@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Training Programs - DNA4Digital</title>
+    <meta name="description" content="Comprehensive AI training programs for executives, managers, and technical teams. Build AI capabilities and drive digital transformation.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <style>
+        :root {
+            --navy: #1a2332;
+            --teal: #2dd4bf;
+            --warm-white: #fafafa;
+            --soft-gray: #64748b;
+            --light-teal: #f0fdfa;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--warm-white);
+            color: var(--navy);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--teal) 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-primary {
+            background: var(--navy);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--teal);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(45, 212, 191, 0.3);
+        }
+        
+        .btn-secondary {
+            border: 2px solid var(--teal);
+            color: var(--teal);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--teal);
+            color: white;
+        }
+        
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active {
+            background: var(--teal);
+            color: white;
+            transform: translateY(-1px);
+        }
+        
+        .course-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.6s ease;
+        }
+        
+        .instructor-card {
+            transition: all 0.3s ease;
+        }
+        
+        .instructor-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .comparison-table {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-900">
+                        DNA4<span class="gradient-text">Digital</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="services.html" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                        <a href="training.html" class="text-gray-900 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">Training</a>
+                        <a href="about.html" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <button class="btn-primary px-6 py-2 rounded-lg text-sm font-medium" onclick="showContactForm()">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h1 class="text-5xl font-bold text-gray-900 mb-6">
+                    AI Training <span class="gradient-text">Programs</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Build AI capabilities within your organization through comprehensive training programs 
+                    designed for executives, managers, and technical teams at every level.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Filters -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    Find the Right Training Program
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Filter programs by your specific needs and requirements
+                </p>
+            </div>
+            
+            <!-- Filter Controls -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg mb-12">
+                <div class="grid md:grid-cols-4 gap-6">
+                    <!-- Industry Filter -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Industry</label>
+                        <div class="space-y-2">
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="industry" data-value="all">All Industries</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="industry" data-value="healthcare">Healthcare</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="industry" data-value="finance">Financial Services</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="industry" data-value="manufacturing">Manufacturing</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="industry" data-value="retail">Retail</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Role Filter -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Target Role</label>
+                        <div class="space-y-2">
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="role" data-value="all">All Roles</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="role" data-value="executive">Executive</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="role" data-value="manager">Manager</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="role" data-value="technical">Technical</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="role" data-value="end-user">End User</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Duration Filter -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Duration</label>
+                        <div class="space-y-2">
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="duration" data-value="all">All Durations</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="duration" data-value="1-day">1 Day</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="duration" data-value="1-week">1 Week</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="duration" data-value="1-month">1 Month</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="duration" data-value="custom">Custom</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Format Filter -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Delivery Format</label>
+                        <div class="space-y-2">
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="format" data-value="all">All Formats</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="format" data-value="online">Online</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="format" data-value="in-person">In-Person</button>
+                            <button class="filter-btn w-full text-left px-3 py-2 rounded-lg text-sm bg-gray-100 hover:bg-teal-100" 
+                                    data-filter="format" data-value="hybrid">Hybrid</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <button class="btn-primary px-6 py-3 rounded-lg font-medium" onclick="resetFilters()">
+                        Reset Filters
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Course Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="course-grid">
+                <!-- Courses will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Comparison Tool -->
+    <section class="py-20 bg-gray-50" id="comparison-section" style="display: none;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Compare Training Programs
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Side-by-side comparison of selected programs
+                </p>
+            </div>
+            
+            <div class="comparison-table rounded-2xl p-8 shadow-lg">
+                <div id="comparison-table">
+                    <!-- Comparison table will be populated by JavaScript -->
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <button class="btn-primary px-8 py-3 rounded-lg font-medium" onclick="enrollInProgram()">
+                        Enroll Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Profiles -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Expert Instructors
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Learn from industry leaders with real-world AI implementation experience
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="instructor-card bg-white rounded-xl p-6 shadow-lg text-center">
+                    <img src="resources/team-consulting.jpg" alt="Dr. Sarah Chen" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Dr. Sarah Chen</h3>
+                    <p class="text-sm text-teal-600 font-medium mb-3">AI Strategy Expert</p>
+                    <p class="text-gray-600 text-sm">
+                        Former McKinsey AI practice lead with 15+ years helping Fortune 500 companies develop AI strategies.
+                    </p>
+                </div>
+                
+                <div class="instructor-card bg-white rounded-xl p-6 shadow-lg text-center">
+                    <img src="resources/team-consulting.jpg" alt="Michael Rodriguez" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Michael Rodriguez</h3>
+                    <p class="text-sm text-teal-600 font-medium mb-3">Technical Lead</p>
+                    <p class="text-gray-600 text-sm">
+                        Ex-Google AI engineer with expertise in ML systems and large-scale AI implementations.
+                    </p>
+                </div>
+                
+                <div class="instructor-card bg-white rounded-xl p-6 shadow-lg text-center">
+                    <img src="resources/team-consulting.jpg" alt="Dr. Priya Patel" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Dr. Priya Patel</h3>
+                    <p class="text-sm text-teal-600 font-medium mb-3">Data Science Lead</p>
+                    <p class="text-gray-600 text-sm">
+                        Former Stanford researcher specializing in computer vision and NLP applications for business.
+                    </p>
+                </div>
+                
+                <div class="instructor-card bg-white rounded-xl p-6 shadow-lg text-center">
+                    <img src="resources/team-consulting.jpg" alt="James Thompson" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">James Thompson</h3>
+                    <p class="text-sm text-teal-600 font-medium mb-3">Change Management</p>
+                    <p class="text-gray-600 text-sm">
+                        Organizational transformation expert with 20+ years in digital transformation and AI adoption.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Pathways -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    AI Certification Pathways
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Structured learning paths to build comprehensive AI expertise
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">AI Strategy Certificate</h3>
+                    <p class="text-gray-600 mb-6">
+                        Master AI strategy development, business case creation, and implementation planning.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li>• AI Readiness Assessment</li>
+                        <li>• Business Case Development</li>
+                        <li>• Implementation Roadmapping</li>
+                        <li>• ROI Measurement</li>
+                    </ul>
+                    <div class="text-teal-600 font-bold text-lg">3 Courses • 6 Weeks</div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">AI Implementation Certificate</h3>
+                    <p class="text-gray-600 mb-6">
+                        Hands-on training in AI model development, deployment, and system integration.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li>• ML Model Development</li>
+                        <li>• Data Pipeline Architecture</li>
+                        <li>• System Integration</li>
+                        <li>• Production Deployment</li>
+                    </ul>
+                    <div class="text-teal-600 font-bold text-lg">4 Courses • 8 Weeks</div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">AI Leadership Certificate</h3>
+                    <p class="text-gray-600 mb-6">
+                        Develop leadership skills for managing AI teams and driving organizational change.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li>• AI Team Leadership</li>
+                        <li>• Change Management</li>
+                        <li>• Ethical AI Governance</li>
+                        <li>• Innovation Management</li>
+                    </ul>
+                    <div class="text-teal-600 font-bold text-lg">3 Courses • 4 Weeks</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-2xl font-bold mb-4">
+                    DNA4<span class="gradient-text">Digital</span>
+                </div>
+                <p class="text-gray-400 mb-8">
+                    Transforming businesses through AI-driven solutions
+                </p>
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-500 text-sm">
+                        © 2024 DNA4Digital. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Training programs data
+        const trainingPrograms = [
+            {
+                id: 1,
+                title: "AI Strategy for Executives",
+                description: "Strategic AI planning and business transformation for senior leadership",
+                duration: "2 days",
+                format: "in-person",
+                role: "executive",
+                industry: "all",
+                price: "$4,500",
+                level: "Beginner",
+                outcomes: ["AI strategy development", "Business case creation", "Implementation planning"],
+                instructor: "Dr. Sarah Chen"
+            },
+            {
+                id: 2,
+                title: "Machine Learning Fundamentals",
+                description: "Hands-on introduction to ML algorithms and model development",
+                duration: "1 week",
+                format: "hybrid",
+                role: "technical",
+                industry: "all",
+                price: "$6,500",
+                level: "Intermediate",
+                outcomes: ["ML algorithm understanding", "Model development", "Data preprocessing"],
+                instructor: "Michael Rodriguez"
+            },
+            {
+                id: 3,
+                title: "AI in Healthcare: Applications & Ethics",
+                description: "Specialized training for healthcare AI implementation and governance",
+                duration: "3 days",
+                format: "online",
+                role: "manager",
+                industry: "healthcare",
+                price: "$3,200",
+                level: "Intermediate",
+                outcomes: ["Healthcare AI applications", "Ethical considerations", "Compliance requirements"],
+                instructor: "Dr. Priya Patel"
+            },
+            {
+                id: 4,
+                title: "Financial AI & Risk Management",
+                description: "AI applications in finance, fraud detection, and risk assessment",
+                duration: "1 week",
+                format: "in-person",
+                role: "technical",
+                industry: "finance",
+                price: "$7,500",
+                level: "Advanced",
+                outcomes: ["Financial modeling", "Risk assessment", "Fraud detection systems"],
+                instructor: "Michael Rodriguez"
+            },
+            {
+                id: 5,
+                title: "AI for Manufacturing Operations",
+                description: "Predictive maintenance, quality control, and process optimization",
+                duration: "4 days",
+                format: "hybrid",
+                role: "manager",
+                industry: "manufacturing",
+                price: "$4,800",
+                level: "Intermediate",
+                outcomes: ["Predictive maintenance", "Quality control AI", "Process optimization"],
+                instructor: "Dr. Priya Patel"
+            },
+            {
+                id: 6,
+                title: "AI Team Leadership",
+                description: "Managing AI teams and driving organizational AI adoption",
+                duration: "3 days",
+                format: "in-person",
+                role: "executive",
+                industry: "all",
+                price: "$5,200",
+                level: "Advanced",
+                outcomes: ["Team leadership", "Change management", "AI governance"],
+                instructor: "James Thompson"
+            },
+            {
+                id: 7,
+                title: "Data Science with Python",
+                description: "Comprehensive data science training using Python and popular libraries",
+                duration: "1 month",
+                format: "hybrid",
+                role: "technical",
+                industry: "all",
+                price: "$8,500",
+                level: "Intermediate",
+                outcomes: ["Python for data science", "Statistical analysis", "Data visualization"],
+                instructor: "Michael Rodriguez"
+            },
+            {
+                id: 8,
+                title: "AI Ethics & Governance",
+                description: "Responsible AI development and ethical decision-making frameworks",
+                duration: "2 days",
+                format: "online",
+                role: "manager",
+                industry: "all",
+                price: "$2,800",
+                level: "Beginner",
+                outcomes: ["Ethical frameworks", "Governance models", "Bias detection"],
+                instructor: "Dr. Sarah Chen"
+            },
+            {
+                id: 9,
+                title: "Retail AI & Customer Analytics",
+                description: "AI applications in retail, personalization, and customer behavior analysis",
+                duration: "3 days",
+                format: "hybrid",
+                role: "manager",
+                industry: "retail",
+                price: "$3,800",
+                level: "Intermediate",
+                outcomes: ["Customer analytics", "Personalization", "Inventory optimization"],
+                instructor: "James Thompson"
+            },
+            {
+                id: 10,
+                title: "End User AI Training",
+                description: "Practical AI tools and applications for non-technical users",
+                duration: "1 day",
+                format: "online",
+                role: "end-user",
+                industry: "all",
+                price: "$1,200",
+                level: "Beginner",
+                outcomes: ["AI tool usage", "Productivity enhancement", "Basic troubleshooting"],
+                instructor: "James Thompson"
+            },
+            {
+                id: 11,
+                title: "Advanced Deep Learning",
+                description: "Deep neural networks, CNNs, RNNs, and transformer models",
+                duration: "2 weeks",
+                format: "in-person",
+                role: "technical",
+                industry: "all",
+                price: "$12,000",
+                level: "Advanced",
+                outcomes: ["Deep learning architectures", "Model optimization", "Production deployment"],
+                instructor: "Dr. Priya Patel"
+            },
+            {
+                id: 12,
+                title: "AI Project Management",
+                description: "Managing AI projects from conception to deployment",
+                duration: "4 days",
+                format: "hybrid",
+                role: "manager",
+                industry: "all",
+                price: "$4,200",
+                level: "Intermediate",
+                outcomes: ["Project planning", "Risk management", "Stakeholder communication"],
+                instructor: "James Thompson"
+            }
+        ];
+
+        // Global variables
+        let selectedPrograms = new Set();
+        let currentFilters = {
+            industry: 'all',
+            role: 'all',
+            duration: 'all',
+            format: 'all'
+        };
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            initTrainingPage();
+            renderCourses();
+            initScrollAnimations();
+        });
+
+        function initTrainingPage() {
+            // Initialize filter buttons
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    handleFilterClick(this);
+                });
+            });
+
+            // Set initial active states
+            document.querySelectorAll('[data-value="all"]').forEach(btn => {
+                btn.classList.add('active');
+            });
+        }
+
+        function handleFilterClick(button) {
+            const filterType = button.dataset.filter;
+            const filterValue = button.dataset.value;
+            
+            // Remove active class from siblings
+            const siblings = document.querySelectorAll(`[data-filter="${filterType}"]`);
+            siblings.forEach(sibling => sibling.classList.remove('active'));
+            
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            // Update current filters
+            currentFilters[filterType] = filterValue;
+            
+            // Re-render courses
+            renderCourses();
+        }
+
+        function resetFilters() {
+            // Reset all filters to 'all'
+            Object.keys(currentFilters).forEach(key => {
+                currentFilters[key] = 'all';
+            });
+            
+            // Reset button states
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.value === 'all') {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Re-render courses
+            renderCourses();
+        }
+
+        function renderCourses() {
+            const courseGrid = document.getElementById('course-grid');
+            const filteredCourses = filterCourses();
+            
+            courseGrid.innerHTML = filteredCourses.map(course => `
+                <div class="course-card bg-white rounded-xl p-6 shadow-lg border border-gray-100" 
+                     data-course-id="${course.id}">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">${course.title}</h3>
+                            <p class="text-gray-600 text-sm mb-3">${course.description}</p>
+                        </div>
+                        <button class="ml-4 p-2 text-gray-400 hover:text-teal-600 transition-colors" 
+                                onclick="toggleProgramComparison(${course.id})">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="text-sm">
+                            <span class="text-gray-500">Duration:</span>
+                            <span class="font-medium text-gray-900">${course.duration}</span>
+                        </div>
+                        <div class="text-sm">
+                            <span class="text-gray-500">Format:</span>
+                            <span class="font-medium text-gray-900 capitalize">${course.format}</span>
+                        </div>
+                        <div class="text-sm">
+                            <span class="text-gray-500">Level:</span>
+                            <span class="font-medium text-gray-900">${course.level}</span>
+                        </div>
+                        <div class="text-sm">
+                            <span class="text-gray-500">Instructor:</span>
+                            <span class="font-medium text-gray-900">${course.instructor}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="text-sm text-gray-500 mb-2">Learning Outcomes:</div>
+                        <div class="flex flex-wrap gap-1">
+                            ${course.outcomes.map(outcome => `
+                                <span class="px-2 py-1 bg-teal-50 text-teal-700 text-xs rounded-full">${outcome}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="text-2xl font-bold text-teal-600">${course.price}</div>
+                        <button class="btn-primary px-6 py-2 rounded-lg text-sm font-medium" 
+                                onclick="enrollInProgram(${course.id})">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterCourses() {
+            return trainingPrograms.filter(course => {
+                return (currentFilters.industry === 'all' || course.industry === currentFilters.industry || course.industry === 'all') &&
+                       (currentFilters.role === 'all' || course.role === currentFilters.role) &&
+                       (currentFilters.duration === 'all' || course.duration.includes(currentFilters.duration) || currentFilters.duration === 'custom' && course.duration.includes('week')) &&
+                       (currentFilters.format === 'all' || course.format === currentFilters.format);
+            });
+        }
+
+        function toggleProgramComparison(courseId) {
+            if (selectedPrograms.has(courseId)) {
+                selectedPrograms.delete(courseId);
+            } else {
+                if (selectedPrograms.size < 3) {
+                    selectedPrograms.add(courseId);
+                } else {
+                    alert('You can compare up to 3 programs at a time.');
+                    return;
+                }
+            }
+            
+            updateComparisonSection();
+        }
+
+        function updateComparisonSection() {
+            const comparisonSection = document.getElementById('comparison-section');
+            const comparisonTable = document.getElementById('comparison-table');
+            
+            if (selectedPrograms.size === 0) {
+                comparisonSection.style.display = 'none';
+                return;
+            }
+            
+            comparisonSection.style.display = 'block';
+            
+            const selectedCourses = Array.from(selectedPrograms).map(id => 
+                trainingPrograms.find(course => course.id === id)
+            );
+            
+            comparisonTable.innerHTML = `
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="text-left py-4 px-4 font-medium text-gray-900">Feature</th>
+                                ${selectedCourses.map(course => `
+                                    <th class="text-left py-4 px-4 font-medium text-gray-900">${course.title}</th>
+                                `).join('')}
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="py-4 px-4 font-medium text-gray-700">Duration</td>
+                                ${selectedCourses.map(course => `
+                                    <td class="py-4 px-4 text-gray-600">${course.duration}</td>
+                                `).join('')}
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-medium text-gray-700">Format</td>
+                                ${selectedCourses.map(course => `
+                                    <td class="py-4 px-4 text-gray-600 capitalize">${course.format}</td>
+                                `).join('')}
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-medium text-gray-700">Level</td>
+                                ${selectedCourses.map(course => `
+                                    <td class="py-4 px-4 text-gray-600">${course.level}</td>
+                                `).join('')}
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-medium text-gray-700">Price</td>
+                                ${selectedCourses.map(course => `
+                                    <td class="py-4 px-4 font-bold text-teal-600">${course.price}</td>
+                                `).join('')}
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-medium text-gray-700">Instructor</td>
+                                ${selectedCourses.map(course => `
+                                    <td class="py-4 px-4 text-gray-600">${course.instructor}</td>
+                                `).join('')}
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-medium text-gray-700">Learning Outcomes</td>
+                                ${selectedCourses.map(course => `
+                                    <td class="py-4 px-4 text-gray-600">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            ${course.outcomes.map(outcome => `<li class="text-sm">${outcome}</li>`).join('')}
+                                        </ul>
+                                    </td>
+                                `).join('')}
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        }
+
+        function enrollInProgram(courseId = null) {
+            const programs = courseId ? [courseId] : Array.from(selectedPrograms);
+            
+            if (programs.length === 0) {
+                alert('Please select a program to enroll.');
+                return;
+            }
+            
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enroll in Training Program</h3>
+                        <p class="text-gray-600">Complete your enrollment to secure your spot</p>
+                    </div>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Selected Program(s)</label>
+                            <div class="px-4 py-3 border border-gray-300 rounded-lg bg-gray-50">
+                                <div class="text-sm text-gray-700">
+                                    ${programs.length === 1 ? 
+                                        trainingPrograms.find(p => p.id === programs[0]).title : 
+                                        `${programs.length} programs selected`
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 pt-4">
+                            <button type="submit" class="btn-primary flex-1 py-3 rounded-lg font-medium">
+                                Complete Enrollment
+                            </button>
+                            <button type="button" class="btn-secondary flex-1 py-3 rounded-lg font-medium" onclick="closeModal()">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            modal.querySelector('form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your enrollment! We\'ll contact you within 24 hours with program details and next steps.');
+                closeModal();
+            });
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        }
+
+        function closeModal() {
+            const modal = document.querySelector('.fixed.inset-0');
+            if (modal) {
+                modal.remove();
+            }
+        }
+
+        function showContactForm() {
+            // Reused from other pages
+            enrollInProgram();
+        }
+
+        // Scroll Animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+    </script>
+</body>
+</html>
