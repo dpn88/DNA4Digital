@@ -576,13 +576,75 @@ function initSmoothScrolling() {
 
 // Mobile Menu
 function initMobileMenu() {
-    const mobileMenuButton = document.querySelector('.md\\:hidden button');
-    if (mobileMenuButton) {
-        mobileMenuButton.addEventListener('click', function() {
-            // Toggle mobile menu (simplified implementation)
-            alert('Mobile menu functionality would be implemented here');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (!mobileMenuButton || !mobileMenu) return;
+
+    const focusableMenuItems = mobileMenu.querySelectorAll('a, button');
+
+    const isMenuOpen = () => !mobileMenu.classList.contains('hidden');
+
+    const openMenu = () => {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('block');
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        mobileMenuButton.setAttribute('aria-label', 'Close main menu');
+
+        if (focusableMenuItems.length > 0) {
+            focusableMenuItems[0].focus();
+        }
+    };
+
+    const closeMenu = ({ focusButton = false } = {}) => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('block');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.setAttribute('aria-label', 'Open main menu');
+
+        if (focusButton) {
+            mobileMenuButton.focus();
+        }
+    };
+
+    const toggleMenu = () => {
+        if (isMenuOpen()) {
+            closeMenu({ focusButton: true });
+        } else {
+            openMenu();
+        }
+    };
+
+    mobileMenuButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        toggleMenu();
+    });
+
+    mobileMenu.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!isMenuOpen()) return;
+
+        if (!mobileMenu.contains(event.target) && event.target !== mobileMenuButton) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && isMenuOpen()) {
+            closeMenu({ focusButton: true });
+        }
+    });
+
+    focusableMenuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (isMenuOpen()) {
+                closeMenu();
+            }
         });
-    }
+    });
 }
 
 // Utility function for button clicks
