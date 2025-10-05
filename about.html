@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About DNA4Digital - AI Consulting Experts</title>
+    <meta name="description" content="Learn about DNA4Digital's team of AI experts, our mission to transform businesses through AI, and our proven track record of successful implementations.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <style>
+        :root {
+            --navy: #1a2332;
+            --teal: #2dd4bf;
+            --warm-white: #fafafa;
+            --soft-gray: #64748b;
+            --light-teal: #f0fdfa;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--warm-white);
+            color: var(--navy);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--teal) 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-primary {
+            background: var(--navy);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--teal);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(45, 212, 191, 0.3);
+        }
+        
+        .btn-secondary {
+            border: 2px solid var(--teal);
+            color: var(--teal);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--teal);
+            color: white;
+        }
+        
+        .team-card {
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 16px;
+            height: 16px;
+            background: var(--teal);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px var(--teal);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 2rem;
+            width: 2px;
+            height: calc(100% - 1rem);
+            background: #e5e7eb;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.6s ease;
+        }
+        
+        .stats-counter {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--teal);
+        }
+        
+        .value-card {
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-900">
+                        DNA4<span class="gradient-text">Digital</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="services.html" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                        <a href="training.html" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">Training</a>
+                        <a href="about.html" class="text-gray-900 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <button class="btn-primary px-6 py-2 rounded-lg text-sm font-medium" onclick="showContactForm()">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h1 class="text-5xl font-bold text-gray-900 mb-6">
+                    Transforming Business with <span class="gradient-text">AI Excellence</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We are a team of AI experts, data scientists, and business strategists dedicated to 
+                    helping organizations harness the power of artificial intelligence for sustainable growth.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-8">
+                        Our Mission
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        To democratize AI by making it accessible, understandable, and implementable for 
+                        businesses of all sizes. We believe that artificial intelligence should be a 
+                        transformative force that empowers organizations to achieve their full potential.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Through our comprehensive consulting services, training programs, and ongoing support, 
+                        we bridge the gap between AI innovation and practical business application.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="stats-counter" data-target="150">0</div>
+                            <p class="text-gray-600 text-sm">Projects Completed</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="stats-counter" data-target="98">0</div>
+                            <p class="text-gray-600 text-sm">% Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <img src="resources/team-consulting.jpg" alt="DNA4Digital Team" 
+                         class="rounded-2xl shadow-2xl w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Our Core Values
+                </h2>
+                <p class="text-xl text-gray-600">
+                    The principles that guide everything we do
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="value-card bg-white rounded-xl p-8 shadow-lg text-center">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Excellence</h3>
+                    <p class="text-gray-600">
+                        We deliver exceptional quality in every project, ensuring our clients achieve 
+                        measurable results and sustainable competitive advantages.
+                    </p>
+                </div>
+                
+                <div class="value-card bg-white rounded-xl p-8 shadow-lg text-center">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Collaboration</h3>
+                    <p class="text-gray-600">
+                        We work closely with our clients as partners, combining our AI expertise with 
+                        their domain knowledge to create truly transformative solutions.
+                    </p>
+                </div>
+                
+                <div class="value-card bg-white rounded-xl p-8 shadow-lg text-center">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Innovation</h3>
+                    <p class="text-gray-600">
+                        We stay at the forefront of AI technology, continuously exploring new possibilities 
+                        and pushing the boundaries of what's possible for our clients.
+                    </p>
+                </div>
+                
+                <div class="value-card bg-white rounded-xl p-8 shadow-lg text-center">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Integrity</h3>
+                    <p class="text-gray-600">
+                        We conduct our business with the highest ethical standards, ensuring transparency, 
+                        fairness, and responsible AI development in all our engagements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Leadership Team
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Meet the experts driving AI transformation
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="team-card bg-white rounded-xl p-6 shadow-lg text-center">
+                    <img src="resources/team-consulting.jpg" alt="Dr. Sarah Chen" class="w-24 h-24 rounded-full mx-auto mb-6 object-cover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dr. Sarah Chen</h3>
+                    <p class="text-teal-600 font-medium mb-3">CEO & Founder</p>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Former McKinsey partner with 15+ years in AI strategy. PhD in Computer Science from Stanford. 
+                        Led AI transformations at 50+ Fortune 500 companies.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-teal-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-teal-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-xl p-6 shadow-lg text-center">
+                    <img src="resources/team-consulting.jpg" alt="Michael Rodriguez" class="w-24 h-24 rounded-full mx-auto mb-6 object-cover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Michael Rodriguez</h3>
+                    <p class="text-teal-600 font-medium mb-3">CTO</p>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Former Google AI technical lead. MS in Machine Learning from MIT. 
+                        Expert in large-scale AI systems with 12+ years of experience.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-teal-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-teal-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-xl p-6 shadow-lg text-center">
+                    <img src="resources/team-consulting.jpg" alt="Dr. Priya Patel" class="w-24 h-24 rounded-full mx-auto mb-6 object-cover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dr. Priya Patel</h3>
+                    <p class="text-teal-600 font-medium mb-3">Head of Data Science</p>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Former Stanford researcher in computer vision and NLP. PhD in AI. 
+                        Published 30+ papers and holds 8 patents in AI/ML technologies.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-teal-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-teal-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-xl p-6 shadow-lg text-center">
+                    <img src="resources/team-consulting.jpg" alt="James Thompson" class="w-24 h-24 rounded-full mx-auto mb-6 object-cover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">James Thompson</h3>
+                    <p class="text-teal-600 font-medium mb-3">VP of Client Success</p>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Organizational transformation expert with 20+ years in change management. 
+                        MBA from Wharton. Specialist in AI adoption and cultural transformation.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-teal-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-teal-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Timeline -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Our Journey
+                </h2>
+                <p class="text-xl text-gray-600">
+                    From startup to AI consulting leader
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-12">
+                    <div class="timeline-item fade-in">
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-2xl font-bold text-gray-900">Company Founded</h3>
+                                <span class="text-teal-600 font-medium">2018</span>
+                            </div>
+                            <p class="text-gray-600">
+                                DNA4Digital was founded by Dr. Sarah Chen with a vision to make AI accessible to businesses. 
+                                Started with a small team of 5 experts and our first client in the healthcare sector.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-2xl font-bold text-gray-900">First Major Success</h3>
+                                <span class="text-teal-600 font-medium">2019</span>
+                            </div>
+                            <p class="text-gray-600">
+                                Successfully implemented AI-powered diagnostic tools for a Fortune 500 healthcare company, 
+                                reducing analysis time by 60% and saving $2.1M annually. This project established our reputation.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-2xl font-bold text-gray-900">Expansion & Growth</h3>
+                                <span class="text-teal-600 font-medium">2020-2021</span>
+                            </div>
+                            <p class="text-gray-600">
+                                Expanded our team to 25 experts and opened offices in New York and San Francisco. 
+                                Launched our comprehensive training programs and achieved 50+ successful implementations.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-2xl font-bold text-gray-900">Industry Recognition</h3>
+                                <span class="text-teal-600 font-medium">2022</span>
+                            </div>
+                            <p class="text-gray-600">
+                                Named "AI Consulting Firm of the Year" by Tech Excellence Awards. 
+                                Reached 100 project completions and expanded into European markets.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-2xl font-bold text-gray-900">Innovation Leadership</h3>
+                                <span class="text-teal-600 font-medium">2023</span>
+                            </div>
+                            <p class="text-gray-600">
+                                Launched our proprietary AI assessment framework and developed industry-specific solutions. 
+                                Achieved 98% client satisfaction rate and completed 150+ projects.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <div class="bg-white rounded-xl p-8 shadow-lg border-2 border-teal-200">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-2xl font-bold text-gray-900">Future Forward</h3>
+                                <span class="text-teal-600 font-medium">2024+</span>
+                            </div>
+                            <p class="text-gray-600">
+                                Continuing to lead AI innovation with expanded services in generative AI, 
+                                autonomous systems, and AI governance. Committed to helping 500+ companies transform by 2025.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Awards & Recognition
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Industry recognition for our excellence in AI consulting
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">AI Consulting Firm of the Year</h3>
+                    <p class="text-gray-600 text-sm">Tech Excellence Awards 2022</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Best AI Training Program</h3>
+                    <p class="text-gray-600 text-sm">Learning & Development Awards 2023</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Innovation in Healthcare AI</h3>
+                    <p class="text-gray-600 text-sm">Healthcare Tech Summit 2023</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-lg text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Top Workplace Culture</h3>
+                    <p class="text-gray-600 text-sm">Great Places to Work 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h2 class="text-4xl font-bold mb-6">
+                    Ready to Transform Your Business?
+                </h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Let's discuss how AI can drive growth, efficiency, and innovation in your organization.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="btn-primary px-8 py-4 rounded-lg text-lg font-medium" onclick="showContactForm()">
+                        Schedule Consultation
+                    </button>
+                    <button class="btn-secondary px-8 py-4 rounded-lg text-lg font-medium bg-transparent">
+                        Download Company Profile
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-2xl font-bold mb-4">
+                    DNA4<span class="gradient-text">Digital</span>
+                </div>
+                <p class="text-gray-400 mb-8">
+                    Transforming businesses through AI-driven solutions
+                </p>
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-500 text-sm">
+                        © 2024 DNA4Digital. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            initScrollAnimations();
+            initCounterAnimations();
+        });
+
+        // Scroll Animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Counter Animations
+        function initCounterAnimations() {
+            const counters = document.querySelectorAll('.stats-counter');
+            
+            const observerOptions = {
+                threshold: 0.5
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            counters.forEach(counter => {
+                observer.observe(counter);
+            });
+        }
+
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const start = performance.now();
+            
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - start;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(easeOut * target);
+                
+                element.textContent = current;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+            
+            requestAnimationFrame(updateCounter);
+        }
+
+        // Contact Form
+        function showContactForm() {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Get In Touch</h3>
+                        <p class="text-gray-600">Let's discuss your AI transformation goals</p>
+                    </div>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" placeholder="Tell us about your AI goals..."></textarea>
+                        </div>
+                        
+                        <div class="flex gap-4 pt-4">
+                            <button type="submit" class="btn-primary flex-1 py-3 rounded-lg font-medium">
+                                Send Message
+                            </button>
+                            <button type="button" class="btn-secondary flex-1 py-3 rounded-lg font-medium" onclick="closeModal()">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            modal.querySelector('form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+                closeModal();
+            });
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        }
+
+        function closeModal() {
+            const modal = document.querySelector('.fixed.inset-0');
+            if (modal) {
+                modal.remove();
+            }
+        }
+    </script>
+</body>
+</html>
