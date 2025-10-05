@@ -1,0 +1,22 @@
+{
+  "name": "dna4digital-website",
+  "version": "1.0.0",
+  "description": "DNA4Digital - AI Consulting & Digital Transformation website",
+  "main": "index.html",
+  "files": [
+    "index.html",
+    "about.html",
+    "services.html",
+    "training.html",
+    "main.js",
+    "resources/"
+  ],
+  "keywords": [
+    "ai",
+    "consulting",
+    "digital-transformation",
+    "website"
+  ],
+  "author": "DNA4Digital",
+  "license": "ISC"
+}
