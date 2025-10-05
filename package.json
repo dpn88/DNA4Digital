@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "DNA4Digital - AI Consulting & Digital Transformation website",
   "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build complete - static site ready for deployment'"
+  },
   "files": [
     "index.html",
     "about.html",
