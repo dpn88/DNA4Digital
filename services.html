@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Consulting Services - DNA4Digital</title>
+    <meta name="description" content="Comprehensive AI implementation services including strategy development, custom solutions, and ongoing support for business transformation.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    
+    <style>
+        :root {
+            --navy: #1a2332;
+            --teal: #2dd4bf;
+            --warm-white: #fafafa;
+            --soft-gray: #64748b;
+            --light-teal: #f0fdfa;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--warm-white);
+            color: var(--navy);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--teal) 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-primary {
+            background: var(--navy);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--teal);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(45, 212, 191, 0.3);
+        }
+        
+        .btn-secondary {
+            border: 2px solid var(--teal);
+            color: var(--teal);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--teal);
+            color: white;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card.selected {
+            border-color: var(--teal);
+            background: var(--light-teal);
+        }
+        
+        .configurator-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--teal);
+            border-radius: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1.5rem;
+            width: 2px;
+            height: calc(100% - 1rem);
+            background: #e5e7eb;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.6s ease;
+        }
+        
+        .roi-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: #e5e7eb;
+            outline: none;
+        }
+        
+        .roi-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--teal);
+            cursor: pointer;
+        }
+        
+        .roi-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--teal);
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-900">
+                        DNA4<span class="gradient-text">Digital</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="services.html" class="text-gray-900 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                        <a href="training.html" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">Training</a>
+                        <a href="about.html" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <button class="btn-primary px-6 py-2 rounded-lg text-sm font-medium" onclick="showContactForm()">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h1 class="text-5xl font-bold text-gray-900 mb-6">
+                    AI Consulting <span class="gradient-text">Services</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive AI implementation services designed to transform your business operations, 
+                    reduce costs, and drive sustainable growth through intelligent automation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Categories -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="service-card bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100" 
+                     onclick="selectServiceCategory('strategy')">
+                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">AI Strategy</h3>
+                    <p class="text-gray-600 text-sm">Strategic planning and roadmap development</p>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100" 
+                     onclick="selectServiceCategory('implementation')">
+                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Implementation</h3>
+                    <p class="text-gray-600 text-sm">End-to-end AI solution deployment</p>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100" 
+                     onclick="selectServiceCategory('training')">
+                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Training</h3>
+                    <p class="text-gray-600 text-sm">Team education and skill development</p>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl p-6 shadow-lg border-2 border-gray-100" 
+                     onclick="selectServiceCategory('support')">
+                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Support</h3>
+                    <p class="text-gray-600 text-sm">Ongoing maintenance and optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Configurator -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Build Your Custom AI Solution
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Select the services you need and see real-time pricing and timeline estimates
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Service Selection Panel -->
+                <div class="lg:col-span-2">
+                    <div class="configurator-panel rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Select Services</h3>
+                        
+                        <div class="space-y-6" id="service-options">
+                            <!-- Strategy Services -->
+                            <div class="service-category" data-category="strategy">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                    <svg class="w-5 h-5 text-teal-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                    </svg>
+                                    AI Strategy Development
+                                </h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="ai-assessment" data-price="15000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">AI Readiness Assessment</h5>
+                                            <span class="text-teal-600 font-medium">$15K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">Comprehensive evaluation of your AI readiness</p>
+                                    </div>
+                                    
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="strategy-roadmap" data-price="25000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">AI Strategy Roadmap</h5>
+                                            <span class="text-teal-600 font-medium">$25K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">Custom AI implementation roadmap</p>
+                                    </div>
+                                    
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="use-case-identification" data-price="20000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">Use Case Identification</h5>
+                                            <span class="text-teal-600 font-medium">$20K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">Identify high-impact AI opportunities</p>
+                                    </div>
+                                    
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="vendor-evaluation" data-price="18000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">Vendor Evaluation</h5>
+                                            <span class="text-teal-600 font-medium">$18K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">AI platform and vendor selection</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Implementation Services -->
+                            <div class="service-category" data-category="implementation">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                    <svg class="w-5 h-5 text-teal-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    AI Implementation
+                                </h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="data-pipeline" data-price="35000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">Data Pipeline Setup</h5>
+                                            <span class="text-teal-600 font-medium">$35K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">Build robust data infrastructure</p>
+                                    </div>
+                                    
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="model-development" data-price="50000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">Custom Model Development</h5>
+                                            <span class="text-teal-600 font-medium">$50K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">Tailored AI/ML models</p>
+                                    </div>
+                                    
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="system-integration" data-price="40000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">System Integration</h5>
+                                            <span class="text-teal-600 font-medium">$40K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">Integrate AI with existing systems</p>
+                                    </div>
+                                    
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="deployment-support" data-price="25000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">Deployment Support</h5>
+                                            <span class="text-teal-600 font-medium">$25K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">Production deployment assistance</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Training Services -->
+                            <div class="service-category" data-category="training">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                    <svg class="w-5 h-5 text-teal-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    </svg>
+                                    Training & Change Management
+                                </h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="executive-training" data-price="15000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">Executive Training</h5>
+                                            <span class="text-teal-600 font-medium">$15K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">Leadership AI strategy training</p>
+                                    </div>
+                                    
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="technical-training" data-price="25000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">Technical Training</h5>
+                                            <span class="text-teal-600 font-medium">$25K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">Hands-on AI/ML development training</p>
+                                    </div>
+                                    
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="change-management" data-price="20000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">Change Management</h5>
+                                            <span class="text-teal-600 font-medium">$20K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">Organizational transformation support</p>
+                                    </div>
+                                    
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="user-adoption" data-price="12000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">User Adoption Training</h5>
+                                            <span class="text-teal-600 font-medium">$12K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">End-user training and support</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Support Services -->
+                            <div class="service-category" data-category="support">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                    <svg class="w-5 h-5 text-teal-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    Ongoing Support
+                                </h4>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="monitoring-support" data-price="10000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">Monitoring & Support</h5>
+                                            <span class="text-teal-600 font-medium">$10K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">24/7 system monitoring</p>
+                                    </div>
+                                    
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="model-optimization" data-price="18000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">Model Optimization</h5>
+                                            <span class="text-teal-600 font-medium">$18K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">Continuous model improvement</p>
+                                    </div>
+                                    
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="performance-tuning" data-price="15000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">Performance Tuning</h5>
+                                            <span class="text-teal-600 font-medium">$15K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">System optimization services</p>
+                                    </div>
+                                    
+                                    <div class="service-option p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-teal-500" 
+                                         data-service="compliance-audit" data-price="12000">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-900">Compliance Audit</h5>
+                                            <span class="text-teal-600 font-medium">$12K</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">AI governance and compliance</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Summary Panel -->
+                <div class="lg:col-span-1">
+                    <div class="configurator-panel rounded-2xl p-8 sticky top-24">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Project Summary</h3>
+                        
+                        <!-- Selected Services -->
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Selected Services</h4>
+                            <div id="selected-services" class="space-y-2">
+                                <p class="text-gray-500 text-sm">No services selected</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline -->
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Estimated Timeline</h4>
+                            <div class="bg-gray-100 rounded-lg p-4">
+                                <div class="text-2xl font-bold text-teal-600" id="timeline-display">0 weeks</div>
+                                <div class="text-sm text-gray-600">Project duration</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Total Cost -->
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">Total Investment</h4>
+                            <div class="bg-teal-50 rounded-lg p-4">
+                                <div class="text-3xl font-bold text-teal-600" id="total-cost">$0</div>
+                                <div class="text-sm text-gray-600">Total project cost</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Action Buttons -->
+                        <div class="space-y-3">
+                            <button class="btn-primary w-full py-3 rounded-lg font-medium" onclick="generateProposal()">
+                                Generate Proposal
+                            </button>
+                            <button class="btn-secondary w-full py-3 rounded-lg font-medium" onclick="scheduleConsultation()">
+                                Schedule Consultation
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Calculate Your AI ROI
+                </h2>
+                <p class="text-xl text-gray-600">
+                    See the potential return on investment for your AI implementation
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Input Panel -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Business Metrics</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Annual Revenue ($ Millions)
+                            </label>
+                            <input type="range" min="1" max="1000" value="50" 
+                                   class="roi-slider" id="annual-revenue">
+                            <div class="flex justify-between text-sm text-gray-500 mt-1">
+                                <span>$1M</span>
+                                <span id="revenue-display" class="font-medium text-teal-600">$50M</span>
+                                <span>$1B</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Number of Employees
+                            </label>
+                            <input type="range" min="10" max="10000" value="500" 
+                                   class="roi-slider" id="employee-count">
+                            <div class="flex justify-between text-sm text-gray-500 mt-1">
+                                <span>10</span>
+                                <span id="employee-display" class="font-medium text-teal-600">500</span>
+                                <span>10,000</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Current Operational Costs ($ Millions)
+                            </label>
+                            <input type="range" min="0.5" max="500" value="25" 
+                                   class="roi-slider" id="operational-costs">
+                            <div class="flex justify-between text-sm text-gray-500 mt-1">
+                                <span>$0.5M</span>
+                                <span id="costs-display" class="font-medium text-teal-600">$25M</span>
+                                <span>$500M</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                AI Implementation Scope
+                            </label>
+                            <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500" id="implementation-scope">
+                                <option value="pilot">Pilot Project (1-2 processes)</option>
+                                <option value="department">Department-wide (3-5 processes)</option>
+                                <option value="enterprise" selected>Enterprise-wide (5+ processes)</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Industry Sector
+                            </label>
+                            <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500" id="industry-sector">
+                                <option value="healthcare">Healthcare</option>
+                                <option value="finance">Financial Services</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="retail">Retail</option>
+                                <option value="technology">Technology</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Results Panel -->
+                <div class="space-y-6">
+                    <!-- ROI Summary -->
+                    <div class="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">ROI Projection</h3>
+                        
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-teal-600" id="annual-savings">$0</div>
+                                <div class="text-sm text-gray-600">Annual Savings</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-teal-600" id="roi-percentage">0%</div>
+                                <div class="text-sm text-gray-600">ROI</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-gray-900" id="payback-period">0 months</div>
+                                <div class="text-sm text-gray-600">Payback Period</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chart -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">5-Year ROI Projection</h4>
+                        <div id="roi-chart" style="height: 300px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Methodology -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Our Implementation Methodology
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Proven process that ensures successful AI transformation
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="timeline-item">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-teal-600 font-bold text-lg">1</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Discovery & Assessment</h3>
+                        <p class="text-gray-600 text-sm">
+                            Comprehensive analysis of your current state, identifying opportunities 
+                            and defining success metrics.
+                        </p>
+                        <div class="text-teal-600 font-medium text-sm mt-4">2-4 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-teal-600 font-bold text-lg">2</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Strategy & Planning</h3>
+                        <p class="text-gray-600 text-sm">
+                            Develop comprehensive AI roadmap with clear milestones, 
+                            resource allocation, and risk mitigation strategies.
+                        </p>
+                        <div class="text-teal-600 font-medium text-sm mt-4">3-6 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-teal-600 font-bold text-lg">3</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Implementation & Testing</h3>
+                        <p class="text-gray-600 text-sm">
+                            Execute the implementation plan with agile methodology, 
+                            continuous testing, and stakeholder feedback integration.
+                        </p>
+                        <div class="text-teal-600 font-medium text-sm mt-4">8-16 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-teal-600 font-bold text-lg">4</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Deployment & Support</h3>
+                        <p class="text-gray-600 text-sm">
+                            Production deployment with comprehensive training, 
+                            documentation, and ongoing optimization support.
+                        </p>
+                        <div class="text-teal-600 font-medium text-sm mt-4">4-8 weeks</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-2xl font-bold mb-4">
+                    DNA4<span class="gradient-text">Digital</span>
+                </div>
+                <p class="text-gray-400 mb-8">
+                    Transforming businesses through AI-driven solutions
+                </p>
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-500 text-sm">
+                        © 2024 DNA4Digital. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Service Configurator Logic
+        let selectedServices = new Set();
+        let totalCost = 0;
+        let totalTimeline = 0;
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            initServiceConfigurator();
+            initROICalculator();
+            initScrollAnimations();
+        });
+
+        function initServiceConfigurator() {
+            const serviceOptions = document.querySelectorAll('.service-option');
+            serviceOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    toggleService(this);
+                });
+            });
+        }
+
+        function toggleService(element) {
+            const serviceId = element.dataset.service;
+            const price = parseInt(element.dataset.price);
+            
+            if (selectedServices.has(serviceId)) {
+                selectedServices.delete(serviceId);
+                element.classList.remove('border-teal-500', 'bg-teal-50');
+                totalCost -= price;
+                totalTimeline -= getServiceTimeline(serviceId);
+            } else {
+                selectedServices.add(serviceId);
+                element.classList.add('border-teal-500', 'bg-teal-50');
+                totalCost += price;
+                totalTimeline += getServiceTimeline(serviceId);
+            }
+            
+            updateSummary();
+        }
+
+        function getServiceTimeline(serviceId) {
+            const timelines = {
+                'ai-assessment': 4,
+                'strategy-roadmap': 6,
+                'use-case-identification': 5,
+                'vendor-evaluation': 4,
+                'data-pipeline': 12,
+                'model-development': 16,
+                'system-integration': 12,
+                'deployment-support': 8,
+                'executive-training': 2,
+                'technical-training': 4,
+                'change-management': 8,
+                'user-adoption': 3,
+                'monitoring-support': 0,
+                'model-optimization': 6,
+                'performance-tuning': 4,
+                'compliance-audit': 3
+            };
+            return timelines[serviceId] || 0;
+        }
+
+        function updateSummary() {
+            const selectedContainer = document.getElementById('selected-services');
+            const timelineDisplay = document.getElementById('timeline-display');
+            const totalCostDisplay = document.getElementById('total-cost');
+            
+            if (selectedServices.size === 0) {
+                selectedContainer.innerHTML = '<p class="text-gray-500 text-sm">No services selected</p>';
+            } else {
+                const serviceNames = Array.from(selectedServices).map(id => {
+                    const element = document.querySelector(`[data-service="${id}"]`);
+                    return element.querySelector('h5').textContent;
+                });
+                
+                selectedContainer.innerHTML = serviceNames.map(name => 
+                    `<div class="text-sm text-gray-700">• ${name}</div>`
+                ).join('');
+            }
+            
+            timelineDisplay.textContent = `${totalTimeline} weeks`;
+            totalCostDisplay.textContent = `$${totalCost.toLocaleString()}`;
+        }
+
+        function selectServiceCategory(category) {
+            // Highlight selected category
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            event.target.closest('.service-card').classList.add('selected');
+            
+            // Scroll to relevant section
+            const categorySection = document.querySelector(`[data-category="${category}"]`);
+            if (categorySection) {
+                categorySection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function generateProposal() {
+            if (selectedServices.size === 0) {
+                alert('Please select at least one service to generate a proposal.');
+                return;
+            }
+            
+            alert(`Proposal generated! Total investment: $${totalCost.toLocaleString()} over ${totalTimeline} weeks. We'll contact you within 24 hours with a detailed proposal.`);
+        }
+
+        function scheduleConsultation() {
+            showContactForm();
+        }
+
+        // ROI Calculator Logic
+        function initROICalculator() {
+            const sliders = document.querySelectorAll('.roi-slider');
+            const selects = document.querySelectorAll('select');
+            
+            sliders.forEach(slider => {
+                slider.addEventListener('input', updateROICalculation);
+            });
+            
+            selects.forEach(select => {
+                select.addEventListener('change', updateROICalculation);
+            });
+            
+            // Initialize chart
+            initROIChart();
+            updateROICalculation();
+        }
+
+        function updateROICalculation() {
+            const revenue = parseFloat(document.getElementById('annual-revenue').value);
+            const employees = parseInt(document.getElementById('employee-count').value);
+            const costs = parseFloat(document.getElementById('operational-costs').value);
+            const scope = document.getElementById('implementation-scope').value;
+            
+            // Update display values
+            document.getElementById('revenue-display').textContent = `$${revenue}M`;
+            document.getElementById('employee-display').textContent = employees.toLocaleString();
+            document.getElementById('costs-display').textContent = `$${costs}M`;
+            
+            // Calculate ROI based on industry benchmarks
+            const scopeMultiplier = {
+                'pilot': 0.15,
+                'department': 0.25,
+                'enterprise': 0.35
+            };
+            
+            const annualSavings = costs * scopeMultiplier[scope] * 1000000;
+            const implementationCost = totalCost || 200000; // Default if no services selected
+            const roiPercentage = Math.round((annualSavings / implementationCost) * 100);
+            const paybackMonths = Math.round((implementationCost / annualSavings) * 12);
+            
+            // Update displays
+            document.getElementById('annual-savings').textContent = `$${(annualSavings / 1000000).toFixed(1)}M`;
+            document.getElementById('roi-percentage').textContent = `${roiPercentage}%`;
+            document.getElementById('payback-period').textContent = `${paybackMonths} months`;
+            
+            // Update chart
+            updateROIChart(annualSavings, implementationCost);
+        }
+
+        function initROIChart() {
+            const chartDom = document.getElementById('roi-chart');
+            const myChart = echarts.init(chartDom);
+            window.roiChart = myChart;
+        }
+
+        function updateROIChart(annualSavings, implementationCost) {
+            if (!window.roiChart) return;
+            
+            const years = [1, 2, 3, 4, 5];
+            const cumulativeSavings = years.map(year => annualSavings * year - implementationCost);
+            
+            const option = {
+                tooltip: {
+                    trigger: 'axis',
+                    formatter: function(params) {
+                        return `Year ${params[0].axisValue}<br/>
+                                Cumulative ROI: $${(params[0].value / 1000000).toFixed(1)}M`;
+                    }
+                },
+                xAxis: {
+                    type: 'category',
+                    data: years,
+                    name: 'Years'
+                },
+                yAxis: {
+                    type: 'value',
+                    name: 'ROI ($ Millions)',
+                    axisLabel: {
+                        formatter: function(value) {
+                            return `$${(value / 1000000).toFixed(0)}M`;
+                        }
+                    }
+                },
+                series: [{
+                    data: cumulativeSavings,
+                    type: 'line',
+                    smooth: true,
+                    lineStyle: {
+                        color: '#2dd4bf',
+                        width: 3
+                    },
+                    itemStyle: {
+                        color: '#2dd4bf'
+                    },
+                    areaStyle: {
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                offset: 0, color: 'rgba(45, 212, 191, 0.3)'
+                            }, {
+                                offset: 1, color: 'rgba(45, 212, 191, 0.05)'
+                            }]
+                        }
+                    }
+                }]
+            };
+            
+            window.roiChart.setOption(option);
+        }
+
+        // Scroll Animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Contact Form (reused from main.js)
+        function showContactForm() {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Schedule Consultation</h3>
+                        <p class="text-gray-600">Get expert advice on your AI implementation</p>
+                    </div>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Project Budget</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500">
+                                <option>$50K - $100K</option>
+                                <option>$100K - $250K</option>
+                                <option>$250K - $500K</option>
+                                <option>$500K+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="flex gap-4 pt-4">
+                            <button type="submit" class="btn-primary flex-1 py-3 rounded-lg font-medium">
+                                Schedule Call
+                            </button>
+                            <button type="button" class="btn-secondary flex-1 py-3 rounded-lg font-medium" onclick="closeModal()">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            modal.querySelector('form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you! We\'ll contact you within 24 hours to schedule your consultation.');
+                closeModal();
+            });
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        }
+
+        function closeModal() {
+            const modal = document.querySelector('.fixed.inset-0');
+            if (modal) {
+                modal.remove();
+            }
+        }
+    </script>
+</body>
+</html>
