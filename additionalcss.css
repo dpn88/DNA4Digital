@@ -1,0 +1,1673 @@
+/* ========================= Links ========================= */
+a{ text-decoration:underline; }
+a:hover, a:visited{ text-decoration:underline; }
+/* Button-like links should not be underlined */
+.btn-primary,.btn-secondary,.wp-block-button__link,.menu a,.site-navigation a,.header a.button{ text-decoration:none!important; }
+
+/* ========================= Buttons ========================= */
+.btn-primary{ display:inline-flex; align-items:center; justify-content:center; background:#1a2332; color:#fff; border:1px solid #1a2332; border-radius:14px; padding:.9rem 1.6rem; font-weight:600; transition:transform .15s, box-shadow .2s, background .2s, border-color .2s; }
+.btn-primary:hover{ transform:translateY(-2px); background:#2dd4bf; border-color:#2dd4bf; box-shadow:0 8px 25px rgba(45,212,191,.3); }
+.btn-secondary{ display:inline-flex; align-items:center; justify-content:center; color:#2dd4bf; border:2px solid #2dd4bf; background:transparent; border-radius:14px; padding:.9rem 1.6rem; font-weight:600; transition:transform .15s, box-shadow .2s, border-color .2s, color .2s, background .2s; }
+.btn-secondary:hover{ transform:translateY(-2px); background:#2dd4bf; color:#fff; border-color:#2dd4bf; box-shadow:0 8px 20px rgba(45,212,191,.2); }
+
+/* ========================= Full-bleed hero + layout ========================= */
+.hero-bleed, .hero-bleed.alignfull, .wp-block-html .hero-bleed{ width:100vw; max-width:100vw; margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw); }
+html, body { overflow-x:hidden; }
+
+/* safe right gutter (also for iOS notches) */
+:root{ --hero-right-gutter: clamp(20px, 4.5vw, 64px); --hero-right-safe: calc(var(--hero-right-gutter) + env(safe-area-inset-right, 0px)); }
+
+.hero-bg{ position:relative; min-height:100vh; display:flex; align-items:center; background:linear-gradient(135deg,#1a2332 0%,#2c3e50 100%); overflow:hidden; padding:4.5rem 0; }
+#particles-canvas{ position:absolute; inset:0; z-index:1; pointer-events:none; }
+
+/* Inner container and grid */
+.hero-content{ position:relative; z-index:2; width:100%; max-width:1440px; margin:0 auto; padding:0 2rem; }
+.hero-grid{ display:grid; gap:3rem; align-items:center; grid-template-columns:1fr; }
+@media (min-width:1024px){ .hero-grid{ grid-template-columns:minmax(520px,680px) 1fr; } }
+
+/* Wide: span viewport, image starts at exact middle (50vw) */
+@media (min-width:1200px){
+  .hero-content{ max-width:100vw; padding-right:var(--hero-right-safe) !important; padding-left:clamp(2rem,6vw,6rem); }
+  .hero-grid{ grid-template-columns:minmax(520px,50vw) 50vw !important; }
+  .hero-image-wrap{ justify-self:end; margin-right:var(--hero-right-safe); overflow:visible; }
+  .hero-image{ width:calc(50vw - var(--hero-right-safe)); max-width:920px; height:auto; display:block; border-radius:20px; box-shadow:0 30px 60px rgba(0,0,0,.35); }
+}
+
+/* ========================= Heading + typewriter (two lines, no jump) ========================= */
+.hero-title{ font-size:clamp(2.6rem,5.6vw,4.6rem); font-weight:800; line-height:1.1; color:#d9f5ee; margin:0 0 1rem; }
+.hero-line1{ display:block; }
+.hero-line2{ display:block; line-height:1.1; }
+
+/* Reserve exactly two lines for the typed area */
+#typed-wrap{ display:inline-block; width:100%; height:calc(1.1em * 2); /* two lines times the line-height above */ overflow:hidden; white-space:normal; vertical-align:bottom; }
+/* Typed text stays inline so the cursor sits at the end */
+#typed-text{ display:inline !important; white-space:normal !important; word-break:break-word; overflow-wrap:anywhere; }
+/* Gradient and subtle motion on typed text and its children */
+#typed-text, #typed-text *{ background:linear-gradient(90deg,#00e6a8 0%,#00ffc6 50%,#00aaff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; color:transparent; background-size:200% auto; animation:dna4GradientShift 10s ease-in-out infinite alternate; }
+.typed-cursor{ display:inline-block; margin-left:2px; color:#00e6a8; vertical-align:baseline; }
+@keyframes dna4GradientShift{ from{ background-position:0% 50%; } to { background-position:100% 50%; } }
+
+/* ========================= Body text and CTAs ========================= */
+.hero-sub{ color:rgba(255,255,255,.85); font-size:1.05rem; line-height:1.7; max-width:720px; margin:1rem 0 2rem; }
+.hero-cta{ display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2.25rem; }
+/* Center the hero buttons */
+.hero-cta{ justify-content: center !important; align-items: center; width: 100%; }
+/* harder centering when nested in .hero-text */
+.hero-text .hero-cta{ display:flex !important; gap:1rem; flex-wrap:wrap; justify-content:center !important; align-items:center; width:max-content; margin-inline:auto; }
+.hero-text .hero-cta > *{ margin:0 !important; }
+
+/* ========================= Image badge (ROI) ========================= */
+.roi-badge{ position:absolute; right:12px; bottom:12px; background:#10b981; color:#fff; padding:1rem 1.25rem; border-radius:14px; box-shadow:0 12px 30px rgba(16,185,129,.25); min-width:180px; max-width:clamp(200px,28vw,340px); white-space:normal; line-height:1.25; overflow-wrap:anywhere; }
+.roi-badge__value{ font-size:1.5rem; font-weight:800; line-height:1; }
+.roi-badge__label{ font-size:.9rem; opacity:.9; margin-top:.25rem; }
+/* „float” look (optional: add .roi--float) */
+@media (min-width:1200px){
+  .roi-badge.roi--float{ right:clamp(-16px,-2vw,-10px); bottom:clamp(-16px,-2vw,-10px); }
+  .hero-image-wrap{ padding-bottom:clamp(14px,2vw,24px); }
+}
+/* Keep badge clear of the right safe area when not floating */
+@media (min-width:1024px){
+  .roi-badge:not(.roi--float){ right:var(--hero-right-safe); bottom:clamp(12px,2vw,22px); }
+}
+
+/* ========================= Stats ========================= */
+.stats-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2rem; margin-top:2rem; }
+@media (max-width:640px){ .stats-grid{ grid-template-columns:1fr; } }
+.stat{ text-align:center; }
+.stat-value{ font-size:clamp(2.2rem,5vw,3.4rem); font-weight:800; line-height:1; color:#2dd4bf; }
+.stat-suffix{ color:#2dd4bf; margin-left:2px; }
+.stat-label{ color:rgba(233,244,248,.85); font-size:.95rem; margin-top:.5rem; }
+
+/* ========================= Utility ========================= */
+.container-narrow{ max-width:1100px; margin:0 auto; padding:0 1rem; }
+
+/* ========================= AI Readiness – base styles ========================= */
+.assessment-section { padding: 4rem 0; background: #f6f7f9; }
+.assessment-header { text-align: center; margin-bottom: 2rem; }
+.assessment-title { font-size: clamp(1.8rem, 3vw, 2.25rem); font-weight: 800; color: #111827; margin: 0 0 .5rem; }
+.assessment-sub { color: #4b5563; font-size: 1.05rem; max-width: 52rem; margin: 0 auto; line-height: 1.7; }
+/* Card */
+.assessment-card { background: #fff; border-radius: 18px; border: 1px solid rgba(45,212,191,.18); box-shadow: 0 18px 40px rgba(2, 12, 27, 0.08); padding: 1.75rem; }
+/* Progress */
+.assessment-progress { margin-bottom: 1.25rem; }
+.assessment-progress-top { display: flex; justify-content: space-between; align-items: center; font-size: .9rem; color: #4b5563; margin-bottom: .5rem; }
+.assessment-progress-rail { width: 100%; height: 8px; background: #e5e7eb; border-radius: 999px; overflow: hidden; }
+.progress-bar { height: 8px; width: 0%; background: linear-gradient(90deg, #2dd4bf 0%, #06b6d4 100%); border-radius: 999px; transition: width .45s ease; }
+/* Results */
+.hidden { display: none !important; }
+.assessment-results { text-align: center; }
+.assessment-score { margin-bottom: 1.5rem; }
+.assessment-score-value { font-size: clamp(3rem, 8vw, 4.5rem); font-weight: 800; line-height: 1; background: linear-gradient(90deg, #00e6a8 0%, #00ffc6 50%, #00aaff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; }
+.assessment-score-title { font-size: 1.35rem; font-weight: 800; color: #111827; margin: .5rem 0 .25rem; }
+.assessment-score-desc { color: #4b5563; }
+/* Recommendations */
+.assessment-recos { background: #f0fdfa; border: 1px solid rgba(45,212,191,.25); border-radius: 14px; padding: 1rem; margin: 1.25rem 0 1.75rem; }
+.assessment-recos-title { margin: 0 0 .75rem; font-weight: 700; color: #111827; }
+.assessment-recos-list > div { display: flex; align-items: flex-start; gap: .6rem; margin: .4rem 0; }
+.assessment-recos-list > div::before { content: ""; flex: 0 0 8px; height: 8px; margin-top: .55rem; background: #0f766e; border-radius: 999px; }
+/* Actions */
+.assessment-actions { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+
+/* ========================= Services section (header + cards) ========================= */
+.services-section{ padding:4rem 0; background:#ffffff; }
+.services-header{ text-align:center; margin-bottom:2.5rem; }
+.services-title{ font-size:clamp(1.8rem,3.2vw,2.3rem); font-weight:800; color:#111827; margin:0 0 .5rem; }
+.services-sub{ color:#4b5563; font-size:1.05rem; line-height:1.7; max-width:52rem; margin:0 auto; }
+
+/* Highlighted line “Autorskie szkolenia…” */
+.services-highlight{ margin:.9rem auto 0; font-weight:800; font-size:clamp(1.05rem,2.3vw,1.25rem); }
+.services-highlight > span{ background: linear-gradient(90deg, #00e6a8 0%, #00ffc6 50%, #00aaff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; color:transparent; }
+
+/* ---------- CONSOLIDATED BULLETS (no bleed) ---------- */
+.services-section .services-list{ list-style: none; margin: .9rem auto 0; padding: 0; max-width: 56rem; display: grid; grid-template-columns: 1fr; gap: 16px 24px; align-items: start; }
+@media (min-width: 768px){ .services-section .services-list{ grid-template-columns: repeat(2, minmax(360px, 1fr)); } }
+
+.services-section .services-list li{
+  /* tuning knobs */
+  --ring: 1px;        /* border width */
+  --radius: 14px;     /* pill radius */
+  --bullet: 12px;     /* dot size */
+  --inset: 24px;      /* distance from inner border to BULLET CENTER */
+  --gap: 12px;        /* space between bullet column and text */
+
+  /* pill as a tiny grid: [bullet column][text] */
+  display: grid;
+  grid-template-columns: calc(var(--inset) * 2) 1fr; /* centers dot at --inset */
+  align-items: center;
+  column-gap: var(--gap);
+
+  padding: 14px 20px;
+  background: #f8fffd;
+  border: var(--ring) solid rgba(45,212,191,.22);
+  border-radius: var(--radius);
+  color: #0f172a;
+  line-height: 1.6;
+  box-sizing: border-box;
+  overflow: hidden; /* clips the dot halo so it never crosses the border */
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.services-section .services-list li::before{
+  content: "";
+  width: var(--bullet);
+  height: var(--bullet);
+  border-radius: 999px;
+  justify-self: center; /* perfectly centered in its column */
+  background: radial-gradient(circle at 35% 35%, #2dd4bf 0%, #06b6d4 65%, #00aaff 100%);
+  box-shadow: 0 0 0 5px rgba(45,212,191,.12); /* soft inner ring, clipped by overflow */
+}
+
+.services-section .services-list li:hover{
+  transform: translateY(-2px);
+  background: #ecfffb;
+  border-color: rgba(45,212,191,.45);
+  box-shadow: 0 10px 24px rgba(2,12,27,.06);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .services-section .services-list li{ transition: border-color .2s ease, background .2s ease; }
+  .services-section .services-list li:hover{ transform: none; box-shadow: none; }
+}
+
+/* Grid: 1 / 2 / 3 columns for cards */
+.services-grid{ display:grid; gap:2rem; grid-template-columns:1fr; margin-top:clamp(2rem,4vw,3rem); }
+@media (min-width:768px){ .services-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (min-width:1024px){ .services-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); } }
+
+/* Card */
+.service-card{
+  background:#fff; border:1px solid rgba(17,24,39,.06);
+  border-radius:18px; padding:2rem;
+  box-shadow:0 18px 40px rgba(2,12,27,.06);
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  display:flex; flex-direction:column; min-height:100%;
+  position: relative; z-index: 0; transform: translateZ(0);
+  backface-visibility: hidden; will-change: transform, box-shadow, border-color; cursor: default;
+}
+.service-card:hover{
+  transform: translateY(-8px);
+  border-color: rgba(45,212,191,.55);
+  box-shadow: 0 26px 56px rgba(2,12,27,.14),
+    0 0 0 1px rgba(45,212,191,.15) inset;
+}
+.service-card:hover .service-icon{ background:#d1fae5; border-color:rgba(45,212,191,.45); }
+.service-card:hover .service-link{ color:#0f766e; text-decoration:underline; }
+.service-card:focus-within{ outline:none; transform: translateY(-4px); border-color: rgba(45,212,191,.55); box-shadow: 0 18px 40px rgba(2,12,27,.12); }
+
+/* Icon */
+.service-icon{ width:48px; height:48px; border-radius:12px; background:#f0fdfa; display:flex; align-items:center; justify-content:center; margin-bottom:1.25rem; border:1px solid rgba(45,212,191,.25); }
+.service-icon .icon{ width:26px; height:26px; color:#0f766e; }
+
+/* Text */
+.service-title{ font-size:1.125rem; font-weight:800; color:#111827; margin:0 0 .6rem; }
+.service-desc{ color:#4b5563; line-height:1.7; margin:0 0 1rem; }
+.service-link{ color:#0ea5a3; font-weight:600; text-decoration:none; }
+.service-link:hover{ color:#0f766e; text-decoration:underline; }
+
+/* ========================= Fade-in (used by main.js -> initScrollAnimations) ========================= */
+.fade-in{ opacity:0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+.fade-in.visible{ opacity:1; transform:none; }
+
+/* Pin ROI badge to the image wrapper and let it overhang slightly on wide screens */
+.hero-image-wrap{ position: relative; /* ensures .roi-badge anchors to the image, not the whole hero */ overflow: visible; /* allow the badge to hang outside the image bounds */ }
+.roi-badge{ position: absolute; right: 12px; bottom: 12px; z-index: 2; /* render above the image */ }
+
+/* Optional floating effect on desktops: tiny negative offset + extra bottom padding for clearance */
+@media (min-width: 1200px){
+  .roi-badge.roi--float{ right: clamp(-16px, -2vw, -10px); bottom: clamp(-16px, -2vw, -10px); }
+  .hero-image-wrap{ padding-bottom: clamp(14px, 2vw, 24px); /* space so the overhang doesn't get clipped by layout below */ }
+}
+
+/* ========================= HERO brand headline + helix Matches logo gradient, keeps typed area intact ========================= */
+
+/* row holding "DNA4Digital" + helix */
+.hero-brand-row{ display:inline-grid; grid-auto-flow:column; align-items:center; gap:clamp(10px,1.6vw,18px); }
+
+/* Brand word styled like the logo */
+.brandword{ font-weight:800; letter-spacing:.2px; line-height:1.05; background:linear-gradient(90deg,#00e6a8 0%,#00ffc6 50%,#00aaff 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; /* subtle lift for legibility on dark bg */ text-shadow:0 1px 0 rgba(0,0,0,.18); white-space:nowrap; font-size:clamp(2.2rem,5.2vw,3.6rem); }
+
+/* Tagline just below, slightly smaller and solid */
+.hero-tagline{ display:block; margin-top:.25rem; font-weight:700; color:#d9f5ee; opacity:.95; font-size:clamp(1.1rem,2.2vw,1.35rem); }
+
+/* Helix image sized & animated */
+.hero-helix{ width:clamp(44px,6vw,86px); height:auto; transform:translateY(0) rotate(-6deg); filter:drop-shadow(0 6px 14px rgba(0,0,0,.35)); will-change:transform; animation:helixFloat 6s ease-in-out infinite alternate; }
+
+/* Gentle float/bob */
+@keyframes helixFloat{ from{ transform:translateY(0) rotate(-6deg); } to { transform:translateY(-6px) rotate(-2deg); } }
+
+/* Layout niceties on narrow screens */
+@media (max-width:520px){
+  .brandword{ font-size:clamp(2rem,9vw,2.6rem); }
+  .hero-helix{ width:clamp(38px,9vw,64px); }
+}
+
+/* Keep the typed area aligned with the new header stack */
+.hero-title{ /* original sizes kept; just reduce bottom margin slightly */ margin:0 0 .75rem; }
+
+/* ========================= HERO brand wordmark + helix (logo-accurate) ========================= */
+
+/* row: wordmark + helix */
+.hero-brand-row{ display:flex; align-items:baseline; /* keep baselines aligned */ gap:clamp(10px,1.4vw,16px); flex-wrap:nowrap; }
+
+/* reset any previous gradient text we applied on headings */
+.brandword{ font-weight:800; letter-spacing:.2px; line-height:1.05; text-shadow:none; background:none !important; -webkit-text-fill-color:unset !important; color:inherit; white-space:nowrap; font-size:clamp(2.2rem,5.2vw,3.6rem); }
+
+/* logo colors */
+.brandword .dna,
+.brandword .digital{ color:#1f2a35; /* dark grey like logo */ }
+.brandword .digital{ letter-spacing:.3px; }
+.brandword .four{ color:#2dd4bf; } /* teal “4” */
+
+/* tagline directly under the brand row */
+.hero-tagline{ display:block; margin-top:.35rem; font-weight:700; color:#d9f5ee; opacity:.95; font-size:clamp(1.05rem,2.1vw,1.35rem); }
+
+/* HELIX with CSS mask so the white box disappears */
+.hero-helix{
+  display:inline-block;
+  width:clamp(40px,6vw,78px);
+  height:clamp(40px,6vw,78px);
+  /* fill the helix with brand gradient or solid teal */
+  background:linear-gradient(180deg,#2dd4bf 0%, #00aaff 100%);
+  /* show only the helix shape */
+  -webkit-mask: url("https://dna4digital.com/wp-content/uploads/2025/10/helix.png") center/contain no-repeat;
+          mask: url("https://dna4digital.com/wp-content/uploads/2025/10/helix.png") center/contain no-repeat;
+  vertical-align:baseline;
+  transform:none; /* no tilt */
+  filter:drop-shadow(0 6px 14px rgba(0,0,0,.28));
+}
+
+/* gentle bob only if user allows motion */
+@media (prefers-reduced-motion: no-preference){
+  .hero-helix{ animation: helixBob 6s ease-in-out infinite alternate; }
+  @keyframes helixBob{
+    from{ transform: translateY(0); }
+    to  { transform: translateY(-6px); }
+  }
+}
+
+/* small screens: scale down nicely */
+@media (max-width:520px){
+  .brandword{ font-size:clamp(1.9rem,8.6vw,2.5rem); }
+  .hero-helix{ width:clamp(32px,9vw,56px); height:clamp(32px,9vw,56px); }
+}
+
+/* keep your heading stack tidy */
+.hero-title{ margin:0 0 .75rem; }
+
+/* ========================= HERO wordmark (DNA / 4Digital) with helix on the left ========================= */
+
+/* Layout: helix column + text column */
+.hero-wordmark{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  align-items:center;
+  column-gap:clamp(12px,1.8vw,22px);
+  margin-bottom:.25rem; /* small breathing room before tagline */
+}
+
+/* Two stacked lines on the right */
+.hero-wordmark .wm{
+  display:grid;
+  row-gap:.15em;
+}
+
+/* Colors to match the request */
+:root{
+  --wm-light: #e6edf3;    /* light grey for text */
+  --wm-teal:  #2dd4bf;    /* teal for the "4" */
+}
+
+/* Line styles */
+.hero-wordmark .line{
+  font-weight:800;
+  letter-spacing:.2px;
+  line-height:1.0;
+  color:var(--wm-light);
+  font-size:clamp(2.1rem,5.2vw,3.6rem);
+}
+
+/* “4” in teal */
+.hero-wordmark .four{
+  color:var(--wm-teal);
+  margin-right:.08em;
+}
+
+/* Helix shown via mask (no white box) and sized to span ~2 text lines */
+.hero-helix{
+  width:clamp(46px,6.2vw,76px);
+  height:clamp(84px,10vw,120px); /* tall enough to visually match both lines */
+  background: linear-gradient(180deg, var(--wm-teal) 0%, #00aaff 100%);
+  -webkit-mask: url("https://dna4digital.com/wp-content/uploads/2025/10/helix.png") center/contain no-repeat;
+          mask: url("https://dna4digital.com/wp-content/uploads/2025/10/helix.png") center/contain no-repeat;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.28));
+}
+
+/* Tagline below the wordmark */
+.hero-tagline{
+  display:block;
+  margin-top:.45rem;
+  font-weight:700;
+  color:#d9f5ee;
+  opacity:.95;
+  font-size:clamp(1.05rem,2.1vw,1.35rem);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion:no-preference){
+  .hero-helix{ animation: helixBob 7s ease-in-out infinite alternate; }
+  @keyframes helixBob{
+    from{ transform: translateY(0); }
+    to  { transform: translateY(-6px); }
+  }
+}
+
+/* Small screens: scale down gracefully */
+@media (max-width:560px){
+  .hero-wordmark .line{ font-size:clamp(1.8rem,8.6vw,2.4rem); }
+  .hero-helix{
+    width:clamp(36px,9vw,56px);
+    height:clamp(64px,12vw,92px);
+  }
+}
+
+/* Keep your heading stack tidy (works with your existing rules) */
+.hero-title{ margin:0 0 .75rem; }
+
+/* Force the menu visible in the top-right while debugging */
+.dna-stgm{ position:fixed !important; top:16px; right:16px; z-index:999999; }
+.stgm-toggle{ background:#10b981; color:#fff; }
+
+html { margin-top: 0 !important; }
+
+/* Use dynamic viewport height when supported (prevents iOS/Android 100vh jump) */
+@supports (height: 100dvh) {
+  .hero-bg{ min-height:100dvh; } /* fallback 100vh above stays for older browsers */
+}
+
+/* Mobile: let the section grow and stop clipping */
+@media (max-width: 900px){
+  .hero-bg{
+    min-height:auto;            /* grow with content */
+    align-items:flex-start;     /* no forced vertical centering */
+    overflow:visible;           /* stop cutting the bottom */
+    padding:clamp(2rem,6vh,3rem) 0 2rem;
+  }
+  .hero-content{ padding:0 1.25rem; }
+  .hero-grid{ gap:1.5rem; }
+
+  /* Make the hero image truly responsive on small screens */
+  .hero-image{
+    display:block;
+    width:100%;
+    max-width:100%;
+    height:auto;
+  }
+  .hero-image-wrap{ margin:0; }
+}
+
+/* === HERO: mobile cut-off hotfix === */
+@supports (height: 100dvh) {
+  .hero-bg { min-height: 100dvh; } /* dynamic VH where supported */
+}
+
+@media (max-width: 1024px){
+  /* stop clipping, let section grow with content */
+  .hero-bleed.hero-bg,
+  .hero-bleed.alignfull.hero-bg,
+  .wp-block-html .hero-bleed.hero-bg,
+  .hero-bg{
+    min-height: auto !important;
+    height: auto !important;
+    align-items: flex-start !important;
+    overflow: visible !important;
+    padding: clamp(20px, 6vh, 40px) 0 24px !important;
+  }
+
+  .hero-content{ padding: 0 16px !important; }
+  .hero-grid{ gap: 1.25rem !important; }
+
+  /* make the right-side image truly responsive */
+  .hero-image{
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .hero-image-wrap{ overflow: visible !important; margin: 0 !important; }
+
+  /* keep the ROI badge from forcing extra height on small screens */
+  .roi-badge{ position: static !important; margin-top: 12px !important; }
+  .roi-badge.roi--float{ right: auto !important; bottom: auto !important; }
+}
+
+/* Safari fallback when 100dvh isn’t available */
+@supports (-webkit-touch-callout: none) and (not (height: 100dvh)) {
+  .hero-bg{ min-height: -webkit-fill-available; }
+}
+
+/* --- HERO mobile fix: stop clipping, let it grow --- */
+
+/* prefer dynamic viewport height when available */
+@supports (height: 100dvh) {
+  .hero-bg { min-height: 100dvh; }  /* desktop/tablet still fill screen */
+}
+
+/* phones & small tablets */
+@media (max-width: 1024px){
+
+  /* turn off flex-centering + rigid heights and stop clipping */
+  .hero-bleed.hero-bg,
+  .hero-bleed.alignfull.hero-bg,
+  .wp-block-html .hero-bleed.hero-bg,
+  .hero-bg{
+    display: block !important;          /* <-- key change */
+    min-height: auto !important;
+    height: auto !important;
+    align-items: stretch !important;
+    overflow: visible !important;
+    padding: clamp(20px, 6vh, 40px) 0 24px !important;
+  }
+
+  /* spacing + layout inside */
+  .hero-content{ padding: 0 16px !important; }
+  .hero-grid{ gap: 1.25rem !important; }
+
+  /* make image truly responsive */
+  .hero-image{
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .hero-image-wrap{ margin: 0 !important; overflow: visible !important; }
+
+  /* badge should not create extra absolute area on small screens */
+  .roi-badge{ position: static !important; margin-top: 12px !important; }
+  .roi-badge.roi--float{ right: auto !important; bottom: auto !important; }
+}
+
+/* iOS fallback when 100dvh isn't supported */
+@supports (-webkit-touch-callout: none) and (not (height: 100dvh)) {
+  .hero-bg { min-height: -webkit-fill-available; }
+}
+
+/* --- HERO mobile: stop clipping and let it grow --- */
+
+/* Prefer dynamic viewport height when available */
+@supports (height: 100dvh) {
+  section#home.hero-bg { min-height: 100dvh !important; }
+}
+/* iOS fallback when 100dvh isn't supported */
+@supports (-webkit-touch-callout: none) and (not (height: 100dvh)) {
+  section#home.hero-bg { min-height: -webkit-fill-available !important; }
+}
+
+/* Phones / small tablets */
+@media (max-width: 1024px){
+  /* Kill flex centering + rigid height + clipping */
+  section#home.hero-bg.hero-bleed.alignfull,
+  .wp-block-html section#home.hero-bg.hero-bleed.alignfull,
+  body section#home.hero-bg{
+    display: block !important;
+    min-height: auto !important;
+    height: auto !important;
+    align-items: stretch !important;
+    overflow: visible !important;
+    padding: clamp(20px, 6vh, 40px) 0 24px !important;
+  }
+
+  /* Inner spacing + responsive image */
+  section#home .hero-content{ padding: 0 16px !important; }
+  section#home .hero-grid{ gap: 1.25rem !important; }
+
+  section#home .hero-image{
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  section#home .hero-image-wrap{ margin: 0 !important; overflow: visible !important; }
+
+  /* Badge shouldn’t create extra absolute area on mobile */
+  section#home .roi-badge{ position: static !important; margin-top: 12px !important; }
+  section#home .roi-badge.roi--float{ right: auto !important; bottom: auto !important; }
+}
+
+/* =========================
+   FINAL, MINIMAL MOBILE CLIP FIX (menu-safe)
+   — keeps your working menu; only affects overflow on wrappers
+========================= */
+@media (max-width:1024px){
+  /* Some WP wrappers clip alignfull sections on mobile; open them up */
+  .wp-site-blocks,
+  .wp-site-blocks > .wp-block-group,
+  .wp-site-blocks > .wp-block-cover,
+  .wp-site-blocks > .is-layout-constrained,
+  .wp-block-group.alignfull,
+  .wp-block-cover.alignfull,
+  .wp-block-template-part,
+  .entry-content,
+  .wp-block-post-content{
+    overflow: visible !important;
+  }
+}
+
+/* Allow typed block to grow on very small phones to avoid internal clipping */
+@media (max-width:560px){
+  #typed-wrap{ height:auto !important; }
+}
+
+/* =========================================================
+   PATCH — keep menu working, fix mobile clipping,
+   and reserve EXACTLY two lines for the typewriter
+   (append this at the very end of your CSS)
+========================================================= */
+
+/* 1) Typewriter: hard reserve two lines, with modern 'lh' unit + fallback */
+#home .hero-title { line-height: 1.1; } /* reaffirm for consistent math */
+
+#home #typed-wrap{
+  display: block;              /* inline-block can collapse height on mobile */
+  width: 100%;
+  white-space: normal;
+  overflow: hidden;
+
+  /* Fallback: 2 × font-size × line-height */
+  height: calc(2 * 1em * 1.1);
+  min-height: calc(2 * 1em * 1.1);
+}
+
+/* If 'lh' unit is supported, it’s perfectly accurate */
+@supports (height: 2lh){
+  #home #typed-wrap{
+    height: 2lh !important;
+    min-height: 2lh !important;
+  }
+}
+
+/* Keep cursor at the end of the typed text */
+#home #typed-text{
+  display: inline !important;
+  white-space: normal !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* 2) Menu stays above hero (don’t change positioning, only raise layer) */
+.site-header,
+.header,
+.site-navigation,
+.mobile-nav,
+.nav-primary{
+  z-index: 9999 !important; /* header & menus above hero/canvas */
+}
+
+/* Make sure hero layers don’t cover the menu */
+#home #particles-canvas{ z-index: 1; pointer-events: none; }
+#home .hero-content{ z-index: 2; position: relative; }
+#home .roi-badge{ z-index: 3; position: absolute; }
+
+/* 3) Mobile unclipping — only the hero & its immediate wrappers */
+@media (max-width: 1024px){
+  /* Let the hero grow naturally; no clipping */
+  #home.hero-bg{
+    display: block !important;
+    min-height: auto !important;
+    height: auto !important;
+    align-items: stretch !important;
+    overflow: visible !important;
+    /* keep your existing vertical rhythm */
+    padding: clamp(20px, 6vh, 40px) 0 24px !important;
+  }
+
+  /* Anything inside the hero should not clip */
+  #home .hero-content,
+  #home .hero-grid,
+  #home .hero-image-wrap{
+    overflow: visible !important;
+  }
+
+  /* ROI badge shouldn’t create extra absolute area on small screens */
+  #home .roi-badge{
+    position: static !important;
+    margin-top: 12px !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  /* WP wrappers that sometimes clip alignfull on mobile */
+  .wp-site-blocks,
+  .wp-site-blocks > .wp-block-group,
+  .wp-site-blocks > .wp-block-cover,
+  .wp-site-blocks > .is-layout-constrained,
+  .wp-block-group.alignfull,
+  .wp-block-cover.alignfull,
+  .wp-block-template-part,
+  .entry-content,
+  .wp-block-post-content{
+    overflow: visible !important;
+  }
+}
+
+/* 4) IMPORTANT: ensure nothing elsewhere turns the typed area back to auto */
+@media (max-width:560px){
+  /* If you previously had #typed-wrap{height:auto}, this overrides it */
+  #home #typed-wrap{
+    height: calc(2 * 1em * 1.1) !important;
+    min-height: calc(2 * 1em * 1.1) !important;
+  }
+  @supports (height: 2lh){
+    #home #typed-wrap{
+      height: 2lh !important;
+      min-height: 2lh !important;
+    }
+  }
+}
+
+/* =========================================================
+   FINAL PATCH — keep menu intact, fix mobile clipping
+   (append this after your working CSS)
+========================================================= */
+
+/* Use small viewport height to avoid iOS chrome-jump */
+@media (max-width:1024px){
+  /* 1) Stop the full-bleed negative margins on phones.
+        This is the main source of clipping inside WP wrappers. */
+  .hero-bleed,
+  .hero-bleed.alignfull,
+  .wp-block-html .hero-bleed{
+    width: auto !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* 2) Let the hero grow naturally and never clip */
+  #home.hero-bg{
+    /* keep your layout, but no rigid height */
+    display: block !important;
+    min-height: 100svh !important;   /* safer than 100vh/100dvh on iOS */
+    height: auto !important;
+    align-items: stretch !important;
+    overflow: visible !important;
+    padding: clamp(20px, 6vh, 40px) 0 max(24px, env(safe-area-inset-bottom)) !important;
+    contain: initial !important;      /* neutralize any theme containment that can crop */
+  }
+
+  /* 3) Make sure no immediate wrappers clip the hero */
+  #home,
+  #home > *{
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    contain: initial !important;
+  }
+
+  /* 4) ROI badge should flow after the image on mobile */
+  #home .roi-badge{
+    position: static !important;
+    margin-top: 12px !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+}
+
+/* Keep the 2-line reservation for the typewriter (from previous patch) */
+#home .hero-title{ line-height:1.1; }
+#home #typed-wrap{
+  display:block; width:100%; white-space:normal; overflow:hidden;
+  height:calc(2 * 1em * 1.1); min-height:calc(2 * 1em * 1.1);
+}
+@supports (height: 2lh){
+  #home #typed-wrap{ height:2lh !important; min-height:2lh !important; }
+}
+#home #typed-text{ display:inline !important; white-space:normal !important; word-break:break-word; overflow-wrap:anywhere; }
+
+/* =========================================================
+   FINAL PATCH (append after your current CSS)
+   – menu-safe hero unclipping + 2-line typed area + centering
+========================================================= */
+
+/* 0) Keep header/menus above the hero without changing their layout */
+.site-header, .header, .site-navigation, .mobile-nav, .nav-primary {
+  z-index: 9999 !important;
+}
+
+/* 1) Typewriter: reserve EXACTLY two lines (with lh support + fallback) */
+#home .hero-title { line-height: 1.1; } /* match your title line-height */
+#home #typed-wrap{
+  display: block;            /* avoid inline-block height quirks on iOS */
+  width: 100%;
+  white-space: normal;
+  overflow: hidden;
+  height: calc(2 * 1em * 1.1);
+  min-height: calc(2 * 1em * 1.1);
+}
+@supports (height: 2lh){
+  #home #typed-wrap{
+    height: 2lh !important;
+    min-height: 2lh !important;
+  }
+}
+#home #typed-text{
+  display:inline !important;
+  white-space:normal !important;
+  word-break:break-word;
+  overflow-wrap:anywhere;
+}
+
+/* 2) Mobile unclipping:
+      - neutralize alignfull’s negative margins
+      - let the hero grow naturally
+      - open any WP wrappers that might be clipping
+      - add top padding so content doesn’t sit under the menu
+*/
+@media (max-width:1024px){
+  /* neutralize full-bleed on phones (prevents parent clipping) */
+  .hero-bleed,
+  .hero-bleed.alignfull,
+  .wp-block-html .hero-bleed{
+    width:auto !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+
+  /* hero itself: no rigid heights, no clipping; account for header */
+  #home.hero-bg{
+    display:block !important;
+    min-height:auto !important;
+    height:auto !important;
+    align-items:stretch !important;
+    overflow:visible !important;
+    padding: calc(var(--header-offset, 68px) + 16px) 0 24px !important; /* 68px default header height */
+    contain: initial !important; /* undo theme containment that can crop */
+  }
+
+  /* hero internals must never clip */
+  #home .hero-content,
+  #home .hero-grid,
+  #home .hero-image-wrap{
+    overflow:visible !important;
+    overflow-clip-margin: initial !important;
+  }
+
+  /* ROI badge flows after image on mobile */
+  #home .roi-badge{
+    position:static !important;
+    margin-top:12px !important;
+    right:auto !important; bottom:auto !important;
+  }
+
+  /* open common WP wrappers that sometimes hide overflow on mobile */
+  .wp-site-blocks,
+  .wp-site-blocks > * ,
+  .wp-block-group,
+  .wp-block-group.alignfull,
+  .wp-block-group__inner-container,
+  .wp-block-cover,
+  .wp-block-cover.alignfull,
+  .is-layout-constrained,
+  .is-layout-flow,
+  .entry-content,
+  .wp-block-post-content,
+  .wp-block-template-part{
+    overflow:visible !important;
+    overflow-clip-margin: initial !important;
+    contain: initial !important;
+  }
+}
+
+/* 3) Center stats & CTAs on narrow screens */
+@media (max-width:768px){
+  .stats-grid{ justify-items:center; }
+  .stat{ text-align:center; }
+  .hero-cta{ justify-content:center !important; }
+}
+
+/* 4) Ensure hero layers never sit above the menu */
+#home #particles-canvas{ z-index:1; pointer-events:none; }
+#home .hero-content{ position:relative; z-index:2; }
+#home .roi-badge{ z-index:3; }
+
+/* =========================================================
+   HERO — anti-clip, mobile layout & typewriter reservation
+   (append at the very end)
+========================================================= */
+
+/* A. Never let the hero clip its children (wins over earlier rules) */
+#home.hero-bg,
+.hero-bg{
+  overflow: visible !important;
+  position: relative;
+  z-index: 0;            /* keep below header/menu */
+}
+
+/* B. Make the hero a flow root on phones (stops margin/bleed weirdness)
+      and let it grow naturally */
+@media (max-width:1024px){
+  #home.hero-bg{
+    display: flow-root !important;    /* new BFC; fixes “cut” bottoms */
+    min-height: auto !important;
+    height: auto !important;
+    align-items: stretch !important;
+    padding: clamp(20px,6vh,40px) 0 24px !important;
+  }
+
+  /* Neutralize the full-bleed negative margins on mobile only */
+  .hero-bleed,
+  .hero-bleed.alignfull,
+  .wp-block-html .hero-bleed{
+    width: auto !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Anything inside the hero must not clip */
+  #home .hero-content,
+  #home .hero-grid,
+  #home .hero-image-wrap{
+    overflow: visible !important;
+    overflow-clip-margin: initial !important;
+    contain: initial !important;
+  }
+
+  /* ROI badge drops into flow so it can’t extend the hero’s paint area */
+  #home .roi-badge{
+    position: static !important;
+    margin-top: 12px !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  /* Open common WP wrappers that sometimes hide overflow */
+  .wp-site-blocks,
+  .wp-site-blocks > * ,
+  .wp-block-group,
+  .wp-block-group.alignfull,
+  .wp-block-group__inner-container,
+  .wp-block-cover,
+  .wp-block-cover.alignfull,
+  .is-layout-constrained,
+  .is-layout-flow,
+  .entry-content,
+  .wp-block-post-content,
+  .wp-block-template-part{
+    overflow: visible !important;
+    overflow-clip-margin: initial !important;
+    contain: initial !important;
+  }
+}
+
+/* C. CTAs & stats centering on narrow screens (your second button “missing”) */
+@media (max-width:768px){
+  /* drop max-content width so buttons can wrap and stay centered */
+  .hero-text .hero-cta{ width: 100% !important; justify-content: center !important; }
+  .stats-grid{ grid-template-columns: 1fr !important; justify-items: center; }
+  .stat{ text-align: center; }
+}
+
+/* D. Typewriter: hard-reserve exactly two lines (with lh support) */
+#home .hero-title{ line-height: 1.1; }     /* ensure consistent math */
+#home #typed-wrap{
+  display: block;                           /* avoid inline-block height quirks */
+  width: 100%;
+  white-space: normal;
+  overflow: hidden;
+  height: calc(2 * 1em * 1.1);
+  min-height: calc(2 * 1em * 1.1);
+}
+@supports (height: 2lh){
+  #home #typed-wrap{ height: 2lh !important; min-height: 2lh !important; }
+}
+#home #typed-text{
+  display: inline !important;
+  white-space: normal !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* E. Ensure hero layers never cover the menu */
+#home #particles-canvas{ z-index: 1; pointer-events: none; }
+#home .hero-content{ position: relative; z-index: 2; }
+#home .roi-badge{ z-index: 3; }
+.site-header, .header, .site-navigation, .mobile-nav, .nav-primary{ z-index: 9999 !important; }
+
+/* Bottom CTA */
+.cta-section{
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1a2332 100%);
+  overflow: visible; /* stays clip-safe on mobile */
+}
+.cta-title{
+  text-align:center;
+  color:#d9f5ee;
+  font-weight:800;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  margin:0 0 .5rem;
+}
+.cta-text{
+  text-align:center;
+  color: rgba(255,255,255,.85);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 46rem;
+  margin: 0 auto 1.25rem;
+}
+.cta-actions{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* CTA — compact, on-brand, no conflicts */
+.cta-section{ padding:clamp(2.5rem,5vw,4rem) 0; }
+.cta-card{
+  position:relative; overflow:hidden;
+  background: linear-gradient(135deg,#111827 0%, #1a2332 55%, #2c3e50 100%);
+  border:1px solid rgba(45,212,191,.18);
+  border-radius:18px;
+  padding:clamp(1.5rem,4vw,2.25rem);
+  box-shadow:0 18px 40px rgba(2,12,27,.20);
+}
+
+/* soft teal spotlight */
+.cta-card::before{
+  content:""; position:absolute; inset:auto -20% -40% -20%;
+  height:220%; background:radial-gradient(60% 50% at 50% 100%, rgba(45,212,191,.22), rgba(0,0,0,0) 60%);
+  pointer-events:none;
+}
+
+/* decorative helix (masked) */
+.cta-helix{
+  position:absolute; right:-24px; top:-24px;
+  width:120px; height:220px; opacity:.12; filter:drop-shadow(0 8px 18px rgba(0,0,0,.35));
+  background:linear-gradient(180deg,#2dd4bf 0%, #00aaff 100%);
+  -webkit-mask: url("https://dna4digital.com/wp-content/uploads/2025/10/helix.png") center/contain no-repeat;
+          mask: url("https://dna4digital.com/wp-content/uploads/2025/10/helix.png") center/contain no-repeat;
+  pointer-events:none;
+}
+@media (max-width:560px){
+  .cta-helix{ width:90px; height:170px; right:-18px; top:-18px; }
+}
+
+.cta-title{
+  margin:0 0 .35rem;
+  font-size:clamp(1.6rem,3.2vw,2.2rem);
+  font-weight:800; color:#e6edf3; letter-spacing:.2px;
+}
+.cta-text{
+  margin:0; max-width:60ch;
+  color:rgba(255,255,255,.88); line-height:1.7;
+}
+
+/* tiny checklist */
+.cta-points{
+  list-style:none; margin:clamp(1rem,2vw,1.25rem) 0 0; padding:0;
+  display:grid; gap:.55rem;
+}
+.cta-points li{
+  display:flex; align-items:flex-start; gap:.55rem;
+  color:#cfe8e2;
+}
+.cta-points .check{ width:20px; height:20px; color:#2dd4bf; flex:0 0 20px; margin-top:2px; }
+
+/* actions */
+.cta-actions{
+  display:flex; gap:.75rem; flex-wrap:wrap;
+  align-items:center; justify-content:center;
+  margin:clamp(1.1rem,2.6vw,1.5rem) 0 .75rem;
+}
+.cta-primary{ position:relative; }
+
+/* subtle glow behind the primary button */
+.cta-primary::after{
+  content:""; position:absolute; inset:-8px -14px;
+  background: radial-gradient(40% 60% at 50% 50%, rgba(45,212,191,.28), rgba(45,212,191,0) 70%);
+  filter: blur(14px); z-index:-1; border-radius:20px;
+}
+
+/* small info pills */
+.cta-pills{
+  margin:.25rem 0 0; text-align:center;
+  display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap;
+  color:#bee8e0; font-size:.9rem;
+}
+.cta-pills span{
+  background:rgba(45,212,191,.12); color:#c9fff3;
+  border:1px solid rgba(45,212,191,.25);
+  padding:.35rem .6rem; border-radius:999px;
+}
+
+/* tighter on phones */
+@media (max-width:700px){
+  .cta-text{ max-width:unset; }
+  .cta-actions{ gap:.6rem; }
+}
+
+/* Center CTA header block and paragraph */
+.cta-card .cta-header{
+  max-width:64ch;
+  margin-inline:auto;
+  text-align:center;
+}
+.cta-card .cta-text{
+  max-width:56ch;          /* tweak as you like */
+  margin:.35rem auto 0;    /* centers the block */
+  text-align:center;
+}
+
+/* ===============================
+   NAV / MENU — visibility + size
+   (solid/blurred bar so it reads on white)
+================================= */
+:root{
+  --nav-fg: #e6edf3;
+  --nav-accent: #2dd4bf;
+  --nav-bg: rgba(17,24,39,.65);           /* dark translucent */
+  --nav-ring: rgba(255,255,255,.10);
+}
+
+/* header shell */
+.site-header,
+.header{
+  background: var(--nav-bg);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--nav-ring);
+  color: var(--nav-fg);
+}
+
+/* desktop links */
+.site-navigation a,
+.menu a,
+.header a{
+  color: var(--nav-fg) !important;
+  font-weight: 600;
+  font-size: clamp(.95rem, .9rem + .2vw, 1.08rem);
+  line-height: 1;
+  padding: .55rem .7rem;
+  border-radius: 10px;
+  transition: color .2s, background .2s, box-shadow .2s, transform .15s;
+  text-decoration: none !important;
+}
+.site-navigation a:hover,
+.menu a:hover{
+  background: rgba(45,212,191,.14);
+  color: #cffff4 !important;
+  box-shadow: 0 6px 18px rgba(2,12,27,.15) inset;
+}
+
+/* “Menu” toggle button (covers common class names) */
+.stgm-toggle,
+.menu-toggle,
+.mobile-menu-toggle,
+button.menu-toggle{
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-weight: 700;
+  font-size: clamp(.98rem, .9rem + .25vw, 1.12rem);
+  line-height: 1;
+  padding: .55rem .95rem;
+  color: var(--nav-fg);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 999px;
+  box-shadow: 0 8px 22px rgba(2,12,27,.28);
+  text-decoration: none !important;
+  transition: transform .15s, background .2s, color .2s, border-color .2s, box-shadow .2s;
+}
+.stgm-toggle:hover,
+.menu-toggle:hover,
+.mobile-menu-toggle:hover,
+button.menu-toggle:hover{
+  transform: translateY(-1px);
+  background: var(--nav-accent);
+  border-color: var(--nav-accent);
+  color: #0b1720;
+  box-shadow: 0 12px 28px rgba(45,212,191,.35);
+}
+
+/* make the toggle tap target comfy on mobile */
+@media (max-width: 640px){
+  .stgm-toggle,
+  .menu-toggle,
+  .mobile-menu-toggle,
+  button.menu-toggle{
+    padding: .65rem 1rem;
+    font-size: 1.06rem;
+  }
+}
+
+/* optional: slightly bolder active item */
+.site-navigation .current-menu-item > a,
+.menu .current-menu-item > a{
+  background: rgba(255,255,255,.10);
+  color: #ffffff !important;
+}
+
+/* ===============================
+   MENU TOGGLE — high contrast on white
+   (bigger, darker, always readable)
+================================= */
+:root{
+  --menu-fg: #e9f5f1;
+  --menu-bg: #0b1726;               /* near-black navy */
+  --menu-ring: rgba(12,20,33,.55);
+  --menu-accent: #2dd4bf;
+}
+
+/* covers common toggle class names */
+:where(.stgm-toggle, .menu-toggle, .mobile-menu-toggle, button.menu-toggle){
+  display:inline-flex; align-items:center; gap:.45rem;
+  font-weight:800;
+  font-size:clamp(1rem, .95rem + .25vw, 1.12rem);
+  line-height:1;
+  padding:.7rem 1rem;
+  border-radius:14px;
+
+  color:var(--menu-fg) !important;
+  background:var(--menu-bg) !important;
+  border:1px solid rgba(255,255,255,.18) !important;
+  box-shadow:
+    0 10px 22px rgba(2,12,27,.28),
+    0 0 0 1px var(--menu-ring) inset !important;
+
+  text-decoration:none !important;
+  text-shadow:none !important;
+  opacity:1 !important;      /* kill any theme opacity */
+}
+
+/* hover/active */
+:where(.stgm-toggle, .menu-toggle, .mobile-menu-toggle, button.menu-toggle):hover{
+  transform:translateY(-1px);
+  background:#112433 !important;
+  border-color:var(--menu-accent) !important;
+  box-shadow:0 14px 28px rgba(45,212,191,.35);
+}
+
+/* make sure the chevron uses the same color */
+:where(.stgm-toggle, .menu-toggle) svg,
+:where(.stgm-toggle, .menu-toggle) path{
+  color:currentColor !important;
+  fill:currentColor !important;
+  stroke:currentColor !important;
+  opacity:.95 !important;
+}
+
+/* touch-friendly on small screens */
+@media (max-width:640px){
+  :where(.stgm-toggle, .menu-toggle, .mobile-menu-toggle, button.menu-toggle){
+    padding:.75rem 1.05rem;
+    font-size:1.06rem;
+  }
+}
+.dna-stgm .stgm-toggle{ background:#0b1726 !important; color:#e9f5f1 !important; }
+
+/* ===========================================
+   DNA4Digital — WPForms (GLOBAL, sanitizer-safe)
+   Put in: Appearance → Customize → Additional CSS
+=========================================== */
+
+/* --- Card wrapper --- */
+.entry-content .wpforms-container form.wpforms-form{
+  background:#fff;
+  border:1px solid rgba(17,24,39,.08);
+  border-radius:18px;
+  padding:clamp(16px,2.6vw,28px);
+  box-shadow:0 18px 40px rgba(2,12,27,.08);
+}
+
+/* --- Title / description --- */
+.entry-content .wpforms-title{
+  font-weight:800; color:#111827; margin:0 0 .35rem;
+  font-size:clamp(1.35rem,2.6vw,1.75rem);
+}
+.entry-content .wpforms-description{ color:#4b5563; margin:0 0 1rem; line-height:1.7; }
+
+/* --- Labels + asterisk --- */
+.entry-content .wpforms-form .wpforms-field-label{ font-weight:700; color:#111827; margin-bottom:.35rem; }
+.entry-content .wpforms-form .wpforms-required-label{ color:#ef4444; margin-left:.15rem; }
+
+/* --- Inputs & selects --- */
+.entry-content .wpforms-form input[type="text"],
+.entry-content .wpforms-form input[type="email"],
+.entry-content .wpforms-form input[type="tel"],
+.entry-content .wpforms-form input[type="url"],
+.entry-content .wpforms-form input[type="number"],
+.entry-content .wpforms-form select,
+.entry-content .wpforms-form textarea{
+  width:100%;
+  background:#f8fafc;
+  border:1px solid #cbd5e1;
+  color:#0f172a;
+  border-radius:14px;
+  padding:.85rem 1rem;
+  line-height:1.5;
+  transition:border-color .2s, box-shadow .2s, background .2s;
+  outline:none;
+}
+.entry-content .wpforms-form ::placeholder{ color:#9aa6b2; }
+.entry-content .wpforms-form input:focus,
+.entry-content .wpforms-form select:focus,
+.entry-content .wpforms-form textarea:focus{
+  background:#fff;
+  border-color:#2dd4bf;
+  box-shadow:0 0 0 3px rgba(45,212,191,.25);
+}
+.entry-content .wpforms-form textarea{ min-height:150px; resize:vertical; }
+
+/* --- First/Last side-by-side on ≥640px (no conflict with WPForms) --- */
+@media (min-width:640px){
+  .entry-content .wpforms-field-name .wpforms-field-row{
+    display:flex !important; gap:.8rem;
+  }
+  .entry-content .wpforms-field-name .wpforms-field-row .wpforms-field-row-block{
+    flex:1 1 0; min-width:0;
+  }
+}
+
+/* --- Checkboxes & radios: visible custom marks (no data URIs) --- */
+.entry-content .wpforms-container input[type="checkbox"],
+.entry-content .wpforms-container input[type="radio"]{
+  -webkit-appearance:none; -moz-appearance:none; appearance:none;
+  width:20px; height:20px; background:#fff;
+  border:1px solid #cbd5e1; border-radius:3px;
+  display:inline-block; vertical-align:middle; position:relative; cursor:pointer;
+}
+.entry-content .wpforms-container input[type="radio"]{ border-radius:50%; }
+
+/* checked background tint */
+.entry-content .wpforms-container input[type="checkbox"]:checked,
+.entry-content .wpforms-container input[type="radio"]:checked{
+  background-color:#2dd4bf; border-color:#0ea5a3;
+}
+
+/* draw the check mark (border trick, sanitizer-safe) */
+.entry-content .wpforms-container input[type="checkbox"]::after{
+  content:""; position:absolute; inset:0;
+  width:8px; height:14px; border-right:3px solid #fff; border-bottom:3px solid #fff;
+  transform:rotate(45deg) translate(4px, -2px);
+  opacity:0;
+}
+.entry-content .wpforms-container input[type="checkbox"]:checked::after{ opacity:1; }
+
+/* draw the radio dot */
+.entry-content .wpforms-container input[type="radio"]::after{
+  content:""; position:absolute; top:50%; left:50%;
+  width:10px; height:10px; border-radius:50%; background:#fff;
+  transform:translate(-50%,-50%) scale(0); transition:transform .12s ease-in-out;
+}
+.entry-content .wpforms-container input[type="radio"]:checked::after{ transform:translate(-50%,-50%) scale(1); }
+
+/* Align long consent text */
+.entry-content .wpforms-form .wpforms-field.wpforms-field-checkbox ul,
+.entry-content .wpforms-form .wpforms-field.wpforms-field-gdpr ul{ list-style:none; margin:.35rem 0 0; padding:0; }
+.entry-content .wpforms-form .wpforms-field.wpforms-field-checkbox li,
+.entry-content .wpforms-form .wpforms-field.wpforms-field-gdpr li{ display:flex; align-items:flex-start; gap:.6rem; margin:.35rem 0; }
+.entry-content .wpforms-form .wpforms-field.wpforms-field-checkbox input,
+.entry-content .wpforms-form .wpforms-field.wpforms-field-gdpr input{ flex:0 0 20px; margin-top:.2rem; }
+.entry-content .wpforms-form .wpforms-field.wpforms-field-checkbox label,
+.entry-content .wpforms-form .wpforms-field.wpforms-field-gdpr label{ color:#0f172a; line-height:1.6; font-weight:500; }
+
+/* --- Validation --- */
+.entry-content .wpforms-form .wpforms-error,
+.entry-content .wpforms-form label.wpforms-error{ color:#b91c1c; font-size:.925rem; margin-top:.35rem; }
+.entry-content .wpforms-form .wpforms-has-error input,
+.entry-content .wpforms-form .wpforms-has-error select,
+.entry-content .wpforms-form .wpforms-has-error textarea{
+  border-color:#ef4444 !important; box-shadow:0 0 0 3px rgba(239,68,68,.15) !important;
+}
+
+/* --- Submit button (match .btn-primary) --- */
+.entry-content .wpforms-submit-container{ margin-top:1rem; }
+.entry-content .wpforms-submit{
+  display:inline-flex; align-items:center; justify-content:center;
+  background:#1a2332; color:#fff; border:1px solid #1a2332;
+  border-radius:14px; padding:.9rem 1.6rem; font-weight:600;
+  transition:transform .15s, box-shadow .2s, background .2s, border-color .2s;
+  text-decoration:none;
+}
+.entry-content .wpforms-submit:hover{
+  transform:translateY(-2px);
+  background:#2dd4bf; border-color:#2dd4bf; color:#0b1720;
+  box-shadow:0 8px 25px rgba(45,212,191,.3);
+}
+
+/* --- Spacing --- */
+.entry-content .wpforms-form .wpforms-field{ margin-bottom:1rem; }
+.entry-content .wpforms-form .g-recaptcha,
+.entry-content .wpforms-form .wpforms-recaptcha-container{ margin-top:.5rem; }
+
+/* --- Optional DARK variant inside .cta-section --- */
+.cta-section .wpforms-container form.wpforms-form{
+  background:linear-gradient(135deg,#111827 0%, #1a2332 60%, #2c3e50 100%);
+  border:1px solid rgba(45,212,191,.18);
+}
+.cta-section .wpforms-form .wpforms-field-label{ color:#e6edf3; }
+.cta-section .wpforms-form input,
+.cta-section .wpforms-form select,
+.cta-section .wpforms-form textarea{
+  background:rgba(255,255,255,.06); color:#e6edf3; border-color:rgba(255,255,255,.18);
+}
+.cta-section .wpforms-form ::placeholder{ color:#b8c6d1; }
+
+/* =========================================================
+   DNA4Digital — WPForms (GLOBAL, consolidated)
+   Paste in: Appearance → Customize → Additional CSS
+========================================================= */
+
+/* ---- Card wrapper + spacing ---- */
+.entry-content .wpforms-container form.wpforms-form{
+  background:#fff;
+  border:1px solid rgba(17,24,39,.08);
+  border-radius:18px;
+  padding:clamp(16px,2.6vw,28px);
+  box-shadow:0 18px 40px rgba(2,12,27,.08);
+}
+.entry-content .wpforms-form .wpforms-field{ margin-bottom:1rem; }
+
+/* ---- Headings ---- */
+.entry-content .wpforms-title{
+  font-weight:800; color:#111827; margin:0 0 .35rem;
+  font-size:clamp(1.35rem,2.6vw,1.75rem);
+}
+.entry-content .wpforms-description{ color:#4b5563; margin:0 0 1rem; line-height:1.7; }
+
+/* ---- Inputs / selects / textarea ---- */
+.entry-content .wpforms-form input[type="text"],
+.entry-content .wpforms-form input[type="email"],
+.entry-content .wpforms-form input[type="tel"],
+.entry-content .wpforms-form input[type="url"],
+.entry-content .wpforms-form input[type="number"],
+.entry-content .wpforms-form select,
+.entry-content .wpforms-form textarea{
+  width:100% !important;
+  max-width:100% !important;
+  box-sizing:border-box;
+  background:#f8fafc;
+  border:1px solid #cbd5e1;
+  color:#0f172a;
+  border-radius:14px;
+  padding:.85rem 1rem;
+  line-height:1.5;
+  transition:border-color .2s, box-shadow .2s, background .2s;
+  outline:none;
+}
+.entry-content .wpforms-form ::placeholder{ color:#9aa6b2; }
+.entry-content .wpforms-form input:focus,
+.entry-content .wpforms-form select:focus,
+.entry-content .wpforms-form textarea:focus{
+  background:#fff;
+  border-color:#2dd4bf;
+  box-shadow:0 0 0 3px rgba(45,212,191,.25);
+}
+.entry-content .wpforms-form textarea{ min-height:150px; resize:vertical; }
+
+/* =========================================================
+   CHECKBOXES / RADIOS — draw UI on labels (reliable ticks)
+========================================================= */
+
+/* Hide native control but keep accessible */
+.entry-content .wpforms-form .wpforms-field input[type="checkbox"],
+.entry-content .wpforms-form .wpforms-field input[type="radio"]{
+  position:absolute !important;
+  opacity:0 !important;
+  width:1px; height:1px;
+  overflow:hidden; pointer-events:none;
+}
+
+/* Choice labels directly after the input */
+.entry-content .wpforms-form .wpforms-field input[type="checkbox"] + label,
+.entry-content .wpforms-form .wpforms-field input[type="radio"] + label{
+  position:relative;
+  display:inline-block;
+  cursor:pointer;
+  padding-left:34px;                 /* space for faux box/circle */
+  line-height:1.6;
+  color:#0f172a; font-weight:500;
+}
+
+/* Checkbox: box + tick */
+.entry-content .wpforms-form .wpforms-field input[type="checkbox"] + label::before{
+  content:"";
+  position:absolute; left:0; top:.15em;
+  width:20px; height:20px; border-radius:4px;
+  background:#fff; border:1px solid #cbd5e1;
+  transition:border-color .2s, background .2s, box-shadow .2s;
+}
+.entry-content .wpforms-form .wpforms-field input[type="checkbox"] + label::after{
+  content:"";
+  position:absolute; left:5px; top:2px;
+  width:8px; height:14px;
+  border-right:3px solid #fff; border-bottom:3px solid #fff;
+  transform:rotate(45deg);
+  opacity:0; transition:opacity .12s ease-in-out;
+}
+.entry-content .wpforms-form .wpforms-field input[type="checkbox"]:checked + label::before{
+  background:#2dd4bf; border-color:#0ea5a3;
+}
+.entry-content .wpforms-form .wpforms-field input[type="checkbox"]:checked + label::after{
+  opacity:1;
+}
+
+/* Radio: circle + dot */
+.entry-content .wpforms-form .wpforms-field input[type="radio"] + label::before{
+  content:"";
+  position:absolute; left:0; top:.15em;
+  width:20px; height:20px; border-radius:50%;
+  background:#fff; border:1px solid #cbd5e1;
+  transition:border-color .2s, box-shadow .2s;
+}
+.entry-content .wpforms-form .wpforms-field input[type="radio"] + label::after{
+  content:"";
+  position:absolute; left:5px; top:.55em;
+  width:10px; height:10px; border-radius:50%; background:#2dd4bf;
+  transform:scale(0); transition:transform .12s ease-in-out;
+}
+.entry-content .wpforms-form .wpforms-field input[type="radio"]:checked + label::before{
+  border-color:#0ea5a3; background:#d1fae5;
+}
+.entry-content .wpforms-form .wpforms-field input[type="radio"]:checked + label::after{
+  transform:scale(1);
+}
+
+/* Keyboard focus ring */
+.entry-content .wpforms-form .wpforms-field input[type="checkbox"]:focus + label::before,
+.entry-content .wpforms-form .wpforms-field input[type="radio"]:focus + label::before{
+  box-shadow:0 0 0 3px rgba(45,212,191,.25);
+  border-color:#2dd4bf;
+}
+
+/* Tidy long consent lists */
+.entry-content .wpforms-form .wpforms-field.wpforms-field-checkbox ul,
+.entry-content .wpforms-form .wpforms-field.wpforms-field-gdpr ul{
+  list-style:none; margin:.35rem 0 0; padding:0;
+}
+.entry-content .wpforms-form .wpforms-field.wpforms-field-checkbox li,
+.entry-content .wpforms-form .wpforms-field.wpforms-field-gdpr li{
+  margin:.45rem 0;
+}
+
+/* =========================================================
+   NAME (FIRST / LAST) — single-row, bullet-proof
+========================================================= */
+
+/* Mobile: stack (WPForms default) */
+.entry-content .wpforms-field-name .wpforms-field-row{
+  display:block;           /* baseline */
+}
+
+/* ≥640px: force clean 2-column layout and kill floats/clearfix */
+@media (min-width:640px){
+  .entry-content .wpforms-field-name .wpforms-field-row{
+    display:grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap:.8rem !important;
+    align-items:start !important;
+    justify-items:stretch !important;
+  }
+  /* nuke any float/width helpers WP themes add */
+  .entry-content .wpforms-field-name .wpforms-field-row > .wpforms-field-row-block,
+  .entry-content .wpforms-field-name .wpforms-first,
+  .entry-content .wpforms-field-name .wpforms-last,
+  .entry-content .wpforms-field-name .wpforms-one-half,
+  .entry-content .wpforms-field-name .wpforms-three-sixths{
+    float:none !important;
+    clear:none !important;
+    width:auto !important;
+    margin:0 !important;
+    padding:0 !important;
+    display:block !important;
+    min-width:0 !important;
+  }
+  /* kill clearfix that can force wrapping */
+  .entry-content .wpforms-field-name .wpforms-field-row::before,
+  .entry-content .wpforms-field-name .wpforms-field-row::after{
+    content:none !important;
+    display:none !important;
+  }
+  /* inputs fill their cell */
+  .entry-content .wpforms-field-name .wpforms-field-row input[type="text"]{
+    width:100% !important;
+    max-width:100% !important;
+    box-sizing:border-box;
+  }
+}
+/* sublabels (First/Last) */
+.entry-content .wpforms-field-name .wpforms-field-sublabel{
+  display:block; margin-top:.25rem; color:#0f766e; font-weight:600;
+}
+
+/* =========================================================
+   Validation + Submit
+========================================================= */
+.entry-content .wpforms-form .wpforms-error,
+.entry-content .wpforms-form label.wpforms-error{
+  color:#b91c1c; font-size:.925rem; margin-top:.35rem;
+}
+.entry-content .wpforms-form .wpforms-has-error input,
+.entry-content .wpforms-form .wpforms-has-error select,
+.entry-content .wpforms-form .wpforms-has-error textarea{
+  border-color:#ef4444; box-shadow:0 0 0 3px rgba(239,68,68,.15);
+}
+
+/* Submit button matches site buttons */
+.entry-content .wpforms-submit-container{ margin-top:1rem; }
+.entry-content .wpforms-submit{
+  display:inline-flex; align-items:center; justify-content:center;
+  background:#1a2332; color:#fff; border:1px solid #1a2332;
+  border-radius:14px; padding:.9rem 1.6rem; font-weight:600;
+  transition:transform .15s, box-shadow .2s, background .2s, border-color .2s;
+  text-decoration:none;
+}
+.entry-content .wpforms-submit:hover{
+  transform:translateY(-2px);
+  background:#2dd4bf; border-color:#2dd4bf; color:#0b1720;
+  box-shadow:0 8px 25px rgba(45,212,191,.3);
+}
+
+/* reCAPTCHA spacing */
+.entry-content .wpforms-form .g-recaptcha,
+.entry-content .wpforms-form .wpforms-recaptcha-container{ margin-top:.5rem; }
+
+/* ---- Optional dark variant for CTA sections ---- */
+.cta-section .wpforms-container form.wpforms-form{
+  background:linear-gradient(135deg,#111827 0%, #1a2332 60%, #2c3e50 100%);
+  border:1px solid rgba(45,212,191,.18);
+}
+.cta-section .wpforms-form .wpforms-field-label{ color:#e6edf3; }
+.cta-section .wpforms-form input,
+.cta-section .wpforms-form select,
+.cta-section .wpforms-form textarea{
+  background:rgba(255,255,255,.06); color:#e6edf3; border-color:rgba(255,255,255,.18);
+}
+.cta-section .wpforms-form ::placeholder{ color:#b8c6d1; }
+
+/* Force small, tidy, side-by-side logos */
+.trust-logos{
+  list-style:none; margin:0; padding:0;
+  display:grid;
+  gap: clamp(14px, 2vw, 22px);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  align-items:center;
+}
+
+/* Uniform logo boxes */
+.logo-item a{
+  display:grid;
+  place-items:center;
+  height: 80px;                    /* uniform box height */
+  padding: 10px;                   /* breathing room around logos */
+  border-radius: 12px;
+  border: 1px solid rgba(17,24,39,.06);
+  background:#fff;
+  transition: border-color .25s, box-shadow .25s, transform .25s;
+}
+
+/* Con*
+
+/* ---- Zaufali nam (logos) ---- */
+.trust-section{
+  position: relative;
+  isolation: isolate;                 /* own stacking context */
+  background: #fff;                   /* make sure it’s opaque */
+  padding: clamp(36px, 5vw, 72px) 0;  /* top/bottom spacing so next section won’t overlap */
+  z-index: 1;                         /* sit above any earlier absolute elements */
+}
+
+/* Grid: tidy, responsive, no overlap */
+.trust-logos{
+  list-style: none; margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 1fr;                /* consistent row heights with our box */
+  gap: clamp(14px, 2vw, 22px);
+  align-items: stretch;
+}
+
+/* Uniform logo “card” */
+.logo-item a{
+  display: grid;
+  place-items: center;
+  height: 96px;                       /* uniform box height */
+  padding: 12px;
+  background: #fff;
+  border: 1px solid rgba(17,24,39,.08);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(2,12,27,.05);
+  transition: border-color .25s, box-shadow .25s, transform .25s, background-color .25s;
+}
+
+/* Constrain the actual image; prevent overflow into next section */
+.logo-item img{
+  display: block;
+  max-height: 44px !important;        /* hard cap all logos */
+  max-width: 120px !important;
+  width: auto; height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) contrast(1.05) opacity(.85);
+  transition: filter .25s, opacity .25s, transform .25s;
+}
+
+/* Hover polish */
+.logo-item a:hover,
+.logo-item a:focus-visible{
+  border-color: rgba(45,212,191,.35);
+  box-shadow: 0 14px 30px rgba(2,12,27,.10);
+  transform: translateY(-2px);
+  background-color: #f8fffe;
+  outline: none;
+}
+.logo-item a:hover img,
+.logo-item a:focus-visible img{
+  filter: grayscale(0) opacity(1);
+  transform: translateY(-1px);
+}
+
+/* If your next section sits “too close”, add a bottom margin here or padding-top on the next section */
+.trust-section + section{ margin-top: clamp(12px, 2vw, 24px); }
