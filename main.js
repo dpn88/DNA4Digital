@@ -9,82 +9,82 @@ let answers = [];
 const assessmentQuestions = [
     {
         id: 1,
-        question: "How would you describe your organization's current data infrastructure?",
+        question: "Jak opisał(a)byś obecną infrastrukturę danych w Twojej organizacji?",
         options: [
-            { text: "We have limited data collection and storage capabilities", value: 1 },
-            { text: "We collect data but lack organized storage systems", value: 2 },
-            { text: "We have structured databases but limited integration", value: 3 },
-            { text: "We have advanced data infrastructure with real-time processing", value: 4 }
+            { text: "Mamy ograniczone możliwości zbierania i przechowywania danych", value: 1 },
+            { text: "Zbieramy dane, ale brakuje nam zorganizowanych systemów przechowywania", value: 2 },
+            { text: "Posiadamy uporządkowane bazy danych, ale ograniczoną integrację", value: 3 },
+            { text: "Posiadamy zaawansowaną infrastrukturę danych z przetwarzaniem w czasie rzeczywistym", value: 4 }
         ]
     },
     {
         id: 2,
-        question: "What is your team's current level of AI/ML expertise?",
+        question: "Jaki jest aktualny poziom wiedzy zespołu w zakresie AI/ML?",
         options: [
-            { text: "No prior experience with AI/ML technologies", value: 1 },
-            { text: "Some team members have basic understanding", value: 2 },
-            { text: "We have dedicated data scientists or ML engineers", value: 3 },
-            { text: "We have an experienced AI/ML team", value: 4 }
+            { text: "Brak wcześniejszego doświadczenia z technologiami AI/ML", value: 1 },
+            { text: "Niektórzy członkowie zespołu mają podstawową wiedzę", value: 2 },
+            { text: "Posiadamy dedykowanych data scientistów lub inżynierów ML", value: 3 },
+            { text: "Mamy doświadczony zespół AI/ML", value: 4 }
         ]
     },
     {
         id: 3,
-        question: "How are decisions currently made in your organization?",
+        question: "Jak są podejmowane decyzje w Twojej organizacji?",
         options: [
-            { text: "Primarily based on intuition and experience", value: 1 },
-            { text: "Mix of intuition and basic reporting", value: 2 },
-            { text: "Data-driven with regular analytics", value: 3 },
-            { text: "Highly data-driven with predictive insights", value: 4 }
+            { text: "Głównie na podstawie intuicji i doświadczenia", value: 1 },
+            { text: "Mieszanka intuicji i podstawowych raportów", value: 2 },
+            { text: "Oparte na danych z regularną analizą", value: 3 },
+            { text: "Silnie oparte na danych z wykorzystaniem predykcji", value: 4 }
         ]
     },
     {
         id: 4,
-        question: "What is your organization's approach to technology adoption?",
+        question: "Jakie jest podejście Twojej organizacji do wdrażania technologii?",
         options: [
-            { text: "Cautious and reactive to new technologies", value: 1 },
-            { text: "Selective adoption after thorough evaluation", value: 2 },
-            { text: "Proactive adoption of proven technologies", value: 3 },
-            { text: "Innovation-focused with early adoption", value: 4 }
+            { text: "Ostrożne i reaktywne względem nowych technologii", value: 1 },
+            { text: "Selektywne wdrażanie po dokładnej ocenie", value: 2 },
+            { text: "Proaktywne wdrażanie sprawdzonych technologii", value: 3 },
+            { text: "Skupienie na innowacjach i wczesne wdrażanie", value: 4 }
         ]
     },
     {
         id: 5,
-        question: "How would you rate your current business process automation?",
+        question: "Jak oceniasz automatyzację obecnych procesów biznesowych?",
         options: [
-            { text: "Mostly manual processes with minimal automation", value: 1 },
-            { text: "Some automated workflows but many manual steps", value: 2 },
-            { text: "Well-automated core processes with room for improvement", value: 3 },
-            { text: "Highly automated with intelligent systems", value: 4 }
+            { text: "Przeważnie procesy manualne z minimalną automatyzacją", value: 1 },
+            { text: "Częściowo zautomatyzowane przepływy pracy, ale wiele kroków manualnych", value: 2 },
+            { text: "Dobrze zautomatyzowane kluczowe procesy, ale jest miejsce na rozwój", value: 3 },
+            { text: "Wysoko zautomatyzowane systemy inteligentne", value: 4 }
         ]
     },
     {
         id: 6,
-        question: "What is your budget allocation for digital transformation initiatives?",
+        question: "Jak wygląda alokacja budżetu na inicjatywy transformacji cyfrowej?",
         options: [
-            { text: "Limited budget allocated for technology initiatives", value: 1 },
-            { text: "Moderate budget with careful ROI consideration", value: 2 },
-            { text: "Substantial budget for strategic technology investments", value: 3 },
-            { text: "Significant budget with innovation-focused spending", value: 4 }
+            { text: "Ograniczony budżet na inicjatywy technologiczne", value: 1 },
+            { text: "Umiarkowany budżet z uwzględnieniem zwrotu z inwestycji", value: 2 },
+            { text: "Znaczący budżet na strategiczne inwestycje technologiczne", value: 3 },
+            { text: "Znaczny budżet skoncentrowany na innowacjach", value: 4 }
         ]
     },
     {
         id: 7,
-        question: "How does your organization handle change management?",
+        question: "Jak Twoja organizacja zarządza zmianą?",
         options: [
-            { text: "Change is often resisted and difficult to implement", value: 1 },
-            { text: "Change is managed reactively when necessary", value: 2 },
-            { text: "Structured change management processes are in place", value: 3 },
-            { text: "Agile and adaptive to continuous change", value: 4 }
+            { text: "Zmiany są często oporne i trudne do wdrożenia", value: 1 },
+            { text: "Zmiany są zarządzane reaktywnie, gdy to konieczne", value: 2 },
+            { text: "Funkcjonują ustrukturyzowane procesy zarządzania zmianą", value: 3 },
+            { text: "Zwinne i adaptacyjne podejście do ciągłych zmian", value: 4 }
         ]
     },
     {
         id: 8,
-        question: "What are your primary business objectives for the next 2-3 years?",
+        question: "Jakie są główne cele biznesowe na najbliższe 2-3 lata?",
         options: [
-            { text: "Maintain current operations and market position", value: 1 },
-            { text: "Gradual growth with improved efficiency", value: 2 },
-            { text: "Significant growth and market expansion", value: 3 },
-            { text: "Market leadership through innovation and disruption", value: 4 }
+            { text: "Utrzymanie obecnych operacji i pozycji rynkowej", value: 1 },
+            { text: "Stopniowy wzrost z poprawą efektywności", value: 2 },
+            { text: "Znaczący wzrost i ekspansja rynkowa", value: 3 },
+            { text: "Przywództwo rynkowe dzięki innowacjom i zakłóceniom", value: 4 }
         ]
     }
 ];
@@ -119,96 +119,178 @@ function initializeApp() {
 
 // Typewriter Effect
 function initTypewriter() {
-    const typed = new Typed('#typed-text', {
-        strings: [
-            'AI-Driven Solutions',
-            'Digital Transformation',
-            'Intelligent Automation',
-            'Predictive Analytics'
-        ],
-        typeSpeed: 80,
-        backSpeed: 50,
-        backDelay: 2000,
-        loop: true,
-        showCursor: true,
-        cursorChar: '|'
-    });
+  const el = document.getElementById('typed-text');
+  if (!el || typeof Typed === 'undefined') return;
+
+  new Typed('#typed-text', {
+    strings: [
+      'Strategiczne Audyty',
+      'Eksperckie Szkolenia',
+      'Profesjonalny Konsulting',
+      'Doradztwo Biznesowe',
+      'Nowoczesne Wdrożenia'
+    ],
+    typeSpeed: 80,
+    backSpeed: 50,
+    backDelay: 2000,
+    loop: true,
+    showCursor: true,
+    cursorChar: '|',
+    contentType: 'html'
+  });
 }
 
-// Particle Background
-function initParticles() {
-    const canvas = document.getElementById('particles-canvas');
-    if (!canvas) return;
-    
-    new p5((p) => {
-        let particles = [];
-        const numParticles = 50;
-        
-        p.setup = function() {
-            const canvas = p.createCanvas(window.innerWidth, window.innerHeight);
-            canvas.parent('particles-canvas');
-            
-            // Create particles
-            for (let i = 0; i < numParticles; i++) {
-                particles.push(new Particle(p));
-            }
-        };
-        
-        p.draw = function() {
-            p.clear();
-            
-            // Update and display particles
-            particles.forEach(particle => {
-                particle.update();
-                particle.display();
-                particle.connect(particles);
-            });
-        };
-        
-        p.windowResized = function() {
-            p.resizeCanvas(window.innerWidth, window.innerHeight);
-        };
-        
-        class Particle {
-            constructor(p) {
-                this.p = p;
-                this.x = p.random(p.width);
-                this.y = p.random(p.height);
-                this.vx = p.random(-0.5, 0.5);
-                this.vy = p.random(-0.5, 0.5);
-                this.size = p.random(2, 4);
-            }
-            
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-                
-                // Wrap around edges
-                if (this.x < 0) this.x = this.p.width;
-                if (this.x > this.p.width) this.x = 0;
-                if (this.y < 0) this.y = this.p.height;
-                if (this.y > this.p.height) this.y = 0;
-            }
-            
-            display() {
-                this.p.fill(45, 212, 191, 100);
-                this.p.noStroke();
-                this.p.ellipse(this.x, this.y, this.size);
-            }
-            
-            connect(particles) {
-                particles.forEach(other => {
-                    const distance = this.p.dist(this.x, this.y, other.x, other.y);
-                    if (distance < 100) {
-                        this.p.stroke(45, 212, 191, 50);
-                        this.p.strokeWeight(0.5);
-                        this.p.line(this.x, this.y, other.x, other.y);
-                    }
-                });
-            }
+
+
+
+// Particle Background (richer / denser)
+function initParticles(options = {}) {
+  const host = document.getElementById('particles-canvas');
+  if (!host || typeof p5 === 'undefined') return;
+
+  // ---- Tweakables (lower density number = MORE particles) ----
+  const cfg = Object.assign({
+    density: window.innerWidth < 900 ? 18000 : 14000, // px per particle (12000 = dense; 18000 = lighter)
+    linkDist: 150,          // max distance to draw lines
+    maxNeighbors: 4,        // how many nearest neighbors to link per particle
+    speed: 0.35,            // base movement speed
+    sizeMin: 1.3,           // min particle size
+    sizeMax: 3.1,           // max particle size
+    noiseScale: 0.0012,     // lower = wider curls, higher = tighter motion
+    glow: true,             // soft glow around nodes
+    triangles: true,        // fill subtle triangles between close neighbors
+    triangleAlpha: 10,      // 0–255 fill alpha for triangles
+    lineAlpha: 90,          // 0–255 max line alpha (fades with distance)
+    nodeAlpha: 120,         // 0–255 node alpha
+  }, options);
+
+  const TEAL = { r: 45, g: 212, b: 191 }; // DNA4Digital brand
+
+  new p5((p) => {
+    let particles = [];
+
+    function targetCount() {
+      return Math.max(20, Math.round((p.width * p.height) / cfg.density));
+    }
+
+    class Particle {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.r = p.random(cfg.sizeMin, cfg.sizeMax);
+        this.seed = p.random(1000);
+      }
+
+      update(t) {
+        const ang = p.noise(this.x * cfg.noiseScale, this.y * cfg.noiseScale, t * 0.00025 + this.seed) * p.TWO_PI * 2;
+        this.x += Math.cos(ang) * cfg.speed;
+        this.y += Math.sin(ang) * cfg.speed;
+
+        // wrap with a small margin to avoid popping
+        const m = 10;
+        if (this.x < -m) this.x = p.width + m;
+        if (this.x > p.width + m) this.x = -m;
+        if (this.y < -m) this.y = p.height + m;
+        if (this.y > p.height + m) this.y = -m;
+      }
+
+      drawNode() {
+        if (cfg.glow) {
+          p.drawingContext.shadowBlur = 12;
+          p.drawingContext.shadowColor = `rgba(${TEAL.r},${TEAL.g},${TEAL.b},0.6)`;
         }
-    });
+        p.noStroke();
+        p.fill(TEAL.r, TEAL.g, TEAL.b, cfg.nodeAlpha);
+
+        // gentle twinkle
+        const pulse = 0.5 + 0.5 * Math.sin((p.frameCount + this.seed * 1000) * 0.03);
+        p.circle(this.x, this.y, this.r * (0.85 + 0.3 * pulse));
+
+        if (cfg.glow) p.drawingContext.shadowBlur = 0;
+      }
+    }
+
+    function connectAndDecorate() {
+      // pairwise neighborhood scan (good enough up to a few hundred points)
+      for (let i = 0; i < particles.length; i++) {
+        const a = particles[i];
+        const neighbors = [];
+
+        for (let j = i + 1; j < particles.length; j++) {
+          const b = particles[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const d = Math.hypot(dx, dy);
+          if (d < cfg.linkDist) neighbors.push({ b, d });
+        }
+
+        neighbors.sort((m, n) => m.d - n.d);
+        const close = neighbors.slice(0, cfg.maxNeighbors);
+
+        // lines
+        for (const { b, d } of close) {
+          const alpha = p.map(d, 0, cfg.linkDist, cfg.lineAlpha, 0, true);
+          p.stroke(TEAL.r, TEAL.g, TEAL.b, alpha);
+          p.strokeWeight(0.7);
+          p.line(a.x, a.y, b.x, b.y);
+        }
+
+        // subtle filled triangles
+        if (cfg.triangles && close.length >= 2) {
+          const b = close[0].b;
+          const c = close[1].b;
+          const ab = Math.hypot(a.x - b.x, a.y - b.y);
+          const ac = Math.hypot(a.x - c.x, a.y - c.y);
+          const bc = Math.hypot(b.x - c.x, b.y - c.y);
+          if (ab < cfg.linkDist && ac < cfg.linkDist && bc < cfg.linkDist) {
+            p.noStroke();
+            p.fill(TEAL.r, TEAL.g, TEAL.b, cfg.triangleAlpha);
+            p.triangle(a.x, a.y, b.x, b.y, c.x, c.y);
+          }
+        }
+      }
+    }
+
+    p.setup = function () {
+      const c = p.createCanvas(window.innerWidth, window.innerHeight);
+      c.parent(host);
+      p.noiseSeed(Math.floor(Math.random() * 1e6));
+
+      const n = targetCount();
+      for (let i = 0; i < n; i++) {
+        particles.push(new Particle(p.random(p.width), p.random(p.height)));
+      }
+    };
+
+    p.draw = function () {
+      p.clear(); // keep site background gradient visible
+
+      const t = p.millis();
+      for (const pt of particles) pt.update(t);
+
+      // draw connections first so nodes glow on top
+      connectAndDecorate();
+      for (const pt of particles) pt.drawNode();
+    };
+
+    p.windowResized = function () {
+      p.resizeCanvas(window.innerWidth, window.innerHeight);
+
+      // re-balance particle count to maintain density
+      const desired = targetCount();
+      if (desired > particles.length) {
+        for (let i = particles.length; i < desired; i++) {
+          particles.push(new Particle(p.random(p.width), p.random(p.height)));
+        }
+      } else if (desired < particles.length) {
+        particles.length = desired;
+      }
+    };
+  });
 }
+
+
+
 
 // Scroll Animations
 function initScrollAnimations() {
@@ -369,7 +451,7 @@ function updateProgress() {
         progressBar.style.width = `${progress}%`;
     }
     if (progressText) {
-        progressText.textContent = `${currentQuestion + 1} of ${assessmentQuestions.length} questions`;
+        progressText.textContent = `${currentQuestion + 1} of ${assessmentQuestions.length} pytań`;
     }
 }
 
@@ -421,13 +503,13 @@ function animateScoreDisplay(score) {
     // Set title and description based on score
     if (score < 40) {
         scoreTitle.textContent = 'AI Beginner';
-        scoreDescription.textContent = 'Great starting point for your AI journey';
+        scoreDescription.textContent = 'Doskonały punkt startowy dla Twojej podróży z AI';
     } else if (score < 70) {
         scoreTitle.textContent = 'AI Ready';
-        scoreDescription.textContent = 'You have solid foundations for AI adoption';
+        scoreDescription.textContent = 'Masz solidne fundamenty do wdrożenia AI';
     } else {
         scoreTitle.textContent = 'AI Advanced';
-        scoreDescription.textContent = 'You\'re well-positioned for AI transformation';
+        scoreDescription.textContent = 'Jesteś w dobrej pozycji do transformacji opartej na AI';
     }
 }
 
@@ -437,24 +519,24 @@ function generateRecommendations(score) {
     
     if (score < 40) {
         recs = [
-            'Start with AI education and awareness programs for leadership',
-            'Assess current data infrastructure and create improvement plan',
-            'Begin with pilot AI projects in low-risk areas',
-            'Develop basic data collection and management capabilities'
+            'Rozpocznij z edukacją i zwiększeniem świadomości odnośnie AI dla kadry zarządczej',
+            'Ocen aktualną infrastrukturę danych oraz stwórz plan jej ulepszenia',
+            'Stwórz programy pilotowe dla wprowadzenia AI w obszarach niskiego ryzyka',
+            'Stwórz podstawowe możliwości gromadzenia i zarządzania danymi'
         ];
     } else if (score < 70) {
         recs = [
-            'Implement AI strategy development workshops',
-            'Upgrade data infrastructure for AI readiness',
-            'Launch targeted AI pilot programs',
-            'Invest in team training and skill development'
+            'Przeprowadzenie warsztatów dotyczących opracowania strategii AI',
+            'Udoskonalenie infrastruktury danych pod kątem gotowości na AI',
+            'Uruchomienie ukierunkowanych programów pilotażowych AI',
+            'Inwestowanie w szkolenia zespołu i rozwój umiejętności'
         ];
     } else {
         recs = [
-            'Scale successful AI pilots across the organization',
-            'Implement advanced AI governance frameworks',
-            'Develop custom AI solutions for competitive advantage',
-            'Establish AI innovation labs and R&D programs'
+            'Skalowanie udanych projektów pilotażowych AI w całej organizacji',
+            'Wdrożenie zaawansowanych ram zarządzania AI',
+            'Opracowanie niestandardowych rozwiązań AI w celu uzyskania przewagi konkurencyjnej',
+            'Utworzenie laboratoriów innowacji AI i programów badawczo-rozwojowych'
         ];
     }
     
@@ -576,75 +658,13 @@ function initSmoothScrolling() {
 
 // Mobile Menu
 function initMobileMenu() {
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (!mobileMenuButton || !mobileMenu) return;
-
-    const focusableMenuItems = mobileMenu.querySelectorAll('a, button');
-
-    const isMenuOpen = () => !mobileMenu.classList.contains('hidden');
-
-    const openMenu = () => {
-        mobileMenu.classList.remove('hidden');
-        mobileMenu.classList.add('block');
-        mobileMenuButton.setAttribute('aria-expanded', 'true');
-        mobileMenuButton.setAttribute('aria-label', 'Close main menu');
-
-        if (focusableMenuItems.length > 0) {
-            focusableMenuItems[0].focus();
-        }
-    };
-
-    const closeMenu = ({ focusButton = false } = {}) => {
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.remove('block');
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
-        mobileMenuButton.setAttribute('aria-label', 'Open main menu');
-
-        if (focusButton) {
-            mobileMenuButton.focus();
-        }
-    };
-
-    const toggleMenu = () => {
-        if (isMenuOpen()) {
-            closeMenu({ focusButton: true });
-        } else {
-            openMenu();
-        }
-    };
-
-    mobileMenuButton.addEventListener('click', (event) => {
-        event.stopPropagation();
-        toggleMenu();
-    });
-
-    mobileMenu.addEventListener('click', (event) => {
-        event.stopPropagation();
-    });
-
-    document.addEventListener('click', (event) => {
-        if (!isMenuOpen()) return;
-
-        if (!mobileMenu.contains(event.target) && event.target !== mobileMenuButton) {
-            closeMenu();
-        }
-    });
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && isMenuOpen()) {
-            closeMenu({ focusButton: true });
-        }
-    });
-
-    focusableMenuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            if (isMenuOpen()) {
-                closeMenu();
-            }
+    const mobileMenuButton = document.querySelector('.md\\:hidden button');
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', function() {
+            // Toggle mobile menu (simplified implementation)
+            alert('Mobile menu functionality would be implemented here');
         });
-    });
+    }
 }
 
 // Utility function for button clicks
