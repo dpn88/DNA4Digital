@@ -1,0 +1,28 @@
+/* Staggered Menu – neutral theme */
+.stgm-root{ position:relative; display:inline-block; font:inherit; }
+
+.stgm-toggle{
+  display:inline-flex; align-items:center; gap:.45rem;
+  padding:.6rem .85rem; border-radius:10px; border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06); color:#eaf6f4; font-weight:600; cursor:pointer;
+  transition:transform .15s ease, border-color .2s ease, background .2s ease;
+}
+.stgm-toggle:hover{ transform:translateY(-1px); background:rgba(255,255,255,.10); border-color:rgba(255,255,255,.18); }
+.stgm-caret{ transition: transform .2s ease; opacity:.9 }
+.stgm-caret.open{ transform: rotate(180deg); }
+
+.stgm-panel{
+  position:absolute; top:calc(100% + 8px); min-width:220px; max-height:60vh; overflow:hidden;
+  padding:8px; border-radius:12px; border:1px solid rgba(255,255,255,.08);
+  background:rgba(9,16,28,.96); backdrop-filter:saturate(140%) blur(6px);
+  box-shadow:0 18px 44px rgba(2,12,27,.45);
+}
+.stgm-panel.right{ right:0; }
+.stgm-panel.left{ left:0; }
+
+.stgm-item{ list-style:none; }
+.stgm-link{
+  display:block; padding:10px 12px; border-radius:10px; color:#e6edf3; text-decoration:none; font-weight:600;
+  transition: background .18s ease, color .18s ease;
+}
+.stgm-link:hover{ background:rgba(45,212,191,.14); color:#eafffb; }
