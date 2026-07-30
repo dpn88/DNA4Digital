@@ -1,465 +1,306 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNA4Digital - AI Consulting & Digital Transformation</title>
-    <meta name="description" content="Transform your business with AI-driven consulting services. Expert AI implementation, training, and digital transformation solutions.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Animation Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-    
-    <style>
-        :root {
-            --navy: #1a2332;
-            --teal: #2dd4bf;
-            --warm-white: #fafafa;
-            --soft-gray: #64748b;
-            --light-teal: #f0fdfa;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--warm-white);
-            color: var(--navy);
-        }
-        
-        .hero-bg {
-            background: linear-gradient(135deg, var(--navy) 0%, #2c3e50 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, var(--teal) 0%, #06b6d4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .btn-primary {
-            background: var(--navy);
-            color: white;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background: var(--teal);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(45, 212, 191, 0.3);
-        }
-        
-        .btn-secondary {
-            border: 2px solid var(--teal);
-            color: var(--teal);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-secondary:hover {
-            background: var(--teal);
-            color: white;
-        }
-        
-        .assessment-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(45, 212, 191, 0.2);
-        }
-        
-        .progress-bar {
-            background: linear-gradient(90deg, var(--teal) 0%, #06b6d4 100%);
-            transition: width 0.5s ease;
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-            transition: all 0.6s ease;
-        }
-        
-        #particles-canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .stats-counter {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--teal);
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <div class="text-2xl font-bold text-gray-900">
-                        DNA4<span class="gradient-text">Digital</span>
-                    </div>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="text-gray-900 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
-                        <a href="services.html" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">Services</a>
-                        <a href="training.html" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">Training</a>
-                        <a href="about.html" class="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
-                        <button class="btn-primary px-6 py-2 rounded-lg text-sm font-medium">Get Started</button>
-                    </div>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" type="button" class="text-gray-700 hover:text-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-white" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open main menu">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="px-4 pt-2 pb-4 space-y-2 bg-white shadow-lg border border-gray-200 rounded-b-lg">
-                    <a href="#home" class="block rounded-lg px-3 py-2 text-base font-medium text-gray-900 hover:bg-teal-50 hover:text-teal-600 transition-colors">Home</a>
-                    <a href="services.html" class="block rounded-lg px-3 py-2 text-base font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors">Services</a>
-                    <a href="training.html" class="block rounded-lg px-3 py-2 text-base font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors">Training</a>
-                    <a href="about.html" class="block rounded-lg px-3 py-2 text-base font-medium text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors">About</a>
-                    <button type="button" class="w-full btn-primary px-6 py-2 rounded-lg text-base font-medium">Get Started</button>
-                </div>
-            </div>
-        </div>
-    </nav>
+<!-- wp:shortcode -->
+[dna4d_menu]
+<!-- /wp:shortcode -->
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center relative">
-        <canvas id="particles-canvas"></canvas>
-        
-        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="text-white">
-                    <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                        Transform Your Business with 
-                        <span class="gradient-text" id="typed-text"></span>
-                    </h1>
-                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                        Expert AI consulting services that drive real business results. From strategy to implementation, 
-                        we help organizations harness the power of artificial intelligence to reduce costs, 
-                        increase efficiency, and accelerate growth.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                        <button class="btn-primary px-8 py-4 rounded-lg text-lg font-medium" onclick="scrollToAssessment()">
-                            Start AI Assessment
-                        </button>
-                        <button class="btn-secondary px-8 py-4 rounded-lg text-lg font-medium bg-transparent">
-                            View Case Studies
-                        </button>
-                    </div>
-                    
-                    <!-- Stats -->
-                    <div class="grid grid-cols-3 gap-8">
-                        <div class="text-center">
-                            <div class="stats-counter" data-target="150">0</div>
-                            <p class="text-gray-300 text-sm">Projects Completed</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="stats-counter" data-target="40">0</div>
-                            <p class="text-gray-300 text-sm">% Average Cost Reduction</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="stats-counter" data-target="98">0</div>
-                            <p class="text-gray-300 text-sm">% Client Satisfaction</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="relative">
-                    <img src="resources/hero-main.jpg" alt="AI Consulting Team" 
-                         class="rounded-2xl shadow-2xl w-full h-auto">
-                    <div class="absolute -bottom-6 -right-6 bg-teal-600 text-white p-6 rounded-xl shadow-lg">
-                        <div class="text-2xl font-bold">$2.3M</div>
-                        <div class="text-sm">Average ROI per project</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- wp:html -->
+<section id="home" class="hero-bg hero-bleed alignfull">
+  <!-- p5 host MUST be a DIV (not canvas) -->
+  <div id="particles-canvas"></div>
 
-    <!-- AI Readiness Assessment -->
-    <section id="assessment" class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 fade-in">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    Discover Your AI Readiness Score
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Take our comprehensive assessment to understand where your organization stands 
-                    in its AI journey and get personalized recommendations for your next steps.
-                </p>
-            </div>
-            
-            <div class="assessment-card rounded-2xl p-8 shadow-lg">
-                <!-- Progress Bar -->
-                <div class="mb-8">
-                    <div class="flex justify-between text-sm text-gray-600 mb-2">
-                        <span>Progress</span>
-                        <span id="progress-text">0 of 8 questions</span>
-                    </div>
-                    <div class="w-full bg-gray-200 rounded-full h-2">
-                        <div id="progress-bar" class="progress-bar h-2 rounded-full" style="width: 0%"></div>
-                    </div>
-                </div>
-                
-                <!-- Question Container -->
-                <div id="question-container">
-                    <!-- Questions will be dynamically loaded here -->
-                </div>
-                
-                <!-- Results Container -->
-                <div id="results-container" class="hidden">
-                    <div class="text-center">
-                        <div class="mb-8">
-                            <div class="text-6xl font-bold gradient-text mb-4" id="score-display">0</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2" id="score-title">AI Readiness Score</h3>
-                            <p class="text-gray-600" id="score-description">Your personalized assessment result</p>
-                        </div>
-                        
-                        <div class="bg-light-teal rounded-xl p-6 mb-8">
-                            <h4 class="text-lg font-semibold text-gray-900 mb-4">Your Personalized Recommendations</h4>
-                            <div id="recommendations" class="space-y-3">
-                                <!-- Recommendations will be populated here -->
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button class="btn-primary px-8 py-3 rounded-lg font-medium" onclick="showContactForm()">
-                                Get Custom Strategy
-                            </button>
-                            <button class="btn-secondary px-8 py-3 rounded-lg font-medium" onclick="restartAssessment()">
-                                Retake Assessment
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="hero-content">
+    <div class="hero-grid">
+      <!-- LEFT -->
+      <div class="hero-text">
+        <h1 class="hero-title">
+  <!-- Wordmark: helix on the left, two text lines on the right -->
+  <span class="hero-wordmark">
+    <span class="hero-helix" aria-hidden="true"></span>
+    <span class="wm">
+      <span class="line dna">DNA</span>
+      <span class="line fourdigital"><span class="four">4</span>DIGITAL</span>
+    </span>
+  </span>
+  <span class="hero-tagline"><br>Twoja wiedza i rozwój – nasze wsparcie:<br><br></span>
+  <span id="typed-wrap" class="hero-line2">
+    <span id="typed-text" class="gradient-text"></span>
+  </span>
+</h1>
 
-    <!-- Services Overview -->
-    <section class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    Comprehensive AI Consulting Services
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    From strategy development to implementation and training, 
-                    we provide end-to-end AI solutions tailored to your business needs.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card-hover bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">AI Strategy Development</h3>
-                    <p class="text-gray-600 mb-6">
-                        Comprehensive AI roadmap aligned with your business objectives, 
-                        including market analysis and implementation planning.
-                    </p>
-                    <a href="services.html#strategy" class="text-teal-600 font-medium hover:text-teal-700">
-                        Learn More →
-                    </a>
-                </div>
-                
-                <div class="card-hover bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">AI Implementation</h3>
-                    <p class="text-gray-600 mb-6">
-                        End-to-end implementation of AI solutions, from data preparation 
-                        to model deployment and system integration.
-                    </p>
-                    <a href="services.html#implementation" class="text-teal-600 font-medium hover:text-teal-700">
-                        Learn More →
-                    </a>
-                </div>
-                
-                <div class="card-hover bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">AI Training & Education</h3>
-                    <p class="text-gray-600 mb-6">
-                        Comprehensive training programs to build AI capabilities 
-                        within your organization, from executive to technical levels.
-                    </p>
-                    <a href="training.html" class="text-teal-600 font-medium hover:text-teal-700">
-                        Learn More →
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Case Studies Carousel -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    Proven Results Across Industries
-                </h2>
-                <p class="text-xl text-gray-600">
-                    See how we've helped businesses transform with AI
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="flex items-center mb-6">
-                        <img src="resources/team-consulting.jpg" alt="Healthcare Client" class="w-16 h-16 rounded-full object-cover mr-4">
-                        <div>
-                            <h4 class="font-bold text-gray-900">Healthcare AI</h4>
-                            <p class="text-gray-600 text-sm">Fortune 500 Hospital</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        "DNA4Digital helped us implement AI-powered diagnostic tools that reduced 
-                        analysis time by 60% and improved accuracy by 25%."
-                    </p>
-                    <div class="flex justify-between text-sm">
-                        <span class="text-teal-600 font-medium">60% Faster Analysis</span>
-                        <span class="text-gray-500">$2.1M Saved</span>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="flex items-center mb-6">
-                        <img src="resources/team-consulting.jpg" alt="Finance Client" class="w-16 h-16 rounded-full object-cover mr-4">
-                        <div>
-                            <h4 class="font-bold text-gray-900">Financial Services</h4>
-                            <p class="text-gray-600 text-sm">Regional Bank</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        "The AI fraud detection system they implemented caught 40% more fraudulent 
-                        transactions while reducing false positives by 80%."
-                    </p>
-                    <div class="flex justify-between text-sm">
-                        <span class="text-teal-600 font-medium">40% More Detection</span>
-                        <span class="text-gray-500">$3.2M ROI</span>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="flex items-center mb-6">
-                        <img src="resources/team-consulting.jpg" alt="Manufacturing Client" class="w-16 h-16 rounded-full object-cover mr-4">
-                        <div>
-                            <h4 class="font-bold text-gray-900">Manufacturing</h4>
-                            <p class="text-gray-600 text-sm">Global Manufacturer</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        "Predictive maintenance AI reduced unplanned downtime by 45% and 
-                        saved $1.8M in the first year alone."
-                    </p>
-                    <div class="flex justify-between text-sm">
-                        <span class="text-teal-600 font-medium">45% Less Downtime</span>
-                        <span class="text-gray-500">$1.8M Saved</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="py-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="fade-in">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    Ready to Transform Your Business?
-                </h2>
-                <p class="text-xl text-gray-600 mb-8">
-                    Schedule a free consultation to discuss your AI transformation goals 
-                    and discover how we can help you achieve them.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="btn-primary px-8 py-4 rounded-lg text-lg font-medium" onclick="showContactForm()">
-                        Schedule Free Consultation
-                    </button>
-                    <button class="btn-secondary px-8 py-4 rounded-lg text-lg font-medium">
-                        Download Case Studies
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+        <p class="hero-sub">
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="text-2xl font-bold mb-4">
-                    DNA4<span class="gradient-text">Digital</span>
-                </div>
-                <p class="text-gray-400 mb-8">
-                    Transforming businesses through AI-driven solutions
-                </p>
-                <div class="border-t border-gray-800 pt-8">
-                    <p class="text-gray-500 text-sm">
-                        © 2024 DNA4Digital. All rights reserved.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+<strong>Świat przyspiesza, a technologia otwiera przed nami nowe możliwości.</strong> Sztuczna inteligencja, cyfrowe narzędzia i innowacyjne rozwiązania całkowicie zmieniają sposób, w jaki pracujemy i zarządzamy czasem.
+Ale w tym wszystkim łatwo stracić kontrolę – zamiast wykorzystywać technologię na swoją korzyść, często pozwalamy, by to ona nami sterowała. 
 
-    <script src="main.js"></script>
-</body>
-</html>
+<br><br>
+
+Dlatego oferujemy kompleksowy <strong>konsulting AI dla firm</strong> – autorskie szkolenia, audyty i doradztwo, które pomagają świadomie korzystać z nowoczesnych narzędzi i sprostać wyzwaniom dynamicznego środowiska technologicznego.
+
+<br><br>
+
+Łączymy <strong>ludzkie doświadczenie z nowoczesnymi rozwiązaniami</strong> – bo tylko człowiek potrafi nadać technologii prawdziwy sens.
+        </p>
+        <div class="hero-cta">
+          <button class="btn-primary" onclick="scrollToAssessment()">TEST GOTOWOŚCI AI</button>
+          <a class="btn-secondary" href="/o-nas#trust-title">ZAUFALI NAM</a>
+        </div>
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="stat-value"><span class="stats-counter" data-target="32">0</span></div>
+            <div class="stat-label">Projektów zakończonych</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value"><span class="stats-counter" data-target="30">0</span><span class="stat-suffix">%</span></div>
+            <div class="stat-label">% Średniej redukcji kosztów</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value"><span class="stats-counter" data-target="97">0</span><span class="stat-suffix">%</span></div>
+            <div class="stat-label">% Satysfakcji klienta</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="hero-image-wrap">
+        <img src="https://dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg?fit=1024%2C1024&amp;ssl=1" alt="AI Consulting Team" class="hero-image">
+          <div class="roi-badge roi--float">
+            <div class="roi-badge__value">Zainwestuj dziś</div>
+            <div class="roi-badge__label">Ciesz się zyskiem jutro</div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<section id="services" class="services-section" aria-labelledby="services-heading">
+  <div class="container-narrow">
+
+    <!-- Header -->
+    <header class="services-header fade-in">
+      <h2 id="services-heading" class="services-title">Kompetencje które działają</h2>
+
+      <p class="services-sub">
+        Łączymy ludzkie doświadczenie z nowoczesnymi rozwiązaniami,<br>
+        bo tylko człowiek potrafi nadać technologii i transformacji AI prawdziwy sens.
+      </p>
+
+      <!-- Highlighted line -->
+      <h3 class="services-highlight">
+        <span>Wyposażamy firmy w wiedzę i narzędzia - nasze szkolenia, audyty i doradztwo umożliwiają:</span>
+      </h3>
+
+      <!-- Bullets -->
+      <ul class="services-list" role="list">
+        <li>odzyskać kontrolę nad czasem <br>i organizacją pracy</li>
+        <li>uporządkować procesy <br>i procedury wewnętrzne</li>
+        <li>wdrażać nowe technologie <br>i AI w sposób praktyczny</li>
+        <li>działać efektywnie, bez chaosu <br>i zbędnego stresu</li>
+      </ul>
+    </header>
+
+    <!-- Cards -->
+    <div class="services-grid">
+
+      <!-- Card 1 -->
+      <article class="service-card fade-in">
+        <div class="service-icon" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Doradztwo biznesnowe</h3>
+        <p class="service-desc">
+          Nie działamy według szablonów, tylko tworzymy rozwiązania skrojone pod realne wyzwania Twojej organizacji.
+        </p>
+        <a class="service-link" href="/oferta">Więcej →</a>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="service-card fade-in">
+        <div class="service-icon" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c1.756-.426 1.756-2.924 0-3.35a1.724 1.724 0 00-1.066-2.573c.94-1.543-.826-3.31-2.37-2.37a1.724 1.724 0 00-2.572-1.065c-.426-1.756-2.924-1.756-3.35 0A1.724 1.724 0 0010.325 4.317z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Nowoczesne wdrożenia</h3>
+        <p class="service-desc">
+          Nasze podejście oparte jest na wiedzy wyniesionej z pracy z zespołami, projektami i organizacjami,
+          które musiały stawić czoła szybkim zmianom.
+        </p>
+        <a class="service-link" href="/oferta">Więcej →</a>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="service-card fade-in">
+        <div class="service-icon" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Strategiczne audyty</h3>
+        <p class="service-desc">
+          Nie tylko szkolimy, ale też analizujemy i doradzamy. Dzięki audytom i konsultingowi
+          pomagamy usprawniać procesy, wprowadzać procedury i tworzyć systemy, które naprawdę działają.
+        </p>
+        <a class="service-link" href="/oferta">Więcej →</a>
+      </article>
+<!-- Card 4 -->
+<article class="service-card fade-in">
+  <div class="service-icon" aria-hidden="true">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
+      <rect x="4" y="4" width="16" height="16" rx="2" ry="2" stroke-width="2"/>
+      <circle cx="12" cy="12" r="2" stroke-width="2"/>
+      <path d="M12 7v3M12 14v3M7 12h3M14 12h3" stroke-linecap="round" stroke-width="2"/>
+    </svg>
+  </div>
+  <h3 class="service-title">Eksperckie szkolenia</h3>
+  <p class="service-desc">
+    Dobieramy narzędzia i projektujemy rozwiązania AI dopasowane do Twoich procesów — od koncepcji i PoC, po stabilne wdrożenie i przeszkolenie zespołu.
+  </p>
+  <a class="service-link" href="/oferta">Więcej →</a>
+</article>
+
+<!-- Card 5 -->
+<article class="service-card fade-in">
+  <div class="service-icon" aria-hidden="true">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
+      <rect x="6" y="4" width="12" height="16" rx="2" ry="2" stroke-width="2"/>
+      <path d="M9 9h6M9 12h6M9 15h6" stroke-linecap="round" stroke-width="2"/>
+      <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </svg>
+  </div>
+  <h3 class="service-title">Profesjonalny konsulting</h3>
+  <p class="service-desc">
+    Diagnozujemy procesy, dane i gotowość organizacji na AI, wskazujemy ryzyka i potencjał automatyzacji. Dostajesz priorytety, „quick wins” i 90-dniową mapę działań.
+  </p>
+  <a class="service-link" href="/oferta">Więcej →</a>
+</article>
+
+<!-- Card 6 -->
+<article class="service-card fade-in">
+  <div class="service-icon" aria-hidden="true">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
+      <rect x="6" y="11" width="3" height="7" rx="1" stroke-width="2"/>
+      <rect x="11" y="7"  width="3" height="11" rx="1" stroke-width="2"/>
+      <rect x="16" y="9"  width="3" height="9"  rx="1" stroke-width="2"/>
+      <path d="M4 17l6-6 3 3 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </svg>
+  </div>
+  <h3 class="service-title">Holistyczne podejście</h3>
+  <p class="service-desc">
+    Przekładamy cele biznesowe na konkretne inicjatywy: model operacyjny, KPI, governance i roadmapy zmian — ramię w ramię z Twoją kadrą i zespołami.
+  </p>
+  <a class="service-link" href="/oferta">Więcej →</a>
+</article>
+
+    </div>
+  </div>
+</section>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<section id="assessment" class="assessment-section">
+  <div class="container-narrow">
+    <div class="assessment-header">
+      <h2 class="assessment-title">Sprawdź gotowość Twojej firmy na AI</h2>
+      <p class="assessment-sub">
+        Wypełnij naszą krótką ankietę, aby sprawdzić, na jakim etapie transformacji AI jest Twoja organizacja
+        i otrzymać dopasowane rekomendacje kolejnych kroków.
+      </p>
+    </div>
+
+    <div class="assessment-card">
+      <!-- Pasek postępu -->
+      <div class="assessment-progress">
+        <div class="assessment-progress-top">
+          <span>Postęp</span>
+          <span id="progress-text">0 z 8 pytań</span>
+        </div>
+        <div class="assessment-progress-rail">
+          <div id="progress-bar" class="progress-bar" style="width:0%"></div>
+        </div>
+      </div>
+
+      <!-- Pytania (renderowane dynamicznie przez main.js) -->
+      <div id="question-container"></div>
+
+      <!-- Wynik -->
+      <div id="results-container" class="hidden">
+        <div class="assessment-results">
+          <div class="assessment-score">
+            <div id="score-display" class="assessment-score-value">0</div>
+            <h3 id="score-title" class="assessment-score-title">Wynik gotowości na AI</h3>
+            <p id="score-description" class="assessment-score-desc">Twój spersonalizowany wynik oceny</p>
+          </div>
+
+          <div class="assessment-recos">
+            <h4 class="assessment-recos-title">Twoje spersonalizowane rekomendacje</h4>
+            <div id="recommendations" class="assessment-recos-list"></div>
+          </div>
+
+          <div class="assessment-actions">
+            <button class="btn-primary" onclick="showContactForm()">Odbierz indywidualną strategię</button>
+            <button class="btn-secondary" onclick="restartAssessment()">Wypełnij ponownie</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<section id="cta" class="cta-section" aria-labelledby="cta-heading">
+  <div class="container-narrow">
+    <div class="cta-card fade-in">
+      <!-- decorative helix -->
+      <div class="cta-helix" aria-hidden="true"></div>
+
+      <header class="cta-header">
+        <h2 id="cta-heading" class="cta-title">Zrób pierwszy krok ku efektywnemu działaniu z AI</h2>
+        <p class="cta-text">
+          Porozmawiajmy 30 minut online, bezpłatnie i bez zobowiązań, aby określić najlepsze kroki transformacji - doradztwo, audyty lub szkolenia. <br>Dlaczego warto?
+        </p>
+      </header>
+
+      <ul class="cta-points" role="list">
+        <li>
+          <svg class="check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Szybki, bezpłatny termin
+        </li>
+        <li>
+          <svg class="check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Konkretne rekomendacje dopasowane do Twojej firmy
+        </li>
+        <li>
+          <svg class="check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Maksymalna efektywność spotkania, bez tracenia czasu
+        </li>
+      </ul>
+
+      <div class="cta-actions">
+        <a class="btn-primary cta-primary" href="/calendar" aria-label="Zarezerwuj darmową konsultację">
+          Zarezerwuj darmową konsultację
+        </a>
+        <a class="btn-secondary" href="/oferta" aria-label="Zobacz nasze usługi">
+          Zobacz usługi
+        </a>
+      </div>
+
+      <p class="cta-pills">
+        <span>Bez zobowiązań</span>
+        <span>Szybki termin</span>
+        <span>Dopasowane rekomendacje</span>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- /wp:html -->
