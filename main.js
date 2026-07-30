@@ -9,82 +9,82 @@ let answers = [];
 const assessmentQuestions = [
     {
         id: 1,
-        question: "Jak opisał(a)byś obecną infrastrukturę danych w Twojej organizacji?",
+        question: "How would you describe your organization's current data infrastructure?",
         options: [
-            { text: "Mamy ograniczone możliwości zbierania i przechowywania danych", value: 1 },
-            { text: "Zbieramy dane, ale brakuje nam zorganizowanych systemów przechowywania", value: 2 },
-            { text: "Posiadamy uporządkowane bazy danych, ale ograniczoną integrację", value: 3 },
-            { text: "Posiadamy zaawansowaną infrastrukturę danych z przetwarzaniem w czasie rzeczywistym", value: 4 }
+            { text: "We have limited data collection and storage capabilities", value: 1 },
+            { text: "We collect data but lack organized storage systems", value: 2 },
+            { text: "We have structured databases but limited integration", value: 3 },
+            { text: "We have advanced data infrastructure with real-time processing", value: 4 }
         ]
     },
     {
         id: 2,
-        question: "Jaki jest aktualny poziom wiedzy zespołu w zakresie AI/ML?",
+        question: "What is your team's current level of AI/ML expertise?",
         options: [
-            { text: "Brak wcześniejszego doświadczenia z technologiami AI/ML", value: 1 },
-            { text: "Niektórzy członkowie zespołu mają podstawową wiedzę", value: 2 },
-            { text: "Posiadamy dedykowanych data scientistów lub inżynierów ML", value: 3 },
-            { text: "Mamy doświadczony zespół AI/ML", value: 4 }
+            { text: "No prior experience with AI/ML technologies", value: 1 },
+            { text: "Some team members have basic understanding", value: 2 },
+            { text: "We have dedicated data scientists or ML engineers", value: 3 },
+            { text: "We have an experienced AI/ML team", value: 4 }
         ]
     },
     {
         id: 3,
-        question: "Jak są podejmowane decyzje w Twojej organizacji?",
+        question: "How are decisions currently made in your organization?",
         options: [
-            { text: "Głównie na podstawie intuicji i doświadczenia", value: 1 },
-            { text: "Mieszanka intuicji i podstawowych raportów", value: 2 },
-            { text: "Oparte na danych z regularną analizą", value: 3 },
-            { text: "Silnie oparte na danych z wykorzystaniem predykcji", value: 4 }
+            { text: "Primarily based on intuition and experience", value: 1 },
+            { text: "Mix of intuition and basic reporting", value: 2 },
+            { text: "Data-driven with regular analytics", value: 3 },
+            { text: "Highly data-driven with predictive insights", value: 4 }
         ]
     },
     {
         id: 4,
-        question: "Jakie jest podejście Twojej organizacji do wdrażania technologii?",
+        question: "What is your organization's approach to technology adoption?",
         options: [
-            { text: "Ostrożne i reaktywne względem nowych technologii", value: 1 },
-            { text: "Selektywne wdrażanie po dokładnej ocenie", value: 2 },
-            { text: "Proaktywne wdrażanie sprawdzonych technologii", value: 3 },
-            { text: "Skupienie na innowacjach i wczesne wdrażanie", value: 4 }
+            { text: "Cautious and reactive to new technologies", value: 1 },
+            { text: "Selective adoption after thorough evaluation", value: 2 },
+            { text: "Proactive adoption of proven technologies", value: 3 },
+            { text: "Innovation-focused with early adoption", value: 4 }
         ]
     },
     {
         id: 5,
-        question: "Jak oceniasz automatyzację obecnych procesów biznesowych?",
+        question: "How would you rate your current business process automation?",
         options: [
-            { text: "Przeważnie procesy manualne z minimalną automatyzacją", value: 1 },
-            { text: "Częściowo zautomatyzowane przepływy pracy, ale wiele kroków manualnych", value: 2 },
-            { text: "Dobrze zautomatyzowane kluczowe procesy, ale jest miejsce na rozwój", value: 3 },
-            { text: "Wysoko zautomatyzowane systemy inteligentne", value: 4 }
+            { text: "Mostly manual processes with minimal automation", value: 1 },
+            { text: "Some automated workflows but many manual steps", value: 2 },
+            { text: "Well-automated core processes with room for improvement", value: 3 },
+            { text: "Highly automated with intelligent systems", value: 4 }
         ]
     },
     {
         id: 6,
-        question: "Jak wygląda alokacja budżetu na inicjatywy transformacji cyfrowej?",
+        question: "What is your budget allocation for digital transformation initiatives?",
         options: [
-            { text: "Ograniczony budżet na inicjatywy technologiczne", value: 1 },
-            { text: "Umiarkowany budżet z uwzględnieniem zwrotu z inwestycji", value: 2 },
-            { text: "Znaczący budżet na strategiczne inwestycje technologiczne", value: 3 },
-            { text: "Znaczny budżet skoncentrowany na innowacjach", value: 4 }
+            { text: "Limited budget allocated for technology initiatives", value: 1 },
+            { text: "Moderate budget with careful ROI consideration", value: 2 },
+            { text: "Substantial budget for strategic technology investments", value: 3 },
+            { text: "Significant budget with innovation-focused spending", value: 4 }
         ]
     },
     {
         id: 7,
-        question: "Jak Twoja organizacja zarządza zmianą?",
+        question: "How does your organization handle change management?",
         options: [
-            { text: "Zmiany są często oporne i trudne do wdrożenia", value: 1 },
-            { text: "Zmiany są zarządzane reaktywnie, gdy to konieczne", value: 2 },
-            { text: "Funkcjonują ustrukturyzowane procesy zarządzania zmianą", value: 3 },
-            { text: "Zwinne i adaptacyjne podejście do ciągłych zmian", value: 4 }
+            { text: "Change is often resisted and difficult to implement", value: 1 },
+            { text: "Change is managed reactively when necessary", value: 2 },
+            { text: "Structured change management processes are in place", value: 3 },
+            { text: "Agile and adaptive to continuous change", value: 4 }
         ]
     },
     {
         id: 8,
-        question: "Jakie są główne cele biznesowe na najbliższe 2-3 lata?",
+        question: "What are your main business goals for the next 2-3 years?",
         options: [
-            { text: "Utrzymanie obecnych operacji i pozycji rynkowej", value: 1 },
-            { text: "Stopniowy wzrost z poprawą efektywności", value: 2 },
-            { text: "Znaczący wzrost i ekspansja rynkowa", value: 3 },
-            { text: "Przywództwo rynkowe dzięki innowacjom i zakłóceniom", value: 4 }
+            { text: "Maintain current operations and market position", value: 1 },
+            { text: "Gradual growth with improved efficiency", value: 2 },
+            { text: "Significant growth and market expansion", value: 3 },
+            { text: "Market leadership through innovation and disruption", value: 4 }
         ]
     }
 ];
@@ -124,11 +124,11 @@ function initTypewriter() {
 
   new Typed('#typed-text', {
     strings: [
-      'Strategiczne Audyty',
-      'Eksperckie Szkolenia',
-      'Profesjonalny Konsulting',
-      'Doradztwo Biznesowe',
-      'Nowoczesne Wdrożenia'
+      'GTM Design',
+      'Process Architecture',
+      'Strategic Audits',
+      'Expert Training',
+      'AI Enablement'
     ],
     typeSpeed: 80,
     backSpeed: 50,
@@ -451,7 +451,7 @@ function updateProgress() {
         progressBar.style.width = `${progress}%`;
     }
     if (progressText) {
-        progressText.textContent = `${currentQuestion + 1} of ${assessmentQuestions.length} pytań`;
+        progressText.textContent = `${currentQuestion + 1} of ${assessmentQuestions.length} questions`;
     }
 }
 
@@ -503,13 +503,13 @@ function animateScoreDisplay(score) {
     // Set title and description based on score
     if (score < 40) {
         scoreTitle.textContent = 'AI Beginner';
-        scoreDescription.textContent = 'Doskonały punkt startowy dla Twojej podróży z AI';
+        scoreDescription.textContent = 'A great starting point for your AI journey';
     } else if (score < 70) {
         scoreTitle.textContent = 'AI Ready';
-        scoreDescription.textContent = 'Masz solidne fundamenty do wdrożenia AI';
+        scoreDescription.textContent = 'You have solid foundations for AI implementation';
     } else {
         scoreTitle.textContent = 'AI Advanced';
-        scoreDescription.textContent = 'Jesteś w dobrej pozycji do transformacji opartej na AI';
+        scoreDescription.textContent = "You're well positioned for AI-driven transformation";
     }
 }
 
@@ -519,24 +519,24 @@ function generateRecommendations(score) {
     
     if (score < 40) {
         recs = [
-            'Rozpocznij z edukacją i zwiększeniem świadomości odnośnie AI dla kadry zarządczej',
-            'Ocen aktualną infrastrukturę danych oraz stwórz plan jej ulepszenia',
-            'Stwórz programy pilotowe dla wprowadzenia AI w obszarach niskiego ryzyka',
-            'Stwórz podstawowe możliwości gromadzenia i zarządzania danymi'
+            'Start with AI education and awareness-building for leadership',
+            'Assess your current data infrastructure and create an improvement plan',
+            'Launch pilot programs for AI adoption in low-risk areas',
+            'Build basic data collection and management capabilities'
         ];
     } else if (score < 70) {
         recs = [
-            'Przeprowadzenie warsztatów dotyczących opracowania strategii AI',
-            'Udoskonalenie infrastruktury danych pod kątem gotowości na AI',
-            'Uruchomienie ukierunkowanych programów pilotażowych AI',
-            'Inwestowanie w szkolenia zespołu i rozwój umiejętności'
+            'Run workshops to develop your AI strategy',
+            'Upgrade your data infrastructure for AI readiness',
+            'Launch targeted AI pilot programs',
+            'Invest in team training and skills development'
         ];
     } else {
         recs = [
-            'Skalowanie udanych projektów pilotażowych AI w całej organizacji',
-            'Wdrożenie zaawansowanych ram zarządzania AI',
-            'Opracowanie niestandardowych rozwiązań AI w celu uzyskania przewagi konkurencyjnej',
-            'Utworzenie laboratoriów innowacji AI i programów badawczo-rozwojowych'
+            'Scale successful AI pilots across the organization',
+            'Implement advanced AI governance frameworks',
+            'Develop custom AI solutions for competitive advantage',
+            'Establish AI innovation labs and R&D programs'
         ];
     }
     
