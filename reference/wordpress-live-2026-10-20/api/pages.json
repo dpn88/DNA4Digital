@@ -1,0 +1,1962 @@
+[
+  {
+    "id": 944,
+    "date": "2026-08-02T18:43:21",
+    "date_gmt": "2026-08-02T18:43:21",
+    "guid": {
+      "rendered": "https://dna4digital.com/?page_id=944"
+    },
+    "modified": "2026-08-02T18:43:22",
+    "modified_gmt": "2026-08-02T18:43:22",
+    "slug": "calendar-2",
+    "status": "publish",
+    "type": "page",
+    "link": "https://dna4digital.com/calendar-2/",
+    "title": {
+      "rendered": "Calendar"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false,
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-944",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Calendar - DNA4Digital</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://dna4digital.com/calendar-2/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Calendar - DNA4Digital\" />\n<meta property=\"og:url\" content=\"https://dna4digital.com/calendar-2/\" />\n<meta property=\"og:site_name\" content=\"DNA4Digital\" />\n<meta property=\"article:modified_time\" content=\"2026-08-02T18:43:22+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/dna4digital.com\\/calendar-2\\/\",\"url\":\"https:\\/\\/dna4digital.com\\/calendar-2\\/\",\"name\":\"Calendar - DNA4Digital\",\"isPartOf\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#website\"},\"datePublished\":\"2026-08-02T18:43:21+00:00\",\"dateModified\":\"2026-08-02T18:43:22+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/dna4digital.com\\/calendar-2\\/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/dna4digital.com\\/calendar-2\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/dna4digital.com\\/calendar-2\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/dna4digital.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Calendar\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/dna4digital.com\\/#website\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"name\":\"DNA4Digital\",\"description\":\"At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.\",\"publisher\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/dna4digital.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\",\"name\":\"DNA4Digital\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"contentUrl\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"width\":1024,\"height\":462,\"caption\":\"DNA4Digital\"},\"image\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.linkedin.com\\/company\\/dna4digital\\/\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Calendar - DNA4Digital",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://dna4digital.com/calendar-2/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Calendar - DNA4Digital",
+      "og_url": "https://dna4digital.com/calendar-2/",
+      "og_site_name": "DNA4Digital",
+      "article_modified_time": "2026-08-02T18:43:22+00:00",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://dna4digital.com/calendar-2/",
+            "url": "https://dna4digital.com/calendar-2/",
+            "name": "Calendar - DNA4Digital",
+            "isPartOf": {
+              "@id": "https://dna4digital.com/#website"
+            },
+            "datePublished": "2026-08-02T18:43:21+00:00",
+            "dateModified": "2026-08-02T18:43:22+00:00",
+            "breadcrumb": {
+              "@id": "https://dna4digital.com/calendar-2/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://dna4digital.com/calendar-2/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://dna4digital.com/calendar-2/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://dna4digital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Calendar"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://dna4digital.com/#website",
+            "url": "https://dna4digital.com/",
+            "name": "DNA4Digital",
+            "description": "At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.",
+            "publisher": {
+              "@id": "https://dna4digital.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://dna4digital.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://dna4digital.com/#organization",
+            "name": "DNA4Digital",
+            "url": "https://dna4digital.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://dna4digital.com/#/schema/logo/image/",
+              "url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "contentUrl": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "width": 1024,
+              "height": 462,
+              "caption": "DNA4Digital"
+            },
+            "image": {
+              "@id": "https://dna4digital.com/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/dna4digital/"
+            ]
+          }
+        ]
+      }
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/944",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=944"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/944/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 945,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/944/revisions/945"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media?parent=944"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 899,
+    "date": "2026-03-03T11:26:52",
+    "date_gmt": "2026-03-03T11:26:52",
+    "guid": {
+      "rendered": "https://dna4digital.com/?page_id=899"
+    },
+    "modified": "2026-03-03T13:43:49",
+    "modified_gmt": "2026-03-03T13:43:49",
+    "slug": "test",
+    "status": "publish",
+    "type": "page",
+    "link": "https://dna4digital.com/test/",
+    "title": {
+      "rendered": "test"
+    },
+    "content": {
+      "rendered": "",
+      "protected": true
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": true
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false,
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-899",
+      "page",
+      "type-page",
+      "status-publish",
+      "post-password-required",
+      "hentry"
+    ],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>test - DNA4Digital</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://dna4digital.com/test/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"test - DNA4Digital\" />\n<meta property=\"og:description\" content=\"There is no excerpt because this is a protected post.\" />\n<meta property=\"og:url\" content=\"https://dna4digital.com/test/\" />\n<meta property=\"og:site_name\" content=\"DNA4Digital\" />\n<meta property=\"article:modified_time\" content=\"2026-03-03T13:43:49+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/dna4digital.com\\/test\\/\",\"url\":\"https:\\/\\/dna4digital.com\\/test\\/\",\"name\":\"test - DNA4Digital\",\"isPartOf\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#website\"},\"datePublished\":\"2026-03-03T11:26:52+00:00\",\"dateModified\":\"2026-03-03T13:43:49+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/dna4digital.com\\/test\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/dna4digital.com\\/#website\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"name\":\"DNA4Digital\",\"description\":\"At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.\",\"publisher\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/dna4digital.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\",\"name\":\"DNA4Digital\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"contentUrl\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"width\":1024,\"height\":462,\"caption\":\"DNA4Digital\"},\"image\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.linkedin.com\\/company\\/dna4digital\\/\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "test - DNA4Digital",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://dna4digital.com/test/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "test - DNA4Digital",
+      "og_description": "There is no excerpt because this is a protected post.",
+      "og_url": "https://dna4digital.com/test/",
+      "og_site_name": "DNA4Digital",
+      "article_modified_time": "2026-03-03T13:43:49+00:00",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://dna4digital.com/test/",
+            "url": "https://dna4digital.com/test/",
+            "name": "test - DNA4Digital",
+            "isPartOf": {
+              "@id": "https://dna4digital.com/#website"
+            },
+            "datePublished": "2026-03-03T11:26:52+00:00",
+            "dateModified": "2026-03-03T13:43:49+00:00",
+            "breadcrumb": {
+              "@id": "https://dna4digital.com/test/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://dna4digital.com/#website",
+            "url": "https://dna4digital.com/",
+            "name": "DNA4Digital",
+            "description": "At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.",
+            "publisher": {
+              "@id": "https://dna4digital.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://dna4digital.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://dna4digital.com/#organization",
+            "name": "DNA4Digital",
+            "url": "https://dna4digital.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://dna4digital.com/#/schema/logo/image/",
+              "url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "contentUrl": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "width": 1024,
+              "height": 462,
+              "caption": "DNA4Digital"
+            },
+            "image": {
+              "@id": "https://dna4digital.com/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/dna4digital/"
+            ]
+          }
+        ]
+      }
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/899",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=899"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 4,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/899/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 905,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/899/revisions/905"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media?parent=899"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 744,
+    "date": "2025-10-10T19:23:15",
+    "date_gmt": "2025-10-10T19:23:15",
+    "guid": {
+      "rendered": "https://dna4digital.com/?page_id=744"
+    },
+    "modified": "2026-08-02T11:17:56",
+    "modified_gmt": "2026-08-02T11:17:56",
+    "slug": "about",
+    "status": "publish",
+    "type": "page",
+    "link": "https://dna4digital.com/about/",
+    "title": {
+      "rendered": "About"
+    },
+    "content": {
+      "rendered": "<div class='dna-stgm' data-props='{&quot;label&quot;:&quot;Menu&quot;,&quot;align&quot;:&quot;right&quot;,&quot;items&quot;:[{&quot;label&quot;:&quot;Home&quot;,&quot;href&quot;:&quot;\\/&quot;},{&quot;label&quot;:&quot;Services&quot;,&quot;href&quot;:&quot;\\/services&quot;},{&quot;label&quot;:&quot;About&quot;,&quot;href&quot;:&quot;\\/about&quot;},{&quot;label&quot;:&quot;Selected Work&quot;,&quot;href&quot;:&quot;\\/selected-work&quot;},{&quot;label&quot;:&quot;Blog&quot;,&quot;href&quot;:&quot;\\/blog&quot;},{&quot;label&quot;:&quot;Contact&quot;,&quot;href&quot;:&quot;\\/contact&quot;}]}'></div>\n\n\n\n<!-- ============== ABOUT — HERO ============== -->\n<section id=\"about\" class=\"hero-bg hero-bleed alignfull\" aria-labelledby=\"about-title\">\n  <!-- p5 host MUST be a DIV (not canvas) -->\n  <div id=\"particles-canvas\" aria-hidden=\"true\"></div>\n  <div class=\"hero-content\">\n    <div class=\"hero-grid\">\n      <!-- Text -->\n      <div class=\"hero-text\">\n        <h1 id=\"about-title\" class=\"hero-title\">\n          Who I am\n        </h1>\n        <p class=\"hero-sub\">\n          I&#8217;m <strong>Daniel Nowak</strong>. I fix how revenue and operations actually run, and then apply AI where it compounds.\n          <br><br>\n          I didn&#8217;t arrive at AI from engineering. I arrived from operations: eighteen years of them, thirteen spent running restaurants, conference floors and hotel F&amp;B departments in Poland and Ireland. In that world a broken process isn&#8217;t a slide in a deck. It&#8217;s a room full of people waiting for their food, and you find out within the hour.\n          <br><br>\n          That taught me the thing I still sell today: <strong>the bottleneck is almost never the tool. It&#8217;s the handoff.</strong>\n          <br><br>\n          I do that work independently through DNA4Digital, and as <strong>Associate Partner at Yameo</strong> (a Dutch-Polish enterprise software house) when a client needs the system built as well as designed.\n        </p>\n        <div class=\"hero-cta\">\n          <a class=\"btn-primary\" href=\"#mission\">My story</a>\n          <a class=\"btn-secondary\" href=\"#approach\">How I work</a>\n          <a class=\"btn-secondary\" href=\"#practice\">What I do</a>\n        </div>\n\n        <!-- Track-record counters -->\n        <div class=\"stats-grid\">\n          <div class=\"stat\">\n            <div><span class=\"stat-value\">#1</span></div>\n            <div class=\"stat-label\">revenue team in EMEA, Google Customer Solutions</div>\n          </div>\n          <div class=\"stat\">\n            <div><span class=\"stat-value\">5<span class=\"stat-suffix\">×</span></span></div>\n            <div class=\"stat-label\">increase in funnel engagement</div>\n          </div>\n          <div class=\"stat\">\n            <div><span class=\"stat-value\">30<span class=\"stat-suffix\">%</span></span></div>\n            <div class=\"stat-label\">cut in ticket handling time</div>\n          </div>\n        </div>\n      </div>\n\n      <!-- TODO: replace with a real portrait of Daniel — currently the stock hero photo -->\n      <div class=\"hero-image-wrap\">\n        <img data-recalc-dims=\"1\" decoding=\"async\" class=\"hero-image\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?ssl=1\" alt=\"Daniel Nowak, AI, GTM &amp; process consulting\" />\n        <div class=\"roi-badge roi--float\">\n          <div class=\"roi-badge__value\">+20–40%</div>\n          <div class=\"roi-badge__label\">faster processes once the work is organised</div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- ============== WHY I DO THIS ============== -->\n<section id=\"mission\" class=\"services-section\" aria-labelledby=\"mission-title\">\n  <div class=\"container-narrow\">\n    <header class=\"services-header fade-in\">\n      <h2 id=\"mission-title\" class=\"services-title\">Why I do this</h2>\n      <p class=\"services-sub\">\n        I moved into tech in 2021, and I kept noticing the same thing from the inside that I&#8217;d seen from the kitchen pass: companies buying tools to solve problems that were never tool problems.\n        Technology without business context doesn&#8217;t fix anything. It just relocates the mess and makes it faster. So I work the other way round: process first, then automation, then AI.\n      </p>\n\n      <p class=\"services-sub\">\n        <strong>My story.</strong> Thirteen years in hospitality operations: opening a café and bakery in Donegal National Park, running four F&amp;B outlets and 600 covers a day at the Royal Marine, rebuilding a hotel restaurant into a takeaway business in the first weeks of COVID with nothing but Facebook, Google Ads and a redrawn menu. Along the way I learned SOPs, forecasting, margin control, and what happens to a team when the process is unclear.\n        <br><br>\n        In 2021 I joined TTEC as a Google Ads account manager. Promoted to POD Lead in four months, then to Team Leader running Google Customer Solutions for Poland and CZ/SK, as a TTEC vendor partner. That team finished <strong>#1 for revenue in EMEA</strong>, and I took the Platinum Club award for best manager in the region. I also held a 5/5 employee satisfaction score for four straight quarters. Nobody left, and that protected the margin.\n        <br><br>\n        Then I went technical. At <strong>Sensay</strong>, an AI SaaS company, I stopped selling and started building: migrating legacy systems into HubSpot, enriching the data with Breeze Intelligence, engineering automated sequences in n8n and Zapier, and assembling Looker Studio dashboards that merged CRM, product and website analytics. Funnel engagement went up <strong>fivefold</strong>.\n        <br><br>\n        At <strong>SpotOn</strong> I ran client operations for a restaurant-tech platform, and the same pattern held: audit the workflows, automate the right ones, cut ticket handling time by 30%, and rebuild the SOPs so the answers live somewhere other than in people&#8217;s heads. Which, given where I started, felt like the circle closing.\n        <br><br>\n        I&#8217;m now <strong>Associate Partner at Yameo</strong>, a Dutch–Polish software house that has been building enterprise systems for banking, insurance and healthcare since 2006. That partnership matters for one practical reason: when the work I&#8217;ve mapped needs engineers to build it, I have a team behind me that ships on fixed price, fixed date and a signed SLA. Most independent consultants have to hand you a plan and wish you luck.\n      </p>\n    </header>\n\n    <div class=\"services-grid\">\n      <!-- Why work with me -->\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\n              d=\"M12 6v6l4 2M12 3a9 9 0 100 18 9 9 0 000-18z\"/>\n          </svg>\n        </div>\n        <h3 class=\"service-title\">Why work with me</h3>\n        <p class=\"service-desc\">\n          No &#8220;AI magic,&#8221; and no pretending the tool is the answer. You get a transparent plan, fast pilots, and effects you can measure: time back, cleaner data, revenue that moves. You also get me, not a pitch team followed by a delivery team you&#8217;ve never met. I&#8217;m a <strong>Lean Six Sigma Black Belt</strong> with a <strong>Machine Learning with Python</strong> certification, which is a strange combination and exactly the point.\n        </p>\n      </article>\n\n      <!-- What I stand for -->\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\n              d=\"M12 8l-3 9 3-2 3 2-3-9zM5 12a7 7 0 0114 0 7 7 0 11-14 0z\"/>\n          </svg>\n        </div>\n        <h3 class=\"service-title\">What I stand for</h3>\n        <p class=\"service-desc\">\n          <strong>Simplicity:</strong> if a process can&#8217;t be explained in one page, it won&#8217;t be followed.<br>\n          <strong>Accountability:</strong> I name the number, the baseline and the timeframe. Every time.<br>\n          <strong>Partnership:</strong> I only teach what I&#8217;ve run myself, in a live business, with consequences.\n        </p>\n      </article>\n\n      <!-- The arc -->\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\n              d=\"M9 12l2 2 4-4M7 7h10v10H7z\"/>\n          </svg>\n        </div>\n        <h3 class=\"service-title\">The arc</h3>\n        <p class=\"service-desc\">\n          Hospitality taught me operations. Google taught me scale. Sensay taught me to build the thing instead of just specifying it. Yameo means I can now build the ones that are too big for one person.\n        </p>\n      </article>\n    </div>\n  </div>\n</section>\n\n\n\n<!-- ============== HOW I WORK (3 steps) ============== -->\n<section id=\"approach\" class=\"services-section\" aria-labelledby=\"approach-title\">\n  <div class=\"container-narrow\">\n    <header class=\"services-header fade-in\">\n      <h2 id=\"approach-title\" class=\"services-title\">How I work</h2>\n      <p class=\"services-sub\">From diagnosis to rollout and scale, without chaos and without burning out your team.</p>\n    </header>\n\n    <div class=\"services-grid\">\n      <!-- Step 1 -->\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\">\n            <path stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"\n              d=\"M8 7h8M8 11h8M8 15h5M4 6h.01M4 10h.01M4 14h.01\"/>\n          </svg>\n        </div>\n        <h3 class=\"service-title\">1. Audit &amp; process map</h3>\n        <p class=\"service-desc\">\n          I map how work actually moves, not how the org chart says it does. Bottlenecks, handoffs, duplicated fields, the workarounds everyone has quietly built. You get the friction ranked by what it costs you.\n        </p>\n        <a class=\"service-link\" href=\"/services#audit\">More about audits →</a>\n      </article>\n\n      <!-- Step 2 -->\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\">\n            <path stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"\n              d=\"M12 6v6l4 2M4 12a8 8 0 1016 0A8 8 0 004 12z\"/>\n          </svg>\n        </div>\n        <h3 class=\"service-title\">2. Pilot &amp; training</h3>\n        <p class=\"service-desc\">\n          We test on live examples with your data, I train the people who&#8217;ll run it, and we pick tools that fit the process rather than the other way round.\n        </p>\n        <a class=\"service-link\" href=\"/services#training\">More about training →</a>\n      </article>\n\n      <!-- Step 3 -->\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\">\n            <path stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"\n              d=\"M5 12h14M12 5l7 7-7 7\"/>\n          </svg>\n        </div>\n        <h3 class=\"service-title\">3. Implementation &amp; scale</h3>\n        <p class=\"service-desc\">\n          Standards, SOPs, KPIs and dashboards, so the improvement survives after I&#8217;ve gone.\n        </p>\n        <a class=\"service-link\" href=\"/services#consulting\">More about consulting →</a>\n      </article>\n    </div>\n  </div>\n</section>\n\n<!-- ============== WHAT I DO ============== -->\n<section id=\"practice\" class=\"services-section\" aria-labelledby=\"practice-title\">\n  <div class=\"container-narrow\">\n    <header class=\"services-header fade-in\">\n      <h2 id=\"practice-title\" class=\"services-title\">Three things I&#8217;m actually good at</h2>\n      <p class=\"services-sub\">\n        Eighteen years of operations across hospitality, BPO and SaaS, applied to marketing, sales, customer operations and back-office.\n      </p>\n    </header>\n\n    <div class=\"services-grid\">\n      <!-- Practice 1 -->\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\">\n            <path stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"\n              d=\"M12 6.5l4 4-4 4-4-4 4-4z\"/>\n          </svg>\n        </div>\n        <h3 class=\"service-title\">Go-to-market &amp; RevOps</h3>\n        <p class=\"service-desc\">\n          Funnel and pipeline design, qualification rules, handoffs, CRM architecture and reporting. I&#8217;ve built intent-driven prospecting off ICP and buyer-persona mapping, run A/B tests across outbound cadences that lifted engagement 18%, and migrated a legacy stack into a unified HubSpot instance that C-level could actually read. Tools: HubSpot, Salesforce, Breeze Intelligence, Looker Studio.\n        </p>\n      </article>\n\n      <!-- Practice 2 -->\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\">\n            <path stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"\n              d=\"M8 17l4-4 4 4M12 3v10\"/>\n          </svg>\n        </div>\n        <h3 class=\"service-title\">Process architecture &amp; operations</h3>\n        <p class=\"service-desc\">\n          Mapping, standardisation, ownership, SOPs, KPIs and quality control. This is the Lean Six Sigma half: unglamorous, and the half that decides whether anything else works. Most &#8220;AI problems&#8221; turn out to be undocumented processes wearing a costume.\n        </p>\n      </article>\n\n      <!-- Practice 3 -->\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\">\n            <path stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"\n              d=\"M3 7h18M6 12h12M9 17h6\"/>\n          </svg>\n        </div>\n        <h3 class=\"service-title\">AI enablement &amp; automation</h3>\n        <p class=\"service-desc\">\n          Low-code architecture in n8n and Zapier, AI-enhanced training programmes, internal troubleshooting chatbots, e-commerce sales assistants and concierge bots. Plus the governance nobody wants to write: internal SOPs, GDPR data-sharing agreements, and a framework that keeps your analytics integrations defensible.\n        </p>\n      </article>\n    </div>\n  </div>\n</section>\n\n\n\n<!-- ============== WHERE THIS EXPERIENCE COMES FROM ============== -->\n<section id=\"track-record\" class=\"services-section\" aria-labelledby=\"track-record-title\">\n  <div class=\"container-narrow\">\n    <header class=\"services-header fade-in\">\n      <h2 id=\"track-record-title\" class=\"services-title\">Where this experience comes from</h2>\n      <p class=\"services-sub\">Eighteen years of operations across hospitality, BPO and SaaS, in Poland, Ireland and across EMEA.</p>\n    </header>\n\n    <div class=\"services-grid\">\n      <article class=\"service-card fade-in\">\n        <h3 class=\"service-title\">Yameo, Associate Partner</h3>\n        <p class=\"service-desc\">Enterprise software delivery for banking, insurance, healthcare and the public sector.</p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <h3 class=\"service-title\">Google Customer Solutions</h3>\n        <p class=\"service-desc\">Led the PL and CZ/SK team as a TTEC vendor partner. #1 revenue team in EMEA; Platinum Club, Best Manager, Q3 2024.</p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <h3 class=\"service-title\">TTEC, Team Leader</h3>\n        <p class=\"service-desc\">EMEA Business Development. Enterprise BPO solutioning and C-level negotiation.</p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <h3 class=\"service-title\">Sensay, Senior Technical BDM</h3>\n        <p class=\"service-desc\">RevOps architecture and AI product deployment.</p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <h3 class=\"service-title\">SpotOn, Client Operations Manager</h3>\n        <p class=\"service-desc\">Workflow automation and operational enablement.</p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <h3 class=\"service-title\">Balkans Crypto, Sales Director</h3>\n        <p class=\"service-desc\">Commercial strategy for a 2,000-attendee Web3 conference; Tier-1 exchange and L1/L2 partnerships.</p>\n      </article>\n    </div>\n\n    <p class=\"services-sub\" style=\"margin-top:1.5rem;\">\n      <strong>Credentials:</strong> Lean Six Sigma Black Belt · Machine Learning with Python (V2) · Web Development · BA Economics (Wyższa Szkoła Finansów i Informatyki, 2026)\n    </p>\n\n    <p class=\"services-sub\">\n      Daniel Nowak is an Associate Partner at Yameo B.V. Where a client engagement leads to software delivery by Yameo, I have a commercial interest in that work. I&#8217;ll tell you that in the first conversation, not the fifth.\n    </p>\n  </div>\n</section>\n\n\n\n<!-- ============== CLOSING CTA ============== -->\n<section id=\"kontakt\" class=\"cta-section\">\n  <div class=\"container-narrow\">\n    <div class=\"cta-card\">\n      <div class=\"cta-helix\" aria-hidden=\"true\"></div>\n      <div class=\"cta-header\">\n        <h2 class=\"cta-title\">Ready to give technology some meaning?</h2>\n        <p class=\"cta-text\">\n          Book a free 30-minute call. I&#8217;ll tell you where I&#8217;d start, and whether the first move is an audit, a pilot, or simply writing down how the work is supposed to happen.\n        </p>\n      </div>\n      <div class=\"cta-actions\">\n        <a class=\"btn-primary cta-primary\" href=\"/calendar\">Book a consultation</a>\n        <a class=\"btn-secondary\" href=\"/services\">See services</a>\n      </div>\n      <div class=\"cta-pills\">\n        <span>Transparent plan</span>\n        <span>Practical tools</span>\n        <span>Measurable results</span>\n      </div>\n    </div>\n  </div>\n</section>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Who I am I&#8217;m Daniel Nowak. I fix how revenue and operations actually run, and then apply AI where it compounds. I didn&#8217;t arrive at AI from engineering. I arrived from operations: eighteen years of them, thirteen spent running restaurants, conference floors and hotel F&amp;B departments in Poland and Ireland. In that world a broken [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false,
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-744",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>About - DNA4Digital</title>\n<meta name=\"description\" content=\"Łączymy praktykę biznesową i najnowsze narzędzia AI. Pomagamy firmom przyspieszać decyzje, porządkować procesy i rosnąć mądrzej.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://dna4digital.com/about/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"About - DNA4Digital\" />\n<meta property=\"og:description\" content=\"Łączymy praktykę biznesową i najnowsze narzędzia AI. Pomagamy firmom przyspieszać decyzje, porządkować procesy i rosnąć mądrzej.\" />\n<meta property=\"og:url\" content=\"https://dna4digital.com/about/\" />\n<meta property=\"og:site_name\" content=\"DNA4Digital\" />\n<meta property=\"article:modified_time\" content=\"2026-08-02T11:17:56+00:00\" />\n<meta property=\"og:image\" content=\"https://dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Est. reading time\" />\n\t<meta name=\"twitter:data1\" content=\"6 minutes\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/dna4digital.com\\/about\\/\",\"url\":\"https:\\/\\/dna4digital.com\\/about\\/\",\"name\":\"About - DNA4Digital\",\"isPartOf\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#website\"},\"datePublished\":\"2025-10-10T19:23:15+00:00\",\"dateModified\":\"2026-08-02T11:17:56+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/dna4digital.com\\/about\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/dna4digital.com\\/about\\/#primaryimage\",\"url\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2025\\/10\\/hero-o-nas1-1.png?fit=1080%2C1080&ssl=1\",\"contentUrl\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2025\\/10\\/hero-o-nas1-1.png?fit=1080%2C1080&ssl=1\",\"width\":1080,\"height\":1080,\"caption\":\"o nas\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/dna4digital.com\\/about\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/dna4digital.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"About\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/dna4digital.com\\/#website\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"name\":\"DNA4Digital\",\"description\":\"At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.\",\"publisher\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/dna4digital.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\",\"name\":\"DNA4Digital\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"contentUrl\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"width\":1024,\"height\":462,\"caption\":\"DNA4Digital\"},\"image\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.linkedin.com\\/company\\/dna4digital\\/\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "About - DNA4Digital",
+      "description": "Łączymy praktykę biznesową i najnowsze narzędzia AI. Pomagamy firmom przyspieszać decyzje, porządkować procesy i rosnąć mądrzej.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://dna4digital.com/about/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "About - DNA4Digital",
+      "og_description": "Łączymy praktykę biznesową i najnowsze narzędzia AI. Pomagamy firmom przyspieszać decyzje, porządkować procesy i rosnąć mądrzej.",
+      "og_url": "https://dna4digital.com/about/",
+      "og_site_name": "DNA4Digital",
+      "article_modified_time": "2026-08-02T11:17:56+00:00",
+      "og_image": [
+        {
+          "url": "https://dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png",
+          "type": "",
+          "width": "",
+          "height": ""
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "twitter_misc": {
+        "Est. reading time": "6 minutes"
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://dna4digital.com/about/",
+            "url": "https://dna4digital.com/about/",
+            "name": "About - DNA4Digital",
+            "isPartOf": {
+              "@id": "https://dna4digital.com/#website"
+            },
+            "datePublished": "2025-10-10T19:23:15+00:00",
+            "dateModified": "2026-08-02T11:17:56+00:00",
+            "breadcrumb": {
+              "@id": "https://dna4digital.com/about/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://dna4digital.com/about/#primaryimage",
+            "url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?fit=1080%2C1080&ssl=1",
+            "contentUrl": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?fit=1080%2C1080&ssl=1",
+            "width": 1080,
+            "height": 1080,
+            "caption": "o nas"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://dna4digital.com/about/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://dna4digital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "About"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://dna4digital.com/#website",
+            "url": "https://dna4digital.com/",
+            "name": "DNA4Digital",
+            "description": "At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.",
+            "publisher": {
+              "@id": "https://dna4digital.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://dna4digital.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://dna4digital.com/#organization",
+            "name": "DNA4Digital",
+            "url": "https://dna4digital.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://dna4digital.com/#/schema/logo/image/",
+              "url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "contentUrl": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "width": 1024,
+              "height": 462,
+              "caption": "DNA4Digital"
+            },
+            "image": {
+              "@id": "https://dna4digital.com/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/dna4digital/"
+            ]
+          }
+        ]
+      }
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/744",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=744"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 23,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/744/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 933,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/744/revisions/933"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media?parent=744"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 685,
+    "date": "2025-10-07T18:41:59",
+    "date_gmt": "2025-10-07T18:41:59",
+    "guid": {
+      "rendered": "https://dna4digital.com/?page_id=685"
+    },
+    "modified": "2026-08-02T17:45:22",
+    "modified_gmt": "2026-08-02T17:45:22",
+    "slug": "services",
+    "status": "publish",
+    "type": "page",
+    "link": "https://dna4digital.com/services/",
+    "title": {
+      "rendered": "Services"
+    },
+    "content": {
+      "rendered": "<div class='dna-stgm' data-props='{&quot;label&quot;:&quot;Menu&quot;,&quot;align&quot;:&quot;right&quot;,&quot;items&quot;:[{&quot;label&quot;:&quot;Home&quot;,&quot;href&quot;:&quot;\\/&quot;},{&quot;label&quot;:&quot;Services&quot;,&quot;href&quot;:&quot;\\/services&quot;},{&quot;label&quot;:&quot;About&quot;,&quot;href&quot;:&quot;\\/about&quot;},{&quot;label&quot;:&quot;Selected Work&quot;,&quot;href&quot;:&quot;\\/selected-work&quot;},{&quot;label&quot;:&quot;Blog&quot;,&quot;href&quot;:&quot;\\/blog&quot;},{&quot;label&quot;:&quot;Contact&quot;,&quot;href&quot;:&quot;\\/contact&quot;}]}'></div>\n\n\n\n<!-- ======================= HERO ======================= -->\n<section id=\"home\" class=\"hero-bg hero-bleed alignfull\" aria-labelledby=\"hero-title\">\n  <div class=\"hero-content\">\n    <div class=\"hero-grid\">\n\n      <div class=\"hero-text fade-in\">\n        <h1 id=\"hero-title\" class=\"hero-title\">\n          <span class=\"hero-line1\">Practical AI implementation,</span>\n          <span class=\"hero-line2\">with a return you can see</span>\n        </h1>\n\n        <p class=\"hero-sub\">\nI put AI where it genuinely pays off. Through <strong>training, audits and advisory</strong>, I help companies work\nfaster, cleaner and smarter. My bias is towards <strong>practical implementation and results you notice\nimmediately</strong>, no theorising, no chaos, concrete business value.\n        </p>\n\n        <div class=\"hero-cta\">\n          <a href=\"/calendar\" class=\"btn-primary\">Book a free consultation</a>\n          <a href=\"#gtm\" class=\"btn-secondary\">GTM &amp; processes</a>\n        </div>\n        <div class=\"hero-cta\">\n          <a href=\"#training\" class=\"btn-secondary\">Training</a>\n          <a href=\"#audit\" class=\"btn-secondary\">Audits / AI Readiness</a>\n        </div>\n        <div class=\"hero-cta\">\n          <a href=\"#consulting\" class=\"btn-secondary\">Consulting &amp; implementation</a>\n        </div>\n      </div>\n\n      <div class=\"hero-image-wrap fade-in\" aria-hidden=\"true\">\n        <img data-recalc-dims=\"1\" decoding=\"async\" class=\"hero-image\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?ssl=1\" alt=\"Daniel Nowak, practical AI implementation\" loading=\"lazy\">\n        <div class=\"roi-badge roi--float\">\n          <div class=\"roi-badge__value\">Speed and precision</div>\n          <div class=\"roi-badge__label\">in the areas that matter strategically</div>\n        </div>\n      </div>\n\n    </div>\n  </div>\n</section>\n\n<!-- ======================= GTM & PROCESSES ======================= -->\n<section id=\"gtm\" class=\"services-section\" aria-labelledby=\"gtm-heading\">\n  <div class=\"container-narrow\">\n    <header class=\"services-header fade-in\">\n      <h2 id=\"gtm-heading\" class=\"services-title\">Go-to-market and the processes underneath it</h2>\n      <p class=\"services-sub\">\n\nThis is where I do my best work, and where most AI spending goes to die. Companies point AI at the visible\nlayer: writing the emails, summarising the calls, generating the content. Underneath, the pipeline stages\nmean different things to different people, leads sit in a gap between marketing and sales for four days, the\nCRM has three fields for the same thing, and nobody has written down what &#8220;qualified&#8221; means.\n<br><br>\nAutomating that doesn&#8217;t fix it. It scales it. So I work both layers, in order: <strong>make the revenue process\nlegible, then apply AI where it compounds.</strong>\n\n    </p>\n    </header>\n\n    <div class=\"services-grid\">\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"><path d=\"M4 6h16M7 10h10M9 14h6M6 18h12\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>\n        </div>\n        <h3 class=\"service-title\">Revenue process mapping</h3>\n        <p class=\"service-desc\">The full journey from first touch to closed and renewed. Stage definitions, exit criteria, owners, and every handoff where things currently fall over.</p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"><path d=\"M3 5h18v6H3zM7 11v8m10-8v8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n        </div>\n        <h3 class=\"service-title\">Funnel &amp; pipeline hygiene</h3>\n        <p class=\"service-desc\">Qualification rules that hold, forecast inputs you can trust, CRM fields people actually fill in because they&#8217;re worth filling in.</p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"><path d=\"M6 12h12M12 6v12\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n        </div>\n        <h3 class=\"service-title\">GTM automation</h3>\n        <p class=\"service-desc\">Research, enrichment, routing, follow-up, call notes and reporting. Applied to a process that works, so the gains stick.</p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"><path d=\"M12 6a6 6 0 016 6v5H6v-5a6 6 0 016-6zM9 21h6\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n        </div>\n        <h3 class=\"service-title\">Enablement for revenue teams</h3>\n        <p class=\"service-desc\">SDRs, AEs, marketing and CS trained on the workflows for their role, using your data and your deals. Not a generic prompt library.</p>\n      </article>\n    </div>\n\n    <div class=\"services-header\" style=\"margin-top:1.5rem;margin-bottom:0;\">\n      <p class=\"services-sub\" style=\"margin-bottom:1.25rem;\"><strong>What you get:</strong> a mapped GTM process, a list of the friction points ranked by cost, and a 90-day plan splitting them into &#8220;fix the process&#8221; and &#8220;automate it.&#8221;</p>\n      <div class=\"hero-cta\" style=\"margin-bottom:0;\">\n        <a href=\"/calendar\" class=\"btn-primary\">Book a consultation</a>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- ======================= TWO WAYS THIS ENDS ======================= -->\n<section id=\"engagement-model\" class=\"services-section\" aria-labelledby=\"engagement-model-heading\">\n  <div class=\"container-narrow\">\n    <header class=\"services-header fade-in\">\n      <h2 id=\"engagement-model-heading\" class=\"services-title\">Two ways this ends</h2>\n      <p class=\"services-sub\">\n\nMost engagements start the same way: an audit, a process map, a ranked list of what&#8217;s costing you money.\nWhere they go next depends on what the answer turns out to be.\n<br><br>\n<strong>If the fix is process and configuration</strong>, I do it. Automations, CRM architecture, SOPs, dashboards, and\ntraining your team so it runs without me. Weeks, not quarters.\n<br><br>\n<strong>If the fix needs software built</strong>, I bring in Yameo, a Dutch–Polish software house that has been\ndelivering enterprise systems for banking, insurance and healthcare since 2006. Fixed price, fixed date, signed\nSLA. I&#8217;m an Associate Partner there, and I stay on the engagement as the person who owns whether it actually\nsolves your problem.\n<br><br>\nYou&#8217;re never handed off to strangers, and you&#8217;re never sold a build you didn&#8217;t need.\n\n    </p>\n    </header>\n\n    <div class=\"services-grid\" style=\"grid-template-columns:repeat(auto-fit, minmax(280px, 420px));justify-content:center;\">\n      <article class=\"service-card fade-in\">\n        <h3 class=\"service-title\">I do this myself (DNA4Digital)</h3>\n        <p class=\"service-desc\">\n          GTM and revenue process design<br>\n          Process mapping, SOPs, KPIs<br>\n          AI readiness audits and roadmaps<br>\n          Low-code automation (n8n, Zapier, HubSpot)<br>\n          Training and enablement<br>\n          Dashboards and reporting (Looker Studio)\n        </p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <h3 class=\"service-title\">I bring in the team (via Yameo)</h3>\n        <p class=\"service-desc\">\n          Custom software and platform builds<br>\n          System integrations and migrations at scale<br>\n          Regulated-industry work needing compliance sign-off<br>\n          Anything needing an engineering team for months<br>\n          Fixed-price, fixed-date, SLA-backed delivery<br>\n          Long-term embedded development partnership\n        </p>\n      </article>\n    </div>\n\n    <div class=\"services-header\" style=\"margin-top:1.5rem;margin-bottom:0;\">\n      <p class=\"services-sub\" style=\"margin-bottom:0;\"><strong>The rule of thumb:</strong> if it can be done with configuration, I do it. If it needs code, engineers and a signed SLA, Yameo builds it and I stay on as the person who owns the outcome.</p>\n    </div>\n  </div>\n</section>\n\n<!-- ======================= TRAINING ======================= -->\n<section id=\"training\" class=\"services-section\" aria-labelledby=\"training-heading\">\n  <div class=\"container-narrow\">\n    <header class=\"services-header fade-in\">\n      <h2 id=\"training-heading\" class=\"services-title\">Training and workshops</h2>\n      <p class=\"services-sub\">\n\nI build practical programmes around the roles and processes that exist in your company. We work on your\nreal data and your real tasks, so people can use AI in their actual job the same week. Knowledge plus\npractice, measurable and fast.\n\n    </p>\n    </header>\n\n    <div class=\"services-grid\">\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"><path d=\"M3 5h18v6H3zM7 11v8m10-8v8\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n        </div>\n        <h3 class=\"service-title\">Marketing &amp; sales</h3>\n        <p class=\"service-desc\">Funnels, content, research, analytics, CRM support: a set of ready-to-run workflows.</p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"><path d=\"M4 6h16M7 10h10M9 14h6M6 18h12\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>\n        </div>\n        <h3 class=\"service-title\">Operations &amp; administration</h3>\n        <p class=\"service-desc\">Document standardisation, order in procedures, quality control and automation.</p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"><path d=\"M12 6a6 6 0 016 6v5H6v-5a6 6 0 016-6zM9 21h6\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n        </div>\n        <h3 class=\"service-title\">HR &amp; knowledge</h3>\n        <p class=\"service-desc\">Onboarding, knowledge repositories, policies and SOPs. AI in the service of people.</p>\n      </article>\n    </div>\n  </div>\n</section>\n\n<!-- ======================= AUDITS / AI READINESS ======================= -->\n<section id=\"audit\" class=\"assessment-section\" aria-labelledby=\"audit-heading\">\n  <div class=\"container-narrow\">\n    <header class=\"assessment-header fade-in\">\n      <h2 id=\"audit-heading\" class=\"assessment-title\">Audits</h2>\n      <p class=\"assessment-sub\">\n\nI analyse your processes and your data to find where AI will pay back first. You get a practical\nimplementation plan that lets you act strategically and hit measurable results, without chaos and without\nunnecessary complexity.\n\n      </p>\n      <p><br><a href=\"https://dna4digital.com/wp-content/uploads/2025/10/Oferta-Audyty.pdf\" class=\"btn-secondary\">See the audit offer</a></p>\n    </header>\n\n    <div class=\"assessment-card fade-in\">\n      <div class=\"assessment-progress\">\n        <div class=\"assessment-progress-top\">\n          <span>Assessment progress</span><span>0% → 100%</span>\n        </div>\n        <div class=\"assessment-progress-rail\">\n          <div class=\"progress-bar\" style=\"width:60%\"></div>\n        </div>\n      </div>\n\n      <div class=\"assessment-results\">\n        <div class=\"assessment-score\">\n          <div class=\"assessment-score-value\">AI Readiness Audit</div>\n          <div class=\"assessment-score-title\">Initial score + action plan</div>\n          <p class=\"assessment-score-desc\">After the workshop you leave with priorities, a process map and tool recommendations.</p>\n        </div>\n\n        <div class=\"assessment-actions\">\n          <a href=\"/calendar\" class=\"btn-primary\">Book a consultation</a>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- ======================= CONSULTING & IMPLEMENTATION ======================= -->\n<section id=\"consulting\" class=\"services-section\" aria-labelledby=\"consulting-heading\">\n  <div class=\"container-narrow\">\n    <header class=\"services-header fade-in\">\n      <h2 id=\"consulting-heading\" class=\"services-title\">Consulting</h2>\n      <p class=\"services-sub\">\n\nI implement AI end to end, from quick wins to durable working standards. Automations, AI assistants,\nknowledge repositories and SOPs, so the technology genuinely supports the business. Practical and strategic\nin equal measure, so every change earns its keep and every implementation fits how your organisation\nactually operates.\n\n     </p>\n    </header>\n\n    <div class=\"services-grid\">\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"><path d=\"M4 7h16M6 7v10a2 2 0 002 2h8a2 2 0 002-2V7M9 11h6\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n        </div>\n        <h3 class=\"service-title\">Quick wins</h3>\n        <p class=\"service-desc\">ROI mapping and the first automations that give your team its time back.</p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"><path d=\"M6 12h12M12 6v12\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n        </div>\n        <h3 class=\"service-title\">Assistants &amp; automation</h3>\n        <p class=\"service-desc\">Prompt design, policies and integrations. Stable, auditable workflows.</p>\n      </article>\n\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\"><rect x=\"3\" y=\"7\" width=\"18\" height=\"12\" rx=\"2\" ry=\"2\" stroke-width=\"2\"/><path d=\"M7 11h10M7 14h7\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>\n        </div>\n        <h3 class=\"service-title\">Knowledge repos &amp; SOPs</h3>\n        <p class=\"service-desc\">Standardised documents, policies and checklists: knowledge that&#8217;s current and easy to find.</p>\n      </article>\n    </div>\n\n    <div class=\"services-header\" style=\"margin-top:1.5rem\">\n      <div class=\"hero-cta\">\n        <a href=\"/calendar\" class=\"btn-primary\">Book a free consultation</a>\n        <a href=\"#training\" class=\"btn-secondary\">Start with training</a>\n      </div>\n    </div>\n  </div>\n</section>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Practical AI implementation, with a return you can see I put AI where it genuinely pays off. Through training, audits and advisory, I help companies work faster, cleaner and smarter. My bias is towards practical implementation and results you notice immediately, no theorising, no chaos, concrete business value. Book a free consultation GTM &amp; processes [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false,
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-685",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Services - DNA4Digital</title>\n<meta name=\"description\" content=\"Oferta: Praktyczne wdrożenia AI - Szkolenia, audyty i doradztwo AI z realnym efektem. Pomagamy firmom pracować szybciej i mądrzej.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://dna4digital.com/services/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Services - DNA4Digital\" />\n<meta property=\"og:description\" content=\"Oferta: Praktyczne wdrożenia AI - Szkolenia, audyty i doradztwo AI z realnym efektem. Pomagamy firmom pracować szybciej i mądrzej.\" />\n<meta property=\"og:url\" content=\"https://dna4digital.com/services/\" />\n<meta property=\"og:site_name\" content=\"DNA4Digital\" />\n<meta property=\"article:modified_time\" content=\"2026-08-02T17:45:22+00:00\" />\n<meta property=\"og:image\" content=\"https://dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Est. reading time\" />\n\t<meta name=\"twitter:data1\" content=\"4 minutes\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/dna4digital.com\\/services\\/\",\"url\":\"https:\\/\\/dna4digital.com\\/services\\/\",\"name\":\"Services - DNA4Digital\",\"isPartOf\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#website\"},\"datePublished\":\"2025-10-07T18:41:59+00:00\",\"dateModified\":\"2026-08-02T17:45:22+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/dna4digital.com\\/services\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/dna4digital.com\\/services\\/#primaryimage\",\"url\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2025\\/10\\/oferta-hero2.jpg?fit=1024%2C1024&ssl=1\",\"contentUrl\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2025\\/10\\/oferta-hero2.jpg?fit=1024%2C1024&ssl=1\",\"width\":1024,\"height\":1024},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/dna4digital.com\\/services\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/dna4digital.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Services\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/dna4digital.com\\/#website\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"name\":\"DNA4Digital\",\"description\":\"At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.\",\"publisher\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/dna4digital.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\",\"name\":\"DNA4Digital\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"contentUrl\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"width\":1024,\"height\":462,\"caption\":\"DNA4Digital\"},\"image\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.linkedin.com\\/company\\/dna4digital\\/\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Services - DNA4Digital",
+      "description": "Oferta: Praktyczne wdrożenia AI - Szkolenia, audyty i doradztwo AI z realnym efektem. Pomagamy firmom pracować szybciej i mądrzej.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://dna4digital.com/services/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Services - DNA4Digital",
+      "og_description": "Oferta: Praktyczne wdrożenia AI - Szkolenia, audyty i doradztwo AI z realnym efektem. Pomagamy firmom pracować szybciej i mądrzej.",
+      "og_url": "https://dna4digital.com/services/",
+      "og_site_name": "DNA4Digital",
+      "article_modified_time": "2026-08-02T17:45:22+00:00",
+      "og_image": [
+        {
+          "url": "https://dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg",
+          "type": "",
+          "width": "",
+          "height": ""
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "twitter_misc": {
+        "Est. reading time": "4 minutes"
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://dna4digital.com/services/",
+            "url": "https://dna4digital.com/services/",
+            "name": "Services - DNA4Digital",
+            "isPartOf": {
+              "@id": "https://dna4digital.com/#website"
+            },
+            "datePublished": "2025-10-07T18:41:59+00:00",
+            "dateModified": "2026-08-02T17:45:22+00:00",
+            "breadcrumb": {
+              "@id": "https://dna4digital.com/services/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://dna4digital.com/services/#primaryimage",
+            "url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?fit=1024%2C1024&ssl=1",
+            "contentUrl": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?fit=1024%2C1024&ssl=1",
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://dna4digital.com/services/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://dna4digital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://dna4digital.com/#website",
+            "url": "https://dna4digital.com/",
+            "name": "DNA4Digital",
+            "description": "At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.",
+            "publisher": {
+              "@id": "https://dna4digital.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://dna4digital.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://dna4digital.com/#organization",
+            "name": "DNA4Digital",
+            "url": "https://dna4digital.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://dna4digital.com/#/schema/logo/image/",
+              "url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "contentUrl": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "width": 1024,
+              "height": 462,
+              "caption": "DNA4Digital"
+            },
+            "image": {
+              "@id": "https://dna4digital.com/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/dna4digital/"
+            ]
+          }
+        ]
+      }
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/685",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=685"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 25,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/685/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 938,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/685/revisions/938"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media?parent=685"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "date": "2024-07-11T15:37:39",
+    "date_gmt": "2024-07-11T15:37:39",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/?page_id=19"
+    },
+    "modified": "2026-08-02T18:33:05",
+    "modified_gmt": "2026-08-02T18:33:05",
+    "slug": "selected-work",
+    "status": "publish",
+    "type": "page",
+    "link": "https://dna4digital.com/selected-work/",
+    "title": {
+      "rendered": "Selected Work"
+    },
+    "content": {
+      "rendered": "<div class='dna-stgm' data-props='{&quot;label&quot;:&quot;Menu&quot;,&quot;align&quot;:&quot;right&quot;,&quot;items&quot;:[{&quot;label&quot;:&quot;Home&quot;,&quot;href&quot;:&quot;\\/&quot;},{&quot;label&quot;:&quot;Services&quot;,&quot;href&quot;:&quot;\\/services&quot;},{&quot;label&quot;:&quot;About&quot;,&quot;href&quot;:&quot;\\/about&quot;},{&quot;label&quot;:&quot;Selected Work&quot;,&quot;href&quot;:&quot;\\/selected-work&quot;},{&quot;label&quot;:&quot;Blog&quot;,&quot;href&quot;:&quot;\\/blog&quot;},{&quot;label&quot;:&quot;Contact&quot;,&quot;href&quot;:&quot;\\/contact&quot;}]}'></div>\n\n\n\n<!-- ============== SELECTED WORK — HERO ============== -->\n<section id=\"work\" class=\"hero-bg hero-bleed alignfull\" aria-labelledby=\"work-title\">\n  <!-- p5 host MUST be a DIV (not canvas) -->\n  <div id=\"particles-canvas\" aria-hidden=\"true\"></div>\n  <div class=\"hero-content\">\n    <div class=\"hero-grid\">\n      <!-- LEFT -->\n      <div class=\"hero-text\">\n        <h1 id=\"work-title\" class=\"hero-title\">\n          <span class=\"hero-line1\">Selected work</span>\n        </h1>\n        <p class=\"hero-sub\">\n          These are results from roles I&#8217;ve held as an employee, not consulting engagements delivered under DNA4Digital. I&#8217;m labelling each one with the company and my role, so the context is never in question.\n        </p>\n        <div class=\"hero-cta\">\n          <a class=\"btn-primary\" href=\"/calendar\">Book a free consultation</a>\n          <a class=\"btn-secondary\" href=\"/about#track-record\">See my full track record</a>\n        </div>\n\n        <!-- Quick proof, expanded on below -->\n        <div class=\"stats-grid\">\n          <div class=\"stat\">\n            <div><span class=\"stat-value\">#1</span></div>\n            <div class=\"stat-label\">revenue team in EMEA, Google Customer Solutions</div>\n          </div>\n          <div class=\"stat\">\n            <div><span class=\"stat-value\">5<span class=\"stat-suffix\">×</span></span></div>\n            <div class=\"stat-label\">increase in funnel engagement (Sensay)</div>\n          </div>\n          <div class=\"stat\">\n            <div><span class=\"stat-value\">30<span class=\"stat-suffix\">%</span></span></div>\n            <div class=\"stat-label\">cut in ticket handling time (SpotOn)</div>\n          </div>\n        </div>\n      </div>\n\n      <!-- RIGHT -->\n      <!-- TODO: replace with a real visual — a screenshot, dashboard, or workflow diagram from one of the projects below -->\n      <div class=\"hero-image-wrap\">\n  <video\n    class=\"hero-image\"\n    autoplay\n    muted\n    loop\n    playsinline\n    poster=\"https://dna4digital.com/wp-content/uploads/2026/08/my_work-poster.jpg\"\n    aria-hidden=\"true\"\n  >\n    <source src=\"https://dna4digital.com/wp-content/uploads/2026/08/my_work.mp4\" type=\"video/mp4\">\n  </video>\n</div>\n    </div>\n  </div>\n</section>\n\n\n\n<!-- ⚠ DRAFT — first iteration built from the About page's own achievement summary.\n     Before publishing: confirm each entry with Daniel — was it his work or the team's,\n     what was the real baseline, can the company be named, and are the problem/result\n     specifics accurate as written. See the \"Selected Work\" section of the personal-brand doc. -->\n\n<section id=\"gtm-work\" class=\"services-section\" aria-labelledby=\"gtm-work-title\">\n  <div class=\"container-narrow\">\n    <article class=\"service-card fade-in\" style=\"margin-bottom:2rem;\">\n      <h3 id=\"gtm-work-title\" class=\"service-title\">Migrated a legacy CRM into a unified HubSpot instance, and grew funnel engagement fivefold</h3>\n      <p class=\"service-desc\"><strong>Context:</strong> As Senior Technical Business Development Manager at Sensay, an AI SaaS company.</p>\n      <p class=\"service-desc\"><strong>The problem:</strong> Data lived across a legacy CRM and disconnected tools, with no single source of truth for revenue data. Reporting to leadership meant manual reconciliation rather than a number anyone could just look up.</p>\n      <p class=\"service-desc\"><strong>What I did:</strong> Migrated the legacy stack into a single HubSpot instance, enriched contact and account data with Breeze Intelligence, and engineered automated sequences in n8n and Zapier to keep the data current without manual entry. Then built Looker Studio dashboards merging CRM, product and website analytics into one view.</p>\n      <p class=\"service-desc\"><strong>The result:</strong> Funnel engagement increased fivefold.</p>\n      <p class=\"service-desc\"><strong>What I&#8217;d tell you if you&#8217;re facing this:</strong> A CRM migration that doesn&#8217;t start with agreeing what your key terms mean (qualified, engaged, active) just moves the mess into a nicer-looking tool. Fix the definitions before you fix the system.</p>\n    </article>\n\n    <article class=\"service-card fade-in\" style=\"margin-bottom:2rem;\">\n      <h3 class=\"service-title\">Cut ticket handling time by 30% by rebuilding the workflow, not just automating it</h3>\n      <p class=\"service-desc\"><strong>Context:</strong> As Client Operations Manager at SpotOn, a restaurant-tech platform, owning the support and operations workflow for the client base.</p>\n      <p class=\"service-desc\"><strong>The problem:</strong> Ticket handling was inconsistent. The right answer to a common issue depended on which team member picked it up, because the knowledge lived in people&#8217;s heads rather than in a documented process.</p>\n      <p class=\"service-desc\"><strong>What I did:</strong> Audited the existing workflow end to end, rebuilt the SOPs so the correct answer was documented and easy to find, and automated the repetitive parts of the workflow around that new standard.</p>\n      <p class=\"service-desc\"><strong>The result:</strong> Ticket handling time dropped by 30%.</p>\n      <p class=\"service-desc\"><strong>What I&#8217;d tell you if you&#8217;re facing this:</strong> Automating a broken process just makes the mess move faster. Document the correct process first. The automation almost writes itself once that part is done.</p>\n    </article>\n\n    <article class=\"service-card fade-in\">\n      <h3 class=\"service-title\">Built the automation layer nobody had to be told to use</h3>\n      <p class=\"service-desc\"><strong>Context:</strong> Also at Sensay, alongside the CRM migration, building the automation and reporting layer underneath the sales and marketing workflow.</p>\n      <p class=\"service-desc\"><strong>The problem:</strong> Reporting tools already existed, but the team rarely opened them, because the numbers didn&#8217;t match what people saw in the systems they actually used day to day.</p>\n      <p class=\"service-desc\"><strong>What I did:</strong> Built the n8n and Zapier automations around the workflows the team already used, rather than asking them to adopt a new tool, and built the dashboards on top of the same data everyone already trusted, merging CRM, product and website analytics into one Looker Studio view.</p>\n      <p class=\"service-desc\"><strong>The result:</strong> The dashboards became the thing leadership actually opened, because the numbers finally matched what the team saw on the ground.</p>\n      <p class=\"service-desc\"><strong>What I&#8217;d tell you if you&#8217;re facing this:</strong> Adoption is the metric everyone skips when reporting on an automation project. If nobody opens the dashboard, the automation didn&#8217;t work, no matter how clever it is.</p>\n    </article>\n  </div>\n</section>\n\n\n\n<!-- ============== CLOSING CTA ============== -->\n<section id=\"kontakt\" class=\"cta-section\">\n  <div class=\"container-narrow\">\n    <div class=\"cta-card\">\n      <div class=\"cta-helix\" aria-hidden=\"true\"></div>\n      <div class=\"cta-header\">\n        <h2 class=\"cta-title\">Want results like these?</h2>\n        <p class=\"cta-text\">\n          Book a free 30-minute call and we&#8217;ll work out whether the first move is an audit, a pilot, or simply writing down how the work is supposed to happen.\n        </p>\n      </div>\n      <div class=\"cta-actions\">\n        <a class=\"btn-primary cta-primary\" href=\"/calendar\">Book a consultation</a>\n        <a class=\"btn-secondary\" href=\"/services\">See services</a>\n      </div>\n      <div class=\"cta-pills\">\n        <span>Transparent plan</span>\n        <span>Practical tools</span>\n        <span>Measurable results</span>\n      </div>\n    </div>\n  </div>\n</section>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Selected work These are results from roles I&#8217;ve held as an employee, not consulting engagements delivered under DNA4Digital. I&#8217;m labelling each one with the company and my role, so the context is never in question. Book a free consultation See my full track record #1 revenue team in EMEA, Google Customer Solutions 5× increase in [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false,
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-19",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Selected Work - DNA4Digital</title>\n<meta name=\"description\" content=\"Discover DNA4Digital&#039;s services: SEO, PPC, web development, and more. Tailored solutions to boost your digital presence effectively.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://dna4digital.com/selected-work/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Selected Work - DNA4Digital\" />\n<meta property=\"og:description\" content=\"Discover DNA4Digital&#039;s services: SEO, PPC, web development, and more. Tailored solutions to boost your digital presence effectively.\" />\n<meta property=\"og:url\" content=\"https://dna4digital.com/selected-work/\" />\n<meta property=\"og:site_name\" content=\"DNA4Digital\" />\n<meta property=\"article:modified_time\" content=\"2026-08-02T18:33:05+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Est. reading time\" />\n\t<meta name=\"twitter:data1\" content=\"3 minutes\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/dna4digital.com\\/selected-work\\/\",\"url\":\"https:\\/\\/dna4digital.com\\/selected-work\\/\",\"name\":\"Selected Work - DNA4Digital\",\"isPartOf\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#website\"},\"datePublished\":\"2024-07-11T15:37:39+00:00\",\"dateModified\":\"2026-08-02T18:33:05+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/dna4digital.com\\/selected-work\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/dna4digital.com\\/selected-work\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/dna4digital.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Selected Work\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/dna4digital.com\\/#website\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"name\":\"DNA4Digital\",\"description\":\"At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.\",\"publisher\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/dna4digital.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\",\"name\":\"DNA4Digital\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"contentUrl\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"width\":1024,\"height\":462,\"caption\":\"DNA4Digital\"},\"image\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.linkedin.com\\/company\\/dna4digital\\/\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Selected Work - DNA4Digital",
+      "description": "Discover DNA4Digital's services: SEO, PPC, web development, and more. Tailored solutions to boost your digital presence effectively.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://dna4digital.com/selected-work/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Selected Work - DNA4Digital",
+      "og_description": "Discover DNA4Digital's services: SEO, PPC, web development, and more. Tailored solutions to boost your digital presence effectively.",
+      "og_url": "https://dna4digital.com/selected-work/",
+      "og_site_name": "DNA4Digital",
+      "article_modified_time": "2026-08-02T18:33:05+00:00",
+      "twitter_card": "summary_large_image",
+      "twitter_misc": {
+        "Est. reading time": "3 minutes"
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://dna4digital.com/selected-work/",
+            "url": "https://dna4digital.com/selected-work/",
+            "name": "Selected Work - DNA4Digital",
+            "isPartOf": {
+              "@id": "https://dna4digital.com/#website"
+            },
+            "datePublished": "2024-07-11T15:37:39+00:00",
+            "dateModified": "2026-08-02T18:33:05+00:00",
+            "breadcrumb": {
+              "@id": "https://dna4digital.com/selected-work/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://dna4digital.com/selected-work/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://dna4digital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Selected Work"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://dna4digital.com/#website",
+            "url": "https://dna4digital.com/",
+            "name": "DNA4Digital",
+            "description": "At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.",
+            "publisher": {
+              "@id": "https://dna4digital.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://dna4digital.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://dna4digital.com/#organization",
+            "name": "DNA4Digital",
+            "url": "https://dna4digital.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://dna4digital.com/#/schema/logo/image/",
+              "url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "contentUrl": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "width": 1024,
+              "height": 462,
+              "caption": "DNA4Digital"
+            },
+            "image": {
+              "@id": "https://dna4digital.com/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/dna4digital/"
+            ]
+          }
+        ]
+      }
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/19",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=19"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 11,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/19/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 942,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/19/revisions/942"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media?parent=19"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "date": "2024-04-07T13:36:54",
+    "date_gmt": "2024-04-07T13:36:54",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/blog/"
+    },
+    "modified": "2024-09-18T19:50:35",
+    "modified_gmt": "2024-09-18T19:50:35",
+    "slug": "blog",
+    "status": "publish",
+    "type": "page",
+    "link": "https://dna4digital.com/blog/",
+    "title": {
+      "rendered": "Blog"
+    },
+    "content": {
+      "rendered": "\n<main class=\"wp-block-group alignfull is-layout-constrained wp-block-group-is-layout-constrained\">\n<div style=\"height:40px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<div class=\"wp-block-group is-layout-constrained wp-container-core-group-is-layout-3e5f4f53 wp-block-group-is-layout-constrained\">\n<h1 class=\"wp-block-heading has-text-align-center has-primary-color has-text-color\" style=\"font-size:clamp(2.2rem, 2.2rem + ((1vw - 0.2rem) * 1.946), 4rem);\">Our news</h1>\n\n\n\n<p class=\"has-text-align-center has-medium-font-size\"></p>\n</div>\n\n\n\n<div style=\"height:80px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<div class=\"wp-block-query alignfull is-layout-constrained wp-block-query-is-layout-constrained\">\n\n\n<div style=\"height:40px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n</div>\n</main>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Our news</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false,
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-8",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Blog - DNA4Digital</title>\n<meta name=\"description\" content=\"Stay updated with DNA4Digital&#039;s latest insights on digital marketing trends. Dive into our blog for cutting-edge strategies and tips.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://dna4digital.com/blog/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Blog - DNA4Digital\" />\n<meta property=\"og:description\" content=\"Stay updated with DNA4Digital&#039;s latest insights on digital marketing trends. Dive into our blog for cutting-edge strategies and tips.\" />\n<meta property=\"og:url\" content=\"https://dna4digital.com/blog/\" />\n<meta property=\"og:site_name\" content=\"DNA4Digital\" />\n<meta property=\"article:modified_time\" content=\"2024-09-18T19:50:35+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Est. reading time\" />\n\t<meta name=\"twitter:data1\" content=\"1 minute\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/dna4digital.com\\/blog\\/\",\"url\":\"https:\\/\\/dna4digital.com\\/blog\\/\",\"name\":\"Blog - DNA4Digital\",\"isPartOf\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#website\"},\"datePublished\":\"2024-04-07T13:36:54+00:00\",\"dateModified\":\"2024-09-18T19:50:35+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/dna4digital.com\\/blog\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/dna4digital.com\\/blog\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/dna4digital.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Blog\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/dna4digital.com\\/#website\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"name\":\"DNA4Digital\",\"description\":\"At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.\",\"publisher\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/dna4digital.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\",\"name\":\"DNA4Digital\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"contentUrl\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"width\":1024,\"height\":462,\"caption\":\"DNA4Digital\"},\"image\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.linkedin.com\\/company\\/dna4digital\\/\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Blog - DNA4Digital",
+      "description": "Stay updated with DNA4Digital's latest insights on digital marketing trends. Dive into our blog for cutting-edge strategies and tips.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://dna4digital.com/blog/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Blog - DNA4Digital",
+      "og_description": "Stay updated with DNA4Digital's latest insights on digital marketing trends. Dive into our blog for cutting-edge strategies and tips.",
+      "og_url": "https://dna4digital.com/blog/",
+      "og_site_name": "DNA4Digital",
+      "article_modified_time": "2024-09-18T19:50:35+00:00",
+      "twitter_card": "summary_large_image",
+      "twitter_misc": {
+        "Est. reading time": "1 minute"
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://dna4digital.com/blog/",
+            "url": "https://dna4digital.com/blog/",
+            "name": "Blog - DNA4Digital",
+            "isPartOf": {
+              "@id": "https://dna4digital.com/#website"
+            },
+            "datePublished": "2024-04-07T13:36:54+00:00",
+            "dateModified": "2024-09-18T19:50:35+00:00",
+            "breadcrumb": {
+              "@id": "https://dna4digital.com/blog/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://dna4digital.com/blog/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://dna4digital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://dna4digital.com/#website",
+            "url": "https://dna4digital.com/",
+            "name": "DNA4Digital",
+            "description": "At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.",
+            "publisher": {
+              "@id": "https://dna4digital.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://dna4digital.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://dna4digital.com/#organization",
+            "name": "DNA4Digital",
+            "url": "https://dna4digital.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://dna4digital.com/#/schema/logo/image/",
+              "url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "contentUrl": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "width": 1024,
+              "height": 462,
+              "caption": "DNA4Digital"
+            },
+            "image": {
+              "@id": "https://dna4digital.com/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/dna4digital/"
+            ]
+          }
+        ]
+      }
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/8",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=8"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/8/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 291,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/8/revisions/291"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media?parent=8"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "date": "2024-04-07T13:36:54",
+    "date_gmt": "2024-04-07T13:36:54",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/contact/"
+    },
+    "modified": "2026-08-02T11:19:00",
+    "modified_gmt": "2026-08-02T11:19:00",
+    "slug": "contact",
+    "status": "publish",
+    "type": "page",
+    "link": "https://dna4digital.com/contact/",
+    "title": {
+      "rendered": "Contact"
+    },
+    "content": {
+      "rendered": "<div class='dna-stgm' data-props='{&quot;label&quot;:&quot;Menu&quot;,&quot;align&quot;:&quot;right&quot;,&quot;items&quot;:[{&quot;label&quot;:&quot;Home&quot;,&quot;href&quot;:&quot;\\/&quot;},{&quot;label&quot;:&quot;Services&quot;,&quot;href&quot;:&quot;\\/services&quot;},{&quot;label&quot;:&quot;About&quot;,&quot;href&quot;:&quot;\\/about&quot;},{&quot;label&quot;:&quot;Selected Work&quot;,&quot;href&quot;:&quot;\\/selected-work&quot;},{&quot;label&quot;:&quot;Blog&quot;,&quot;href&quot;:&quot;\\/blog&quot;},{&quot;label&quot;:&quot;Contact&quot;,&quot;href&quot;:&quot;\\/contact&quot;}]}'></div>\n\n\n\n<section id=\"cta\" class=\"cta-section\" aria-labelledby=\"cta-heading\">\n  <div class=\"container-narrow\">\n    <div class=\"cta-card fade-in\">\n      <!-- decorative helix -->\n      <div class=\"cta-helix\" aria-hidden=\"true\"></div>\n\n      <header class=\"cta-header\">\n        <h2 id=\"cta-heading\" class=\"cta-title\">Get in touch</h2>\n        <p class=\"cta-text\">\n          Modern tools make it easy to connect quickly: you can <u><a href=\"mailto:info@dna4digital.com\">email me</a></u> at info@dna4digital.com or fill in the <u><a href=\"#contact-form\">contact form</a></u> below and I&#8217;ll come back to you promptly and concretely.\n        </p>\n      </header>\n<header class=\"cta-header\">\n        <p class=\"cta-text\">\n         That said, I still value talking to people properly. I&#8217;m happy to jump on a call to go through what you need <br>directly.\n        </p>\n      </header>\n\n      <div class=\"cta-actions\">\n        <a class=\"btn-primary cta-primary\" href=\"/calendar\" aria-label=\"Book a meeting\">\n          Book a meeting\n        </a>\n      </div>\n\n      <p class=\"cta-pills\">\n        <span>No obligation</span>\n        <span>Fast slot</span>\n        <span>Tailored recommendations</span>\n      </p>\n\n      <header class=\"cta-header\">\n        <p class=\"cta-text\"><br>\n         And if you want the full effect of <strong>the training</strong>, the best place to see it is <strong>in the room, at an in-person workshop</strong>, where the knowledge and the practice finally meet.\n        </p>\n      </header>\n\n\n    </div>\n  </div>\n</section>\n\n\n\n<p id=\"contact-form\"></p>\n\n\n\n<div class=\"nfd-container nfd-bg-surface nfd-theme-white is-style-nfd-theme-white wp-block-group is-layout-constrained wp-block-group-is-layout-constrained\"><style id=\"wpforms-css-vars-161-block-5cac4ccd-b89f-49fc-8a00-7653645b1337\">\n\t\t\t\t#wpforms-161.wpforms-block-5cac4ccd-b89f-49fc-8a00-7653645b1337 {\n\t\t\t\t--wpforms-label-sublabel-color: #007565;\n--wpforms-field-border-size: 3px;\n--wpforms-field-background-color: #e8e8e8;\n--wpforms-field-border-color: #404040;\n--wpforms-field-border-color-spare: #404040;\n--wpforms-field-menu-color: #007565;\n--wpforms-button-border-radius: 10px;\n--wpforms-button-background-color: #007565;\n--wpforms-field-size-input-height: 43px;\n--wpforms-field-size-input-spacing: 15px;\n--wpforms-field-size-font-size: 16px;\n--wpforms-field-size-line-height: 19px;\n--wpforms-field-size-padding-h: 14px;\n--wpforms-field-size-checkbox-size: 16px;\n--wpforms-field-size-sublabel-spacing: 5px;\n--wpforms-field-size-icon-size: 1;\n--wpforms-label-size-font-size: 18px;\n--wpforms-label-size-line-height: 21px;\n--wpforms-label-size-sublabel-font-size: 16px;\n--wpforms-label-size-sublabel-line-height: 19px;\n--wpforms-button-size-font-size: 20px;\n--wpforms-button-size-height: 48px;\n--wpforms-button-size-padding-h: 20px;\n--wpforms-button-size-margin-top: 15px;\n\t\t\t}\n\t\t\t</style><div class=\"wpforms-container wpforms-container-full wpforms-block wpforms-block-5cac4ccd-b89f-49fc-8a00-7653645b1337 wpforms-render-modern\" id=\"wpforms-161\"><form id=\"wpforms-form-161\" class=\"wpforms-validate wpforms-form wpforms-ajax-form\" data-formid=\"161\" method=\"post\" enctype=\"multipart/form-data\" action=\"/wp-json/wp/v2/pages?per_page=100\" data-token=\"d0420635e4119a5c5ca2ae0187103f6c\" data-token-time=\"1792523685\"><noscript class=\"wpforms-error-noscript\">Please enable JavaScript in your browser to complete this form.</noscript><div id=\"wpforms-error-noscript\" style=\"display: none;\">Please enable JavaScript in your browser to complete this form.</div><div class=\"wpforms-field-container\"><div id=\"wpforms-161-field_0-container\" class=\"wpforms-field wpforms-field-name\" data-field-id=\"0\"><fieldset><legend class=\"wpforms-field-label\">Contact details <span class=\"wpforms-required-label\" aria-hidden=\"true\">*</span></legend><div class=\"wpforms-field-row wpforms-field-medium\"><div class=\"wpforms-field-row-block wpforms-first wpforms-one-half\"><input type=\"text\" id=\"wpforms-161-field_0\" class=\"wpforms-field-name-first wpforms-field-required\" name=\"wpforms[fields][0][first]\" placeholder=\"First Name\" aria-errormessage=\"wpforms-161-field_0-error\" required><label for=\"wpforms-161-field_0\" class=\"wpforms-field-sublabel after wpforms-sublabel-hide\">First</label></div><div class=\"wpforms-field-row-block wpforms-one-half\"><input type=\"text\" id=\"wpforms-161-field_0-last\" class=\"wpforms-field-name-last wpforms-field-required\" name=\"wpforms[fields][0][last]\" placeholder=\"Last Name\" aria-errormessage=\"wpforms-161-field_0-last-error\" required><label for=\"wpforms-161-field_0-last\" class=\"wpforms-field-sublabel after wpforms-sublabel-hide\">Last</label></div></div></fieldset></div><div id=\"wpforms-161-field_1-container\" class=\"wpforms-field wpforms-field-email\" data-field-id=\"1\"><label class=\"wpforms-field-label\" for=\"wpforms-161-field_1\">E-mail <span class=\"wpforms-required-label\" aria-hidden=\"true\">*</span></label><input type=\"email\" id=\"wpforms-161-field_1\" class=\"wpforms-field-medium wpforms-field-required\" name=\"wpforms[fields][1]\" placeholder=\"your_email@xyz.com\" spellcheck=\"false\" aria-errormessage=\"wpforms-161-field_1-error\" required></div><div id=\"wpforms-161-field_2-container\" class=\"wpforms-field wpforms-field-textarea\" data-field-id=\"2\"><label class=\"wpforms-field-label\" for=\"wpforms-161-field_2\">Your message <span class=\"wpforms-required-label\" aria-hidden=\"true\">*</span></label><textarea id=\"wpforms-161-field_2\" class=\"wpforms-field-small wpforms-field-required\" name=\"wpforms[fields][2]\" placeholder=\"Provide a full context enabling me to get back with the most relevant answer and information.\" aria-errormessage=\"wpforms-161-field_2-error\" required></textarea></div><div id=\"wpforms-161-field_3-container\" class=\"wpforms-field wpforms-field-checkbox\" data-field-id=\"3\"><fieldset><legend class=\"wpforms-field-label\">GDPR consents</legend><ul id=\"wpforms-161-field_3\"><li class=\"choice-1 depth-1\"><input type=\"checkbox\" id=\"wpforms-161-field_3_1\" name=\"wpforms[fields][3][]\" value=\"I acknowledge that I have read the Privacy Policy and consent to the use of my personal data to process and fulfill this request.\" aria-errormessage=\"wpforms-161-field_3_1-error\"  ><label class=\"wpforms-field-label-inline\" for=\"wpforms-161-field_3_1\">I acknowledge that I have read the Privacy Policy and consent to the use of my personal data to process and fulfill this request.</label></li><li class=\"choice-2 depth-1\"><input type=\"checkbox\" id=\"wpforms-161-field_3_2\" name=\"wpforms[fields][3][]\" value=\"I agree to receive promotional communications and marketing materials from DNA4Digital. I understand that I reserve the right to withdraw this consent at any time.\" aria-errormessage=\"wpforms-161-field_3_2-error\"  ><label class=\"wpforms-field-label-inline\" for=\"wpforms-161-field_3_2\">I agree to receive promotional communications and marketing materials from DNA4Digital. I understand that I reserve the right to withdraw this consent at any time.</label></li></ul></fieldset></div></div><!-- .wpforms-field-container --><div class=\"wpforms-recaptcha-container wpforms-is-recaptcha wpforms-is-recaptcha-type-v2\" ><div class=\"g-recaptcha\" data-sitekey=\"6Lcvjj0qAAAAAKPrzY_yesqO-jamwIlqtnT2Jnby\"></div><input type=\"text\" name=\"g-recaptcha-hidden\" class=\"wpforms-recaptcha-hidden\" style=\"position:absolute!important;clip:rect(0,0,0,0)!important;height:1px!important;width:1px!important;border:0!important;overflow:hidden!important;padding:0!important;margin:0!important;\" data-rule-recaptcha=\"1\"></div><div class=\"wpforms-submit-container\" ><input type=\"hidden\" name=\"wpforms[id]\" value=\"161\"><input type=\"hidden\" name=\"wpforms[time_token]\" value=\"1792523685.f5463f492c9a9d6bed7a4cdbd74bf1b1c02e298343b1470c2329fa32db1d8b66\"><input type=\"hidden\" name=\"page_title\" value=\"\"><input type=\"hidden\" name=\"page_url\" value=\"https://dna4digital.com/wp-json/wp/v2/pages?per_page=100\"><input type=\"hidden\" name=\"url_referer\" value=\"\"><button type=\"submit\" name=\"wpforms[submit]\" id=\"wpforms-submit-161\" class=\"wpforms-submit\" data-alt-text=\"Wysyłam...\" data-submit-text=\"Wyślij\" aria-live=\"assertive\" value=\"wpforms-submit\">Wyślij</button><img loading=\"lazy\" decoding=\"async\" src=\"https://dna4digital.com/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg\" class=\"wpforms-submit-spinner\" style=\"display: none;\" width=\"26\" height=\"26\" alt=\"Loading\"></div></form></div>  <!-- .wpforms-container --></div>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Get in touch Modern tools make it easy to connect quickly: you can email me at info@dna4digital.com or fill in the contact form below and I&#8217;ll come back to you promptly and concretely. That said, I still value talking to people properly. I&#8217;m happy to jump on a call to go through what you need [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false,
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-7",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Contact - DNA4Digital</title>\n<meta name=\"description\" content=\"Reach out to DNA4Digital to discuss your digital marketing needs. Contact us today for expert advice and tailored solutions.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://dna4digital.com/contact/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Contact - DNA4Digital\" />\n<meta property=\"og:description\" content=\"Reach out to DNA4Digital to discuss your digital marketing needs. Contact us today for expert advice and tailored solutions.\" />\n<meta property=\"og:url\" content=\"https://dna4digital.com/contact/\" />\n<meta property=\"og:site_name\" content=\"DNA4Digital\" />\n<meta property=\"article:modified_time\" content=\"2026-08-02T11:19:00+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Est. reading time\" />\n\t<meta name=\"twitter:data1\" content=\"1 minute\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/dna4digital.com\\/contact\\/\",\"url\":\"https:\\/\\/dna4digital.com\\/contact\\/\",\"name\":\"Contact - DNA4Digital\",\"isPartOf\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#website\"},\"datePublished\":\"2024-04-07T13:36:54+00:00\",\"dateModified\":\"2026-08-02T11:19:00+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/dna4digital.com\\/contact\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/dna4digital.com\\/contact\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/dna4digital.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Contact\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/dna4digital.com\\/#website\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"name\":\"DNA4Digital\",\"description\":\"At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.\",\"publisher\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/dna4digital.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\",\"name\":\"DNA4Digital\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"contentUrl\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"width\":1024,\"height\":462,\"caption\":\"DNA4Digital\"},\"image\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.linkedin.com\\/company\\/dna4digital\\/\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Contact - DNA4Digital",
+      "description": "Reach out to DNA4Digital to discuss your digital marketing needs. Contact us today for expert advice and tailored solutions.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://dna4digital.com/contact/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Contact - DNA4Digital",
+      "og_description": "Reach out to DNA4Digital to discuss your digital marketing needs. Contact us today for expert advice and tailored solutions.",
+      "og_url": "https://dna4digital.com/contact/",
+      "og_site_name": "DNA4Digital",
+      "article_modified_time": "2026-08-02T11:19:00+00:00",
+      "twitter_card": "summary_large_image",
+      "twitter_misc": {
+        "Est. reading time": "1 minute"
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://dna4digital.com/contact/",
+            "url": "https://dna4digital.com/contact/",
+            "name": "Contact - DNA4Digital",
+            "isPartOf": {
+              "@id": "https://dna4digital.com/#website"
+            },
+            "datePublished": "2024-04-07T13:36:54+00:00",
+            "dateModified": "2026-08-02T11:19:00+00:00",
+            "breadcrumb": {
+              "@id": "https://dna4digital.com/contact/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://dna4digital.com/contact/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://dna4digital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://dna4digital.com/#website",
+            "url": "https://dna4digital.com/",
+            "name": "DNA4Digital",
+            "description": "At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.",
+            "publisher": {
+              "@id": "https://dna4digital.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://dna4digital.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://dna4digital.com/#organization",
+            "name": "DNA4Digital",
+            "url": "https://dna4digital.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://dna4digital.com/#/schema/logo/image/",
+              "url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "contentUrl": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "width": 1024,
+              "height": 462,
+              "caption": "DNA4Digital"
+            },
+            "image": {
+              "@id": "https://dna4digital.com/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/dna4digital/"
+            ]
+          }
+        ]
+      }
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/7",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=7"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 22,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/7/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 934,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/7/revisions/934"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media?parent=7"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "date": "2024-04-07T13:36:54",
+    "date_gmt": "2024-04-07T13:36:54",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/home/"
+    },
+    "modified": "2026-08-26T08:41:48",
+    "modified_gmt": "2026-08-26T08:41:48",
+    "slug": "dna4digital-ai-consulting",
+    "status": "publish",
+    "type": "page",
+    "link": "https://dna4digital.com/",
+    "title": {
+      "rendered": "DNA4Digital &#8211; Daniel Nowak &#8211; AI Consulting"
+    },
+    "content": {
+      "rendered": "<div class='dna-stgm' data-props='{&quot;label&quot;:&quot;Menu&quot;,&quot;align&quot;:&quot;right&quot;,&quot;items&quot;:[{&quot;label&quot;:&quot;Home&quot;,&quot;href&quot;:&quot;\\/&quot;},{&quot;label&quot;:&quot;Services&quot;,&quot;href&quot;:&quot;\\/services&quot;},{&quot;label&quot;:&quot;About&quot;,&quot;href&quot;:&quot;\\/about&quot;},{&quot;label&quot;:&quot;Selected Work&quot;,&quot;href&quot;:&quot;\\/selected-work&quot;},{&quot;label&quot;:&quot;Blog&quot;,&quot;href&quot;:&quot;\\/blog&quot;},{&quot;label&quot;:&quot;Contact&quot;,&quot;href&quot;:&quot;\\/contact&quot;}]}'></div>\n\n\n\n<section id=\"home\" class=\"hero-bg hero-bleed alignfull\">\n  <!-- p5 host MUST be a DIV (not canvas) -->\n  <div id=\"particles-canvas\"></div>\n\n  <div class=\"hero-content\">\n    <div class=\"hero-grid\">\n      <!-- LEFT -->\n      <div class=\"hero-text\">\n        <h1 class=\"hero-title\">\n  <!-- Wordmark: helix on the left, two text lines on the right -->\n  <span class=\"hero-wordmark\">\n    <span class=\"hero-helix\" aria-hidden=\"true\"></span>\n    <span class=\"wm\">\n      <span class=\"line dna\">DNA</span>\n      <span class=\"line fourdigital\"><span class=\"four\">4</span>DIGITAL</span>\n    </span>\n  </span>\n  <span class=\"hero-tagline\"><br>I&#8217;m Daniel Nowak. AI consulting built around:<br><br></span>\n  <span id=\"typed-wrap\" class=\"hero-line2\">\n    <span id=\"typed-text\" class=\"gradient-text\"></span>\n  </span>\n</h1>\n\n\n\n        <p class=\"hero-sub\">\n\n<strong>The world is speeding up, and technology keeps opening new doors.</strong> AI, digital tools and automation are genuinely changing how we work and how we spend our time.\nBut it&#8217;s easy to lose control in all of it: instead of technology working for you, you end up working for it.\n\n<br><br>\n\nThat&#8217;s why I focus on <strong>go-to-market and the processes underneath it</strong>, the part most AI projects skip. Marketing, sales, customer operations: the places where a broken handoff costs more than any tool can save. I fix the process first, then apply AI to it. In that order, it works.\n\n<br><br>\n\nI bring <strong>18 years of hospitality, revenue-operations and AI experience</strong> to the table, because tools change every quarter. Judgement doesn&#8217;t.\n        </p>\n        <div class=\"hero-cta\">\n          <button class=\"btn-primary\" onclick=\"scrollToAssessment()\">TAKE THE AI READINESS TEST</button>\n          <a class=\"btn-secondary\" href=\"/about#track-record\">SEE MY TRACK RECORD</a>\n        </div>\n        <div class=\"stats-grid\">\n          <div class=\"stat\">\n            <div class=\"stat-value\">#<span class=\"stats-counter\" data-target=\"1\">0</span></div>\n            <div class=\"stat-label\">Revenue team, Google Customer Solutions, EMEA</div>\n          </div>\n          <div class=\"stat\">\n            <div class=\"stat-value\"><span class=\"stats-counter\" data-target=\"5\">0</span><span class=\"stat-suffix\">×</span></div>\n            <div class=\"stat-label\">Funnel engagement increase (Sensay)</div>\n          </div>\n          <div class=\"stat\">\n            <div class=\"stat-value\"><span class=\"stats-counter\" data-target=\"30\">0</span><span class=\"stat-suffix\">%</span></div>\n            <div class=\"stat-label\">Cut in ticket handling time (SpotOn)</div>\n          </div>\n        </div>\n      </div>\n\n      <!-- RIGHT -->\n      <!-- TODO: replace with a real portrait of Daniel — currently the stock hero photo -->\n      <div class=\"hero-image-wrap\">\n        <img data-recalc-dims=\"1\" decoding=\"async\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/02/1757749181096.png?ssl=1\" alt=\"Daniel Nowak, AI, GTM &amp; Process Consultant\" class=\"hero-image\">\n          <div class=\"roi-badge roi--float\">\n            <div class=\"roi-badge__value\">Invest today</div>\n            <div class=\"roi-badge__label\">See the return tomorrow</div>\n          </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n\n\n<section id=\"services\" class=\"services-section\" aria-labelledby=\"services-heading\">\n  <div class=\"container-narrow\">\n\n    <!-- Header -->\n    <header class=\"services-header fade-in\">\n      <h2 id=\"services-heading\" class=\"services-title\">Skills that hold up in practice</h2>\n\n      <p class=\"services-sub\">\n        I combine human experience with modern tools,<br>\n        because only a human can give technology, and an AI transformation, real meaning.\n      </p>\n\n      <!-- Highlighted line -->\n      <h3 class=\"services-highlight\">\n        <span>I give teams the knowledge and tools to:</span>\n      </h3>\n\n      <!-- Bullets -->\n      <ul class=\"services-list\" role=\"list\">\n        <li>take back control of their time <br>and how work is organised</li>\n        <li>clean up internal processes <br>and procedures</li>\n        <li>adopt AI and new technology <br>in a practical, non-theoretical way</li>\n        <li>work effectively, without chaos <br>and without the stress</li>\n      </ul>\n    </header>\n\n    <!-- Cards -->\n    <div class=\"services-grid\">\n\n      <!-- Card 1 -->\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" aria-hidden=\"true\" focusable=\"false\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\n              d=\"M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z\"/>\n          </svg>\n        </div>\n        <h3 class=\"service-title\">GTM design &amp; optimisation</h3>\n        <p class=\"service-desc\">\n          Your funnel, your handoffs, your qualification rules, your CRM. I map how revenue actually moves through the company. Then I remove the friction before adding a single tool.\n        </p>\n        <a class=\"service-link\" href=\"/services#gtm\">More →</a>\n      </article>\n\n      <!-- Card 2 -->\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" aria-hidden=\"true\" focusable=\"false\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\n              d=\"M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c1.756-.426 1.756-2.924 0-3.35a1.724 1.724 0 00-1.066-2.573c.94-1.543-.826-3.31-2.37-2.37a1.724 1.724 0 00-2.572-1.065c-.426-1.756-2.924-1.756-3.35 0A1.724 1.724 0 0010.325 4.317z\"/>\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\n              d=\"M15 12a3 3 0 11-6 0 3 3 0 016 0z\"/>\n          </svg>\n        </div>\n        <h3 class=\"service-title\">Process architecture</h3>\n        <p class=\"service-desc\">\n          Mapping, standardisation, ownership and KPIs. Most &#8220;AI problems&#8221; turn out to be undocumented processes wearing a costume. I make the work legible first.\n        </p>\n        <a class=\"service-link\" href=\"/services#gtm\">More →</a>\n      </article>\n\n      <!-- Card 3 -->\n      <article class=\"service-card fade-in\">\n        <div class=\"service-icon\" aria-hidden=\"true\">\n          <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" aria-hidden=\"true\" focusable=\"false\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\n              d=\"M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253\"/>\n          </svg>\n        </div>\n        <h3 class=\"service-title\">Strategic audits</h3>\n        <p class=\"service-desc\">\n          I don&#8217;t just train. I analyse and advise. Audits and consulting to tighten processes, introduce procedures and build systems that actually get used.\n        </p>\n        <a class=\"service-link\" href=\"/services#audit\">More →</a>\n      </article>\n<!-- Card 4 -->\n<article class=\"service-card fade-in\">\n  <div class=\"service-icon\" aria-hidden=\"true\">\n    <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" aria-hidden=\"true\" focusable=\"false\">\n      <rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\" ry=\"2\" stroke-width=\"2\"/>\n      <circle cx=\"12\" cy=\"12\" r=\"2\" stroke-width=\"2\"/>\n      <path d=\"M12 7v3M12 14v3M7 12h3M14 12h3\" stroke-linecap=\"round\" stroke-width=\"2\"/>\n    </svg>\n  </div>\n  <h3 class=\"service-title\">Expert training</h3>\n  <p class=\"service-desc\">\n    I choose the tools and design AI solutions that fit your processes, from concept and PoC to a stable rollout and a team that knows how to run it.\n  </p>\n  <a class=\"service-link\" href=\"/services#training\">More →</a>\n</article>\n\n<!-- Card 5 -->\n<article class=\"service-card fade-in\">\n  <div class=\"service-icon\" aria-hidden=\"true\">\n    <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" aria-hidden=\"true\" focusable=\"false\">\n      <rect x=\"6\" y=\"4\" width=\"12\" height=\"16\" rx=\"2\" ry=\"2\" stroke-width=\"2\"/>\n      <path d=\"M9 9h6M9 12h6M9 15h6\" stroke-linecap=\"round\" stroke-width=\"2\"/>\n      <path d=\"M9 12l2 2 4-4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"/>\n    </svg>\n  </div>\n  <h3 class=\"service-title\">Professional consulting</h3>\n  <p class=\"service-desc\">\n    I diagnose your processes, your data and your organisation&#8217;s readiness for AI, then flag the risks and the automation potential. You get priorities, quick wins and a 90-day action map.\n  </p>\n  <a class=\"service-link\" href=\"/services#consulting\">More →</a>\n</article>\n\n<!-- Card 6 -->\n<article class=\"service-card fade-in\">\n  <div class=\"service-icon\" aria-hidden=\"true\">\n    <svg class=\"icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" aria-hidden=\"true\" focusable=\"false\">\n      <rect x=\"6\" y=\"11\" width=\"3\" height=\"7\" rx=\"1\" stroke-width=\"2\"/>\n      <rect x=\"11\" y=\"7\"  width=\"3\" height=\"11\" rx=\"1\" stroke-width=\"2\"/>\n      <rect x=\"16\" y=\"9\"  width=\"3\" height=\"9\"  rx=\"1\" stroke-width=\"2\"/>\n      <path d=\"M4 17l6-6 3 3 7-7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"/>\n    </svg>\n  </div>\n  <h3 class=\"service-title\">A holistic view</h3>\n  <p class=\"service-desc\">\n    I translate business goals into concrete initiatives: operating model, KPIs, governance and change roadmaps, working alongside your leadership and your teams.\n  </p>\n  <a class=\"service-link\" href=\"/services#consulting\">More →</a>\n</article>\n\n    </div>\n  </div>\n</section>\n\n\n\n<section id=\"assessment\" class=\"assessment-section\">\n  <div class=\"container-narrow\">\n    <div class=\"assessment-header\">\n      <h2 class=\"assessment-title\">Is your company ready for AI?</h2>\n      <p class=\"assessment-sub\">\n        Eight questions, two minutes. You&#8217;ll find out where your organisation actually sits on the AI curve, and get my recommendations for what to do next.\n      </p>\n    </div>\n\n    <div class=\"assessment-card\">\n      <!-- Progress bar -->\n      <div class=\"assessment-progress\">\n        <div class=\"assessment-progress-top\">\n          <span>Progress</span>\n          <span id=\"progress-text\">0 of 8 questions</span>\n        </div>\n        <div class=\"assessment-progress-rail\">\n          <div id=\"progress-bar\" class=\"progress-bar\" style=\"width:0%\"></div>\n        </div>\n      </div>\n\n      <!-- Questions (rendered dynamically by main.js) -->\n      <div id=\"question-container\"></div>\n\n      <!-- Result -->\n      <div id=\"results-container\" class=\"hidden\">\n        <div class=\"assessment-results\">\n          <div class=\"assessment-score\">\n            <div id=\"score-display\" class=\"assessment-score-value\">0</div>\n            <h3 id=\"score-title\" class=\"assessment-score-title\">AI Readiness Score</h3>\n            <p id=\"score-description\" class=\"assessment-score-desc\">Your personalised assessment result</p>\n          </div>\n\n          <div class=\"assessment-recos\">\n            <h4 class=\"assessment-recos-title\">Your personalised recommendations</h4>\n            <div id=\"recommendations\" class=\"assessment-recos-list\"></div>\n          </div>\n\n          <div class=\"assessment-actions\">\n            <button class=\"btn-primary\" onclick=\"showContactForm()\">Get my individual strategy</button>\n            <button class=\"btn-secondary\" onclick=\"restartAssessment()\">Start over</button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n\n\n<section id=\"cta\" class=\"cta-section\" aria-labelledby=\"cta-heading\">\n  <div class=\"container-narrow\">\n    <div class=\"cta-card fade-in\">\n      <!-- decorative helix -->\n      <div class=\"cta-helix\" aria-hidden=\"true\"></div>\n\n      <header class=\"cta-header\">\n        <h2 id=\"cta-heading\" class=\"cta-title\">Take the first step</h2>\n        <p class=\"cta-text\">\n          Let&#8217;s talk for 30 minutes, online, free, no strings attached, and work out where your transformation should actually start: advisory, an audit, or training. <br>Why it&#8217;s worth it:\n        </p>\n      </header>\n\n      <ul class=\"cta-points\" role=\"list\">\n        <li>\n          <svg class=\"check\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 13l4 4L19 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n          A fast, free slot in my calendar\n        </li>\n        <li>\n          <svg class=\"check\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 13l4 4L19 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n          Concrete recommendations for your company, not generic advice\n        </li>\n        <li>\n          <svg class=\"check\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 13l4 4L19 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n          A tight meeting that respects your time\n        </li>\n      </ul>\n\n      <div class=\"cta-actions\">\n        <a class=\"btn-primary cta-primary\" href=\"/calendar\" aria-label=\"Book a free consultation\">\n          Book a free consultation\n        </a>\n        <a class=\"btn-secondary\" href=\"/services\" aria-label=\"See my services\">\n          See services\n        </a>\n      </div>\n\n      <p class=\"cta-pills\">\n        <span>No obligation</span>\n        <span>Fast slot</span>\n        <span>Tailored recommendations</span>\n      </p>\n    </div>\n  </div>\n</section>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>DNA 4DIGITAL I&#8217;m Daniel Nowak. AI consulting built around: The world is speeding up, and technology keeps opening new doors. AI, digital tools and automation are genuinely changing how we work and how we spend our time. But it&#8217;s easy to lose control in all of it: instead of technology working for you, you end [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 27,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "home",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false,
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-6",
+      "page",
+      "type-page",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Konsulting AI dla firm, Treningi, Audyty, Wdrożenia - DNA4Digital</title>\n<meta name=\"description\" content=\"Konsulting AI dla firm. Doradzamy i wdrażamy AI, SEO, PPC oraz audyty, by przyspieszyć wzrost Twojej firmy. Umów darmową konsultację już dziś.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://dna4digital.com/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Konsulting AI dla firm, Treningi, Audyty, Wdrożenia - DNA4Digital\" />\n<meta property=\"og:description\" content=\"Konsulting AI dla firm. Doradzamy i wdrażamy AI, SEO, PPC oraz audyty, by przyspieszyć wzrost Twojej firmy. Umów darmową konsultację już dziś.\" />\n<meta property=\"og:url\" content=\"https://dna4digital.com/\" />\n<meta property=\"og:site_name\" content=\"DNA4Digital\" />\n<meta property=\"article:modified_time\" content=\"2026-08-26T08:41:48+00:00\" />\n<meta property=\"og:image\" content=\"https://dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png\" />\n\t<meta property=\"og:image:width\" content=\"512\" />\n\t<meta property=\"og:image:height\" content=\"512\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Est. reading time\" />\n\t<meta name=\"twitter:data1\" content=\"3 minutes\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/dna4digital.com\\/\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"name\":\"Konsulting AI dla firm, Treningi, Audyty, Wdrożenia - DNA4Digital\",\"isPartOf\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#website\"},\"datePublished\":\"2024-04-07T13:36:54+00:00\",\"dateModified\":\"2026-08-26T08:41:48+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/dna4digital.com\\/#primaryimage\",\"url\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/06\\/cropped-logo-w-dna4digital-1.png?fit=512%2C512&ssl=1\",\"contentUrl\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/06\\/cropped-logo-w-dna4digital-1.png?fit=512%2C512&ssl=1\",\"width\":512,\"height\":512,\"caption\":\"dna4digital logo\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/dna4digital.com\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/dna4digital.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"DNA4Digital &#8211; Daniel Nowak &#8211; AI Consulting\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/dna4digital.com\\/#website\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"name\":\"DNA4Digital\",\"description\":\"At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.\",\"publisher\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/dna4digital.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\",\"name\":\"DNA4Digital\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"contentUrl\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"width\":1024,\"height\":462,\"caption\":\"DNA4Digital\"},\"image\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.linkedin.com\\/company\\/dna4digital\\/\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Konsulting AI dla firm, Treningi, Audyty, Wdrożenia - DNA4Digital",
+      "description": "Konsulting AI dla firm. Doradzamy i wdrażamy AI, SEO, PPC oraz audyty, by przyspieszyć wzrost Twojej firmy. Umów darmową konsultację już dziś.",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://dna4digital.com/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Konsulting AI dla firm, Treningi, Audyty, Wdrożenia - DNA4Digital",
+      "og_description": "Konsulting AI dla firm. Doradzamy i wdrażamy AI, SEO, PPC oraz audyty, by przyspieszyć wzrost Twojej firmy. Umów darmową konsultację już dziś.",
+      "og_url": "https://dna4digital.com/",
+      "og_site_name": "DNA4Digital",
+      "article_modified_time": "2026-08-26T08:41:48+00:00",
+      "og_image": [
+        {
+          "width": 512,
+          "height": 512,
+          "url": "https://dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png",
+          "type": "image/png"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "twitter_misc": {
+        "Est. reading time": "3 minutes"
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://dna4digital.com/",
+            "url": "https://dna4digital.com/",
+            "name": "Konsulting AI dla firm, Treningi, Audyty, Wdrożenia - DNA4Digital",
+            "isPartOf": {
+              "@id": "https://dna4digital.com/#website"
+            },
+            "datePublished": "2024-04-07T13:36:54+00:00",
+            "dateModified": "2026-08-26T08:41:48+00:00",
+            "breadcrumb": {
+              "@id": "https://dna4digital.com/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://dna4digital.com/#primaryimage",
+            "url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?fit=512%2C512&ssl=1",
+            "contentUrl": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?fit=512%2C512&ssl=1",
+            "width": 512,
+            "height": 512,
+            "caption": "dna4digital logo"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://dna4digital.com/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://dna4digital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "DNA4Digital &#8211; Daniel Nowak &#8211; AI Consulting"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://dna4digital.com/#website",
+            "url": "https://dna4digital.com/",
+            "name": "DNA4Digital",
+            "description": "At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.",
+            "publisher": {
+              "@id": "https://dna4digital.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://dna4digital.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://dna4digital.com/#organization",
+            "name": "DNA4Digital",
+            "url": "https://dna4digital.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://dna4digital.com/#/schema/logo/image/",
+              "url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "contentUrl": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "width": 1024,
+              "height": 462,
+              "caption": "DNA4Digital"
+            },
+            "image": {
+              "@id": "https://dna4digital.com/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/dna4digital/"
+            ]
+          }
+        ]
+      }
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/6",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=6"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 25,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/6/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 947,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/6/revisions/947"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/27"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media?parent=6"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "date": "2024-04-01T17:05:11",
+    "date_gmt": "2024-04-01T17:05:11",
+    "guid": {
+      "rendered": "http://box2405/cgi/addon_GT.cgi?s=GT::WP::Install::Cpanel+%28meujrumy%29+-+127.0.0.1+%5Bnocaller%5D/?page_id=3"
+    },
+    "modified": "2024-08-04T18:28:43",
+    "modified_gmt": "2024-08-04T18:28:43",
+    "slug": "privacy-policy",
+    "status": "publish",
+    "type": "page",
+    "link": "https://dna4digital.com/privacy-policy/",
+    "title": {
+      "rendered": "Privacy Policy"
+    },
+    "content": {
+      "rendered": "\n<p class=\"\"><strong>Privacy Policy for DNA4Digital.com</strong></p>\n\n\n\n<p class=\"\"><strong>Effective Date: 4.08.2024</strong></p>\n\n\n\n<p class=\"\">Welcome to DNA4Digital.com. We are committed to protecting your privacy and ensuring that your personal data is handled securely and in accordance with the General Data Protection Regulation (GDPR) and other applicable laws.</p>\n\n\n\n<p class=\"\"><strong>1. Information Collection and Use</strong></p>\n\n\n\n<p class=\"\"><strong>Personal Data</strong>: We collect personal data that you provide to us when you:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li class=\"\">Register on our website,</li>\n\n\n\n<li class=\"\">Subscribe to our newsletters,</li>\n\n\n\n<li class=\"\">Participate in promotional activities,</li>\n\n\n\n<li class=\"\">Interact with our marketing efforts.</li>\n</ul>\n\n\n\n<p class=\"\">This data may include your name, email address, phone number, profession, and demographic information such as age and location.</p>\n\n\n\n<p class=\"\"><strong>Usage Data</strong>: We automatically collect data generated by your use of our services, such as your IP address, browser type, and browsing history.</p>\n\n\n\n<p class=\"\"><strong>Purpose of Processing</strong>: We process your personal data to:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li class=\"\">Provide and maintain our services,</li>\n\n\n\n<li class=\"\">Personalize your website experience,</li>\n\n\n\n<li class=\"\">Communicate with you about products and services that may be of interest,</li>\n\n\n\n<li class=\"\">Conduct analytics and market research,</li>\n\n\n\n<li class=\"\">Ensure compliance with regulatory requirements.</li>\n</ul>\n\n\n\n<p class=\"\"><strong>Lawful Basis</strong>: We process personal data based on:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li class=\"\">Your consent,</li>\n\n\n\n<li class=\"\">The necessity to fulfill a contract with you,</li>\n\n\n\n<li class=\"\">Our legitimate business interests,</li>\n\n\n\n<li class=\"\">Legal obligations.</li>\n</ul>\n\n\n\n<p class=\"\"><strong>2. Consent</strong></p>\n\n\n\n<p class=\"\">When you provide us with personal data to complete a transaction, verify your credit card, or place an order, we imply that you consent to our collecting it and using it for that specific reason only.</p>\n\n\n\n<p class=\"\">If we ask for your personal data for a secondary reason, like marketing, we will either ask you directly for your expressed consent or provide you with an opportunity to say no.</p>\n\n\n\n<p class=\"\"><strong>3. Withdrawal of Consent</strong></p>\n\n\n\n<p class=\"\">If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use, or disclosure of your information, at any time, by contacting us at [Insert Email] or mailing us at [Insert Address].</p>\n\n\n\n<p class=\"\"><strong>4. Disclosure of Data</strong></p>\n\n\n\n<p class=\"\">We may disclose your personal data if we are required by law to do so or if you violate our Terms of Service.</p>\n\n\n\n<p class=\"\"><strong>5. Data Security</strong></p>\n\n\n\n<p class=\"\">We take all reasonable steps to ensure that your data is treated securely and in accordance with this Privacy Policy. No method of transmission over the Internet or method of electronic storage is 100% secure, but we follow all GDPR requirements and implement additional generally accepted industry standards.</p>\n\n\n\n<p class=\"\"><strong>6. Data Retention</strong></p>\n\n\n\n<p class=\"\">We will retain your personal data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your data to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.</p>\n\n\n\n<p class=\"\"><strong>7. Rights Under GDPR</strong></p>\n\n\n\n<p class=\"\">Under GDPR, you have various rights including:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li class=\"\">The right to access, update or to delete the information we have on you.</li>\n\n\n\n<li class=\"\">The right of rectification.</li>\n\n\n\n<li class=\"\">The right to object.</li>\n\n\n\n<li class=\"\">The right of restriction.</li>\n\n\n\n<li class=\"\">The right to data portability.</li>\n\n\n\n<li class=\"\">The right to withdraw consent.</li>\n</ul>\n\n\n\n<p class=\"\">Please contact us if you wish to exercise any of these rights.</p>\n\n\n\n<p class=\"\"><strong>8. Third-Party Services</strong></p>\n\n\n\n<p class=\"\">We may use third-party service providers to assist us in operating our website and conducting our business. These third-party services may include payment processors, email service providers, and marketing platforms. While we strive to work with reputable providers, we encourage you to review their privacy policies as we do not control their practices and are not responsible for their content or actions.</p>\n\n\n\n<p class=\"\"><strong>9. International Data Transfers</strong></p>\n\n\n\n<p class=\"\">If you are located in the European Economic Area (EEA), please note that any information we collect from you may be transferred to and processed in countries outside of the EEA, which may not have the same level of data protection as your home country. When we do so, we ensure that there are adequate safeguards in place to protect your personal data in accordance with GDPR requirements.</p>\n\n\n\n<p class=\"\"><strong>10. Cookies and Tracking Technologies</strong></p>\n\n\n\n<p class=\"\">Our website uses cookies and similar tracking technologies to enhance user experience and analyze site usage. Cookies are small files that are stored on your device and can be retrieved by our servers. You can control the use of cookies at the individual browser level, but if you choose to disable cookies, it may limit your ability to use certain features or functions of our website.</p>\n\n\n\n<p class=\"\">We use the following types of cookies:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li class=\"\"><strong>Essential Cookies</strong>: Required for the operation of our website.</li>\n\n\n\n<li class=\"\"><strong>Analytical/Performance Cookies</strong>: Help us understand how visitors interact with our website.</li>\n\n\n\n<li class=\"\"><strong>Marketing Cookies</strong>: Used to deliver advertisements relevant to you and your interests.</li>\n</ul>\n\n\n\n<p class=\"\">By using our website, you consent to our use of cookies in accordance with this Privacy Policy.</p>\n\n\n\n<p class=\"\"><strong>11. Changes to This Privacy Policy</strong></p>\n\n\n\n<p class=\"\">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the effective date at the top of the policy. We encourage you to review this Privacy Policy periodically for any updates.</p>\n\n\n\n<p class=\"\"><strong>12. Contact Us</strong></p>\n\n\n\n<p class=\"\">If you have any questions or concerns regarding this Privacy Policy or our data practices, please contact us at:</p>\n\n\n\n<p class=\"\">Email: dn@dna4digital.com</p>\n\n\n\n<p class=\"\"><strong>13. Complaints</strong></p>\n\n\n\n<p class=\"\">If you believe that we have not complied with your data protection rights, you have the right to lodge a complaint with a supervisory authority in your country of residence.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Privacy Policy for DNA4Digital.com Effective Date: 4.08.2024 Welcome to DNA4Digital.com. We are committed to protecting your privacy and ensuring that your personal data is handled securely and in accordance with the General Data Protection Regulation (GDPR) and other applicable laws. 1. Information Collection and Use Personal Data: We collect personal data that you provide to [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "parent": 0,
+    "menu_order": 0,
+    "comment_status": "closed",
+    "ping_status": "open",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": true,
+      "_monsterinsights_skip_tracking": false,
+      "footnotes": ""
+    },
+    "class_list": [
+      "post-3",
+      "page",
+      "type-page",
+      "status-publish",
+      "hentry"
+    ],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Privacy Policy - DNA4Digital</title>\n<meta name=\"description\" content=\"DNA4Digital Privacy policy\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://dna4digital.com/privacy-policy/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Privacy Policy - DNA4Digital\" />\n<meta property=\"og:description\" content=\"DNA4Digital Privacy policy\" />\n<meta property=\"og:url\" content=\"https://dna4digital.com/privacy-policy/\" />\n<meta property=\"og:site_name\" content=\"DNA4Digital\" />\n<meta property=\"article:modified_time\" content=\"2024-08-04T18:28:43+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Est. reading time\" />\n\t<meta name=\"twitter:data1\" content=\"4 minutes\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/dna4digital.com\\/privacy-policy\\/\",\"url\":\"https:\\/\\/dna4digital.com\\/privacy-policy\\/\",\"name\":\"Privacy Policy - DNA4Digital\",\"isPartOf\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#website\"},\"datePublished\":\"2024-04-01T17:05:11+00:00\",\"dateModified\":\"2024-08-04T18:28:43+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/dna4digital.com\\/privacy-policy\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/dna4digital.com\\/privacy-policy\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/dna4digital.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Privacy Policy\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/dna4digital.com\\/#website\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"name\":\"DNA4Digital\",\"description\":\"At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.\",\"publisher\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/dna4digital.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/dna4digital.com\\/#organization\",\"name\":\"DNA4Digital\",\"url\":\"https:\\/\\/dna4digital.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"contentUrl\":\"https:\\/\\/i0.wp.com\\/dna4digital.com\\/wp-content\\/uploads\\/2024\\/08\\/logo16-9.png?fit=1024%2C462&ssl=1\",\"width\":1024,\"height\":462,\"caption\":\"DNA4Digital\"},\"image\":{\"@id\":\"https:\\/\\/dna4digital.com\\/#\\/schema\\/logo\\/image\\/\"},\"sameAs\":[\"https:\\/\\/www.linkedin.com\\/company\\/dna4digital\\/\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Privacy Policy - DNA4Digital",
+      "description": "DNA4Digital Privacy policy",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://dna4digital.com/privacy-policy/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Privacy Policy - DNA4Digital",
+      "og_description": "DNA4Digital Privacy policy",
+      "og_url": "https://dna4digital.com/privacy-policy/",
+      "og_site_name": "DNA4Digital",
+      "article_modified_time": "2024-08-04T18:28:43+00:00",
+      "twitter_card": "summary_large_image",
+      "twitter_misc": {
+        "Est. reading time": "4 minutes"
+      },
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://dna4digital.com/privacy-policy/",
+            "url": "https://dna4digital.com/privacy-policy/",
+            "name": "Privacy Policy - DNA4Digital",
+            "isPartOf": {
+              "@id": "https://dna4digital.com/#website"
+            },
+            "datePublished": "2024-04-01T17:05:11+00:00",
+            "dateModified": "2024-08-04T18:28:43+00:00",
+            "breadcrumb": {
+              "@id": "https://dna4digital.com/privacy-policy/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://dna4digital.com/privacy-policy/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://dna4digital.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Privacy Policy"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://dna4digital.com/#website",
+            "url": "https://dna4digital.com/",
+            "name": "DNA4Digital",
+            "description": "At DNA4Digital, we delve into the genetic code of digital marketing success, blending the art of advertising with the science of digital innovation.",
+            "publisher": {
+              "@id": "https://dna4digital.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://dna4digital.com/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://dna4digital.com/#organization",
+            "name": "DNA4Digital",
+            "url": "https://dna4digital.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://dna4digital.com/#/schema/logo/image/",
+              "url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "contentUrl": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1",
+              "width": 1024,
+              "height": 462,
+              "caption": "DNA4Digital"
+            },
+            "image": {
+              "@id": "https://dna4digital.com/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/dna4digital/"
+            ]
+          }
+        ]
+      }
+    },
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/3",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/page"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=3"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 2,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/3/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 188,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/3/revisions/188"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media?parent=3"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

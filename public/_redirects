@@ -1,0 +1,12 @@
+# Old WordPress URLs
+/calendar https://calendar.app.google/ddE9Gz4PGV4dUWmJ7 301
+/calendar/ https://calendar.app.google/ddE9Gz4PGV4dUWmJ7 301
+/calendar-2/ https://calendar.app.google/ddE9Gz4PGV4dUWmJ7 301
+/hello-world/ /blog/ 301
+/importance-of-seo/ /blog/ 301
+/test/ / 301
+/feed/ /blog/ 301
+/offer/ /services/ 301
+/oferta/ /services/ 301
+/o-nas/ /about/ 301
+/kontakt/ /contact/ 301

@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import Site from '../../layouts/Site.astro';
+import Panel from '../../components/Panel.astro';
+import { LINKEDIN_URL } from '../../data/site';
+
+const posts = (await getCollection('blog', p => !p.data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Site
+  title="Blog: notes on GTM, process and AI | DNA4Digital"
+  description="Short, practical notes on go-to-market, process and AI, written from real projects."
+>
+  <Panel rung={3} kicker="04 · Blog">
+    <h1>Notes from the field</h1>
+    <p class="lead">Short, practical notes on go-to-market, process and AI, written from real projects rather than vendor decks.</p>
+    {posts.length > 0 ? (
+      posts.map(p => (
+        <a class="post" href={`/blog/${p.id}/`}>
+          <span class="date">{fmt(p.data.date)}</span>
+          <strong>{p.data.title}</strong>
+          <span class="excerpt">{p.data.description}</span>
+        </a>
+      ))
+    ) : (
+      <p>The first posts are being written now. In the meantime, <a href={LINKEDIN_URL} rel="noopener">follow DNA4Digital on LinkedIn</a> or <a href="/contact/">send me the question</a> you'd like answered first.</p>
+    )}
+  </Panel>
+</Site>

@@ -1,0 +1,81 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/space-grotesk';
+import '@fontsource/jetbrains-mono/500.css';
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+import { RUNGS, BOOKING_URL } from '../data/site';
+
+interface Props {
+  title: string;
+  description: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+}
+const { title, description, ogType = 'website', noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/og.png', Astro.site);
+---
+<!doctype html>
+<html lang="en" transition:animate="none">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="DNA4Digital" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#05080d" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <script is:inline>
+      // App layout is assumed as soon as JS runs; if the 3D scene never starts, fall back to the plain page.
+      document.documentElement.classList.add('js');
+      setTimeout(function () { if (!window.__helixReady) document.documentElement.classList.add('no-gl'); }, 8000);
+    </script>
+    <ClientRouter fallback="none" />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div id="stage" transition:persist="stage" aria-hidden="true">
+      <canvas id="overlay"></canvas>
+    </div>
+
+    <header class="topbar">
+      <a class="wordmark" href="/" aria-label="DNA4Digital, back to the helix">
+        <svg width="24" height="34" viewBox="0 0 24 34" aria-hidden="true">
+          <path d="M4 2c0 8 16 8 16 15S4 24 4 32" stroke="#2dd4bf" stroke-width="2.4" fill="none" stroke-linecap="round" />
+          <path d="M20 2c0 8-16 8-16 15s16 7 16 15" stroke="#00aaff" stroke-width="2.4" fill="none" stroke-linecap="round" />
+          <path d="M7 7h10M7 27h10M9.5 12h5M9.5 22h5" stroke="#bdf5ec" stroke-opacity=".55" stroke-width="1.5" />
+        </svg>
+        <span class="stack" aria-hidden="true"><span>DNA</span><span><span class="four">4</span>DIGITAL</span></span>
+      </a>
+      <a class="btn btn-ghost btn-sm" href={BOOKING_URL} target="_blank" rel="noopener">Book a call</a>
+    </header>
+
+    <nav class="rungs" id="rungs" aria-label="Main" transition:persist="rungs">
+      {RUNGS.map((r, i) => (
+        <a class="rung-link" href={r.href} data-rung={i}>
+          <span class="idx">0{i + 1}</span>{r.name}
+        </a>
+      ))}
+    </nav>
+
+    <slot />
+
+    <script>
+      import '../scripts/forms';
+      // three.js is the heavy part, so it loads as its own chunk and never holds up the page or the form.
+      import('../scripts/helix');
+    </script>
+  </body>
+</html>

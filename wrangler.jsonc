@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dna4digital",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-15",
+  "upload_source_maps": true,
+  "observability": { "enabled": true },
+
+  // The Astro build in ./dist is served as static files. Only /api/* runs Worker code.
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+
+  // Contact form mail. The binding can only ever deliver to this one verified address.
+  // CONTACT_FROM must be an address on a domain onboarded to Cloudflare Email Service (see README).
+  "send_email": [{ "name": "EMAIL", "destination_address": "dn@dna4digital.com" }],
+  "vars": {
+    "CONTACT_TO": "dn@dna4digital.com",
+    "CONTACT_FROM": "website@forms.dna4digital.com"
+  },
+
+  // At most 5 form submissions per visitor per minute.
+  "ratelimits": [{ "name": "CONTACT_LIMIT", "namespace_id": "4120", "simple": { "limit": 5, "period": 60 } }]
+}

@@ -1,2 +1,9 @@
 node_modules/
+dist/
+.astro/
+.wrangler/
+.dev.vars*
 .env
+.superpowers/
+.claude/
+worker/worker-configuration.d.ts

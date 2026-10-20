@@ -1,0 +1,4395 @@
+[
+  {
+    "id": 939,
+    "date": "2026-08-02T18:19:55",
+    "date_gmt": "2026-08-02T18:19:55",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2026/08/my_work.mp4"
+    },
+    "modified": "2026-08-02T18:27:31",
+    "modified_gmt": "2026-08-02T18:27:31",
+    "slug": "my_work",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/my_work/",
+    "title": {
+      "rendered": "my_work"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-939",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "jetpack_videopress_guid": "",
+    "jetpack_videopress": {
+      "title": "my_work",
+      "description": "Process, CRM, reporting, AI automation — \r\nthe actual tools behind the numbers on this page.",
+      "caption": "",
+      "guid": null,
+      "rating": null,
+      "allow_download": 0,
+      "display_embed": 0,
+      "privacy_setting": 2,
+      "needs_playback_token": false,
+      "is_private": false,
+      "private_enabled_for_site": false
+    },
+    "description": {
+      "rendered": "<div style=\"width: 1920px;\" class=\"wp-video\"><video class=\"wp-video-shortcode\" id=\"video-939-1\" width=\"1920\" height=\"1080\" preload=\"metadata\" controls=\"controls\"><source type=\"video/mp4\" src=\"https://dna4digital.com/wp-content/uploads/2026/08/my_work.mp4?_=1\" /><a href=\"https://dna4digital.com/wp-content/uploads/2026/08/my_work.mp4\">https://dna4digital.com/wp-content/uploads/2026/08/my_work.mp4</a></video></div>\n<p>Process, CRM, reporting, AI automation —<br />\nthe actual tools behind the numbers on this page.</p>\n"
+    },
+    "caption": {
+      "rendered": "<p>https://dna4digital.com/wp-content/uploads/2026/08/my_work.mp4 Process, CRM, reporting, AI automation — the actual tools behind the numbers on this page.</p>\n"
+    },
+    "alt_text": "",
+    "media_type": "file",
+    "mime_type": "video/mp4",
+    "media_details": {
+      "bitrate": 2546954,
+      "filesize": 3371177,
+      "mime_type": "video/mp4",
+      "length": 10,
+      "length_formatted": "0:10",
+      "width": 1920,
+      "height": 1080,
+      "fileformat": "mp4",
+      "dataformat": "quicktime",
+      "audio": {
+        "dataformat": "mp4",
+        "bitrate": 137065,
+        "codec": "ISO/IEC 14496-3 AAC",
+        "sample_rate": 48000,
+        "channels": 2,
+        "bits_per_sample": 16,
+        "lossless": false,
+        "channelmode": "stereo",
+        "compression_ratio": 0.08923502604166667
+      },
+      "created_timestamp": -2082844800,
+      "sizes": {}
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2026/08/my_work.mp4",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/939",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=939"
+        }
+      ]
+    }
+  },
+  {
+    "id": 911,
+    "date": "2026-06-14T20:01:01",
+    "date_gmt": "2026-06-14T20:01:01",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2026/06/ezgif.com-reverse.gif"
+    },
+    "modified": "2026-06-14T20:01:01",
+    "modified_gmt": "2026-06-14T20:01:01",
+    "slug": "ezgif-com-reverse",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/ezgif-com-reverse/",
+    "title": {
+      "rendered": "ezgif.com-reverse"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-911",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/06/ezgif.com-reverse.gif?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"169\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/06/ezgif.com-reverse.gif?fit=300%2C169&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/gif",
+    "media_details": {
+      "width": 1920,
+      "height": 1080,
+      "file": "2026/06/ezgif.com-reverse.gif",
+      "filesize": 16985515,
+      "sizes": {
+        "medium": {
+          "file": "ezgif.com-reverse-300x169.gif",
+          "width": 300,
+          "height": 169,
+          "filesize": 28153,
+          "mime_type": "image/gif",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/06/ezgif.com-reverse.gif?fit=300%2C169&ssl=1"
+        },
+        "large": {
+          "file": "ezgif.com-reverse-1024x576.gif",
+          "width": 1024,
+          "height": 576,
+          "filesize": 234760,
+          "mime_type": "image/gif",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/06/ezgif.com-reverse.gif?fit=1024%2C576&ssl=1"
+        },
+        "thumbnail": {
+          "file": "ezgif.com-reverse-150x150.gif",
+          "width": 150,
+          "height": 150,
+          "filesize": 14060,
+          "mime_type": "image/gif",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/06/ezgif.com-reverse.gif?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "ezgif.com-reverse-768x432.gif",
+          "width": 768,
+          "height": 432,
+          "filesize": 137589,
+          "mime_type": "image/gif",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/06/ezgif.com-reverse.gif?fit=768%2C432&ssl=1"
+        },
+        "1536x1536": {
+          "file": "ezgif.com-reverse-1536x864.gif",
+          "width": 1536,
+          "height": 864,
+          "filesize": 534508,
+          "mime_type": "image/gif",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/06/ezgif.com-reverse.gif?fit=1536%2C864&ssl=1"
+        },
+        "full": {
+          "file": "ezgif.com-reverse.gif?fit=1920%2C1080&ssl=1",
+          "width": 1920,
+          "height": 1080,
+          "mime_type": "image/gif",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/06/ezgif.com-reverse.gif?fit=1920%2C1080&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2026/06/ezgif.com-reverse.gif",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/911",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=911"
+        }
+      ]
+    }
+  },
+  {
+    "id": 892,
+    "date": "2026-02-20T06:53:26",
+    "date_gmt": "2026-02-20T06:53:26",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2026/02/1757749181096.png"
+    },
+    "modified": "2026-02-20T06:53:26",
+    "modified_gmt": "2026-02-20T06:53:26",
+    "slug": "1757749181096",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/1757749181096/",
+    "title": {
+      "rendered": "1757749181096"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-892",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/02/1757749181096.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/02/1757749181096.png?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/02/1757749181096.png?w=800&amp;ssl=1 800w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/02/1757749181096.png?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/02/1757749181096.png?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/02/1757749181096.png?resize=768%2C768&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 800,
+      "height": 800,
+      "file": "2026/02/1757749181096.png",
+      "filesize": 729967,
+      "sizes": {
+        "medium": {
+          "file": "1757749181096-300x300.png",
+          "width": 300,
+          "height": 300,
+          "filesize": 92243,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/02/1757749181096.png?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "1757749181096-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 25604,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/02/1757749181096.png?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "1757749181096-768x768.png",
+          "width": 768,
+          "height": 768,
+          "filesize": 586754,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/02/1757749181096.png?fit=768%2C768&ssl=1"
+        },
+        "full": {
+          "file": "1757749181096.png?fit=800%2C800&ssl=1",
+          "width": 800,
+          "height": 800,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2026/02/1757749181096.png?fit=800%2C800&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2026/02/1757749181096.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/892",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=892"
+        }
+      ]
+    }
+  },
+  {
+    "id": 889,
+    "date": "2025-10-28T18:22:52",
+    "date_gmt": "2025-10-28T18:22:52",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2025/10/Oferta-Audyty.pdf"
+    },
+    "modified": "2025-10-28T18:23:27",
+    "modified_gmt": "2025-10-28T18:23:27",
+    "slug": "oferta-audyty",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/oferta-audyty/",
+    "title": {
+      "rendered": "Oferta &#8211; Audyty"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-889",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href='https://dna4digital.com/wp-content/uploads/2025/10/Oferta-Audyty.pdf'><img data-recalc-dims=\"1\" loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"169\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/Oferta-Audyty-pdf.jpg?resize=300%2C169&#038;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" /></a></p>\n<p>Oferta &#8211; Audyt struktury organizacyjnej i procesów z wykorzystaniem AI</p>\n"
+    },
+    "caption": {
+      "rendered": "<p>Oferta &#8211; Audyt struktury organizacyjnej i procesów z wykorzystaniem AI</p>\n"
+    },
+    "alt_text": "",
+    "media_type": "file",
+    "mime_type": "application/pdf",
+    "media_details": {
+      "sizes": {
+        "full": {
+          "file": "Oferta-Audyty-pdf.jpg",
+          "width": 2048,
+          "height": 1152,
+          "mime_type": "application/pdf",
+          "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/Oferta-Audyty-pdf.jpg"
+        },
+        "medium": {
+          "file": "Oferta-Audyty-pdf-300x169.jpg",
+          "width": 300,
+          "height": 169,
+          "filesize": 8258,
+          "mime_type": "image/jpeg",
+          "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/Oferta-Audyty-pdf-300x169.jpg"
+        },
+        "large": {
+          "file": "Oferta-Audyty-pdf-1024x576.jpg",
+          "width": 1024,
+          "height": 576,
+          "filesize": 32376,
+          "mime_type": "image/jpeg",
+          "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/Oferta-Audyty-pdf-1024x576.jpg"
+        },
+        "thumbnail": {
+          "file": "Oferta-Audyty-pdf-150x84.jpg",
+          "width": 150,
+          "height": 84,
+          "filesize": 4364,
+          "mime_type": "image/jpeg",
+          "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/Oferta-Audyty-pdf-150x84.jpg"
+        }
+      },
+      "filesize": 1184349
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/Oferta-Audyty.pdf",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/889",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=889"
+        }
+      ]
+    }
+  },
+  {
+    "id": 843,
+    "date": "2025-10-12T15:46:27",
+    "date_gmt": "2025-10-12T15:46:27",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg"
+    },
+    "modified": "2025-10-12T15:46:27",
+    "modified_gmt": "2025-10-12T15:46:27",
+    "slug": "oferta-hero2",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/oferta-hero2/",
+    "title": {
+      "rendered": "oferta-hero2"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-843",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?w=1024&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?resize=768%2C768&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/jpeg",
+    "media_details": {
+      "width": 1024,
+      "height": 1024,
+      "file": "2025/10/oferta-hero2.jpg",
+      "filesize": 134272,
+      "sizes": {
+        "medium": {
+          "file": "oferta-hero2-300x300.jpg",
+          "width": 300,
+          "height": 300,
+          "filesize": 11774,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "oferta-hero2-150x150.jpg",
+          "width": 150,
+          "height": 150,
+          "filesize": 4839,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "oferta-hero2-768x768.jpg",
+          "width": 768,
+          "height": 768,
+          "filesize": 44747,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?fit=768%2C768&ssl=1"
+        },
+        "full": {
+          "file": "oferta-hero2.jpg?fit=1024%2C1024&ssl=1",
+          "width": 1024,
+          "height": 1024,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg?fit=1024%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/oferta-hero2.jpg",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/843",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=843"
+        }
+      ]
+    }
+  },
+  {
+    "id": 750,
+    "date": "2025-10-10T20:23:35",
+    "date_gmt": "2025-10-10T20:23:35",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png"
+    },
+    "modified": "2025-10-10T20:25:17",
+    "modified_gmt": "2025-10-10T20:25:17",
+    "slug": "hero-o-nas1-1",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/hero-o-nas1-1/",
+    "title": {
+      "rendered": "hero-o-nas1-1"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-750",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"o nas\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?w=1080&amp;ssl=1 1080w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?resize=1024%2C1024&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?resize=768%2C768&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "o nas",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 1080,
+      "height": 1080,
+      "file": "2025/10/hero-o-nas1-1.png",
+      "filesize": 959776,
+      "sizes": {
+        "medium": {
+          "file": "hero-o-nas1-1-300x300.png",
+          "width": 300,
+          "height": 300,
+          "filesize": 30690,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?fit=300%2C300&ssl=1"
+        },
+        "large": {
+          "file": "hero-o-nas1-1-1024x1024.png",
+          "width": 1024,
+          "height": 1024,
+          "filesize": 319456,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?fit=1024%2C1024&ssl=1"
+        },
+        "thumbnail": {
+          "file": "hero-o-nas1-1-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 10446,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "hero-o-nas1-1-768x768.png",
+          "width": 768,
+          "height": 768,
+          "filesize": 176820,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?fit=768%2C768&ssl=1"
+        },
+        "full": {
+          "file": "hero-o-nas1-1.png?fit=1080%2C1080&ssl=1",
+          "width": 1080,
+          "height": 1080,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png?fit=1080%2C1080&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/hero-o-nas1-1.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/750",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=750"
+        }
+      ]
+    }
+  },
+  {
+    "id": 748,
+    "date": "2025-10-10T20:14:05",
+    "date_gmt": "2025-10-10T20:14:05",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png"
+    },
+    "modified": "2025-10-10T20:15:08",
+    "modified_gmt": "2025-10-10T20:15:08",
+    "slug": "hero-o-nas",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/hero-o-nas/",
+    "title": {
+      "rendered": "hero-o-nas"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-748",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"200\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png?fit=300%2C200&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"o-nas\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png?w=1536&amp;ssl=1 1536w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png?resize=768%2C512&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "o-nas",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 1536,
+      "height": 1024,
+      "file": "2025/10/hero-o-nas.png",
+      "filesize": 1564206,
+      "sizes": {
+        "medium": {
+          "file": "hero-o-nas-300x200.png",
+          "width": 300,
+          "height": 200,
+          "filesize": 18485,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png?fit=300%2C200&ssl=1"
+        },
+        "large": {
+          "file": "hero-o-nas-1024x683.png",
+          "width": 1024,
+          "height": 683,
+          "filesize": 197800,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png?fit=1024%2C683&ssl=1"
+        },
+        "thumbnail": {
+          "file": "hero-o-nas-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 9271,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "hero-o-nas-768x512.png",
+          "width": 768,
+          "height": 512,
+          "filesize": 99398,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png?fit=768%2C512&ssl=1"
+        },
+        "full": {
+          "file": "hero-o-nas.png?fit=1536%2C1024&ssl=1",
+          "width": 1536,
+          "height": 1024,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png?fit=1536%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/hero-o-nas.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/748",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=748"
+        }
+      ]
+    }
+  },
+  {
+    "id": 735,
+    "date": "2025-10-10T17:06:52",
+    "date_gmt": "2025-10-10T17:06:52",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2025/10/hero-oferta.png"
+    },
+    "modified": "2025-10-10T17:07:45",
+    "modified_gmt": "2025-10-10T17:07:45",
+    "slug": "hero-oferta",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/hero-oferta/",
+    "title": {
+      "rendered": "hero-oferta"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-735",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-oferta.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"200\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-oferta.png?fit=300%2C200&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"oferta\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-oferta.png?w=1536&amp;ssl=1 1536w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-oferta.png?resize=300%2C200&amp;ssl=1 300w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "oferta",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 1536,
+      "height": 1024,
+      "file": "2025/10/hero-oferta.png",
+      "filesize": 1892611,
+      "sizes": {
+        "medium": {
+          "file": "hero-oferta-300x200.png",
+          "width": 300,
+          "height": 200,
+          "filesize": 15370,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-oferta.png?fit=300%2C200&ssl=1"
+        },
+        "full": {
+          "file": "hero-oferta.png?fit=1536%2C1024&ssl=1",
+          "width": 1536,
+          "height": 1024,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-oferta.png?fit=1536%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/hero-oferta.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/735",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=735"
+        }
+      ]
+    }
+  },
+  {
+    "id": 698,
+    "date": "2025-10-08T17:45:01",
+    "date_gmt": "2025-10-08T17:45:01",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg"
+    },
+    "modified": "2025-10-08T17:45:01",
+    "modified_gmt": "2025-10-08T17:45:01",
+    "slug": "hero-main2",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/hero-main2/",
+    "title": {
+      "rendered": "hero-main2"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-698",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"200\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg?fit=300%2C200&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg?w=1536&amp;ssl=1 1536w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg?resize=768%2C512&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/jpeg",
+    "media_details": {
+      "width": 1536,
+      "height": 1024,
+      "file": "2025/10/hero-main2.jpg",
+      "filesize": 408765,
+      "sizes": {
+        "medium": {
+          "file": "hero-main2-300x200.jpg",
+          "width": 300,
+          "height": 200,
+          "filesize": 9959,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg?fit=300%2C200&ssl=1"
+        },
+        "large": {
+          "file": "hero-main2-1024x683.jpg",
+          "width": 1024,
+          "height": 683,
+          "filesize": 76926,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg?fit=1024%2C683&ssl=1"
+        },
+        "thumbnail": {
+          "file": "hero-main2-150x150.jpg",
+          "width": 150,
+          "height": 150,
+          "filesize": 5146,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "hero-main2-768x512.jpg",
+          "width": 768,
+          "height": 512,
+          "filesize": 43261,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg?fit=768%2C512&ssl=1"
+        },
+        "full": {
+          "file": "hero-main2.jpg?fit=1536%2C1024&ssl=1",
+          "width": 1536,
+          "height": 1024,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg?fit=1536%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/hero-main2.jpg",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/698",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=698"
+        }
+      ]
+    }
+  },
+  {
+    "id": 501,
+    "date": "2025-10-06T18:13:59",
+    "date_gmt": "2025-10-06T18:13:59",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png"
+    },
+    "modified": "2025-10-06T18:13:59",
+    "modified_gmt": "2025-10-06T18:13:59",
+    "slug": "cropped-helix-png",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/helix/cropped-helix-png/",
+    "title": {
+      "rendered": "cropped-helix.png"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-501",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png?w=512&amp;ssl=1 512w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png?resize=270%2C270&amp;ssl=1 270w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png?resize=192%2C192&amp;ssl=1 192w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png?resize=180%2C180&amp;ssl=1 180w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png?resize=32%2C32&amp;ssl=1 32w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n<p>https://dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png</p>\n"
+    },
+    "caption": {
+      "rendered": "<p>https://dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png</p>\n"
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 512,
+      "height": 512,
+      "file": "2025/10/cropped-helix.png",
+      "filesize": 35267,
+      "sizes": {
+        "medium": {
+          "file": "cropped-helix-300x300.png",
+          "width": 300,
+          "height": 300,
+          "filesize": 14887,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "cropped-helix-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 5446,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png?resize=150%2C150&ssl=1"
+        },
+        "site_icon-270": {
+          "file": "cropped-helix-270x270.png",
+          "width": 270,
+          "height": 270,
+          "filesize": 12548,
+          "mime_type": "image/png",
+          "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/cropped-helix-270x270.png"
+        },
+        "site_icon-192": {
+          "file": "cropped-helix-192x192.png",
+          "width": 192,
+          "height": 192,
+          "filesize": 7525,
+          "mime_type": "image/png",
+          "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/cropped-helix-192x192.png"
+        },
+        "site_icon-180": {
+          "file": "cropped-helix-180x180.png",
+          "width": 180,
+          "height": 180,
+          "filesize": 6907,
+          "mime_type": "image/png",
+          "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/cropped-helix-180x180.png"
+        },
+        "site_icon-32": {
+          "file": "cropped-helix-32x32.png",
+          "width": 32,
+          "height": 32,
+          "filesize": 1234,
+          "mime_type": "image/png",
+          "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/cropped-helix-32x32.png"
+        },
+        "full": {
+          "file": "cropped-helix.png?fit=512%2C512&ssl=1",
+          "width": 512,
+          "height": 512,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png?fit=512%2C512&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": 490,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/cropped-helix.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/501",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=501"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "attachment",
+          "id": 490,
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/490"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 490,
+    "date": "2025-10-06T17:52:53",
+    "date_gmt": "2025-10-06T17:52:53",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2025/10/helix.png"
+    },
+    "modified": "2025-10-06T17:52:53",
+    "modified_gmt": "2025-10-06T17:52:53",
+    "slug": "helix",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/helix/",
+    "title": {
+      "rendered": "helix"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-490",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/helix.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"180\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/helix.png?fit=180%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/helix.png?w=300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/helix.png?resize=180%2C300&amp;ssl=1 180w\" sizes=\"auto, (max-width: 180px) 100vw, 180px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 300,
+      "height": 500,
+      "file": "2025/10/helix.png",
+      "filesize": 119139,
+      "sizes": {
+        "medium": {
+          "file": "helix-180x300.png",
+          "width": 180,
+          "height": 300,
+          "filesize": 8954,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/helix.png?fit=180%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "helix-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 5158,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/helix.png?resize=150%2C150&ssl=1"
+        },
+        "full": {
+          "file": "helix.png?fit=300%2C500&ssl=1",
+          "width": 300,
+          "height": 500,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/helix.png?fit=300%2C500&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/helix.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/490",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=490"
+        }
+      ]
+    }
+  },
+  {
+    "id": 484,
+    "date": "2025-10-06T17:35:21",
+    "date_gmt": "2025-10-06T17:35:21",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2025/10/logo.png"
+    },
+    "modified": "2025-10-06T17:35:21",
+    "modified_gmt": "2025-10-06T17:35:21",
+    "slug": "logo-4",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/logo-4/",
+    "title": {
+      "rendered": "logo"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-484",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/logo.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"180\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/logo.png?fit=300%2C180&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/logo.png?w=500&amp;ssl=1 500w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/logo.png?resize=300%2C180&amp;ssl=1 300w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 500,
+      "height": 300,
+      "file": "2025/10/logo.png",
+      "filesize": 57267,
+      "sizes": {
+        "medium": {
+          "file": "logo-300x180.png",
+          "width": 300,
+          "height": 180,
+          "filesize": 9584,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/logo.png?fit=300%2C180&ssl=1"
+        },
+        "thumbnail": {
+          "file": "logo-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 4558,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/logo.png?resize=150%2C150&ssl=1"
+        },
+        "full": {
+          "file": "logo.png?fit=500%2C300&ssl=1",
+          "width": 500,
+          "height": 300,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/logo.png?fit=500%2C300&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/logo.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/484",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=484"
+        }
+      ]
+    }
+  },
+  {
+    "id": 308,
+    "date": "2025-10-05T16:06:05",
+    "date_gmt": "2025-10-05T16:06:05",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2025/10/hero-main.png"
+    },
+    "modified": "2025-10-05T16:06:05",
+    "modified_gmt": "2025-10-05T16:06:05",
+    "slug": "hero-main",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/dna4digital-ai-consulting/hero-main/",
+    "title": {
+      "rendered": "hero-main"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-308",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main.png?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main.png?w=1024&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main.png?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main.png?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main.png?resize=768%2C768&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 1024,
+      "height": 1024,
+      "file": "2025/10/hero-main.png",
+      "filesize": 1374550,
+      "sizes": {
+        "medium": {
+          "file": "hero-main-300x300.png",
+          "width": 300,
+          "height": 300,
+          "filesize": 50880,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main.png?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "hero-main-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 17384,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main.png?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "hero-main-768x768.png",
+          "width": 768,
+          "height": 768,
+          "filesize": 233861,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main.png?fit=768%2C768&ssl=1"
+        },
+        "full": {
+          "file": "hero-main.png?fit=1024%2C1024&ssl=1",
+          "width": 1024,
+          "height": 1024,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2025/10/hero-main.png?fit=1024%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": 6,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2025/10/hero-main.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/308",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=308"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "page",
+          "id": 6,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/6"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 306,
+    "date": "2025-10-05T16:02:08",
+    "date_gmt": "2025-10-05T16:02:08",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2024/08/logo16-9.png"
+    },
+    "modified": "2025-10-05T16:02:08",
+    "modified_gmt": "2025-10-05T16:02:08",
+    "slug": "logo16-9",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/?attachment_id=306",
+    "title": {
+      "rendered": "logo16-9"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-306",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"135\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=300%2C135&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?w=1024&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?resize=300%2C135&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?resize=768%2C347&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 1024,
+      "height": 462,
+      "file": "2024/08/logo16-9.png",
+      "filesize": 158894,
+      "sizes": {
+        "medium": {
+          "file": "logo16-9-300x135.png",
+          "width": 300,
+          "height": 135,
+          "filesize": 5466,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=300%2C135&ssl=1"
+        },
+        "thumbnail": {
+          "file": "logo16-9-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 3431,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "logo16-9-768x347.png",
+          "width": 768,
+          "height": 347,
+          "filesize": 27429,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=768%2C347&ssl=1"
+        },
+        "full": {
+          "file": "logo16-9.png?fit=1024%2C462&ssl=1",
+          "width": 1024,
+          "height": 462,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo16-9.png?fit=1024%2C462&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": 219,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/08/logo16-9.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/306",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=306"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "wp_template",
+          "id": 219,
+          "href": "https://dna4digital.com/wp-json/wp/v2/templates/219"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 305,
+    "date": "2025-10-05T16:00:59",
+    "date_gmt": "2025-10-05T16:00:59",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2024/08/logo-2.jpg"
+    },
+    "modified": "2025-10-05T16:00:59",
+    "modified_gmt": "2025-10-05T16:00:59",
+    "slug": "logo-3",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/?attachment_id=305",
+    "title": {
+      "rendered": "logo"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-305",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-2.jpg?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-2.jpg?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-2.jpg?w=1024&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-2.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-2.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-2.jpg?resize=768%2C768&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/jpeg",
+    "media_details": {
+      "width": 1024,
+      "height": 1024,
+      "file": "2024/08/logo-2.jpg",
+      "filesize": 70397,
+      "sizes": {
+        "medium": {
+          "file": "logo-2-300x300.jpg",
+          "width": 300,
+          "height": 300,
+          "filesize": 7703,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-2.jpg?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "logo-2-150x150.jpg",
+          "width": 150,
+          "height": 150,
+          "filesize": 3254,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-2.jpg?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "logo-2-768x768.jpg",
+          "width": 768,
+          "height": 768,
+          "filesize": 28023,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-2.jpg?fit=768%2C768&ssl=1"
+        },
+        "full": {
+          "file": "logo-2.jpg?fit=1024%2C1024&ssl=1",
+          "width": 1024,
+          "height": 1024,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-2.jpg?fit=1024%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": 219,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/08/logo-2.jpg",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/305",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=305"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "wp_template",
+          "id": 219,
+          "href": "https://dna4digital.com/wp-json/wp/v2/templates/219"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 304,
+    "date": "2025-10-05T16:00:17",
+    "date_gmt": "2025-10-05T16:00:17",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2024/08/logo-1.jpg"
+    },
+    "modified": "2025-10-05T16:00:17",
+    "modified_gmt": "2025-10-05T16:00:17",
+    "slug": "logo-2",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/?attachment_id=304",
+    "title": {
+      "rendered": "logo"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-304",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-1.jpg?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-1.jpg?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-1.jpg?w=1024&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-1.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-1.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-1.jpg?resize=768%2C768&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/jpeg",
+    "media_details": {
+      "width": 1024,
+      "height": 1024,
+      "file": "2024/08/logo-1.jpg",
+      "filesize": 70397,
+      "sizes": {
+        "medium": {
+          "file": "logo-1-300x300.jpg",
+          "width": 300,
+          "height": 300,
+          "filesize": 7703,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-1.jpg?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "logo-1-150x150.jpg",
+          "width": 150,
+          "height": 150,
+          "filesize": 3254,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-1.jpg?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "logo-1-768x768.jpg",
+          "width": 768,
+          "height": 768,
+          "filesize": 28023,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-1.jpg?fit=768%2C768&ssl=1"
+        },
+        "full": {
+          "file": "logo-1.jpg?fit=1024%2C1024&ssl=1",
+          "width": 1024,
+          "height": 1024,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo-1.jpg?fit=1024%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": 219,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/08/logo-1.jpg",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/304",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=304"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "wp_template",
+          "id": 219,
+          "href": "https://dna4digital.com/wp-json/wp/v2/templates/219"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 303,
+    "date": "2025-10-05T15:58:02",
+    "date_gmt": "2025-10-05T15:58:02",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2024/08/logo.jpg"
+    },
+    "modified": "2025-10-05T15:58:02",
+    "modified_gmt": "2025-10-05T15:58:02",
+    "slug": "logo",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/?attachment_id=303",
+    "title": {
+      "rendered": "logo"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-303",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo.jpg?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo.jpg?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo.jpg?w=1024&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo.jpg?resize=768%2C768&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/jpeg",
+    "media_details": {
+      "width": 1024,
+      "height": 1024,
+      "file": "2024/08/logo.jpg",
+      "filesize": 70397,
+      "sizes": {
+        "medium": {
+          "file": "logo-300x300.jpg",
+          "width": 300,
+          "height": 300,
+          "filesize": 7703,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo.jpg?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "logo-150x150.jpg",
+          "width": 150,
+          "height": 150,
+          "filesize": 3254,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo.jpg?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "logo-768x768.jpg",
+          "width": 768,
+          "height": 768,
+          "filesize": 28023,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo.jpg?fit=768%2C768&ssl=1"
+        },
+        "full": {
+          "file": "logo.jpg?fit=1024%2C1024&ssl=1",
+          "width": 1024,
+          "height": 1024,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/08/logo.jpg?fit=1024%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": 219,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/08/logo.jpg",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/303",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=303"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "wp_template",
+          "id": 219,
+          "href": "https://dna4digital.com/wp-json/wp/v2/templates/219"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 296,
+    "date": "2024-12-18T06:32:00",
+    "date_gmt": "2024-12-18T06:32:00",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2024/12/sensay1710852823450.png"
+    },
+    "modified": "2024-12-18T06:32:00",
+    "modified_gmt": "2024-12-18T06:32:00",
+    "slug": "sensay1710852823450",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/sensay1710852823450/",
+    "title": {
+      "rendered": "sensay1710852823450"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-296",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/sensay1710852823450.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/sensay1710852823450.png?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/sensay1710852823450.png?w=400&amp;ssl=1 400w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/sensay1710852823450.png?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/sensay1710852823450.png?resize=150%2C150&amp;ssl=1 150w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 400,
+      "height": 400,
+      "file": "2024/12/sensay1710852823450.png",
+      "filesize": 36562,
+      "sizes": {
+        "medium": {
+          "file": "sensay1710852823450-300x300.png",
+          "width": 300,
+          "height": 300,
+          "filesize": 25462,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/sensay1710852823450.png?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "sensay1710852823450-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 9154,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/sensay1710852823450.png?resize=150%2C150&ssl=1"
+        },
+        "full": {
+          "file": "sensay1710852823450.png?fit=400%2C400&ssl=1",
+          "width": 400,
+          "height": 400,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/sensay1710852823450.png?fit=400%2C400&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/12/sensay1710852823450.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/296",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=296"
+        }
+      ]
+    }
+  },
+  {
+    "id": 295,
+    "date": "2024-12-18T06:31:17",
+    "date_gmt": "2024-12-18T06:31:17",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg"
+    },
+    "modified": "2024-12-18T06:31:17",
+    "modified_gmt": "2024-12-18T06:31:17",
+    "slug": "web_sensay_2",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/web_sensay_2/",
+    "title": {
+      "rendered": "Web_sensay_2"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-295",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"158\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg?fit=300%2C158&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg?w=1200&amp;ssl=1 1200w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg?resize=300%2C158&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg?resize=1024%2C538&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg?resize=768%2C403&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/jpeg",
+    "media_details": {
+      "width": 1200,
+      "height": 630,
+      "file": "2024/12/Web_sensay_2.jpg",
+      "filesize": 210152,
+      "sizes": {
+        "medium": {
+          "file": "Web_sensay_2-300x158.jpg",
+          "width": 300,
+          "height": 158,
+          "filesize": 12361,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg?fit=300%2C158&ssl=1"
+        },
+        "large": {
+          "file": "Web_sensay_2-1024x538.jpg",
+          "width": 1024,
+          "height": 538,
+          "filesize": 91394,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg?fit=1024%2C538&ssl=1"
+        },
+        "thumbnail": {
+          "file": "Web_sensay_2-150x150.jpg",
+          "width": 150,
+          "height": 150,
+          "filesize": 7004,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "Web_sensay_2-768x403.jpg",
+          "width": 768,
+          "height": 403,
+          "filesize": 59617,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg?fit=768%2C403&ssl=1"
+        },
+        "full": {
+          "file": "Web_sensay_2.jpg?fit=1200%2C630&ssl=1",
+          "width": 1200,
+          "height": 630,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg?fit=1200%2C630&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/12/Web_sensay_2.jpg",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/295",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=295"
+        }
+      ]
+    }
+  },
+  {
+    "id": 294,
+    "date": "2024-12-05T08:28:55",
+    "date_gmt": "2024-12-05T08:28:55",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2024/12/profile.jpg"
+    },
+    "modified": "2024-12-05T08:28:55",
+    "modified_gmt": "2024-12-05T08:28:55",
+    "slug": "profile",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/profile/",
+    "title": {
+      "rendered": "profile"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-294",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/profile.jpg?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/profile.jpg?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/profile.jpg?w=556&amp;ssl=1 556w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/profile.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/profile.jpg?resize=150%2C150&amp;ssl=1 150w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/jpeg",
+    "media_details": {
+      "width": 556,
+      "height": 556,
+      "file": "2024/12/profile.jpg",
+      "filesize": 86061,
+      "sizes": {
+        "medium": {
+          "file": "profile-300x300.jpg",
+          "width": 300,
+          "height": 300,
+          "filesize": 19392,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/profile.jpg?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "profile-150x150.jpg",
+          "width": 150,
+          "height": 150,
+          "filesize": 6283,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/profile.jpg?resize=150%2C150&ssl=1"
+        },
+        "full": {
+          "file": "profile.jpg?fit=556%2C556&ssl=1",
+          "width": 556,
+          "height": 556,
+          "mime_type": "image/jpeg",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/12/profile.jpg?fit=556%2C556&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/12/profile.jpg",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/294",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=294"
+        }
+      ]
+    }
+  },
+  {
+    "id": 282,
+    "date": "2024-09-10T17:51:05",
+    "date_gmt": "2024-09-10T17:51:05",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2024/09/strategy.webp"
+    },
+    "modified": "2024-09-10T17:51:05",
+    "modified_gmt": "2024-09-10T17:51:05",
+    "slug": "strategy",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/importance-of-seo/strategy/",
+    "title": {
+      "rendered": "strategy"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-282",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/strategy.webp?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/strategy.webp?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/strategy.webp?w=1024&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/strategy.webp?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/strategy.webp?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/strategy.webp?resize=768%2C768&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/webp",
+    "media_details": {
+      "width": 1024,
+      "height": 1024,
+      "file": "2024/09/strategy.webp",
+      "filesize": 358858,
+      "sizes": {
+        "medium": {
+          "file": "strategy-300x300.webp",
+          "width": 300,
+          "height": 300,
+          "filesize": 26678,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/strategy.webp?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "strategy-150x150.webp",
+          "width": 150,
+          "height": 150,
+          "filesize": 7678,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/strategy.webp?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "strategy-768x768.webp",
+          "width": 768,
+          "height": 768,
+          "filesize": 110438,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/strategy.webp?fit=768%2C768&ssl=1"
+        },
+        "full": {
+          "file": "strategy.webp?fit=1024%2C1024&ssl=1",
+          "width": 1024,
+          "height": 1024,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/strategy.webp?fit=1024%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": 275,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/09/strategy.webp",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/282",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=282"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "post",
+          "id": 275,
+          "href": "https://dna4digital.com/wp-json/wp/v2/posts/275"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 276,
+    "date": "2024-09-09T18:53:05",
+    "date_gmt": "2024-09-09T18:53:05",
+    "guid": {
+      "rendered": "https://dna4digital.com/wp-content/uploads/2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp"
+    },
+    "modified": "2024-09-09T18:54:48",
+    "modified_gmt": "2024-09-09T18:54:48",
+    "slug": "0c3c58ac-12aa-4e33-942e-ac18f269f99d",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/importance-of-seo/0c3c58ac-12aa-4e33-942e-ac18f269f99d/",
+    "title": {
+      "rendered": "SEO, GEO, SXO"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-276",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"SEO GEO SXO\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp?w=1024&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp?resize=768%2C768&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "SEO GEO SXO",
+    "media_type": "image",
+    "mime_type": "image/webp",
+    "media_details": {
+      "width": 1024,
+      "height": 1024,
+      "file": "2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp",
+      "filesize": 574424,
+      "sizes": {
+        "medium": {
+          "file": "0c3c58ac-12aa-4e33-942e-ac18f269f99d-300x300.webp",
+          "width": 300,
+          "height": 300,
+          "filesize": 25648,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "0c3c58ac-12aa-4e33-942e-ac18f269f99d-150x150.webp",
+          "width": 150,
+          "height": 150,
+          "filesize": 7480,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "0c3c58ac-12aa-4e33-942e-ac18f269f99d-768x768.webp",
+          "width": 768,
+          "height": 768,
+          "filesize": 121196,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp?fit=768%2C768&ssl=1"
+        },
+        "full": {
+          "file": "0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp?fit=1024%2C1024&ssl=1",
+          "width": 1024,
+          "height": 1024,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp?fit=1024%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": 275,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/09/0c3c58ac-12aa-4e33-942e-ac18f269f99d.webp",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/276",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=276"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "post",
+          "id": 275,
+          "href": "https://dna4digital.com/wp-json/wp/v2/posts/275"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 151,
+    "date": "2024-08-04T13:01:57",
+    "date_gmt": "2024-08-04T13:01:57",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/wp-content/uploads/2024/08/Video_background.mp4"
+    },
+    "modified": "2024-08-04T13:02:17",
+    "modified_gmt": "2024-08-04T13:02:17",
+    "slug": "video_background",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/dna4digital-ai-consulting/video_background/",
+    "title": {
+      "rendered": "Video_background"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-151",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "jetpack_videopress_guid": "",
+    "jetpack_videopress": {
+      "title": "Video_background",
+      "description": "DNA4Ads services",
+      "caption": "DNA4Ads services",
+      "guid": null,
+      "rating": null,
+      "allow_download": 0,
+      "display_embed": 0,
+      "privacy_setting": 2,
+      "needs_playback_token": false,
+      "is_private": false,
+      "private_enabled_for_site": false
+    },
+    "description": {
+      "rendered": "<div style=\"width: 1280px;\" class=\"wp-video\"><video class=\"wp-video-shortcode\" id=\"video-151-3\" width=\"1280\" height=\"720\" preload=\"metadata\" controls=\"controls\"><source type=\"video/mp4\" src=\"https://dna4digital.com/wp-content/uploads/2024/08/Video_background.mp4?_=3\" /><a href=\"https://dna4digital.com/wp-content/uploads/2024/08/Video_background.mp4\">https://dna4digital.com/wp-content/uploads/2024/08/Video_background.mp4</a></video></div>\n<p>DNA4Ads services</p>\n"
+    },
+    "caption": {
+      "rendered": "<p>DNA4Ads services</p>\n"
+    },
+    "alt_text": "",
+    "media_type": "file",
+    "mime_type": "video/mp4",
+    "media_details": {
+      "bitrate": 1280980,
+      "filesize": 1607996,
+      "mime_type": "video/quicktime",
+      "length": 10,
+      "length_formatted": "0:10",
+      "width": 1280,
+      "height": 720,
+      "fileformat": "mp4",
+      "dataformat": "quicktime",
+      "created_timestamp": -2082844800,
+      "sizes": {}
+    },
+    "post": 6,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/08/Video_background.mp4",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/151",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=151"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "page",
+          "id": 6,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/6"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 41,
+    "date": "2024-07-11T10:49:47",
+    "date_gmt": "2024-07-11T10:49:47",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/wp-content/uploads/2024/07/Google-1.mp4"
+    },
+    "modified": "2024-07-11T10:49:47",
+    "modified_gmt": "2024-07-11T10:49:47",
+    "slug": "google-1",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/google-1/",
+    "title": {
+      "rendered": "Google (1)"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-41",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "jetpack_videopress_guid": "",
+    "jetpack_videopress": {
+      "title": "Google (1)",
+      "description": "",
+      "caption": "",
+      "guid": null,
+      "rating": null,
+      "allow_download": 0,
+      "display_embed": 0,
+      "privacy_setting": 2,
+      "needs_playback_token": false,
+      "is_private": false,
+      "private_enabled_for_site": false
+    },
+    "description": {
+      "rendered": "<div style=\"width: 1280px;\" class=\"wp-video\"><video class=\"wp-video-shortcode\" id=\"video-41-4\" width=\"1280\" height=\"720\" preload=\"metadata\" controls=\"controls\"><source type=\"video/mp4\" src=\"https://dna4digital.com/wp-content/uploads/2024/07/Google-1.mp4?_=4\" /><a href=\"https://dna4digital.com/wp-content/uploads/2024/07/Google-1.mp4\">https://dna4digital.com/wp-content/uploads/2024/07/Google-1.mp4</a></video></div>\n"
+    },
+    "caption": {
+      "rendered": "<p>https://dna4digital.com/wp-content/uploads/2024/07/Google-1.mp4</p>\n"
+    },
+    "alt_text": "",
+    "media_type": "file",
+    "mime_type": "video/mp4",
+    "media_details": {
+      "bitrate": 1635451,
+      "filesize": 1027812,
+      "mime_type": "video/quicktime",
+      "length": 5,
+      "length_formatted": "0:05",
+      "width": 1280,
+      "height": 720,
+      "fileformat": "mp4",
+      "dataformat": "quicktime",
+      "created_timestamp": -2082844800,
+      "sizes": {}
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/07/Google-1.mp4",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/41",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=41"
+        }
+      ]
+    }
+  },
+  {
+    "id": 40,
+    "date": "2024-07-11T10:43:14",
+    "date_gmt": "2024-07-11T10:43:14",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/wp-content/uploads/2024/07/Google.mp4"
+    },
+    "modified": "2024-07-11T10:43:14",
+    "modified_gmt": "2024-07-11T10:43:14",
+    "slug": "google",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/dna4digital-ai-consulting/google/",
+    "title": {
+      "rendered": "Google"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-40",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "jetpack_videopress_guid": "",
+    "jetpack_videopress": {
+      "title": "Google",
+      "description": "",
+      "caption": "",
+      "guid": null,
+      "rating": null,
+      "allow_download": 0,
+      "display_embed": 0,
+      "privacy_setting": 2,
+      "needs_playback_token": false,
+      "is_private": false,
+      "private_enabled_for_site": false
+    },
+    "description": {
+      "rendered": "<div style=\"width: 1280px;\" class=\"wp-video\"><video class=\"wp-video-shortcode\" id=\"video-40-6\" width=\"1280\" height=\"720\" preload=\"metadata\" controls=\"controls\"><source type=\"video/mp4\" src=\"https://dna4digital.com/wp-content/uploads/2024/07/Google.mp4?_=6\" /><a href=\"https://dna4digital.com/wp-content/uploads/2024/07/Google.mp4\">https://dna4digital.com/wp-content/uploads/2024/07/Google.mp4</a></video></div>\n"
+    },
+    "caption": {
+      "rendered": "<p>https://dna4digital.com/wp-content/uploads/2024/07/Google.mp4</p>\n"
+    },
+    "alt_text": "",
+    "media_type": "file",
+    "mime_type": "video/mp4",
+    "media_details": {
+      "bitrate": 1588566,
+      "filesize": 998509,
+      "mime_type": "video/quicktime",
+      "length": 5,
+      "length_formatted": "0:05",
+      "width": 1280,
+      "height": 720,
+      "fileformat": "mp4",
+      "dataformat": "quicktime",
+      "created_timestamp": -2082844800,
+      "sizes": {}
+    },
+    "post": 6,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/07/Google.mp4",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/40",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=40"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "page",
+          "id": 6,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/6"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 35,
+    "date": "2024-07-11T09:54:30",
+    "date_gmt": "2024-07-11T09:54:30",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/wp-content/uploads/2024/07/Front-1.mp4"
+    },
+    "modified": "2024-07-11T09:59:12",
+    "modified_gmt": "2024-07-11T09:59:12",
+    "slug": "front-2",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/front-2/",
+    "title": {
+      "rendered": "Front"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-35",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "jetpack_videopress_guid": "",
+    "jetpack_videopress": {
+      "title": "Front",
+      "description": "DNA4Digital services",
+      "caption": "DNA4Digital",
+      "guid": null,
+      "rating": null,
+      "allow_download": 0,
+      "display_embed": 0,
+      "privacy_setting": 2,
+      "needs_playback_token": false,
+      "is_private": false,
+      "private_enabled_for_site": false
+    },
+    "description": {
+      "rendered": "<div style=\"width: 1280px;\" class=\"wp-video\"><video class=\"wp-video-shortcode\" id=\"video-35-8\" width=\"1280\" height=\"720\" preload=\"metadata\" controls=\"controls\"><source type=\"video/mp4\" src=\"https://dna4digital.com/wp-content/uploads/2024/07/Front-1.mp4?_=8\" /><a href=\"https://dna4digital.com/wp-content/uploads/2024/07/Front-1.mp4\">https://dna4digital.com/wp-content/uploads/2024/07/Front-1.mp4</a></video></div>\n<p>DNA4Digital services</p>\n"
+    },
+    "caption": {
+      "rendered": "<p>DNA4Digital</p>\n"
+    },
+    "alt_text": "",
+    "media_type": "file",
+    "mime_type": "video/mp4",
+    "media_details": {
+      "bitrate": 1130716,
+      "filesize": 712365,
+      "mime_type": "video/quicktime",
+      "length": 5,
+      "length_formatted": "0:05",
+      "width": 1280,
+      "height": 720,
+      "fileformat": "mp4",
+      "dataformat": "quicktime",
+      "created_timestamp": -2082844800,
+      "sizes": {}
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/07/Front-1.mp4",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/35",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=35"
+        }
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "date": "2024-07-11T09:52:08",
+    "date_gmt": "2024-07-11T09:52:08",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/wp-content/uploads/2024/07/Front.mp4"
+    },
+    "modified": "2024-07-11T09:52:08",
+    "modified_gmt": "2024-07-11T09:52:08",
+    "slug": "front",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/dna4digital-ai-consulting/front/",
+    "title": {
+      "rendered": "Front"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-34",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "jetpack_videopress_guid": "",
+    "jetpack_videopress": {
+      "title": "Front",
+      "description": "",
+      "caption": "",
+      "guid": null,
+      "rating": null,
+      "allow_download": 0,
+      "display_embed": 0,
+      "privacy_setting": 2,
+      "needs_playback_token": false,
+      "is_private": false,
+      "private_enabled_for_site": false
+    },
+    "description": {
+      "rendered": "<div style=\"width: 1280px;\" class=\"wp-video\"><video class=\"wp-video-shortcode\" id=\"video-34-9\" width=\"1280\" height=\"720\" preload=\"metadata\" controls=\"controls\"><source type=\"video/mp4\" src=\"https://dna4digital.com/wp-content/uploads/2024/07/Front.mp4?_=9\" /><a href=\"https://dna4digital.com/wp-content/uploads/2024/07/Front.mp4\">https://dna4digital.com/wp-content/uploads/2024/07/Front.mp4</a></video></div>\n"
+    },
+    "caption": {
+      "rendered": "<p>https://dna4digital.com/wp-content/uploads/2024/07/Front.mp4</p>\n"
+    },
+    "alt_text": "",
+    "media_type": "file",
+    "mime_type": "video/mp4",
+    "media_details": {
+      "bitrate": 1130716,
+      "filesize": 712365,
+      "mime_type": "video/quicktime",
+      "length": 5,
+      "length_formatted": "0:05",
+      "width": 1280,
+      "height": 720,
+      "fileformat": "mp4",
+      "dataformat": "quicktime",
+      "created_timestamp": -2082844800,
+      "sizes": {}
+    },
+    "post": 6,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/07/Front.mp4",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/34",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=34"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "page",
+          "id": 6,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/6"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "date": "2024-06-18T18:35:17",
+    "date_gmt": "2024-06-18T18:35:17",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/wp-content/uploads/2024/06/background.png"
+    },
+    "modified": "2024-06-18T18:35:49",
+    "modified_gmt": "2024-06-18T18:35:49",
+    "slug": "background",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/dna4digital-ai-consulting/background/",
+    "title": {
+      "rendered": "background"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-29",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/background.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"171\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/background.png?fit=300%2C171&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/background.png?w=1366&amp;ssl=1 1366w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/background.png?resize=300%2C171&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/background.png?resize=1024%2C582&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/background.png?resize=768%2C437&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": "<p>DNA4Digital</p>\n"
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 1366,
+      "height": 777,
+      "file": "2024/06/background.png",
+      "filesize": 950336,
+      "sizes": {
+        "medium": {
+          "file": "background-300x171.png",
+          "width": 300,
+          "height": 171,
+          "filesize": 68745,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/background.png?fit=300%2C171&ssl=1"
+        },
+        "large": {
+          "file": "background-1024x582.png",
+          "width": 1024,
+          "height": 582,
+          "filesize": 471261,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/background.png?fit=1024%2C582&ssl=1"
+        },
+        "thumbnail": {
+          "file": "background-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 32487,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/background.png?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "background-768x437.png",
+          "width": 768,
+          "height": 437,
+          "filesize": 307654,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/background.png?fit=768%2C437&ssl=1"
+        },
+        "full": {
+          "file": "background.png?fit=1366%2C777&ssl=1",
+          "width": 1366,
+          "height": 777,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/background.png?fit=1366%2C777&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": 6,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/06/background.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/29",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=29"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "page",
+          "id": 6,
+          "href": "https://dna4digital.com/wp-json/wp/v2/pages/6"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "date": "2024-06-18T17:55:06",
+    "date_gmt": "2024-06-18T17:55:06",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png"
+    },
+    "modified": "2024-08-04T14:16:19",
+    "modified_gmt": "2024-08-04T14:16:19",
+    "slug": "dna4digital-logo",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/logo-w-dna4digital-2/dna4digital-logo/",
+    "title": {
+      "rendered": "dna4digital logo"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-27",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"dna4digital logo\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?w=512&amp;ssl=1 512w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?resize=270%2C270&amp;ssl=1 270w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?resize=192%2C192&amp;ssl=1 192w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?resize=180%2C180&amp;ssl=1 180w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?resize=32%2C32&amp;ssl=1 32w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n<p>dna4digital logo</p>\n"
+    },
+    "caption": {
+      "rendered": "<p>dna4digital logo</p>\n"
+    },
+    "alt_text": "dna4digital logo",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 512,
+      "height": 512,
+      "file": "2024/06/cropped-logo-w-dna4digital-1.png",
+      "filesize": 156477,
+      "sizes": {
+        "medium": {
+          "file": "cropped-logo-w-dna4digital-1-300x300.png",
+          "width": 300,
+          "height": 300,
+          "filesize": 75761,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "cropped-logo-w-dna4digital-1-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 28256,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?resize=150%2C150&ssl=1"
+        },
+        "site_icon-270": {
+          "file": "cropped-logo-w-dna4digital-1-270x270.png",
+          "width": 270,
+          "height": 270,
+          "filesize": 65037,
+          "mime_type": "image/png",
+          "source_url": "https://dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1-270x270.png"
+        },
+        "site_icon-192": {
+          "file": "cropped-logo-w-dna4digital-1-192x192.png",
+          "width": 192,
+          "height": 192,
+          "filesize": 40469,
+          "mime_type": "image/png",
+          "source_url": "https://dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1-192x192.png"
+        },
+        "site_icon-180": {
+          "file": "cropped-logo-w-dna4digital-1-180x180.png",
+          "width": 180,
+          "height": 180,
+          "filesize": 36850,
+          "mime_type": "image/png",
+          "source_url": "https://dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1-180x180.png"
+        },
+        "site_icon-32": {
+          "file": "cropped-logo-w-dna4digital-1-32x32.png",
+          "width": 32,
+          "height": 32,
+          "filesize": 2599,
+          "mime_type": "image/png",
+          "source_url": "https://dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1-32x32.png"
+        },
+        "full": {
+          "file": "cropped-logo-w-dna4digital-1.png?fit=512%2C512&ssl=1",
+          "width": 512,
+          "height": 512,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png?fit=512%2C512&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": 26,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/06/cropped-logo-w-dna4digital-1.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/27",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=27"
+        }
+      ],
+      "wp:attached-to": [
+        {
+          "embeddable": true,
+          "post_type": "attachment",
+          "id": 26,
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/26"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "date": "2024-06-18T17:54:02",
+    "date_gmt": "2024-06-18T17:54:02",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/wp-content/uploads/2024/06/logo-w-dna4digital-1.png"
+    },
+    "modified": "2024-06-18T17:54:41",
+    "modified_gmt": "2024-06-18T17:54:41",
+    "slug": "logo-w-dna4digital-2",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/logo-w-dna4digital-2/",
+    "title": {
+      "rendered": "dna4digital logo"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-26",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital-1.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital-1.png?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital-1.png?w=1024&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital-1.png?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital-1.png?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital-1.png?resize=768%2C768&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n<p>dna4digital logo</p>\n"
+    },
+    "caption": {
+      "rendered": "<p>dna4digital logo</p>\n"
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 1024,
+      "height": 1024,
+      "file": "2024/06/logo-w-dna4digital-1.png",
+      "filesize": 290016,
+      "sizes": {
+        "medium": {
+          "file": "logo-w-dna4digital-1-300x300.png",
+          "width": 300,
+          "height": 300,
+          "filesize": 42720,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital-1.png?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "logo-w-dna4digital-1-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 15697,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital-1.png?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "logo-w-dna4digital-1-768x768.png",
+          "width": 768,
+          "height": 768,
+          "filesize": 161932,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital-1.png?fit=768%2C768&ssl=1"
+        },
+        "full": {
+          "file": "logo-w-dna4digital-1.png?fit=1024%2C1024&ssl=1",
+          "width": 1024,
+          "height": 1024,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital-1.png?fit=1024%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital-1.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/26",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=26"
+        }
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "date": "2024-06-18T17:51:44",
+    "date_gmt": "2024-06-18T17:51:44",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/wp-content/uploads/2024/06/logo-w-dna4digital.png"
+    },
+    "modified": "2024-06-18T17:52:10",
+    "modified_gmt": "2024-06-18T17:52:10",
+    "slug": "logo-w-dna4digital",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/logo-w-dna4digital/",
+    "title": {
+      "rendered": "logo w dna4digital"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-25",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital.png?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"DNA4Digital logo\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital.png?w=1024&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital.png?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital.png?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital.png?resize=768%2C768&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n<p>DNA4Digital logo</p>\n"
+    },
+    "caption": {
+      "rendered": "<p>DNA4Digital logo</p>\n"
+    },
+    "alt_text": "DNA4Digital logo",
+    "media_type": "image",
+    "mime_type": "image/png",
+    "media_details": {
+      "width": 1024,
+      "height": 1024,
+      "file": "2024/06/logo-w-dna4digital.png",
+      "filesize": 310255,
+      "sizes": {
+        "medium": {
+          "file": "logo-w-dna4digital-300x300.png",
+          "width": 300,
+          "height": 300,
+          "filesize": 44780,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital.png?fit=300%2C300&ssl=1"
+        },
+        "thumbnail": {
+          "file": "logo-w-dna4digital-150x150.png",
+          "width": 150,
+          "height": 150,
+          "filesize": 16314,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital.png?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "logo-w-dna4digital-768x768.png",
+          "width": 768,
+          "height": 768,
+          "filesize": 172013,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital.png?fit=768%2C768&ssl=1"
+        },
+        "full": {
+          "file": "logo-w-dna4digital.png?fit=1024%2C1024&ssl=1",
+          "width": 1024,
+          "height": 1024,
+          "mime_type": "image/png",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital.png?fit=1024%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/06/logo-w-dna4digital.png",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/25",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=25"
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "date": "2024-04-07T13:21:42",
+    "date_gmt": "2024-04-07T13:21:42",
+    "guid": {
+      "rendered": "https://meu.jru.mybluehost.me/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp"
+    },
+    "modified": "2024-04-07T13:21:42",
+    "modified_gmt": "2024-04-07T13:21:42",
+    "slug": "2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88",
+    "status": "inherit",
+    "type": "attachment",
+    "link": "https://dna4digital.com/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88/",
+    "title": {
+      "rendered": "2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88"
+    },
+    "author": 1,
+    "featured_media": 0,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "template": "",
+    "meta": {
+      "nf_dc_page": "",
+      "content-type": "",
+      "om_disable_all_campaigns": false,
+      "_monsterinsights_skip_tracking": false
+    },
+    "class_list": [
+      "post-5",
+      "attachment",
+      "type-attachment",
+      "status-inherit",
+      "hentry"
+    ],
+    "jetpack_sharing_enabled": true,
+    "description": {
+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"171\" src=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?fit=300%2C171&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?w=1792&amp;ssl=1 1792w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?resize=300%2C171&amp;ssl=1 300w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?resize=1024%2C585&amp;ssl=1 1024w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?resize=768%2C439&amp;ssl=1 768w, https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?resize=1536%2C878&amp;ssl=1 1536w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+    },
+    "caption": {
+      "rendered": ""
+    },
+    "alt_text": "",
+    "media_type": "image",
+    "mime_type": "image/webp",
+    "media_details": {
+      "width": 1792,
+      "height": 1024,
+      "file": "2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp",
+      "filesize": 123038,
+      "sizes": {
+        "medium": {
+          "file": "2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88-300x171.webp",
+          "width": 300,
+          "height": 171,
+          "filesize": 7182,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?fit=300%2C171&ssl=1"
+        },
+        "large": {
+          "file": "2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88-1024x585.webp",
+          "width": 1024,
+          "height": 585,
+          "filesize": 27744,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?fit=1024%2C585&ssl=1"
+        },
+        "thumbnail": {
+          "file": "2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88-150x150.webp",
+          "width": 150,
+          "height": 150,
+          "filesize": 5960,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?resize=150%2C150&ssl=1"
+        },
+        "medium_large": {
+          "file": "2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88-768x439.webp",
+          "width": 768,
+          "height": 439,
+          "filesize": 21564,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?fit=768%2C439&ssl=1"
+        },
+        "1536x1536": {
+          "file": "2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88-1536x878.webp",
+          "width": 1536,
+          "height": 878,
+          "filesize": 41394,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?fit=1536%2C878&ssl=1"
+        },
+        "full": {
+          "file": "2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?fit=1792%2C1024&ssl=1",
+          "width": 1792,
+          "height": 1024,
+          "mime_type": "image/webp",
+          "source_url": "https://i0.wp.com/dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp?fit=1792%2C1024&ssl=1"
+        }
+      },
+      "image_meta": {
+        "aperture": "0",
+        "credit": "",
+        "camera": "",
+        "caption": "",
+        "created_timestamp": "0",
+        "copyright": "",
+        "focal_length": "0",
+        "iso": "0",
+        "shutter_speed": "0",
+        "title": "",
+        "orientation": "0",
+        "keywords": []
+      }
+    },
+    "post": null,
+    "source_url": "https://dna4digital.com/wp-content/uploads/2024/04/2ef9f528-0ce3-4f3a-a9a3-ed63ea2ddb88.webp",
+    "_links": {
+      "self": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media/5",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/media"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://dna4digital.com/wp-json/wp/v2/types/attachment"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/users/1"
+        }
+      ],
+      "replies": [
+        {
+          "embeddable": true,
+          "href": "https://dna4digital.com/wp-json/wp/v2/comments?post=5"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,70 @@
+---
+import { BOOKING_URL } from '../data/site';
+import Site from '../layouts/Site.astro';
+import Panel from '../components/Panel.astro';
+
+const cases = [
+  {
+    figure: '5×',
+    title: 'Migrated a legacy CRM into one HubSpot instance, and grew funnel engagement fivefold',
+    context: 'As Senior Technical Business Development Manager at Sensay, an AI SaaS company.',
+    problem: 'Data lived across a legacy CRM and disconnected tools, with no single source of truth for revenue data. Reporting to leadership meant manual reconciliation rather than a number anyone could just look up.',
+    did: 'Migrated the legacy stack into a single HubSpot instance, enriched contact and account data with Breeze Intelligence, and engineered automated sequences in n8n and Zapier to keep the data current without manual entry. Then built Looker Studio dashboards merging CRM, product and website analytics into one view.',
+    result: 'Funnel engagement increased fivefold.',
+    advice: "A CRM migration that doesn't start with agreeing what your key terms mean (qualified, engaged, active) just moves the mess into a nicer-looking tool. Fix the definitions before you fix the system.",
+  },
+  {
+    figure: '30%',
+    title: 'Cut ticket handling time by 30% by rebuilding the workflow, not just automating it',
+    context: 'As Client Operations Manager at SpotOn, a restaurant-tech platform, owning the support and operations workflow for the client base.',
+    problem: "Ticket handling was inconsistent. The right answer to a common issue depended on which team member picked it up, because the knowledge lived in people's heads rather than in a documented process.",
+    did: 'Audited the existing workflow end to end, rebuilt the SOPs so the correct answer was documented and easy to find, and automated the repetitive parts of the workflow around that new standard.',
+    result: 'Ticket handling time dropped by 30%.',
+    advice: 'Automating a broken process just makes the mess move faster. Document the correct process first. The automation almost writes itself once that part is done.',
+  },
+  {
+    figure: 'Adoption',
+    title: 'Built the automation layer nobody had to be told to use',
+    context: 'Also at Sensay, alongside the CRM migration, building the automation and reporting layer underneath the sales and marketing workflow.',
+    problem: "Reporting tools already existed, but the team rarely opened them, because the numbers didn't match what people saw in the systems they actually used day to day.",
+    did: 'Built the n8n and Zapier automations around the workflows the team already used, rather than asking them to adopt a new tool, and built the dashboards on the same data everyone already trusted, merging CRM, product and website analytics into one Looker Studio view.',
+    result: 'The dashboards became the thing leadership actually opened, because the numbers finally matched what the team saw on the ground.',
+    advice: "Adoption is the metric everyone skips when reporting on an automation project. If nobody opens the dashboard, the automation didn't work, no matter how clever it is.",
+  },
+];
+---
+<Site
+  title="Selected work: results from roles I've held | DNA4Digital"
+  description="A CRM migration that grew funnel engagement fivefold, a 30% cut in ticket handling time, and dashboards leadership actually opened. Results from roles at Sensay, SpotOn and Google Customer Solutions."
+>
+  <Panel rung={2} kicker="03 · Selected work">
+    <h1>Results from roles I've held</h1>
+    <p class="lead">These are results from roles I've held as an employee, not consulting engagements delivered under DNA4Digital. Each one is labelled with the company and my role, so the context is never in question.</p>
+    <div class="stats">
+      <div><b>#1</b><span>revenue team in EMEA, Google CS</span></div>
+      <div><b>5&times;</b><span>funnel engagement, Sensay</span></div>
+      <div><b>30%</b><span>less ticket handling time, SpotOn</span></div>
+    </div>
+
+    {cases.map(c => (
+      <article class="case">
+        <p class="figure">{c.figure}</p>
+        <h2>{c.title}</h2>
+        <dl>
+          <dt>Context</dt><dd>{c.context}</dd>
+          <dt>The problem</dt><dd>{c.problem}</dd>
+          <dt>What I did</dt><dd>{c.did}</dd>
+          <dt>The result</dt><dd><strong>{c.result}</strong></dd>
+          <dt>If you're facing this</dt><dd>{c.advice}</dd>
+        </dl>
+      </article>
+    ))}
+
+    <h2>Want results like these?</h2>
+    <p>Book a free 30-minute call and we'll work out whether the first move is an audit, a pilot, or simply writing down how the work is supposed to happen.</p>
+    <div class="btnrow">
+      <a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Book a consultation</a>
+      <a class="btn btn-ghost" href="/about/#track-record">See my full track record</a>
+    </div>
+  </Panel>
+</Site>

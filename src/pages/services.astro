@@ -1,0 +1,86 @@
+---
+import { BOOKING_URL } from '../data/site';
+import Site from '../layouts/Site.astro';
+import Panel from '../components/Panel.astro';
+---
+<Site
+  title="Services: GTM, audits, training and AI consulting | DNA4Digital"
+  description="GTM and process consulting, AI readiness audits, role-based training and implementation. I fix the revenue process first, then automate what's worth it."
+>
+  <Panel rung={0} kicker="01 · Services">
+    <h1>Practical AI, with a return you can see</h1>
+    <p class="lead">I put AI where it genuinely pays off. Through training, audits and advisory, I help companies work faster, cleaner and smarter. No theorising and no chaos: practical implementation and results you notice quickly.</p>
+    <nav class="toc" aria-label="On this page">
+      <a href="#gtm">GTM &amp; processes</a><a href="#delivery">How it's delivered</a><a href="#training">Training</a><a href="#audit">Audits</a><a href="#consulting">Consulting</a>
+    </nav>
+
+    <h2 id="gtm">Go-to-market and the processes underneath it</h2>
+    <p>This is where I do my best work, and where most AI spending goes to die. Companies point AI at the visible layer: writing the emails, summarising the calls, generating the content. Underneath, the pipeline stages mean different things to different people, leads sit between marketing and sales for four days, the CRM has three fields for the same thing, and nobody has written down what &ldquo;qualified&rdquo; means.</p>
+    <p>Automating that doesn't fix it. It scales it. So I work both layers, in order: make the revenue process legible, then apply AI where it compounds.</p>
+    <div class="pcards">
+      <div class="pcard"><h3>Revenue process mapping</h3><p>The full journey from first touch to closed and renewed. Stage definitions, exit criteria, owners, and every handoff where things currently fall over.</p></div>
+      <div class="pcard"><h3>Funnel &amp; pipeline hygiene</h3><p>Qualification rules that hold, forecast inputs you can trust, CRM fields people actually fill in because they're worth filling in.</p></div>
+      <div class="pcard"><h3>GTM automation</h3><p>Research, enrichment, routing, follow-up, call notes and reporting. Applied to a process that works, so the gains stick.</p></div>
+      <div class="pcard"><h3>Enablement for revenue teams</h3><p>SDRs, AEs, marketing and CS trained on the workflows for their role, using your data and your deals. Not a generic prompt library.</p></div>
+    </div>
+    <div class="callout"><p><strong>What you get:</strong> a mapped GTM process, the friction points ranked by what they cost you, and a 90-day plan that splits them into &ldquo;fix the process&rdquo; and &ldquo;automate it&rdquo;.</p></div>
+
+    <h2 id="delivery">Two ways this ends</h2>
+    <p>Most engagements start the same way: an audit, a process map, a ranked list of what's costing you money. Where they go next depends on what the answer turns out to be.</p>
+    <p><strong>If the fix is process and configuration</strong>, I do it. Automations, CRM architecture, SOPs, dashboards, and training your team so it runs without me. Weeks, not quarters.</p>
+    <p><strong>If the fix needs software built</strong>, I bring in Yameo, a Dutch&ndash;Polish software house that has been delivering enterprise systems for banking, insurance and healthcare since 2006. Fixed price, fixed date, signed SLA. I'm an Associate Partner there, and I stay on the engagement as the person who owns whether it actually solves your problem. You're never handed off to strangers, and you're never sold a build you didn't need.</p>
+    <div class="pcards">
+      <div class="pcard">
+        <h3>I do this myself (DNA4Digital)</h3>
+        <ul>
+          <li>GTM and revenue process design</li>
+          <li>Process mapping, SOPs, KPIs</li>
+          <li>AI readiness audits and roadmaps</li>
+          <li>Low-code automation (n8n, Zapier, HubSpot)</li>
+          <li>Training and enablement</li>
+          <li>Dashboards and reporting (Looker Studio)</li>
+        </ul>
+      </div>
+      <div class="pcard">
+        <h3>I bring in the team (via Yameo)</h3>
+        <ul>
+          <li>Custom software and platform builds</li>
+          <li>System integrations and migrations at scale</li>
+          <li>Regulated-industry work needing compliance sign-off</li>
+          <li>Anything needing an engineering team for months</li>
+          <li>Fixed-price, fixed-date, SLA-backed delivery</li>
+          <li>Long-term embedded development partnership</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout"><p>The rule of thumb: if it can be done with configuration, I do it. If it needs code, engineers and a signed SLA, Yameo builds it and I stay on as the person who owns the outcome.</p></div>
+
+    <h2 id="training">Training and workshops</h2>
+    <p>I build practical programmes around the roles and processes that exist in your company. We work on your real data and your real tasks, so people can use AI in their actual job the same week. Knowledge plus practice, measurable and fast.</p>
+    <div class="pcards three">
+      <div class="pcard"><h3>Marketing &amp; sales</h3><p>Funnels, content, research, analytics and CRM support: a set of ready-to-run workflows.</p></div>
+      <div class="pcard"><h3>Operations &amp; admin</h3><p>Document standards, order in procedures, quality control and automation.</p></div>
+      <div class="pcard"><h3>HR &amp; knowledge</h3><p>Onboarding, knowledge repositories, policies and SOPs. AI in the service of people.</p></div>
+    </div>
+
+    <h2 id="audit">Audits</h2>
+    <p>I analyse your processes and your data to find where AI will pay back first. You get a practical implementation plan that lets you act strategically and hit measurable results, without chaos and without unnecessary complexity.</p>
+    <p>After the audit workshop you leave with priorities, a process map and tool recommendations.</p>
+    <div class="btnrow">
+      <a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Book an audit call</a>
+      <a class="btn btn-ghost" href="/ai-readiness/">Take the AI readiness test</a>
+    </div>
+
+    <h2 id="consulting">Consulting</h2>
+    <p>I implement AI end to end, from quick wins to durable working standards. Automations, AI assistants, knowledge repositories and SOPs, so the technology genuinely supports the business and every change fits how your organisation actually operates.</p>
+    <div class="pcards three">
+      <div class="pcard"><h3>Quick wins</h3><p>ROI mapping and the first automations that give your team its time back.</p></div>
+      <div class="pcard"><h3>Assistants &amp; automation</h3><p>Prompt design, policies and integrations. Stable, auditable workflows.</p></div>
+      <div class="pcard"><h3>Knowledge repos &amp; SOPs</h3><p>Standard documents, policies and checklists: knowledge that's current and easy to find.</p></div>
+    </div>
+
+    <h2>Take the first step</h2>
+    <p>Let's talk for 30 minutes, online, free and with no strings attached, and work out where your transformation should actually start: advisory, an audit, or training.</p>
+    <div class="btnrow"><a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Book a free consultation</a></div>
+  </Panel>
+</Site>

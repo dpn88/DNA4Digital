@@ -1,0 +1,54 @@
+---
+import Site from '../../layouts/Site.astro';
+import Panel from '../../components/Panel.astro';
+import { CONTACT_EMAIL, BOOKING_URL } from '../../data/site';
+---
+<Site
+  title="Contact Daniel Nowak | DNA4Digital"
+  description="Book a free 30-minute call or send a message about GTM, process or AI work. I reply promptly and concretely."
+>
+  <Panel rung={4} kicker="05 · Contact">
+    <h1>Let's talk for 30 minutes</h1>
+    <p class="lead">Free, online, no strings attached. Pick a time in my calendar, or tell me what you're working on and I'll come back to you promptly and concretely. You can also email me at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <div class="btnrow"><a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Book a time in my calendar</a></div>
+
+    <h2>Or send a message</h2>
+
+    <form class="form" method="post" action="/api/contact" data-contact>
+      <div class="row">
+        <label>Your name<input name="name" autocomplete="name" required maxlength="120" /></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required maxlength="200" /></label>
+      </div>
+      <div class="row">
+        <label>Company <span>(optional)</span><input name="company" autocomplete="organization" maxlength="160" /></label>
+        <label>What it's about
+          <select name="topic">
+            <option value="call">A free 30-min call</option>
+            <option value="audit">AI readiness audit</option>
+            <option value="gtm">GTM and process work</option>
+            <option value="training">Training or workshop</option>
+            <option value="consulting">Consulting and implementation</option>
+            <option value="other">Something else</option>
+          </select>
+        </label>
+      </div>
+      <label>Your message
+        <textarea name="message" required minlength="10" maxlength="5000" placeholder="The more context you give me, the more useful my first reply will be."></textarea>
+      </label>
+      <label class="check">
+        <input type="checkbox" name="consent" value="yes" required />
+        <span>I have read the <a href="/privacy-policy/">privacy policy</a> and agree to my details being used to answer this message.</span>
+      </label>
+      <div class="hp" aria-hidden="true">
+        <label>Leave this empty<input name="website" tabindex="-1" autocomplete="off" /></label>
+      </div>
+      <input type="hidden" name="started" value="" />
+      <input type="hidden" name="score" value="" />
+      <div class="btnrow"><button class="btn btn-primary" type="submit">Send message</button></div>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <h2>Prefer to see the training first?</h2>
+    <p>The best place to see it is in the room, at an in-person workshop, where the knowledge and the practice finally meet. Mention it in your message and I'll share the options.</p>
+  </Panel>
+</Site>
