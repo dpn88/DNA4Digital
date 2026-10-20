@@ -1,0 +1,34 @@
+---
+import { RUNGS, DISCLOSURE, LINKEDIN_URL, CONTACT_EMAIL } from '../data/site';
+
+interface Props {
+  rung: number;
+  kicker?: string;
+}
+const { rung, kicker } = Astro.props;
+const path = Astro.url.pathname;
+const year = new Date().getFullYear();
+---
+<main class="panel" id="main" data-view="page" data-rung={rung} tabindex="-1">
+  <nav class="panel-nav" aria-label="Pages">
+    <a href="/">&larr; Back to the helix</a>
+    <span class="chips">
+      {RUNGS.map(r => <a href={r.href} aria-current={path === r.href ? 'page' : undefined}>{r.short}</a>)}
+    </span>
+  </nav>
+  {kicker && <p class="kicker">{kicker}</p>}
+  <slot />
+  <footer class="panel-foot">
+    <nav aria-label="Footer">
+      <a href="/services/#gtm">GTM &amp; processes</a>
+      <a href="/services/#training">Training</a>
+      <a href="/services/#audit">Audits</a>
+      <a href="/ai-readiness/">AI readiness test</a>
+      <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+      <a href={LINKEDIN_URL} rel="noopener">LinkedIn</a>
+      <a href="/privacy-policy/">Privacy policy</a>
+    </nav>
+    <p>{DISCLOSURE}</p>
+    <p>&copy; {year} Daniel Nowak / DNA4Digital. All rights reserved.</p>
+  </footer>
+</main>

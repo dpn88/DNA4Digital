@@ -1,0 +1,28 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Site from '../../layouts/Site.astro';
+import Panel from '../../components/Panel.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', p => !p.data.draft);
+  return posts.map(post => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const date = post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Site title={`${post.data.title} | DNA4Digital`} description={post.data.description} ogType="article">
+  <Panel rung={3} kicker={`04 · Blog · ${date}`}>
+    <article class="prose">
+      <h1>{post.data.title}</h1>
+      {post.data.cover && <Image src={post.data.cover} alt={post.data.coverAlt ?? ''} width={1100} />}
+      <Content />
+    </article>
+    <div class="btnrow" style="margin-top:28px">
+      <a class="btn btn-ghost" href="/blog/">&larr; All posts</a>
+      <a class="btn btn-primary" href="/contact/?topic=call">Book a free 30-min call</a>
+    </div>
+  </Panel>
+</Site>
