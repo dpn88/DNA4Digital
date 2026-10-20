@@ -4,7 +4,7 @@ import '@fontsource-variable/space-grotesk';
 import '@fontsource/jetbrains-mono/500.css';
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
-import { RUNGS } from '../data/site';
+import { RUNGS, BOOKING_URL } from '../data/site';
 
 interface Props {
   title: string;
@@ -59,7 +59,7 @@ const ogImage = new URL('/og.png', Astro.site);
         </svg>
         <span class="stack" aria-hidden="true"><span>DNA</span><span><span class="four">4</span>DIGITAL</span></span>
       </a>
-      <a class="btn btn-ghost btn-sm" href="/contact/?topic=call">Book a call</a>
+      <a class="btn btn-ghost btn-sm" href={BOOKING_URL} target="_blank" rel="noopener">Book a call</a>
     </header>
 
     <nav class="rungs" id="rungs" aria-label="Main" transition:persist="rungs">

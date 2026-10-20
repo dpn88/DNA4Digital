@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import Site from '../layouts/Site.astro';
 import Panel from '../components/Panel.astro';
 import portrait from '../assets/daniel-nowak.png';
-import { DISCLOSURE } from '../data/site';
+import { DISCLOSURE, BOOKING_URL } from '../data/site';
 ---
 <Site
   title="About Daniel Nowak | DNA4Digital"
@@ -69,7 +69,7 @@ import { DISCLOSURE } from '../data/site';
     <h2>Ready to give technology some meaning?</h2>
     <p>Book a free 30-minute call. I'll tell you where I'd start, and whether the first move is an audit, a pilot, or simply writing down how the work is supposed to happen.</p>
     <div class="btnrow">
-      <a class="btn btn-primary" href="/contact/?topic=call">Book a consultation</a>
+      <a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Book a consultation</a>
       <a class="btn btn-ghost" href="/services/">See services</a>
     </div>
   </Panel>

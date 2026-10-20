@@ -2,7 +2,7 @@
 // Works for plain HTML form posts (redirects back to the site) and for fetch() calls (JSON).
 
 const TOPICS: Record<string, string> = {
-  call: 'Book a free 30-min call',
+  call: 'A free 30-min call',
   audit: 'AI readiness audit',
   gtm: 'GTM and process work',
   training: 'Training or workshop',

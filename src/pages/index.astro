@@ -1,4 +1,5 @@
 ---
+import { BOOKING_URL } from '../data/site';
 import Site from '../layouts/Site.astro';
 const year = new Date().getFullYear();
 const jsonLd = {
@@ -25,7 +26,7 @@ const jsonLd = {
         <span class="short">I'm Daniel Nowak. I map how your revenue actually moves, then automate what's worth automating.</span>
       </p>
       <div class="ctas">
-        <a class="btn btn-primary" href="/contact/?topic=call">Book a free 30-min call</a>
+        <a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Book a free 30-min call</a>
         <a class="btn btn-ghost" href="/ai-readiness/">Take the AI readiness test</a>
       </div>
     </section>

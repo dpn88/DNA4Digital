@@ -1,7 +1,7 @@
 ---
 import Site from '../../layouts/Site.astro';
 import Panel from '../../components/Panel.astro';
-import { CONTACT_EMAIL } from '../../data/site';
+import { CONTACT_EMAIL, BOOKING_URL } from '../../data/site';
 ---
 <Site
   title="Contact Daniel Nowak | DNA4Digital"
@@ -9,7 +9,10 @@ import { CONTACT_EMAIL } from '../../data/site';
 >
   <Panel rung={4} kicker="05 · Contact">
     <h1>Let's talk for 30 minutes</h1>
-    <p class="lead">Free, online, no strings attached. Tell me what you're working on and I'll come back to you promptly and concretely, usually with a couple of times for a call. You can also email me at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <p class="lead">Free, online, no strings attached. Pick a time in my calendar, or tell me what you're working on and I'll come back to you promptly and concretely. You can also email me at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <div class="btnrow"><a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Book a time in my calendar</a></div>
+
+    <h2>Or send a message</h2>
 
     <form class="form" method="post" action="/api/contact" data-contact>
       <div class="row">
@@ -20,7 +23,7 @@ import { CONTACT_EMAIL } from '../../data/site';
         <label>Company <span>(optional)</span><input name="company" autocomplete="organization" maxlength="160" /></label>
         <label>What it's about
           <select name="topic">
-            <option value="call">Book a free 30-min call</option>
+            <option value="call">A free 30-min call</option>
             <option value="audit">AI readiness audit</option>
             <option value="gtm">GTM and process work</option>
             <option value="training">Training or workshop</option>

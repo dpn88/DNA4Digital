@@ -1,4 +1,5 @@
 ---
+import { BOOKING_URL } from '../data/site';
 import Site from '../layouts/Site.astro';
 import Panel from '../components/Panel.astro';
 ---
@@ -66,7 +67,7 @@ import Panel from '../components/Panel.astro';
     <p>I analyse your processes and your data to find where AI will pay back first. You get a practical implementation plan that lets you act strategically and hit measurable results, without chaos and without unnecessary complexity.</p>
     <p>After the audit workshop you leave with priorities, a process map and tool recommendations.</p>
     <div class="btnrow">
-      <a class="btn btn-primary" href="/contact/?topic=audit">Book an audit call</a>
+      <a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Book an audit call</a>
       <a class="btn btn-ghost" href="/ai-readiness/">Take the AI readiness test</a>
     </div>
 
@@ -80,6 +81,6 @@ import Panel from '../components/Panel.astro';
 
     <h2>Take the first step</h2>
     <p>Let's talk for 30 minutes, online, free and with no strings attached, and work out where your transformation should actually start: advisory, an audit, or training.</p>
-    <div class="btnrow"><a class="btn btn-primary" href="/contact/?topic=call">Book a free consultation</a></div>
+    <div class="btnrow"><a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Book a free consultation</a></div>
   </Panel>
 </Site>

@@ -1,5 +1,5 @@
 ---
-import { RUNGS, DISCLOSURE, LINKEDIN_URL, CONTACT_EMAIL } from '../data/site';
+import { RUNGS, DISCLOSURE, LINKEDIN_URL, CONTACT_EMAIL, BOOKING_URL } from '../data/site';
 
 interface Props {
   rung: number;
@@ -24,6 +24,7 @@ const year = new Date().getFullYear();
       <a href="/services/#training">Training</a>
       <a href="/services/#audit">Audits</a>
       <a href="/ai-readiness/">AI readiness test</a>
+      <a href={BOOKING_URL} target="_blank" rel="noopener">Book a call</a>
       <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
       <a href={LINKEDIN_URL} rel="noopener">LinkedIn</a>
       <a href="/privacy-policy/">Privacy policy</a>

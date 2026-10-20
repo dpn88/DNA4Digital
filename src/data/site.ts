@@ -26,6 +26,8 @@ export const rungForPath = (pathname: string): number => {
 };
 
 export const CONTACT_EMAIL = 'info@dna4digital.com';
+// Google Calendar appointment page for the free 30-minute call.
+export const BOOKING_URL = 'https://calendar.app.google/ddE9Gz4PGV4dUWmJ7';
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/dna4digital/';
 
 export const DISCLOSURE =

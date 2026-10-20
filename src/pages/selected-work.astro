@@ -1,4 +1,5 @@
 ---
+import { BOOKING_URL } from '../data/site';
 import Site from '../layouts/Site.astro';
 import Panel from '../components/Panel.astro';
 
@@ -62,7 +63,7 @@ const cases = [
     <h2>Want results like these?</h2>
     <p>Book a free 30-minute call and we'll work out whether the first move is an audit, a pilot, or simply writing down how the work is supposed to happen.</p>
     <div class="btnrow">
-      <a class="btn btn-primary" href="/contact/?topic=call">Book a consultation</a>
+      <a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Book a consultation</a>
       <a class="btn btn-ghost" href="/about/#track-record">See my full track record</a>
     </div>
   </Panel>
