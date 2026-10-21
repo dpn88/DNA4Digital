@@ -4,7 +4,8 @@ import '@fontsource-variable/space-grotesk';
 import '@fontsource/jetbrains-mono/500.css';
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
-import { rungs, BOOKING_URL } from '../data/site';
+import { rungs, BOOKING_URL, GTM_ID } from '../data/site';
+import Preferences from '../components/Preferences.astro';
 import { LANGS, ROUTES, alternatePath, langFromPath, ui } from '../i18n';
 
 interface Props {
@@ -51,6 +52,40 @@ const alternates = LANGS.map(l => ({ lang: l, href: new URL(alternatePath(path, 
         })();
       </script>
     )}
+    <script define:vars={{ gtmId: GTM_ID }}>
+      // Accessibility settings and cookie consent, applied before the page draws (see src/scripts/prefs.ts).
+      (function () {
+        var root = document.documentElement;
+        try {
+          var a = JSON.parse(localStorage.getItem('dna4d-a11y') || '{}');
+          if (a.text === 1 || a.text === 2) root.classList.add('a11y-text-' + a.text);
+          ['still', 'contrast', 'links', 'spacing'].forEach(function (k) { if (a[k]) root.classList.add('a11y-' + k); });
+        } catch (e) {}
+
+        // Google Consent Mode v2: everything is denied until the visitor chooses. Tag Manager loads only after a yes.
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        window.gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted' });
+        window.gtag('set', 'ads_data_redaction', true);
+        window.__loadGtm = function () {
+          if (window.__gtmLoaded) return;
+          window.__gtmLoaded = true;
+          window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId;
+          document.head.appendChild(s);
+        };
+        try {
+          var c = JSON.parse(localStorage.getItem('dna4d-consent') || 'null');
+          if (c && c.v === 1 && Date.now() - c.ts < 31536000000 && (c.analytics || c.marketing)) {
+            var g = function (on) { return on ? 'granted' : 'denied'; };
+            window.gtag('consent', 'update', { analytics_storage: g(c.analytics), ad_storage: g(c.marketing), ad_user_data: g(c.marketing), ad_personalization: g(c.marketing) });
+            window.__loadGtm();
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="DNA4Digital" />
     <meta property="og:locale" content={t.locale} />
@@ -73,6 +108,7 @@ const alternates = LANGS.map(l => ({ lang: l, href: new URL(alternatePath(path, 
   </head>
   <body>
     <a class="skip" href="#main">{t.skip}</a>
+    <Preferences />
     <div id="stage" transition:persist="stage" aria-hidden="true">
       <canvas id="overlay"></canvas>
     </div>
@@ -92,6 +128,12 @@ const alternates = LANGS.map(l => ({ lang: l, href: new URL(alternatePath(path, 
             <a href={a.href.pathname} hreflang={a.lang} lang={a.lang} aria-current={a.lang === lang ? 'true' : undefined}>{a.lang.toUpperCase()}</a>
           ))}
         </nav>
+        <button type="button" class="icon-btn" data-open-settings="a11y" aria-label={t.settingsButton} title={t.settingsButton}>
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <circle cx="12" cy="4.5" r="1.8" fill="currentColor" stroke="none" />
+            <path d="M5 8.5c2.3.7 4.6 1 7 1s4.7-.3 7-1M12 9.5v5M12 14.5l-3 6M12 14.5l3 6" />
+          </svg>
+        </button>
         <a class="btn btn-ghost btn-sm" href={BOOKING_URL} target="_blank" rel="noopener">{t.bookCall}</a>
       </div>
     </header>
@@ -110,6 +152,7 @@ const alternates = LANGS.map(l => ({ lang: l, href: new URL(alternatePath(path, 
     <script>
       import '../scripts/forms';
       import '../scripts/lang';
+      import '../scripts/prefs';
       // three.js is the heavy part, so it loads as its own chunk and never holds up the page or the form.
       import('../scripts/helix');
     </script>

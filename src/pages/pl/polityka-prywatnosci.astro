@@ -5,7 +5,7 @@ import Panel from '../../components/Panel.astro';
 <Site title="Polityka prywatności | DNA4Digital" description="Jak dna4digital.com przetwarza Twoje dane osobowe.">
   <Panel rung={4} kicker="Polityka prywatności">
     <h1>Polityka prywatności</h1>
-    <p class="lead">Ostatnia aktualizacja: październik 2026. Ta strona zbiera tak mało danych, jak to możliwe: bez śledzących plików cookie, bez reklam, bez profili analitycznych.</p>
+    <p class="lead">Ostatnia aktualizacja: październik 2026. Nic, co Cię śledzi, nie działa na tej stronie, dopóki nie wyrazisz na to zgody w banerze cookie, a swoją decyzję możesz zmienić w każdej chwili.</p>
 
     <h2>Kto odpowiada za Twoje dane</h2>
     <p>Administratorem Twoich danych osobowych jest Daniel Nowak, prowadzący działalność pod marką DNA4Digital. We wszystkich sprawach dotyczących danych napisz na <a href="mailto:dn@dna4digital.com">dn@dna4digital.com</a>.</p>
@@ -13,20 +13,31 @@ import Panel from '../../components/Panel.astro';
     <h2>Jakie dane zbieram i w jakim celu</h2>
     <p><strong>Formularz kontaktowy.</strong> Gdy wysyłasz wiadomość, otrzymuję Twoje imię i nazwisko, adres e-mail, opcjonalnie nazwę firmy, wybrany temat, treść wiadomości oraz, jeśli przychodzisz z testu gotowości AI, Twój wynik. Używam tych danych wyłącznie po to, żeby Ci odpowiedzieć, a jeśli zdecydujemy się na współpracę, żeby ją przygotować i prowadzić. Podstawą prawną jest Twoja zgoda oraz działania podejmowane na Twoje żądanie przed zawarciem umowy (art. 6 ust. 1 lit. a i b RODO).</p>
     <p><strong>Test gotowości AI.</strong> Test działa w całości w Twojej przeglądarce. Twoje odpowiedzi nie są nigdzie zapisywane ani wysyłane. Wynik trafia do mnie tylko wtedy, gdy zdecydujesz się przesłać go przez formularz kontaktowy.</p>
+    <p><strong>Analityka, tylko za Twoją zgodą.</strong> Jeśli zgodzisz się na analitykę, Google Analytics zapisuje, które strony odwiedzasz, skąd do nich trafiasz, przybliżoną lokalizację (kraj i miasto) oraz rodzaj urządzenia i przeglądarki. Dzięki temu widzę, które strony są przydatne. Nie dowiaduję się z tego, kim jesteś. Podstawą prawną jest Twoja zgoda (art. 6 ust. 1 lit. a RODO).</p>
+    <p><strong>Rozpoznawanie firm, tylko za Twoją zgodą.</strong> Jeśli zgodzisz się na marketing, Leadinfo na podstawie Twojego adresu IP ustala, z jakiej firmy pochodzi wizyta, i pokazuje mi nazwę tej firmy oraz odwiedzone strony. Narzędzie dotyczy wizyt firmowych i nie identyfikuje konkretnych osób. Podstawą prawną jest Twoja zgoda (art. 6 ust. 1 lit. a RODO).</p>
     <p><strong>Dane techniczne.</strong> Jak w przypadku każdej strony, serwery, które ją dostarczają, przetwarzają Twój adres IP i podstawowe informacje o żądaniu (typ przeglądarki, czas, odwiedzana strona), żeby wyświetlić strony, chronić serwis przed nadużyciami i ograniczać spam w formularzu. Podstawą prawną jest mój prawnie uzasadniony interes w prowadzeniu bezpiecznej strony (art. 6 ust. 1 lit. f RODO). Te dane nie służą do profilowania.</p>
 
-    <h2>Pliki cookie</h2>
-    <p>Ta strona nie zapisuje plików cookie i nie używa technologii śledzących ani reklamowych. Jeśli wybierzesz język przełącznikiem EN/PL, ten wybór zostanie zapisany w pamięci lokalnej Twojej przeglądarki (local storage), żeby strona nie przekierowywała Cię ponownie do drugiej wersji językowej. Zostaje on na Twoim urządzeniu i nigdy do mnie nie trafia. Czcionki i skrypty są serwowane z tej domeny, a nie z zewnętrznych serwerów CDN.</p>
+    <h2>Pliki cookie i pamięć przeglądarki</h2>
+    <p><strong>Zawsze włączone, zapisane tylko w Twojej przeglądarce:</strong> wybrany język, Twoja decyzja dotycząca plików cookie i ustawienia dostępności. Są przechowywane w pamięci lokalnej (local storage), nigdy do mnie nie trafiają i są potrzebne, żeby strona działała tak, jak sobie tego życzysz.</p>
+    <p><strong>Tylko za Twoją zgodą:</strong></p>
+    <ul class="ticks">
+      <li><strong>Google Analytics</strong> (analityka): pliki cookie <code>_ga</code> i <code>_ga_*</code>, które rozróżniają wizyty i są przechowywane do dwóch lat.</li>
+      <li><strong>Leadinfo</strong> (marketing): pliki cookie <code>_li_id</code> i <code>_li_ses</code>, które rozpoznają powracające wizyty firm.</li>
+    </ul>
+    <p>Dopóki nie dokonasz wyboru, wszystko poza elementami zawsze włączonymi jest wyłączone, a Google Tag Manager, który ładuje te narzędzia, w ogóle się nie wczytuje. Zgodę możesz zmienić lub wycofać w każdej chwili w <button type="button" class="linkbtn" data-open-settings="privacy">ustawieniach cookie i dostępności</button>, do których link znajdziesz też na dole każdej strony. Wycofanie zgody usuwa te pliki cookie z Twojej przeglądarki.</p>
+    <p>Czcionki i skrypty samej strony są serwowane z tej domeny, a nie z zewnętrznych serwerów CDN.</p>
 
     <h2>Kto przetwarza dane w moim imieniu</h2>
     <ul class="ticks">
       <li><strong>Cloudflare, Inc.</strong> hostuje stronę i dostarcza wiadomości z formularza kontaktowego e-mailem.</li>
       <li><strong>Google</strong> (Google Workspace) obsługuje moją skrzynkę pocztową, do której trafiają wiadomości.</li>
+      <li><strong>Google Ireland Limited</strong> dostarcza Google Analytics i Google Tag Manager, tylko za Twoją zgodą.</li>
+      <li><strong>Leadinfo B.V.</strong> (Holandia) dostarcza rozpoznawanie firm, tylko za Twoją zgodą.</li>
     </ul>
-    <p>Obie firmy mogą przetwarzać dane poza Europejskim Obszarem Gospodarczym. W takim przypadku przekazanie odbywa się na podstawie programu EU-US Data Privacy Framework lub standardowych klauzul umownych Komisji Europejskiej.</p>
+    <p>Cloudflare i Google mogą przetwarzać dane poza Europejskim Obszarem Gospodarczym. W takim przypadku przekazanie odbywa się na podstawie programu EU-US Data Privacy Framework lub standardowych klauzul umownych Komisji Europejskiej.</p>
 
     <h2>Jak długo przechowuję dane</h2>
-    <p>Wiadomości przechowuję tak długo, jak to potrzebne do obsługi Twojego zapytania i ewentualnej współpracy, która z niego wyniknie, oraz do wypełnienia obowiązków prawnych, na przykład przepisów rachunkowych. Potem je usuwam.</p>
+    <p>Wiadomości przechowuję tak długo, jak to potrzebne do obsługi Twojego zapytania i ewentualnej współpracy, która z niego wyniknie, oraz do wypełnienia obowiązków prawnych, na przykład przepisów rachunkowych. Potem je usuwam. Dane analityczne i dane o rozpoznanych firmach są przechowywane przez okres ustawiony w tych usługach, a potem usuwane automatycznie.</p>
 
     <h2>Twoje prawa</h2>
     <p>Zgodnie z RODO możesz zażądać dostępu do swoich danych, ich sprostowania lub usunięcia, ograniczenia przetwarzania, wnieść sprzeciw, otrzymać dane w przenośnym formacie oraz w każdej chwili wycofać zgodę, bez wpływu na zgodność z prawem wcześniejszego przetwarzania. Napisz na <a href="mailto:dn@dna4digital.com">dn@dna4digital.com</a>, a odpowiem w ciągu miesiąca.</p>

@@ -9,6 +9,7 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { navigate, type TransitionBeforePreparationEvent } from 'astro:transitions/client';
 import { rungForPath } from '../data/site';
 import { ROUTES, langFromPath } from '../i18n';
+import { storedA11y } from './prefs';
 
 declare global {
   interface Window { __helixReady?: boolean }
@@ -17,6 +18,8 @@ declare global {
 const root = document.documentElement;
 const PHONE_MQ = matchMedia('(max-width: 819px)'); // keep in sync with global.css
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)');
+// The OS setting or the "Pause animations" accessibility option.
+const reducedMotion = () => REDUCED.matches || root.classList.contains('a11y-still');
 const LITE = PHONE_MQ.matches || (navigator.hardwareConcurrency || 8) <= 4;
 
 const clamp = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
@@ -31,6 +34,11 @@ const SPEED_REDUCED = 0.03;
 const SWAP_DELAY_MS = 320;
 
 function start() {
+  // "Turn off the 3D background" in the accessibility settings: keep the plain page.
+  if (storedA11y().no3d) {
+    root.classList.add('no-gl');
+    return;
+  }
   let renderer: THREE.WebGLRenderer;
   try {
     renderer = new THREE.WebGLRenderer({ antialias: !LITE, powerPreference: 'high-performance' });
@@ -408,7 +416,7 @@ function start() {
     setRoute(rungForPath(e.to.pathname));
     applyState();
     const load = e.loader;
-    const delay = REDUCED.matches ? 0 : SWAP_DELAY_MS;
+    const delay = reducedMotion() ? 0 : SWAP_DELAY_MS;
     e.loader = async () => { await Promise.all([load(), new Promise(r => setTimeout(r, delay))]); };
   });
   document.addEventListener('astro:after-swap', () => { bindLinks(); applyState(); });
@@ -420,7 +428,7 @@ function start() {
     const main = document.getElementById('main');
     bindLinks();
     setRoute(main ? Number(main.dataset.rung ?? -1) : -1);
-    if (firstLoad || REDUCED.matches) { prog = target; focus.copy(focusTarget); }
+    if (firstLoad || reducedMotion()) { prog = target; focus.copy(focusTarget); }
     links.forEach((a, i) => (i === rung ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
     if (shownPath && shownPath !== location.pathname && rung >= 0) main?.focus({ preventScroll: true });
     shownPath = location.pathname;
@@ -498,13 +506,17 @@ function start() {
     const dt = Math.min((now - lastFrame) / 1000, .05);
     lastFrame = now;
     if (!W || !H) return;
-    const reduced = REDUCED.matches;
+    const reduced = reducedMotion();
+    // "Pause animations" freezes the scene completely; the OS reduced-motion setting only slows it down.
+    const paused = root.classList.contains('a11y-still');
     const lay = layout();
-    uniforms.uTime.value += dt;
-    updateNetwork(dt, uniforms.uTime.value, ease(prog), lay.phone, !reduced);
-    helix.rotation.y += dt * (reduced ? SPEED_REDUCED : SPEED) * (target === 1 ? .35 : hover >= 0 ? .25 : 1);
-    specks.rotation.y += dt * .01;
-    bokehBack.rotation.y -= dt * .015;
+    if (!paused) {
+      uniforms.uTime.value += dt;
+      updateNetwork(dt, uniforms.uTime.value, ease(prog), lay.phone, !reduced);
+      helix.rotation.y += dt * (reduced ? SPEED_REDUCED : SPEED) * (target === 1 ? .35 : hover >= 0 ? .25 : 1);
+      specks.rotation.y += dt * .01;
+      bokehBack.rotation.y -= dt * .015;
+    }
     const k = reduced ? 1 : 1 - Math.exp(-dt * 3.2);
     prog += (target - prog) * k;
     focus.lerp(focusTarget, k);
