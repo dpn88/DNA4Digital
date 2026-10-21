@@ -19,9 +19,23 @@
   "send_email": [{ "name": "EMAIL", "destination_address": "dn@dna4digital.com" }],
   "vars": {
     "CONTACT_TO": "dn@dna4digital.com",
-    "CONTACT_FROM": "website@forms.dna4digital.com"
+    "CONTACT_FROM": "website@forms.dna4digital.com",
+    "SUBJECT_PREFIX": ""
   },
 
   // At most 5 form submissions per visitor per minute.
-  "ratelimits": [{ "name": "CONTACT_LIMIT", "namespace_id": "4120", "simple": { "limit": 5, "period": 60 } }]
+  "ratelimits": [{ "name": "CONTACT_LIMIT", "namespace_id": "4120", "simple": { "limit": 5, "period": 60 } }],
+
+  // Worker Previews: every non-main branch build runs `npx wrangler preview`, which inherits nothing from the
+  // production settings above. Preview contact forms still mail the same verified inbox (the only address the
+  // binding can reach), tagged [Preview], and count against their own rate-limit namespace.
+  "previews": {
+    "send_email": [{ "name": "EMAIL", "destination_address": "dn@dna4digital.com" }],
+    "vars": {
+      "CONTACT_TO": "dn@dna4digital.com",
+      "CONTACT_FROM": "website@forms.dna4digital.com",
+      "SUBJECT_PREFIX": "[Preview] "
+    },
+    "ratelimits": [{ "name": "CONTACT_LIMIT", "namespace_id": "4121", "simple": { "limit": 5, "period": 60 } }]
+  }
 }

@@ -77,7 +77,7 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
       from: { email: env.CONTACT_FROM, name: 'dna4digital.com' },
       to: env.CONTACT_TO,
       replyTo: { email: f.email, name: f.name },
-      subject: `Website enquiry: ${topic} (${f.name})`,
+      subject: `${env.SUBJECT_PREFIX}Website enquiry: ${topic} (${f.name})`,
       text: plainText(f, topic, ip),
       html: htmlBody(f, topic),
     });
