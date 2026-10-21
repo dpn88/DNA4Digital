@@ -140,6 +140,10 @@ const alternates = LANGS.map(l => ({ lang: l, href: new URL(alternatePath(path, 
         </svg>
         <span class="stack" aria-hidden="true"><span>DNA</span><span><span class="four">4</span>DIGITAL</span></span>
       </a>
+      {/* Shown on subpages once the panel's own page links have scrolled away (helix.ts sets html.docked). */}
+      <nav class="topnav" aria-label={t.pagesNav}>
+        {rungs(lang).map(r => <a href={r.href} aria-current={path === r.href ? 'page' : undefined}>{r.short}</a>)}
+      </nav>
       <div class="topbar-right">
         <nav class="lang-switch" aria-label={t.langNav}>
           {alternates.map(a => (
@@ -171,6 +175,7 @@ const alternates = LANGS.map(l => ({ lang: l, href: new URL(alternatePath(path, 
       import '../scripts/forms';
       import '../scripts/lang';
       import '../scripts/prefs';
+      import '../scripts/sections';
       // three.js is the heavy part, so it loads as its own chunk and never holds up the page or the form.
       import('../scripts/helix');
     </script>

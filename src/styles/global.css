@@ -1,6 +1,7 @@
 /*
   Two layouts share this file:
-  - "app" (html.js without .no-gl): fixed full-screen helix with the hero or a content panel floating over it.
+  - "app" (html.js without .no-gl): fixed full-screen helix with the hero over it, or a wide content panel that
+    scrolls with the window and overlaps the zoomed helix.
   - fallback (no JS, no WebGL): an ordinary scrolling page on the same dark background.
   Phone breakpoint is 820px and must match PHONE_MQ in src/scripts/helix.ts.
 */
@@ -73,7 +74,7 @@ img { max-width: 100%; height: auto; }
 .rung-link:hover, .rung-link.on { color: #fff; text-shadow: 0 0 18px rgba(45, 212, 191, .55); letter-spacing: .01em; }
 
 /* ---------- Panel content ---------- */
-.panel { background: rgba(11, 18, 28, .66); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(45, 212, 191, .22); border-radius: 22px; padding: 26px 36px 30px; scrollbar-width: thin; scrollbar-color: rgba(45, 212, 191, .35) transparent; }
+.panel { background: rgba(8, 14, 22, .8); border: 1px solid rgba(45, 212, 191, .22); border-radius: 22px; padding: 26px 36px 30px; }
 .panel:focus { outline: none; }
 .panel-nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin-bottom: 22px; font-size: 13px; }
 .panel-nav a { color: var(--muted); text-decoration: none; }
@@ -185,11 +186,26 @@ html:not(.js) .rungs, html.no-gl .rungs { margin: 0 0 20px; }
 html:not(.js) .rungs:has(~ .panel), html.no-gl .rungs:has(~ .panel) { display: none; }
 
 /* ---------- App layout (JS + WebGL) ---------- */
-html.js:not(.no-gl), html.js:not(.no-gl) body { height: 100%; overflow: hidden; }
+/* Home has nothing to scroll. Subpages scroll the window while the helix stays fixed behind. */
+html.js:not(.no-gl):not(:has(.panel)), html.js:not(.no-gl):not(:has(.panel)) body { height: 100%; overflow: hidden; }
+html.js:not(.no-gl) { scrollbar-width: thin; scrollbar-color: rgba(45, 212, 191, .35) transparent; }
 html.js:not(.no-gl) #stage { display: block; position: fixed; inset: 0; z-index: 1; }
 html.js:not(.no-gl) #stage canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; display: block; }
 html.js:not(.no-gl) #overlay { z-index: 2; pointer-events: none; }
-html.js:not(.no-gl) .topbar { position: fixed; top: 0; left: 0; right: 0; }
+html.js:not(.no-gl) .topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 10; transition: background .3s, box-shadow .3s; }
+html.js.scrolled:not(.no-gl) .topbar { background: rgba(5, 10, 16, .74); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--line); }
+/* Zoomed in, the strand can pass right behind the wordmark, so a soft shade sits along the top until the bar frosts. */
+html.js:not(.no-gl) .topbar::before { content: ""; position: absolute; inset: 0 0 -48px; z-index: -1; background: linear-gradient(rgba(3, 10, 16, .75), rgba(3, 10, 16, 0)); opacity: 0; transition: opacity .45s; pointer-events: none; }
+html.js.zoomed:not(.scrolled):not(.no-gl) .topbar::before { opacity: 1; }
+/* Page links that appear in the bar once the panel's own links have scrolled under it, lined up with the text. */
+.topnav { display: none; }
+.topnav a { color: var(--muted); text-decoration: none; }
+.topnav a:hover { color: var(--text); }
+.topnav a[aria-current="page"] { color: var(--teal); }
+@media (min-width: 1200px) {
+  html.js:not(.no-gl) .topnav { display: flex; gap: 22px; position: absolute; top: 50%; left: calc(100% - 4vw - min(1080px, 70vw) + 56px); font-size: 14px; opacity: 0; visibility: hidden; transform: translateY(calc(-50% + 6px)); transition: opacity .3s, transform .3s, visibility 0s .3s; }
+  html.js.docked:not(.no-gl) .topnav { opacity: 1; visibility: visible; transform: translateY(-50%); transition: opacity .3s, transform .3s, visibility 0s; }
+}
 
 html.js:not(.no-gl) .hero { position: fixed; left: 6%; top: 50%; width: 46%; max-width: 620px; z-index: 5; transform: translateY(-50%); animation: hero-in .8s .1s both; transition: opacity .45s, transform .6s; }
 html.js:not(.no-gl) .proof { position: fixed; left: 6%; bottom: 38px; z-index: 5; animation: fade-in .8s .3s both; transition: opacity .45s; }
@@ -201,9 +217,43 @@ html.js:not(.no-gl) .rungs { position: fixed; inset: 0; z-index: 6; padding: 0; 
 html.js:not(.no-gl) .rung-link { position: absolute; left: 0; top: 0; pointer-events: none; opacity: 0; visibility: hidden; transition: opacity .3s, visibility 0s .3s, color .2s, letter-spacing .25s, text-shadow .2s; }
 html.js.ready:not(.zoomed) .rung-link { pointer-events: auto; opacity: 1; visibility: visible; transition: opacity .3s, visibility 0s, color .2s, letter-spacing .25s, text-shadow .2s; }
 
-/* The panel is readable straight away; once the scene is running it only shows when the camera has arrived. */
-html.js:not(.no-gl) .panel { position: fixed; z-index: 9; right: 5%; top: 50%; width: min(640px, 48%); max-height: calc(100dvh - 150px); overflow: auto; transform: translate(0, -50%); transition: opacity .45s, transform .55s, visibility 0s; }
-html.js.ready:not(.panel-show) .panel { opacity: 0; visibility: hidden; transform: translate(40px, -50%); transition: opacity .45s, transform .55s, visibility 0s .55s; }
+/* The panel sits in the page flow and its left edge overlaps the zoomed helix; src/scripts/helix.ts measures
+   that edge to place the rung. It is readable straight away; once the scene is running it only shows when the
+   camera has arrived. */
+html.js:not(.no-gl) .panel { --pad-t: 36px; --pad-x: 56px; position: relative; z-index: 7; width: min(1080px, 70vw); margin: 108px 4vw 48px auto; padding: var(--pad-t) var(--pad-x) 40px; background: none; overflow: clip; transition: transform .55s, border-color .45s, visibility 0s; }
+/* The frosted glass is a screen-tall layer that sticks to the top of the window while the panel scrolls past,
+   clipped to the panel's rounded edge. Chrome stops drawing backdrop-filter on elements taller than about
+   4,000px, which a long page easily is. The glass is thinner along the left edge, where it covers the helix. */
+html.js:not(.no-gl) .panel::before { content: ""; position: sticky; top: 0; z-index: -1; display: block; height: 100vh; margin: calc(-1 * var(--pad-t)) calc(-1 * var(--pad-x)) calc(var(--pad-t) - 100vh); background: linear-gradient(90deg, rgba(8, 14, 22, .5), rgba(8, 14, 22, .8) 300px); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+/* Fade the children, not the panel: opacity on the panel would switch off the glass blur until it reached 1. */
+html.js:not(.no-gl) .panel > *, html.js:not(.no-gl) .panel::before { transition: opacity .45s; }
+html.js.ready:not(.panel-show) .panel { visibility: hidden; border-color: transparent; transform: translateX(40px); transition: transform .55s, border-color .45s, visibility 0s .55s; }
+html.js.ready:not(.panel-show) .panel > *, html.js.ready:not(.panel-show) .panel::before { opacity: 0; }
+html.js:not(.no-gl) .panel [id] { scroll-margin-top: 110px; }
+@media (min-width: 820px) {
+  html.js:not(.no-gl) .panel { font-size: 17px; line-height: 1.65; }
+  html.js:not(.no-gl) .panel h1 { font-size: clamp(34px, 3.1vw, 48px); max-width: 24ch; }
+  html.js:not(.no-gl) .panel h2 { font-size: 26px; margin-top: 48px; }
+  /* Paragraphs keep a comfortable line length; cards, stats and the timeline use the full width. */
+  html.js:not(.no-gl) .panel :is(p, .ticks, .callout) { max-width: 62ch; }
+  html.js:not(.no-gl) .panel :is(.form, .quiz) { max-width: 720px; }
+  html.js:not(.no-gl) .photo { width: 190px; }
+}
+
+/* "On this page" rail (src/components/Panel.astro), beside the text once the panel is wide enough for both. */
+html.js:not(.no-gl) .panel { container-type: inline-size; }
+.panel-rail { display: none; }
+.panel .rail-title { font: 500 12px var(--mono); color: var(--teal); margin: 0 0 12px; }
+.panel-rail ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--line); }
+.panel-rail a { display: block; margin-left: -1px; padding: 6px 0 6px 14px; border-left: 1px solid transparent; font-size: 13.5px; line-height: 1.4; color: var(--muted); text-decoration: none; transition: color .2s, border-color .2s; }
+.panel-rail a span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.panel-rail a:hover { color: var(--text); }
+.panel-rail a[aria-current] { color: var(--teal); border-left-color: var(--teal); }
+@container (min-width: 860px) {
+  .panel-cols:has(> .panel-rail) { display: grid; grid-template-columns: minmax(0, 1fr) 200px; column-gap: 48px; align-items: start; }
+  .panel-cols:has(> .panel-rail) .toc { display: none; }
+  .panel-rail { display: block; position: sticky; top: 118px; max-height: calc(100vh - 150px); overflow-y: auto; margin-top: 44px; scrollbar-width: thin; }
+}
 
 @keyframes hero-in { from { opacity: 0; transform: translate(-24px, -50%); } }
 @keyframes fade-in { from { opacity: 0; } }
@@ -236,7 +286,9 @@ html.js.ready:not(.panel-show) .panel { opacity: 0; visibility: hidden; transfor
   html.js:not(.no-gl) .hero { left: 22px; right: 22px; width: auto; top: 84px; transform: none; animation-name: fade-in; }
   html.js.zoomed .hero { transform: translateY(-20px); }
   html.js:not(.no-gl) .homefoot { right: auto; left: 22px; bottom: 14px; font-size: 11.5px; }
-  html.js:not(.no-gl) .panel { left: 10px; right: 10px; width: auto; top: 34dvh; bottom: 10px; max-height: none; transform: none; }
+  /* The sheet starts a third of the way down and rises over the helix as the page scrolls. */
+  html.js:not(.no-gl) .panel { --pad-t: 20px; --pad-x: 20px; width: auto; margin: 34dvh 10px 10px; padding-bottom: 26px; }
+  html.js:not(.no-gl) .panel::before { background: rgba(8, 14, 22, .8); }
   html.js.ready:not(.panel-show) .panel { transform: translateY(30px); }
 }
 
@@ -295,7 +347,8 @@ html.a11y-text-2 .rung-link { font-size: 22px; }
 html.a11y-still *, html.a11y-still *::before, html.a11y-still *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 
 html.a11y-contrast { --muted: #d0dbe5; }
-html.a11y-contrast .panel { background: #05080d; backdrop-filter: none; -webkit-backdrop-filter: none; border-color: rgba(255, 255, 255, .55); }
+html.a11y-contrast .panel, html.a11y-contrast.js:not(.no-gl) .panel { background: #05080d; border-color: rgba(255, 255, 255, .55); }
+html.a11y-contrast.js:not(.no-gl) .panel::before { display: none; }
 html.a11y-contrast .panel :is(p, li, dd), html.a11y-contrast .panel .lead { color: #f4f8fb; }
 html.a11y-contrast :is(.pcard, .steps li, .disclosure) { background: #0d141e; border-color: rgba(255, 255, 255, .35); }
 html.a11y-contrast .hero { background: rgba(5, 8, 13, .9); padding: 24px 26px; border-radius: 18px; }
