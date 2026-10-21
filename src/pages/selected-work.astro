@@ -8,38 +8,38 @@ const cases = [
     figure: '5×',
     title: 'Migrated a legacy CRM into one HubSpot instance, and grew funnel engagement fivefold',
     context: 'As Senior Technical Business Development Manager at Sensay, an AI SaaS company.',
-    problem: 'Data lived across a legacy CRM and disconnected tools, with no single source of truth for revenue data. Reporting to leadership meant manual reconciliation rather than a number anyone could just look up.',
+    problem: 'Revenue data was split between a legacy CRM and disconnected tools, with no single source of truth. Every report to leadership meant reconciling numbers by hand.',
     did: 'Migrated the legacy stack into a single HubSpot instance, enriched contact and account data with Breeze Intelligence, and engineered automated sequences in n8n and Zapier to keep the data current without manual entry. Then built Looker Studio dashboards merging CRM, product and website analytics into one view.',
     result: 'Funnel engagement increased fivefold.',
-    advice: "A CRM migration that doesn't start with agreeing what your key terms mean (qualified, engaged, active) just moves the mess into a nicer-looking tool. Fix the definitions before you fix the system.",
+    advice: "Agree what your key terms mean (qualified, engaged, active) before you migrate, or you'll carry the same mess into a nicer-looking tool.",
   },
   {
     figure: '30%',
-    title: 'Cut ticket handling time by 30% by rebuilding the workflow, not just automating it',
+    title: 'Cut ticket handling time by 30% by rebuilding the workflow before automating it',
     context: 'As Client Operations Manager at SpotOn, a restaurant-tech platform, owning the support and operations workflow for the client base.',
-    problem: "Ticket handling was inconsistent. The right answer to a common issue depended on which team member picked it up, because the knowledge lived in people's heads rather than in a documented process.",
-    did: 'Audited the existing workflow end to end, rebuilt the SOPs so the correct answer was documented and easy to find, and automated the repetitive parts of the workflow around that new standard.',
+    problem: "The right answer to a common issue depended on who picked up the ticket, because the knowledge lived in people's heads and nowhere else.",
+    did: 'Audited the existing workflow end to end, rebuilt the SOPs so the correct answer was written down and easy to find, and automated the repetitive parts of the workflow around that new standard.',
     result: 'Ticket handling time dropped by 30%.',
-    advice: 'Automating a broken process just makes the mess move faster. Document the correct process first. The automation almost writes itself once that part is done.',
+    advice: 'Write down the correct process first. Once you have it, the automation is the easy part.',
   },
   {
     figure: 'Adoption',
     title: 'Built the automation layer nobody had to be told to use',
     context: 'Also at Sensay, alongside the CRM migration, building the automation and reporting layer underneath the sales and marketing workflow.',
-    problem: "Reporting tools already existed, but the team rarely opened them, because the numbers didn't match what people saw in the systems they actually used day to day.",
-    did: 'Built the n8n and Zapier automations around the workflows the team already used, rather than asking them to adopt a new tool, and built the dashboards on the same data everyone already trusted, merging CRM, product and website analytics into one Looker Studio view.',
-    result: 'The dashboards became the thing leadership actually opened, because the numbers finally matched what the team saw on the ground.',
-    advice: "Adoption is the metric everyone skips when reporting on an automation project. If nobody opens the dashboard, the automation didn't work, no matter how clever it is.",
+    problem: "Reporting tools already existed, but the team rarely opened them, because the numbers didn't match what people saw in the systems they used every day.",
+    did: 'Built the n8n and Zapier automations into the workflows the team already used, so nobody had to learn a new tool, and built the dashboards on the data everyone already trusted, merging CRM, product and website analytics into one Looker Studio view.',
+    result: 'Leadership started opening the dashboards, because the numbers matched what the team saw on the ground.',
+    advice: 'Report adoption alongside delivery. A dashboard nobody opens has failed, however clever the automation behind it.',
   },
 ];
 ---
 <Site
   title="Selected work: results from roles I've held | DNA4Digital"
-  description="A CRM migration that grew funnel engagement fivefold, a 30% cut in ticket handling time, and dashboards leadership actually opened. Results from roles at Sensay, SpotOn and Google Customer Solutions."
+  description="A CRM migration that grew funnel engagement fivefold, a 30% cut in ticket handling time, and dashboards leadership opened. Results from roles at Sensay, SpotOn and Google Customer Solutions."
 >
   <Panel rung={2} kicker="03 · Selected work">
     <h1>Results from roles I've held</h1>
-    <p class="lead">These are results from roles I've held as an employee, not consulting engagements delivered under DNA4Digital. Each one is labelled with the company and my role, so the context is never in question.</p>
+    <p class="lead">I achieved these results as an employee, in the roles named on each case. They are not DNA4Digital consulting engagements.</p>
     <div class="stats">
       <div><b>#1</b><span>revenue team in EMEA, Google CS</span></div>
       <div><b>5&times;</b><span>funnel engagement, Sensay</span></div>
@@ -60,8 +60,8 @@ const cases = [
       </article>
     ))}
 
-    <h2>Want results like these?</h2>
-    <p>Book a free 30-minute call and we'll work out whether the first move is an audit, a pilot, or simply writing down how the work is supposed to happen.</p>
+    <h2>Start with a free call</h2>
+    <p>Book 30 minutes and we'll work out whether your first move is an audit, a pilot, or writing down how the work is supposed to happen.</p>
     <div class="btnrow">
       <a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Book a consultation</a>
       <a class="btn btn-ghost" href="/about/#track-record">See my full track record</a>

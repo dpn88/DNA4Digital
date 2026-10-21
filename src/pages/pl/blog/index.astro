@@ -10,11 +10,11 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
 ---
 <Site
   title="Blog: notatki o GTM, procesach i AI | DNA4Digital"
-  description="Krótkie, praktyczne notatki o go-to-market, procesach i AI, pisane na podstawie prawdziwych projektów."
+  description="Krótkie, praktyczne notatki o go-to-market, procesach i AI, oparte na projektach, przy których pracowałem."
 >
   <Panel rung={3} kicker="04 · Blog">
     <h1>Notatki z praktyki</h1>
-    <p class="lead">Krótkie, praktyczne notatki o go-to-market, procesach i AI, pisane na podstawie prawdziwych projektów, a nie prezentacji dostawców.</p>
+    <p class="lead">Krótkie, praktyczne notatki o go-to-market, procesach i AI, oparte na projektach, przy których pracowałem.</p>
     {posts.length > 0 ? (
       posts.map(p => (
         <a class="post" href={`${ROUTES.blog.pl}${p.id}/`}>
@@ -24,7 +24,7 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
         </a>
       ))
     ) : (
-      <p>Pierwsze wpisy właśnie powstają. Do tego czasu <a href={LINKEDIN_URL} rel="noopener">obserwuj DNA4Digital na LinkedInie</a> albo <a href={ROUTES.contact.pl}>wyślij mi pytanie</a>, na które odpowiedź chcesz przeczytać najpierw.</p>
+      <p>Piszę właśnie pierwsze wpisy. Do tego czasu <a href={LINKEDIN_URL} rel="noopener">obserwuj DNA4Digital na LinkedInie</a> albo <a href={ROUTES.contact.pl}>wyślij mi pytanie</a>, na które mam odpowiedzieć najpierw.</p>
     )}
   </Panel>
 </Site>

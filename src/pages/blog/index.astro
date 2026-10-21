@@ -9,11 +9,11 @@ const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 
 ---
 <Site
   title="Blog: notes on GTM, process and AI | DNA4Digital"
-  description="Short, practical notes on go-to-market, process and AI, written from real projects."
+  description="Short, practical notes on go-to-market, process and AI, drawn from projects I've worked on."
 >
   <Panel rung={3} kicker="04 · Blog">
     <h1>Notes from the field</h1>
-    <p class="lead">Short, practical notes on go-to-market, process and AI, written from real projects rather than vendor decks.</p>
+    <p class="lead">Short, practical notes on go-to-market, process and AI, drawn from projects I've worked on.</p>
     {posts.length > 0 ? (
       posts.map(p => (
         <a class="post" href={`/blog/${p.id}/`}>
@@ -23,7 +23,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 
         </a>
       ))
     ) : (
-      <p>The first posts are being written now. In the meantime, <a href={LINKEDIN_URL} rel="noopener">follow DNA4Digital on LinkedIn</a> or <a href="/contact/">send me the question</a> you'd like answered first.</p>
+      <p>I'm writing the first posts now. Until they're up, <a href={LINKEDIN_URL} rel="noopener">follow DNA4Digital on LinkedIn</a> or <a href="/contact/">send me the question</a> you'd like me to answer first.</p>
     )}
   </Panel>
 </Site>
