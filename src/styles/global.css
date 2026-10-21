@@ -188,8 +188,11 @@ html:not(.js) .rungs:has(~ .panel), html.no-gl .rungs:has(~ .panel) { display: n
 /* ---------- App layout (JS + WebGL) ---------- */
 /* Home has nothing to scroll. Subpages scroll the window while the helix stays fixed behind. */
 html.js:not(.no-gl):not(:has(.panel)), html.js:not(.no-gl):not(:has(.panel)) body { height: 100%; overflow: hidden; }
-html.js:not(.no-gl) { scrollbar-width: thin; scrollbar-color: rgba(45, 212, 191, .35) transparent; }
-html.js:not(.no-gl) #stage { display: block; position: fixed; inset: 0; z-index: 1; }
+/* The scrollbar's space is kept on every page, so moving between home (nothing to scroll) and a subpage never
+   changes the page width, which would resize the canvas mid-zoom and blank a frame. The stage runs under that
+   strip, so it isn't an empty band on home. */
+html.js:not(.no-gl) { scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: rgba(45, 212, 191, .35) transparent; }
+html.js:not(.no-gl) #stage { display: block; position: fixed; top: 0; bottom: 0; left: 0; width: 100vw; z-index: 1; }
 html.js:not(.no-gl) #stage canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; display: block; }
 html.js:not(.no-gl) #overlay { z-index: 2; pointer-events: none; }
 html.js:not(.no-gl) .topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 10; transition: background .3s, box-shadow .3s; }
