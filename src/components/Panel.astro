@@ -31,6 +31,7 @@ const year = new Date().getFullYear();
       <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
       <a href={LINKEDIN_URL} rel="noopener">LinkedIn</a>
       <a href={ROUTES.privacy[lang]}>{t.footer.privacy}</a>
+      <button type="button" class="linkbtn" data-open-settings="privacy">{t.footer.settings}</button>
     </nav>
     <p>{t.disclosure}</p>
     <p>&copy; {year} Daniel Nowak / DNA4Digital. {t.rights}</p>

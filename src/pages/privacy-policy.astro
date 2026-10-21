@@ -5,7 +5,7 @@ import Panel from '../components/Panel.astro';
 <Site title="Privacy policy | DNA4Digital" description="How dna4digital.com handles your personal data.">
   <Panel rung={4} kicker="Privacy policy">
     <h1>Privacy policy</h1>
-    <p class="lead">Last updated: October 2026. This site collects as little as it can: no tracking cookies, no advertising, no analytics profiles.</p>
+    <p class="lead">Last updated: October 2026. Nothing that tracks you runs on this site until you agree to it in the cookie banner, and you can change your choice at any time.</p>
 
     <h2>Who is responsible</h2>
     <p>The controller of your personal data is Daniel Nowak, trading as DNA4Digital. For anything about your data, email <a href="mailto:dn@dna4digital.com">dn@dna4digital.com</a>.</p>
@@ -13,20 +13,31 @@ import Panel from '../components/Panel.astro';
     <h2>What I collect and why</h2>
     <p><strong>Contact form.</strong> When you send a message I receive your name, email address, optional company name, the topic you picked, your message and, if you came from the AI readiness test, your score. I use this only to reply to you and, if we decide to work together, to prepare and run that work. The legal basis is your consent and steps taken at your request before entering into a contract (GDPR Article 6(1)(a) and (b)).</p>
     <p><strong>AI readiness test.</strong> The test runs entirely in your browser. Your answers are not stored or sent anywhere. Your score is only shared if you choose to send it through the contact form.</p>
+    <p><strong>Analytics, only with your consent.</strong> If you allow analytics, Google Analytics records which pages you visit, how you got here, roughly where you are (country and city), and the type of device and browser you use. I use this to see which pages are useful. It does not tell me who you are. The legal basis is your consent (Article 6(1)(a)).</p>
+    <p><strong>Company recognition, only with your consent.</strong> If you allow marketing, Leadinfo uses your IP address to work out which company a visit comes from, and shows me that company's name and the pages visited. It is meant for business visitors and does not identify individual people. The legal basis is your consent (Article 6(1)(a)).</p>
     <p><strong>Technical data.</strong> Like any website, the servers that deliver this site process your IP address and basic request details (browser type, time, page requested) to deliver pages, protect the site from abuse and limit form spam. The legal basis is my legitimate interest in running a secure website (Article 6(1)(f)). This data is not used to profile you.</p>
 
-    <h2>Cookies</h2>
-    <p>This site does not set cookies and does not use tracking or advertising technologies. Fonts and scripts are served from this domain, not from third-party CDNs.</p>
+    <h2>Cookies and browser storage</h2>
+    <p><strong>Always on, stored only in your browser:</strong> your language choice, your cookie choice and your accessibility settings. They are kept in local storage, are never sent to me and are needed for the site to work the way you asked.</p>
+    <p><strong>Only with your consent:</strong></p>
+    <ul class="ticks">
+      <li><strong>Google Analytics</strong> (analytics): cookies <code>_ga</code> and <code>_ga_*</code>, which distinguish visits and last up to two years.</li>
+      <li><strong>Leadinfo</strong> (marketing): cookies <code>_li_id</code> and <code>_li_ses</code>, which recognise returning company visits.</li>
+    </ul>
+    <p>Until you choose, everything except the always-on items is switched off and Google Tag Manager, which loads these tools, is not loaded at all. You can change or withdraw your consent at any time with <button type="button" class="linkbtn" data-open-settings="privacy">Cookie &amp; accessibility settings</button>, also linked at the bottom of every page. Withdrawing removes these cookies from your browser.</p>
+    <p>Fonts and scripts for the site itself are served from this domain, not from third-party CDNs.</p>
 
     <h2>Who processes the data for me</h2>
     <ul class="ticks">
       <li><strong>Cloudflare, Inc.</strong> hosts the site and delivers contact form messages by email.</li>
       <li><strong>Google</strong> (Google Workspace) hosts my mailbox, where your messages arrive.</li>
+      <li><strong>Google Ireland Limited</strong> provides Google Analytics and Google Tag Manager, only if you consent.</li>
+      <li><strong>Leadinfo B.V.</strong> (the Netherlands) provides company recognition, only if you consent.</li>
     </ul>
-    <p>Both may process data outside the European Economic Area. Where they do, the transfer is covered by the EU-US Data Privacy Framework or the European Commission's standard contractual clauses.</p>
+    <p>Cloudflare and Google may process data outside the European Economic Area. Where they do, the transfer is covered by the EU-US Data Privacy Framework or the European Commission's standard contractual clauses.</p>
 
     <h2>How long I keep it</h2>
-    <p>Messages are kept for as long as needed to handle your enquiry and any work that follows from it, and to meet legal obligations such as accounting rules. After that they are deleted.</p>
+    <p>Messages are kept for as long as needed to handle your enquiry and any work that follows from it, and to meet legal obligations such as accounting rules. After that they are deleted. Analytics and company-recognition data are kept for the retention period set in those services and then deleted automatically.</p>
 
     <h2>Your rights</h2>
     <p>Under the GDPR you can ask to access, correct or delete your data, restrict or object to its processing, receive it in a portable format, and withdraw consent at any time without affecting what was done before. Email <a href="mailto:dn@dna4digital.com">dn@dna4digital.com</a> and I'll respond within one month.</p>
