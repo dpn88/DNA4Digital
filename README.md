@@ -22,7 +22,9 @@ Under `npm run preview` the contact form doesn't send real email. Wrangler print
 
 | What | Where |
 |---|---|
-| Page copy | `src/pages/*.astro` |
+| Page copy, English | `src/pages/*.astro` (served at the root: `/services/`, ...) |
+| Page copy, Polish | `src/pages/pl/*.astro` (served under `/pl/` with Polish slugs: `/pl/uslugi/`, ...) |
+| Language pairs, menu labels, footer and other shared UI text | `src/i18n/index.ts` (`ROUTES` drives the EN/PL switch and hreflang tags) |
 | Menu items and which rung each page zooms to | `src/data/site.ts` |
 | Styles | `src/styles/global.css` |
 | Helix, background network, camera and page transitions | `src/scripts/helix.ts` |

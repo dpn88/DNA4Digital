@@ -3,7 +3,9 @@ import { Image } from 'astro:assets';
 import Site from '../layouts/Site.astro';
 import Panel from '../components/Panel.astro';
 import portrait from '../assets/daniel-nowak.png';
-import { DISCLOSURE, BOOKING_URL } from '../data/site';
+import { BOOKING_URL } from '../data/site';
+import { ui } from '../i18n';
+const DISCLOSURE = ui('en').disclosure;
 ---
 <Site
   title="About Daniel Nowak | DNA4Digital"

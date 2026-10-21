@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+import Site from '../../layouts/Site.astro';
+import Panel from '../../components/Panel.astro';
+import portrait from '../../assets/daniel-nowak.png';
+import { BOOKING_URL } from '../../data/site';
+import { ROUTES, ui } from '../../i18n';
+---
+<Site
+  title="O mnie: Daniel Nowak | DNA4Digital"
+  description="Osiemnaście lat w operacjach: hotelarstwo, BPO i SaaS. Zespół nr 1 pod względem przychodów w EMEA w Google Customer Solutions, RevOps w Sensay, operacje klienckie w SpotOn, Associate Partner w Yameo."
+>
+  <Panel rung={1} kicker="02 · O mnie">
+    <h1>Wąskim gardłem prawie nigdy nie jest narzędzie. Jest nim przekazanie.</h1>
+    <Image src={portrait} alt="Daniel Nowak przy biurku" width={300} class="photo" loading="eager" />
+    <p class="lead">Jestem Daniel Nowak. Naprawiam to, jak naprawdę działają przychody i operacje, a potem wdrażam AI tam, gdzie efekt się kumuluje.</p>
+    <p>Do AI nie przyszedłem z inżynierii. Przyszedłem z operacji: osiemnaście lat, z czego trzynaście spędziłem, prowadząc restauracje, obsługę konferencji i działy F&amp;B w hotelach w Polsce i Irlandii. W tym świecie zepsuty proces to nie slajd w prezentacji. To sala pełna ludzi czekających na jedzenie, a dowiadujesz się o tym w ciągu godziny.</p>
+    <p>To nauczyło mnie rzeczy, którą sprzedaję do dziś: wąskim gardłem prawie nigdy nie jest narzędzie. Robię to niezależnie w ramach DNA4Digital oraz jako Associate Partner w Yameo (holendersko-polskim software housie dla dużych firm), gdy klient potrzebuje systemu nie tylko zaprojektowanego, ale i zbudowanego.</p>
+    <div class="stats">
+      <div><b>#1</b><span>zespół przychodowy w EMEA, Google CS</span></div>
+      <div><b>5&times;</b><span>zaangażowanie w lejku, Sensay</span></div>
+      <div><b>30%</b><span>krótszy czas obsługi zgłoszeń, SpotOn</span></div>
+    </div>
+
+    <h2 id="mission">Dlaczego to robię</h2>
+    <p>W 2021 roku przeszedłem do branży technologicznej i od środka widziałem to samo, co wcześniej z kuchennego okienka: firmy kupują narzędzia, żeby rozwiązać problemy, które nigdy nie były problemami narzędziowymi. Technologia bez kontekstu biznesowego niczego nie naprawia. Przenosi bałagan w inne miejsce i go przyspiesza. Dlatego pracuję odwrotnie: najpierw proces, potem automatyzacja, potem AI.</p>
+
+    <h2 id="story">Moja historia</h2>
+    <p>Trzynaście lat w operacjach hotelarsko-gastronomicznych: otwarcie kawiarni z piekarnią w Parku Narodowym Donegal, prowadzenie czterech punktów F&amp;B i 600 nakryć dziennie w Royal Marine oraz przebudowa hotelowej restauracji w biznes na wynos w pierwszych tygodniach pandemii, z pomocą wyłącznie Facebooka, Google Ads i nowego menu. Po drodze nauczyłem się SOP-ów, prognozowania, kontroli marży i tego, co dzieje się z zespołem, gdy proces jest niejasny.</p>
+    <p>W 2021 roku dołączyłem do TTEC jako account manager Google Ads. W cztery miesiące awansowałem na POD Leada, a potem na Team Leadera zespołu Google Customer Solutions dla Polski oraz Czech i Słowacji, jako partner dostawcy TTEC. Ten zespół zajął <strong>1. miejsce pod względem przychodów w EMEA</strong>, a ja otrzymałem nagrodę Platinum Club dla najlepszego managera w regionie. Przez cztery kwartały z rzędu utrzymałem też ocenę satysfakcji pracowników 5/5. Nikt nie odszedł, a to chroniło marżę.</p>
+    <p>Potem poszedłem w stronę techniczną. W Sensay, firmie AI SaaS, przestałem sprzedawać i zacząłem budować: migrowałem starsze systemy do HubSpota, wzbogacałem dane w Breeze Intelligence, projektowałem automatyczne sekwencje w n8n i Zapierze oraz składałem dashboardy w Looker Studio łączące dane z CRM, produktu i strony. <strong>Zaangażowanie w lejku wzrosło pięciokrotnie.</strong></p>
+    <p>W SpotOn prowadziłem operacje klienckie dla platformy technologicznej dla restauracji i schemat się powtórzył: audyt procesów, automatyzacja właściwych kroków, <strong>skrócenie czasu obsługi zgłoszeń o 30%</strong> i przebudowa SOP-ów tak, żeby odpowiedzi były spisane, a nie tylko w głowach ludzi. Biorąc pod uwagę, skąd zaczynałem, było to jak domknięcie koła.</p>
+    <p>Dziś jestem Associate Partnerem w Yameo, holendersko-polskim software housie, który od 2006 roku buduje systemy enterprise dla bankowości, ubezpieczeń i ochrony zdrowia. To partnerstwo ma znaczenie z jednego praktycznego powodu: gdy proces, który zmapowałem, wymaga inżynierów, mam za sobą zespół, który dowozi ze stałą ceną, stałym terminem i podpisanym SLA. Większość niezależnych konsultantów może Ci tylko wręczyć plan i życzyć powodzenia.</p>
+
+    <div class="pcards three">
+      <div class="pcard"><h3>Dlaczego warto ze mną pracować</h3><p>Żadnej &bdquo;magii AI&rdquo; i żadnego udawania, że narzędzie jest odpowiedzią. Dostajesz przejrzysty plan, szybkie pilotaże i mierzalne efekty. Dostajesz też mnie, a nie zespół sprzedażowy, po którym przychodzi obcy zespół wdrożeniowy.</p></div>
+      <div class="pcard"><h3>Na czym mi zależy</h3><p><strong>Prostota:</strong> jeśli procesu nie da się opisać na jednej stronie, nikt nie będzie go stosował. <strong>Odpowiedzialność:</strong> zawsze podaję liczbę, punkt odniesienia i termin. <strong>Partnerstwo:</strong> uczę tylko tego, co sam prowadziłem.</p></div>
+      <div class="pcard"><h3>Moja droga</h3><p>Hotelarstwo nauczyło mnie operacji. Google nauczył mnie skali. Sensay nauczył mnie budować, a nie tylko specyfikować. Dzięki Yameo mogę dziś budować także to, co jest za duże dla jednej osoby.</p></div>
+    </div>
+
+    <h2 id="approach">Jak pracuję</h2>
+    <p>Od diagnozy po wdrożenie i skalowanie, bez chaosu i bez wypalania zespołu.</p>
+    <ol class="steps">
+      <li><h3>Audyt i mapa procesu</h3><p>Mapuję, jak praca naprawdę przepływa, a nie jak wynika to ze schematu organizacyjnego. Wąskie gardła, przekazania, zdublowane pola i obejścia, które wszyscy po cichu zbudowali. Dostajesz punkty tarcia uszeregowane według kosztu.</p><a href={`${ROUTES.services.pl}#audit`}>Więcej o audytach &rarr;</a></li>
+      <li><h3>Pilotaż i szkolenie</h3><p>Testujemy na prawdziwych przykładach z Twoimi danymi, szkolę osoby, które będą to prowadzić, i dobieramy narzędzia do procesu, a nie odwrotnie.</p><a href={`${ROUTES.services.pl}#training`}>Więcej o szkoleniach &rarr;</a></li>
+      <li><h3>Wdrożenie i skalowanie</h3><p>Standardy, SOP-y, KPI i dashboardy, żeby poprawa przetrwała, gdy mnie już nie będzie.</p><a href={`${ROUTES.services.pl}#consulting`}>Więcej o doradztwie &rarr;</a></li>
+    </ol>
+
+    <h2 id="practice">Trzy rzeczy, w których jestem naprawdę dobry</h2>
+    <div class="pcards three">
+      <div class="pcard"><h3>Go-to-market i RevOps</h3><p>Projektowanie lejka i pipeline&rsquo;u, zasady kwalifikacji, przekazania, architektura CRM i raportowanie. Prospecting oparty na intencjach z mapowania ICP i person, testy A/B sekwencji outboundowych, które podniosły zaangażowanie o 18%, i migracja starego stosu do jednej instancji HubSpota, którą zarząd mógł wreszcie czytać.</p></div>
+      <div class="pcard"><h3>Architektura procesów</h3><p>Mapowanie, standaryzacja, odpowiedzialność, SOP-y, KPI i kontrola jakości. To połowa z Lean Six Sigma: mało efektowna, ale to ona decyduje, czy cokolwiek innego zadziała. Większość &bdquo;problemów z AI&rdquo; to nieudokumentowane procesy w przebraniu.</p></div>
+      <div class="pcard"><h3>Enablement AI i automatyzacja</h3><p>Architektura low-code w n8n i Zapierze, szkolenia wspierane przez AI, wewnętrzne chatboty, asystenci sprzedaży i boty concierge. Do tego zasady, których nikt nie lubi pisać: SOP-y, umowy o udostępnianiu danych zgodne z RODO i bezpieczne integracje analityczne.</p></div>
+    </div>
+
+    <h2 id="track-record">Skąd to doświadczenie</h2>
+    <p>Osiemnaście lat operacji w hotelarstwie, BPO i SaaS, w Polsce, Irlandii i w całym regionie EMEA.</p>
+    <ol class="timeline">
+      <li><b>Yameo, Associate Partner</b><span>Dostarczanie oprogramowania enterprise dla bankowości, ubezpieczeń, ochrony zdrowia i sektora publicznego.</span></li>
+      <li><b>Google Customer Solutions, przez TTEC</b><span>Kierowałem zespołem PL oraz CZ/SK jako partner dostawcy TTEC. Zespół nr 1 pod względem przychodów w EMEA; Platinum Club, Best Manager, Q3 2024.</span></li>
+      <li><b>TTEC, Team Leader</b><span>Rozwój biznesu w EMEA. Rozwiązania BPO dla dużych firm i negocjacje na poziomie zarządów.</span></li>
+      <li><b>Sensay, Senior Technical BDM</b><span>Architektura RevOps i wdrażanie produktów AI.</span></li>
+      <li><b>SpotOn, Client Operations Manager</b><span>Automatyzacja procesów i wsparcie operacyjne.</span></li>
+      <li><b>Balkans Crypto, Sales Director</b><span>Strategia komercyjna dla konferencji Web3 na 2000 uczestników; partnerstwa z giełdami Tier-1 i projektami L1/L2.</span></li>
+      <li><b>Operacje w hotelarstwie, 13 lat</b><span>Restauracje, obsługa konferencji i hotelowe F&amp;B w Polsce i Irlandii.</span></li>
+    </ol>
+    <p><strong>Kwalifikacje:</strong> Lean Six Sigma Black Belt &middot; Machine Learning with Python (V2) &middot; Web Development &middot; licencjat z ekonomii (Wyższa Szkoła Finansów i Informatyki, 2026)</p>
+    <p class="disclosure" id="disclosure">{ui('pl').disclosure} Powiem Ci o tym w pierwszej rozmowie, a nie w piątej.</p>
+
+    <h2>Nadajmy technologii sens</h2>
+    <p>Umów bezpłatną, 30-minutową rozmowę. Powiem Ci, od czego bym zaczął i czy pierwszym krokiem powinien być audyt, pilotaż, czy po prostu spisanie, jak praca ma wyglądać.</p>
+    <div class="btnrow">
+      <a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Umów konsultację</a>
+      <a class="btn btn-ghost" href={ROUTES.services.pl}>Zobacz usługi</a>
+    </div>
+  </Panel>
+</Site>

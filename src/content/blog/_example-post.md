@@ -5,6 +5,7 @@ title: Why your AI pilot stalled at the handoff
 description: One or two sentences for Google and link previews.
 date: 2026-11-01
 draft: true
+# lang: pl   (leave out for English; Polish posts are listed under /pl/blog/)
 # cover: ../../assets/blog/my-image.jpg
 # coverAlt: What the image shows
 ---

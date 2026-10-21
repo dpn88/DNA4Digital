@@ -1,0 +1,71 @@
+---
+import { BOOKING_URL } from '../../data/site';
+import { ROUTES } from '../../i18n';
+import Site from '../../layouts/Site.astro';
+import Panel from '../../components/Panel.astro';
+
+const cases = [
+  {
+    figure: '5×',
+    title: 'Migracja starego CRM do jednej instancji HubSpota i pięciokrotny wzrost zaangażowania w lejku',
+    context: 'Jako Senior Technical Business Development Manager w Sensay, firmie AI SaaS.',
+    problem: 'Dane były rozproszone między starym CRM a niepołączonymi narzędziami, bez jednego źródła prawdy o przychodach. Raportowanie do zarządu oznaczało ręczne uzgadnianie danych zamiast liczby, którą każdy mógł po prostu sprawdzić.',
+    did: 'Przeniosłem stary stos do jednej instancji HubSpota, wzbogaciłem dane kontaktów i firm w Breeze Intelligence oraz zaprojektowałem automatyczne sekwencje w n8n i Zapierze, które utrzymywały dane aktualne bez ręcznego wpisywania. Potem zbudowałem dashboardy w Looker Studio łączące dane z CRM, produktu i strony w jednym widoku.',
+    result: 'Zaangażowanie w lejku wzrosło pięciokrotnie.',
+    advice: 'Migracja CRM, która nie zaczyna się od uzgodnienia, co znaczą kluczowe pojęcia (zakwalifikowany, zaangażowany, aktywny), tylko przenosi bałagan do ładniejszego narzędzia. Najpierw napraw definicje, potem system.',
+  },
+  {
+    figure: '30%',
+    title: 'Skrócenie czasu obsługi zgłoszeń o 30% dzięki przebudowie procesu, a nie samej automatyzacji',
+    context: 'Jako Client Operations Manager w SpotOn, platformie technologicznej dla restauracji, odpowiedzialny za proces wsparcia i operacji dla bazy klientów.',
+    problem: 'Obsługa zgłoszeń była niespójna. Prawidłowa odpowiedź na typowy problem zależała od tego, kto odebrał zgłoszenie, bo wiedza była w głowach ludzi, a nie w udokumentowanym procesie.',
+    did: 'Przeprowadziłem audyt całego procesu, przebudowałem SOP-y tak, żeby prawidłowa odpowiedź była spisana i łatwa do znalezienia, i zautomatyzowałem powtarzalne kroki wokół nowego standardu.',
+    result: 'Czas obsługi zgłoszeń skrócił się o 30%.',
+    advice: 'Automatyzacja zepsutego procesu tylko przyspiesza bałagan. Najpierw spisz właściwy proces. Gdy to zrobisz, automatyzacja niemal pisze się sama.',
+  },
+  {
+    figure: 'Adopcja',
+    title: 'Warstwa automatyzacji, do której nikogo nie trzeba było namawiać',
+    context: 'Również w Sensay, równolegle z migracją CRM: budowa warstwy automatyzacji i raportowania pod procesami sprzedaży i marketingu.',
+    problem: 'Narzędzia raportowe już istniały, ale zespół rzadko do nich zaglądał, bo liczby nie zgadzały się z tym, co ludzie widzieli w systemach, których używali na co dzień.',
+    did: 'Zbudowałem automatyzacje w n8n i Zapierze wokół procesów, których zespół już używał, zamiast zmuszać go do nowego narzędzia, a dashboardy oparłem na tych samych danych, którym wszyscy już ufali, łącząc dane z CRM, produktu i strony w jednym widoku Looker Studio.',
+    result: 'Dashboardy stały się tym, co zarząd faktycznie otwierał, bo liczby wreszcie zgadzały się z tym, co zespół widział w praktyce.',
+    advice: 'Adopcja to wskaźnik, który wszyscy pomijają w raportach z projektów automatyzacji. Jeśli nikt nie otwiera dashboardu, automatyzacja nie zadziałała, bez względu na to, jak jest sprytna.',
+  },
+];
+---
+<Site
+  title="Realizacje: wyniki z ról, które pełniłem | DNA4Digital"
+  description="Migracja CRM, która zwiększyła zaangażowanie w lejku pięciokrotnie, czas obsługi zgłoszeń krótszy o 30% i dashboardy, które zarząd naprawdę otwierał. Wyniki z ról w Sensay, SpotOn i Google Customer Solutions."
+>
+  <Panel rung={2} kicker="03 · Realizacje">
+    <h1>Wyniki z ról, które pełniłem</h1>
+    <p class="lead">To wyniki z ról, które pełniłem jako pracownik, a nie projekty doradcze zrealizowane w ramach DNA4Digital. Przy każdym podaję firmę i swoją rolę, żeby kontekst był zawsze jasny.</p>
+    <div class="stats">
+      <div><b>#1</b><span>zespół przychodowy w EMEA, Google CS</span></div>
+      <div><b>5&times;</b><span>zaangażowanie w lejku, Sensay</span></div>
+      <div><b>30%</b><span>krótszy czas obsługi zgłoszeń, SpotOn</span></div>
+    </div>
+
+    {cases.map(c => (
+      <article class="case">
+        <p class="figure">{c.figure}</p>
+        <h2>{c.title}</h2>
+        <dl>
+          <dt>Kontekst</dt><dd>{c.context}</dd>
+          <dt>Problem</dt><dd>{c.problem}</dd>
+          <dt>Co zrobiłem</dt><dd>{c.did}</dd>
+          <dt>Wynik</dt><dd><strong>{c.result}</strong></dd>
+          <dt>Jeśli masz podobny problem</dt><dd>{c.advice}</dd>
+        </dl>
+      </article>
+    ))}
+
+    <h2>Chcesz podobnych wyników?</h2>
+    <p>Umów bezpłatną, 30-minutową rozmowę i ustalimy, czy pierwszym krokiem powinien być audyt, pilotaż, czy po prostu spisanie, jak praca ma wyglądać.</p>
+    <div class="btnrow">
+      <a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Umów konsultację</a>
+      <a class="btn btn-ghost" href={`${ROUTES.about.pl}#track-record`}>Zobacz pełne doświadczenie</a>
+    </div>
+  </Panel>
+</Site>

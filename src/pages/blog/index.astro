@@ -4,7 +4,7 @@ import Site from '../../layouts/Site.astro';
 import Panel from '../../components/Panel.astro';
 import { LINKEDIN_URL } from '../../data/site';
 
-const posts = (await getCollection('blog', p => !p.data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const posts = (await getCollection('blog', p => !p.data.draft && p.data.lang === 'en')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 <Site
