@@ -71,10 +71,10 @@ To roll back, remove the two custom domains and re-create the records you wrote 
 
 ## Analytics and the cookie banner
 
-- **Tag Manager container:** Google Tag Manager `GTM-WC99BH8N` holds GA4 (`G-WSNNQD1TC0`) and Leadinfo. It is loaded only after a visitor consents, by the inline script in `src/layouts/Site.astro`. Google Consent Mode v2 starts with everything denied.
+- **Tag Manager container:** Google Tag Manager `GTM-WC99BH8N` holds GA4 (`G-WSNNQD1TC0`) and the HubSpot tracking code (portal `147062284`, EU). It is loaded only after a visitor consents, by the inline script in `src/layouts/Site.astro`. Google Consent Mode v2 starts with everything denied.
 - **Where the code lives:** the banner and settings dialog are in `src/components/Preferences.astro` and `src/scripts/prefs.ts`.
   - Analytics consent controls `analytics_storage`, which GA4 respects through its built-in consent checks.
-  - Marketing consent controls `ad_storage`. The Leadinfo tag in Tag Manager requires `ad_storage`.
+  - Marketing consent controls `ad_storage`. The HubSpot tag in Tag Manager requires `ad_storage`. HubSpot's own cookie banner must stay switched off in HubSpot, or visitors get two banners.
 - **New tools in Tag Manager:** give every tool a consent requirement. Add its domains to the CSP in `public/_headers`. Bump `CONSENT_VERSION` in both `prefs.ts` and the inline script so everyone is asked again.
 - **Accessibility settings:** they live in the same dialog (person icon in the top bar). They are applied before paint by the same inline script.
 

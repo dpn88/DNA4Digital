@@ -253,6 +253,9 @@ html.js.ready:not(.panel-show) .panel { opacity: 0; visibility: hidden; transfor
 .consent[hidden] { display: none; }
 .consent h2 { font: 600 17px var(--display); margin: 0 0 6px; }
 .consent p { font-size: 14px; line-height: 1.55; color: #c3d0dc; margin: 0 0 12px; }
+.consent .btnrow { align-items: center; }
+.consent-accept { padding-left: 26px; padding-right: 26px; }
+.consent-choose { margin-left: 4px; font-size: 14px; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
 
 .prefs { width: min(620px, calc(100% - 24px)); max-height: min(88dvh, 780px); padding: 0; border: 1px solid rgba(45, 212, 191, .3); border-radius: 20px; background: #0b121c; color: var(--text); box-shadow: 0 30px 80px rgba(0, 0, 0, .6); }
 .prefs[open] { display: flex; flex-direction: column; }
@@ -309,7 +312,7 @@ html.a11y-spacing :is(p, li, dd, .desc) { line-height: 1.85; }
 
 @media (max-width: 819px) {
   .consent { bottom: 10px; padding: 16px; }
-  .consent .btn { flex: 1 1 auto; }
+  .consent .consent-accept { flex: 1 1 auto; }
   .prefs-head, .prefs-tabs, .prefs-pane { padding-left: 18px; padding-right: 18px; }
 }
 @media (max-width: 420px) {
