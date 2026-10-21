@@ -11,16 +11,47 @@ const path = Astro.url.pathname;
 const lang = langFromPath(path);
 const t = ui(lang);
 const year = new Date().getFullYear();
+
+// The "On this page" rail lists every h2 on the page. Headings without an id get one from their text, and a
+// page's own .toc nav (Services) supplies shorter labels. Pages with fewer than three sections get no rail.
+const body = await Astro.slots.render('default');
+const tocNav = /<nav class="toc"[^>]*>([\s\S]*?)<\/nav>/.exec(body)?.[1] ?? '';
+const tocLabels = new Map([...tocNav.matchAll(/<a href="#([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)].map(m => [m[1], m[2]]));
+const slug = (s: string) =>
+  s.replace(/&[#a-z0-9]+;/gi, '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ł/gi, 'l')
+    .toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).slice(0, 6).join('-');
+const sections: { id: string; label: string }[] = [];
+const html = body.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/g, (_, attrs: string, inner: string) => {
+  const text = inner.replace(/<[^>]+>/g, '').trim();
+  let id = /\sid="([^"]+)"/.exec(attrs)?.[1];
+  if (!id) {
+    id = slug(text) || 'section';
+    while (sections.some(s => s.id === id)) id += '-2';
+    attrs += ` id="${id}"`;
+  }
+  sections.push({ id, label: tocLabels.get(id) ?? text });
+  return `<h2${attrs}>${inner}</h2>`;
+});
 ---
 <main class="panel" id="main" data-view="page" data-rung={rung} tabindex="-1">
-  <nav class="panel-nav" aria-label={t.pagesNav}>
-    <a href={ROUTES.home[lang]}>&larr; {t.back}</a>
-    <span class="chips">
-      {rungs(lang).map(r => <a href={r.href} aria-current={path === r.href ? 'page' : undefined}>{r.short}</a>)}
-    </span>
-  </nav>
-  {kicker && <p class="kicker">{kicker}</p>}
-  <slot />
+  <div class="panel-cols">
+    <div class="panel-main">
+      <nav class="panel-nav" aria-label={t.pagesNav}>
+        <a href={ROUTES.home[lang]}>&larr; {t.back}</a>
+        <span class="chips">
+          {rungs(lang).map(r => <a href={r.href} aria-current={path === r.href ? 'page' : undefined}>{r.short}</a>)}
+        </span>
+      </nav>
+      {kicker && <p class="kicker">{kicker}</p>}
+      <Fragment set:html={html} />
+    </div>
+    {sections.length >= 3 && (
+      <nav class="panel-rail" aria-label={t.onThisPage}>
+        <p class="rail-title">{t.onThisPage}</p>
+        <ol>{sections.map(s => <li><a href={`#${s.id}`}><span set:html={s.label} /></a></li>)}</ol>
+      </nav>
+    )}
+  </div>
   <footer class="panel-foot">
     <nav aria-label="Footer">
       <a href={`${ROUTES.services[lang]}#gtm`}>{t.footer.gtm}</a>

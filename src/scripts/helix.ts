@@ -32,6 +32,8 @@ const SPEED = 0.22;
 const SPEED_REDUCED = 0.03;
 // Wait this long after a click before swapping pages, so the old panel or hero can fade out.
 const SWAP_DELAY_MS = 320;
+// While a subpage scrolls, the camera moves down the helix by this many world units per screen height.
+const DRIFT_PER_SCREEN = 0.55;
 
 function start() {
   // "Turn off the 3D background" in the accessibility settings: keep the plain page.
@@ -176,6 +178,7 @@ function start() {
   tilt.add(helix);
   tilt.updateMatrixWorld(true);
   const rungWorld = rungY.map(y => tilt.localToWorld(new THREE.Vector3(0, y, 0)));
+  const AXIS = new THREE.Vector3(0, 1, 0).applyQuaternion(tilt.quaternion);
   // The rung each menu item sits on, spread evenly down the helix.
   const MENU_ITEMS = 5;
   const LABELED = Array.from({ length: MENU_ITEMS }, (_, i) => Math.round((i + .5) * BP / MENU_ITEMS - .5));
@@ -277,7 +280,7 @@ function start() {
   const pairPhase = (i: number, j: number) => { const s = Math.sin(i * 12.9898 + j * 78.233) * 43758.5453; return (s - Math.floor(s)) * 6.283; };
   const netTmp = new THREE.Vector3();
 
-  function updateNetwork(dt: number, time: number, zoomProg: number, phone: boolean, pulses: boolean) {
+  function updateNetwork(dt: number, time: number, zoomProg: number, phone: boolean, pulses: boolean, panelX: number) {
     for (let i = 0; i < NET_N; i++) {
       for (let k = 0; k < 3; k++) {
         const idx = i * 3 + k, maxV = k === 2 ? .05 : .22;
@@ -291,7 +294,7 @@ function start() {
       netTmp.set(netPos[i * 3], netPos[i * 3 + 1], netPos[i * 3 + 2]).project(camera);
       const fx = (netTmp.x + 1) / 2, fy = (1 - netTmp.y) / 2;
       const calmHome = phone ? smooth(.4, .6, fy) : smooth(.3, .62, fx);
-      const calmZoom = 1 - .9 * (phone ? smooth(.3, .5, fy) : smooth(.52, .78, fx));
+      const calmZoom = 1 - .9 * (phone ? smooth(.3, .5, fy) : smooth(panelX - .04, panelX + .14, fx));
       calm[i] = calmHome + (calmZoom - calmHome) * zoomProg;
       nodeAlpha[i] = .06 + .8 * calm[i];
     }
@@ -356,8 +359,11 @@ function start() {
   let prog = 0, target = 0; // 0 = whole helix, 1 = zoomed onto a rung
   const focus = new THREE.Vector2(), focusTarget = new THREE.Vector2();
   let panelShow = false, ready = false, swapping = false, firstLoad = true;
+  let scrolled = false, docked = false; // page scrolled at all; panel's page links scrolled under the top bar
   let pendingHash = '';
   let heroBottom = 0;
+  let panelLeft = 0; // left edge of the content panel, as a fraction of the screen width
+  let drift = 0; // how far the camera has moved down the helix while reading
 
   // The menu is persisted per language, so a language switch brings in a new set of links to position.
   function bindLinks() {
@@ -382,7 +388,20 @@ function start() {
     root.classList.toggle('zoomed', target === 1);
     root.classList.toggle('panel-show', panelShow);
     root.classList.toggle('ready', ready);
+    root.classList.toggle('scrolled', scrolled);
+    root.classList.toggle('docked', docked);
   }
+
+  function readScroll() {
+    const nav = document.querySelector('.panel-nav'), bar = document.querySelector('.topbar');
+    scrolled = scrollY > 8;
+    docked = !!nav && !!bar && nav.getBoundingClientRect().bottom < bar.getBoundingClientRect().bottom;
+  }
+  addEventListener('scroll', () => {
+    const was = `${scrolled}${docked}`;
+    readScroll();
+    if (`${scrolled}${docked}` !== was) applyState();
+  }, { passive: true });
 
   function setRoute(r: number) {
     rung = r;
@@ -399,6 +418,12 @@ function start() {
   function measureHero() {
     const hero = document.querySelector('.hero');
     if (hero && !root.classList.contains('zoomed')) heroBottom = hero.getBoundingClientRect().bottom;
+  }
+
+  // offsetLeft ignores the slide-in transform, so this works while the panel is still hidden.
+  function measurePanel() {
+    const panel = document.querySelector<HTMLElement>('main.panel');
+    if (panel && W) panelLeft = panel.offsetLeft / W;
   }
 
   function scrollToHash() {
@@ -435,8 +460,10 @@ function start() {
     pendingHash = location.hash;
     swapping = false;
     firstLoad = false;
+    readScroll(); // a reload can restore a scrolled position without a scroll event
     applyState();
     measureHero();
+    measurePanel();
     document.fonts?.ready.then(measureHero);
   }
   document.addEventListener('astro:page-load', onPageLoad);
@@ -447,7 +474,8 @@ function start() {
   // ---------- Layout ----------
   let W = 0, H = 0, bgPhone: boolean | null = null;
   function resize() {
-    W = window.innerWidth; H = window.innerHeight;
+    // The stage's own size, so the page scrollbar on subpages doesn't stretch the canvas.
+    W = stage.clientWidth; H = stage.clientHeight;
     renderer.setSize(W, H, false);
     composer.setSize(W, H);
     camera.aspect = W / H;
@@ -463,22 +491,26 @@ function start() {
     overlay.width = W * PR; overlay.height = H * PR;
     octx.setTransform(PR, 0, 0, PR, 0, 0);
     measureHero();
+    measurePanel();
   }
-  window.addEventListener('resize', resize);
+  new ResizeObserver(resize).observe(stage);
 
   function layout() {
     const phone = PHONE_MQ.matches;
     // On phones the helix sits below the hero text, so it starts wherever the hero ends.
     const top = phone ? (heroBottom ? clamp(heroBottom + 14, H * .45, H * .62) : H * .57) : 100;
     const bottom = phone ? H - 34 : H - 56;
+    const frac = (bottom - top) / H, zf = phone ? 2.6 : 3.0;
+    // Zoomed on desktop, the helix axis sits a little left of the panel's edge so the panel covers its right
+    // half. Until a panel has been measured, use the sizes from global.css (width min(1080px, 70vw), 4vw margin).
+    const panelX = panelLeft || (W * .96 - Math.min(1080, W * .7)) / W;
+    const zoomHalfW = (L + .6) / (frac * 2 * TAN) / zf * TAN * (W / H);
     return {
-      phone,
+      phone, frac, zf, panelX,
       fx: phone ? .27 : Math.min(.64, (W - 310) / W),
       fy: (top + bottom) / 2 / H,
-      frac: (bottom - top) / H,
-      fxz: phone ? .5 : .27,
+      fxz: phone ? .5 : panelX - R * .3 / (2 * zoomHalfW),
       fyz: phone ? .2 : .5,
-      zf: phone ? 2.6 : 3.0,
     };
   }
 
@@ -491,7 +523,8 @@ function start() {
       return new THREE.Vector3(-(lay.fx - .5) * 2 * hw, (lay.fy - .5) * 2 * hh, dHome);
     }
     const d = dHome / lay.zf, hh = d * TAN, hw = hh * aspect;
-    return new THREE.Vector3(focus.x - (lay.fxz - .5) * 2 * hw, focus.y + (lay.fyz - .5) * 2 * hh, d);
+    const fx = focus.x - AXIS.x * drift, fy = focus.y - AXIS.y * drift;
+    return new THREE.Vector3(fx - (lay.fxz - .5) * 2 * hw, fy + (lay.fyz - .5) * 2 * hh, d);
   }
 
   const tmp = new THREE.Vector3();
@@ -512,7 +545,7 @@ function start() {
     const lay = layout();
     if (!paused) {
       uniforms.uTime.value += dt;
-      updateNetwork(dt, uniforms.uTime.value, ease(prog), lay.phone, !reduced);
+      updateNetwork(dt, uniforms.uTime.value, ease(prog), lay.phone, !reduced, lay.panelX);
       helix.rotation.y += dt * (reduced ? SPEED_REDUCED : SPEED) * (target === 1 ? .35 : hover >= 0 ? .25 : 1);
       specks.rotation.y += dt * .01;
       bokehBack.rotation.y -= dt * .015;
@@ -520,6 +553,10 @@ function start() {
     const k = reduced ? 1 : 1 - Math.exp(-dt * 3.2);
     prog += (target - prog) * k;
     focus.lerp(focusTarget, k);
+    // Scroll-linked drift down the strand, stopping a little before its end. Off with reduced motion.
+    const room = rung >= 0 ? Math.max(0, rungY[LABELED[rung]] + L / 2 - 1.2) : 0;
+    const driftTarget = target === 1 && !reduced ? Math.min(scrollY / H * DRIFT_PER_SCREEN, room) : 0;
+    drift += (driftTarget - drift) * (1 - Math.exp(-dt * 4));
 
     const hlIdx = target === 1 && rung >= 0 ? LABELED[rung] : hover >= 0 ? LABELED[hover] : -1;
     uniforms.uHL.value = hlIdx;
