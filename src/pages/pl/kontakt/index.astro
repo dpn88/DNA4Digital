@@ -1,0 +1,55 @@
+---
+import Site from '../../../layouts/Site.astro';
+import Panel from '../../../components/Panel.astro';
+import { CONTACT_EMAIL, BOOKING_URL } from '../../../data/site';
+import { ROUTES } from '../../../i18n';
+---
+<Site
+  title="Kontakt: Daniel Nowak | DNA4Digital"
+  description="Umów bezpłatną, 30-minutową rozmowę albo napisz w sprawie GTM, procesów lub AI. Odpowiadam szybko i konkretnie."
+>
+  <Panel rung={4} kicker="05 · Kontakt">
+    <h1>Porozmawiajmy przez 30 minut</h1>
+    <p class="lead">Bezpłatnie, online, bez zobowiązań. Wybierz termin w moim kalendarzu albo napisz, nad czym pracujesz, a odpowiem szybko i konkretnie. Możesz też napisać na <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <div class="btnrow"><a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Wybierz termin w kalendarzu</a></div>
+
+    <h2>Albo wyślij wiadomość</h2>
+    <form class="form" method="post" action="/api/contact" data-contact>
+      <div class="row">
+        <label>Imię i nazwisko<input name="name" autocomplete="name" required maxlength="120" /></label>
+        <label>E-mail<input name="email" type="email" autocomplete="email" required maxlength="200" /></label>
+      </div>
+      <div class="row">
+        <label>Firma <span>(opcjonalnie)</span><input name="company" autocomplete="organization" maxlength="160" /></label>
+        <label>Czego dotyczy
+          <select name="topic">
+            <option value="call">Bezpłatna rozmowa (30 min)</option>
+            <option value="audit">Audyt gotowości AI</option>
+            <option value="gtm">GTM i procesy</option>
+            <option value="training">Szkolenie lub warsztat</option>
+            <option value="consulting">Doradztwo i wdrożenie</option>
+            <option value="other">Coś innego</option>
+          </select>
+        </label>
+      </div>
+      <label>Twoja wiadomość
+        <textarea name="message" required minlength="10" maxlength="5000" placeholder="Im więcej kontekstu podasz, tym bardziej przydatna będzie moja pierwsza odpowiedź."></textarea>
+      </label>
+      <label class="check">
+        <input type="checkbox" name="consent" value="yes" required />
+        <span>Znam <a href={ROUTES.privacy.pl}>politykę prywatności</a> i zgadzam się na wykorzystanie moich danych w celu odpowiedzi na tę wiadomość.</span>
+      </label>
+      <div class="hp" aria-hidden="true">
+        <label>Zostaw to pole puste<input name="website" tabindex="-1" autocomplete="off" /></label>
+      </div>
+      <input type="hidden" name="started" value="" />
+      <input type="hidden" name="score" value="" />
+      <input type="hidden" name="lang" value="pl" />
+      <div class="btnrow"><button class="btn btn-primary" type="submit">Wyślij wiadomość</button></div>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <h2>Wolisz najpierw zobaczyć szkolenie?</h2>
+    <p>Najlepiej zobaczyć je na sali, na warsztacie stacjonarnym, gdzie wiedza i praktyka wreszcie się spotykają. Wspomnij o tym w wiadomości, a podeślę możliwości.</p>
+  </Panel>
+</Site>

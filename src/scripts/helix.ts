@@ -7,7 +7,8 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { navigate, type TransitionBeforePreparationEvent } from 'astro:transitions/client';
-import { RUNGS, rungForPath } from '../data/site';
+import { rungForPath } from '../data/site';
+import { ROUTES, langFromPath } from '../i18n';
 
 declare global {
   interface Window { __helixReady?: boolean }
@@ -168,7 +169,8 @@ function start() {
   tilt.updateMatrixWorld(true);
   const rungWorld = rungY.map(y => tilt.localToWorld(new THREE.Vector3(0, y, 0)));
   // The rung each menu item sits on, spread evenly down the helix.
-  const LABELED = RUNGS.map((_, i) => Math.round((i + .5) * BP / RUNGS.length - .5));
+  const MENU_ITEMS = 5;
+  const LABELED = Array.from({ length: MENU_ITEMS }, (_, i) => Math.round((i + .5) * BP / MENU_ITEMS - .5));
 
   // ---------- Haze and bokeh ----------
   function radialTex(stops: [number, string][]) {
@@ -340,7 +342,7 @@ function start() {
   composer.addPass(new OutputPass());
 
   // ---------- Route state ----------
-  const links = [...document.querySelectorAll<HTMLAnchorElement>('#rungs .rung-link')];
+  let links: HTMLAnchorElement[] = [];
   let hover = -1;
   let rung = -1; // rung the camera is heading for, -1 = home view
   let prog = 0, target = 0; // 0 = whole helix, 1 = zoomed onto a rung
@@ -349,14 +351,21 @@ function start() {
   let pendingHash = '';
   let heroBottom = 0;
 
-  links.forEach((a, i) => {
-    const on = () => { hover = i; };
-    const off = () => { if (hover === i) hover = -1; };
-    a.addEventListener('mouseenter', on);
-    a.addEventListener('focus', on);
-    a.addEventListener('mouseleave', off);
-    a.addEventListener('blur', off);
-  });
+  // The menu is persisted per language, so a language switch brings in a new set of links to position.
+  function bindLinks() {
+    const found = [...document.querySelectorAll<HTMLAnchorElement>('#rungs .rung-link')];
+    if (found[0] === links[0]) return;
+    links = found;
+    links.forEach((a, i) => {
+      const on = () => { hover = i; };
+      const off = () => { if (hover === i) hover = -1; };
+      a.addEventListener('mouseenter', on);
+      a.addEventListener('focus', on);
+      a.addEventListener('mouseleave', off);
+      a.addEventListener('blur', off);
+    });
+  }
+  bindLinks();
 
   // Astro replaces the attributes on <html> when it swaps pages, so state lives here and is re-applied.
   function applyState() {
@@ -402,13 +411,14 @@ function start() {
     const delay = REDUCED.matches ? 0 : SWAP_DELAY_MS;
     e.loader = async () => { await Promise.all([load(), new Promise(r => setTimeout(r, delay))]); };
   });
-  document.addEventListener('astro:after-swap', applyState);
+  document.addEventListener('astro:after-swap', () => { bindLinks(); applyState(); });
 
   // Runs once when the scene starts and again after every navigation. Astro's first astro:page-load only
   // fires on window load, so calling it directly avoids a flash of the home view on deep links.
   let shownPath = '';
   function onPageLoad() {
     const main = document.getElementById('main');
+    bindLinks();
     setRoute(main ? Number(main.dataset.rung ?? -1) : -1);
     if (firstLoad || REDUCED.matches) { prog = target; focus.copy(focusTarget); }
     links.forEach((a, i) => (i === rung ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
@@ -423,7 +433,7 @@ function start() {
   }
   document.addEventListener('astro:page-load', onPageLoad);
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && rung >= 0 && !(e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement)) navigate('/');
+    if (e.key === 'Escape' && rung >= 0 && !(e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement)) navigate(ROUTES.home[langFromPath(location.pathname)]);
   });
 
   // ---------- Layout ----------

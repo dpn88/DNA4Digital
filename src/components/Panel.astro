@@ -1,5 +1,6 @@
 ---
-import { RUNGS, DISCLOSURE, LINKEDIN_URL, CONTACT_EMAIL, BOOKING_URL } from '../data/site';
+import { rungs, LINKEDIN_URL, CONTACT_EMAIL, BOOKING_URL } from '../data/site';
+import { ROUTES, langFromPath, ui } from '../i18n';
 
 interface Props {
   rung: number;
@@ -7,29 +8,31 @@ interface Props {
 }
 const { rung, kicker } = Astro.props;
 const path = Astro.url.pathname;
+const lang = langFromPath(path);
+const t = ui(lang);
 const year = new Date().getFullYear();
 ---
 <main class="panel" id="main" data-view="page" data-rung={rung} tabindex="-1">
-  <nav class="panel-nav" aria-label="Pages">
-    <a href="/">&larr; Back to the helix</a>
+  <nav class="panel-nav" aria-label={t.pagesNav}>
+    <a href={ROUTES.home[lang]}>&larr; {t.back}</a>
     <span class="chips">
-      {RUNGS.map(r => <a href={r.href} aria-current={path === r.href ? 'page' : undefined}>{r.short}</a>)}
+      {rungs(lang).map(r => <a href={r.href} aria-current={path === r.href ? 'page' : undefined}>{r.short}</a>)}
     </span>
   </nav>
   {kicker && <p class="kicker">{kicker}</p>}
   <slot />
   <footer class="panel-foot">
     <nav aria-label="Footer">
-      <a href="/services/#gtm">GTM &amp; processes</a>
-      <a href="/services/#training">Training</a>
-      <a href="/services/#audit">Audits</a>
-      <a href="/ai-readiness/">AI readiness test</a>
-      <a href={BOOKING_URL} target="_blank" rel="noopener">Book a call</a>
+      <a href={`${ROUTES.services[lang]}#gtm`}>{t.footer.gtm}</a>
+      <a href={`${ROUTES.services[lang]}#training`}>{t.footer.training}</a>
+      <a href={`${ROUTES.services[lang]}#audit`}>{t.footer.audits}</a>
+      <a href={ROUTES.readiness[lang]}>{t.footer.readiness}</a>
+      <a href={BOOKING_URL} target="_blank" rel="noopener">{t.bookCall}</a>
       <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
       <a href={LINKEDIN_URL} rel="noopener">LinkedIn</a>
-      <a href="/privacy-policy/">Privacy policy</a>
+      <a href={ROUTES.privacy[lang]}>{t.footer.privacy}</a>
     </nav>
-    <p>{DISCLOSURE}</p>
-    <p>&copy; {year} Daniel Nowak / DNA4Digital. All rights reserved.</p>
+    <p>{t.disclosure}</p>
+    <p>&copy; {year} Daniel Nowak / DNA4Digital. {t.rights}</p>
   </footer>
 </main>

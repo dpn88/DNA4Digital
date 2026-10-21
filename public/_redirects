@@ -7,6 +7,6 @@
 /test/ / 301
 /feed/ /blog/ 301
 /offer/ /services/ 301
-/oferta/ /services/ 301
-/o-nas/ /about/ 301
-/kontakt/ /contact/ 301
+/oferta/ /pl/uslugi/ 301
+/o-nas/ /pl/o-mnie/ 301
+/kontakt/ /pl/kontakt/ 301

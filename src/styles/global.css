@@ -39,6 +39,11 @@ img { max-width: 100%; height: auto; }
 .wordmark { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 700; line-height: .92; letter-spacing: .04em; color: var(--text); text-decoration: none; }
 .wordmark .stack > span { display: block; font-size: 17px; }
 .wordmark .four { color: var(--teal); }
+.topbar-right { display: flex; align-items: center; gap: 14px; }
+.lang-switch { display: flex; gap: 2px; padding: 3px; border: 1px solid rgba(255, 255, 255, .14); border-radius: 999px; background: rgba(5, 8, 13, .35); backdrop-filter: blur(4px); font: 600 12px var(--body); letter-spacing: .06em; }
+.lang-switch a { padding: 5px 10px; border-radius: 999px; color: var(--muted); text-decoration: none; }
+.lang-switch a:hover { color: var(--text); }
+.lang-switch a[aria-current] { background: rgba(45, 212, 191, .15); color: var(--teal); }
 
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 22px; border-radius: 12px; font: 600 15px var(--body); text-decoration: none; border: 1px solid transparent; cursor: pointer; color: var(--text); transition: background .2s, border-color .2s, transform .2s; }
 .btn:hover { transform: translateY(-1px); }
@@ -208,6 +213,8 @@ html.js.ready:not(.panel-show) .panel { opacity: 0; visibility: hidden; transfor
 /* ---------- Phone ---------- */
 @media (max-width: 819px) {
   .topbar { padding: 18px 20px; }
+  .topbar-right { gap: 8px; }
+  .lang-switch a { padding: 5px 8px; }
   .hero h1 { font-size: 36px; margin-bottom: 14px; }
   .eyebrow { font-size: 11px; margin-bottom: 12px; }
   .hero .intro { font-size: 15px; margin-bottom: 18px; }

@@ -4,7 +4,8 @@ import '@fontsource-variable/space-grotesk';
 import '@fontsource/jetbrains-mono/500.css';
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
-import { RUNGS, BOOKING_URL } from '../data/site';
+import { rungs, BOOKING_URL } from '../data/site';
+import { LANGS, ROUTES, alternatePath, langFromPath, ui } from '../i18n';
 
 interface Props {
   title: string;
@@ -13,20 +14,27 @@ interface Props {
   noindex?: boolean;
 }
 const { title, description, ogType = 'website', noindex = false } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname;
+const lang = langFromPath(path);
+const t = ui(lang);
+const canonical = new URL(path, Astro.site);
 const ogImage = new URL('/og.png', Astro.site);
+const alternates = LANGS.map(l => ({ lang: l, href: new URL(alternatePath(path, l), Astro.site) }));
 ---
 <!doctype html>
-<html lang="en" transition:animate="none">
+<html lang={lang} transition:animate="none">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {!noindex && alternates.map(a => <link rel="alternate" hreflang={a.lang} href={a.href} />)}
+    {!noindex && <link rel="alternate" hreflang="x-default" href={alternates[0].href} />}
     {noindex && <meta name="robots" content="noindex" />}
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="DNA4Digital" />
+    <meta property="og:locale" content={t.locale} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -45,13 +53,13 @@ const ogImage = new URL('/og.png', Astro.site);
     <slot name="head" />
   </head>
   <body>
-    <a class="skip" href="#main">Skip to content</a>
+    <a class="skip" href="#main">{t.skip}</a>
     <div id="stage" transition:persist="stage" aria-hidden="true">
       <canvas id="overlay"></canvas>
     </div>
 
     <header class="topbar">
-      <a class="wordmark" href="/" aria-label="DNA4Digital, back to the helix">
+      <a class="wordmark" href={ROUTES.home[lang]} aria-label={t.homeAria}>
         <svg width="24" height="34" viewBox="0 0 24 34" aria-hidden="true">
           <path d="M4 2c0 8 16 8 16 15S4 24 4 32" stroke="#2dd4bf" stroke-width="2.4" fill="none" stroke-linecap="round" />
           <path d="M20 2c0 8-16 8-16 15s16 7 16 15" stroke="#00aaff" stroke-width="2.4" fill="none" stroke-linecap="round" />
@@ -59,11 +67,19 @@ const ogImage = new URL('/og.png', Astro.site);
         </svg>
         <span class="stack" aria-hidden="true"><span>DNA</span><span><span class="four">4</span>DIGITAL</span></span>
       </a>
-      <a class="btn btn-ghost btn-sm" href={BOOKING_URL} target="_blank" rel="noopener">Book a call</a>
+      <div class="topbar-right">
+        <nav class="lang-switch" aria-label={t.langNav}>
+          {alternates.map(a => (
+            <a href={a.href.pathname} hreflang={a.lang} lang={a.lang} aria-current={a.lang === lang ? 'true' : undefined}>{a.lang.toUpperCase()}</a>
+          ))}
+        </nav>
+        <a class="btn btn-ghost btn-sm" href={BOOKING_URL} target="_blank" rel="noopener">{t.bookCall}</a>
+      </div>
     </header>
 
-    <nav class="rungs" id="rungs" aria-label="Main" transition:persist="rungs">
-      {RUNGS.map((r, i) => (
+    {/* A separate persist key per language, so switching language swaps the menu labels. */}
+    <nav class="rungs" id="rungs" aria-label={t.mainNav} transition:persist={`rungs-${lang}`}>
+      {rungs(lang).map((r, i) => (
         <a class="rung-link" href={r.href} data-rung={i}>
           <span class="idx">0{i + 1}</span>{r.name}
         </a>

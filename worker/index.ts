@@ -13,7 +13,13 @@ const TOPICS: Record<string, string> = {
 const EMAIL_RE = /^[^\s@<>"]+@[^\s@<>"]+\.[^\s@<>"]{2,}$/;
 const MIN_FILL_MS = 3000;
 
-type Fields = Record<'name' | 'email' | 'company' | 'topic' | 'message' | 'score', string>;
+type Fields = Record<'name' | 'email' | 'company' | 'topic' | 'message' | 'score' | 'lang', string>;
+
+// Must match ROUTES.contact and ROUTES.thanks in src/i18n/index.ts.
+const PAGES = {
+  en: { contact: '/contact/', thanks: '/contact/thanks/' },
+  pl: { contact: '/pl/kontakt/', thanks: '/pl/kontakt/dziekuje/' },
+};
 
 export default {
   async fetch(request, env): Promise<Response> {
@@ -27,10 +33,13 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
   if (request.method !== 'POST') return new Response('Method not allowed', { status: 405, headers: { Allow: 'POST' } });
 
   const wantsJson = (request.headers.get('Accept') ?? '').includes('application/json');
+  // Plain form posts come from the contact page, so the referring page tells us which language to send them back to.
+  const lang: 'en' | 'pl' = new URL(request.headers.get('Referer') ?? request.url).pathname.startsWith('/pl/') ? 'pl' : 'en';
+  const pages = PAGES[lang];
   const reply = (status: 'sent' | 'invalid' | 'error' | 'busy', httpStatus: number) =>
     wantsJson
       ? Response.json({ ok: status === 'sent', status }, { status: httpStatus })
-      : Response.redirect(new URL(status === 'sent' ? '/contact/thanks/' : `/contact/?error=${status}`, request.url).toString(), 303);
+      : Response.redirect(new URL(status === 'sent' ? pages.thanks : `${pages.contact}?error=${status}`, request.url).toString(), 303);
 
   const ip = request.headers.get('CF-Connecting-IP') ?? 'unknown';
   if (env.CONTACT_LIMIT) {
@@ -57,6 +66,7 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
     topic: get('topic', 20),
     message: get('message', 5000),
     score: get('score', 3).replace(/\D/g, ''),
+    lang: get('lang', 2) === 'pl' ? 'Polish' : 'English',
   };
   const consent = form.get('consent') === 'yes';
   if (!f.name || !EMAIL_RE.test(f.email) || f.message.length < 10 || !consent) return reply('invalid', 400);
@@ -79,7 +89,7 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
 }
 
 function rows(f: Fields, topic: string): [string, string][] {
-  const out: [string, string][] = [['Name', f.name], ['Email', f.email], ['Topic', topic]];
+  const out: [string, string][] = [['Name', f.name], ['Email', f.email], ['Topic', topic], ['Site language', f.lang]];
   if (f.company) out.push(['Company', f.company]);
   if (f.score) out.push(['AI readiness score', `${f.score}/100`]);
   return out;
