@@ -493,7 +493,9 @@ function start() {
     measureHero();
     measurePanel();
   }
-  new ResizeObserver(resize).observe(stage);
+  // The resize event runs before this frame's animation callbacks, so the cleared canvas is redrawn before it is
+  // shown. A ResizeObserver would run after them and flash one empty frame on every resize.
+  window.addEventListener('resize', resize);
 
   function layout() {
     const phone = PHONE_MQ.matches;
