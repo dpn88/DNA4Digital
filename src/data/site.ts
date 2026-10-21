@@ -26,5 +26,5 @@ export const CONTACT_EMAIL = 'info@dna4digital.com';
 // Google Calendar appointment page for the free 30-minute call.
 export const BOOKING_URL = 'https://calendar.app.google/ddE9Gz4PGV4dUWmJ7';
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/dna4digital/';
-// Google Tag Manager container (GA4 + Leadinfo). Only loaded after the visitor consents; see src/scripts/prefs.ts.
+// Google Tag Manager container (GA4 + HubSpot). Only loaded after the visitor consents; see src/scripts/prefs.ts.
 export const GTM_ID = 'GTM-WC99BH8N';

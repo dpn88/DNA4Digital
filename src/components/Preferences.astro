@@ -5,8 +5,8 @@ import { ROUTES, langFromPath } from '../i18n';
 const lang = langFromPath(Astro.url.pathname);
 const T = {
   en: {
-    bannerTitle: 'Cookies, only if you agree',
-    bannerText: "I'd like to use Google Analytics to see which pages are useful, and Leadinfo to recognise which companies visit. Neither runs unless you say yes, and you can change your mind at any time in the settings.",
+    bannerTitle: 'Help me make this site more useful',
+    bannerText: 'With your OK, I use Google Analytics to see which pages help visitors most, and HubSpot to remember you if you get in touch. Nothing runs without your consent, and you can change your mind at any time in the settings.',
     privacyLink: 'Privacy policy',
     acceptAll: 'Accept all',
     rejectAll: 'Reject all',
@@ -20,7 +20,7 @@ const T = {
     analytics: 'Analytics',
     analyticsText: 'Google Analytics counts visits and shows which pages are useful, without telling me who you are.',
     marketing: 'Marketing',
-    marketingText: 'Leadinfo recognises which company a visit comes from, based on its IP address, so I can follow up with businesses that might need my help.',
+    marketingText: 'HubSpot remembers your visits and links them to your enquiry if you contact me, so I can reply with the right context.',
     save: 'Save choices',
     textSize: 'Text size',
     textSizes: ['Default', 'Large', 'Extra large'],
@@ -38,8 +38,8 @@ const T = {
     saved: 'Saved',
   },
   pl: {
-    bannerTitle: 'Pliki cookie tylko za Twoją zgodą',
-    bannerText: 'Chciałbym korzystać z Google Analytics, żeby wiedzieć, które strony są przydatne, oraz z Leadinfo, żeby rozpoznawać firmy odwiedzające stronę. Żadne z nich nie działa bez Twojej zgody, a decyzję możesz zmienić w każdej chwili w ustawieniach.',
+    bannerTitle: 'Pomóż mi ulepszać tę stronę',
+    bannerText: 'Za Twoją zgodą korzystam z Google Analytics, żeby widzieć, które strony są najbardziej przydatne, oraz z HubSpot, żeby rozpoznać Cię, gdy się ze mną skontaktujesz. Bez Twojej zgody nic się nie uruchamia, a decyzję możesz zmienić w każdej chwili w ustawieniach.',
     privacyLink: 'Polityka prywatności',
     acceptAll: 'Zaakceptuj wszystkie',
     rejectAll: 'Odrzuć wszystkie',
@@ -53,7 +53,7 @@ const T = {
     analytics: 'Analityka',
     analyticsText: 'Google Analytics liczy odwiedziny i pokazuje, które strony są przydatne, bez wskazywania, kim jesteś.',
     marketing: 'Marketing',
-    marketingText: 'Leadinfo rozpoznaje, z jakiej firmy pochodzi wizyta, na podstawie adresu IP, żebym mógł odezwać się do firm, którym moja pomoc może się przydać.',
+    marketingText: 'HubSpot zapamiętuje Twoje wizyty i łączy je z Twoim zapytaniem, jeśli się ze mną skontaktujesz, żebym mógł odpowiedzieć z pełnym kontekstem.',
     save: 'Zapisz wybór',
     textSize: 'Rozmiar tekstu',
     textSizes: ['Domyślny', 'Duży', 'Bardzo duży'],
@@ -84,9 +84,9 @@ const toggles = [
   <h2 id="consent-title">{T.bannerTitle}</h2>
   <p>{T.bannerText} <a href={ROUTES.privacy[lang]}>{T.privacyLink}</a></p>
   <div class="btnrow">
-    <button type="button" class="btn btn-primary btn-sm" data-consent="none">{T.rejectAll}</button>
-    <button type="button" class="btn btn-primary btn-sm" data-consent="all">{T.acceptAll}</button>
-    <button type="button" class="btn btn-ghost btn-sm" data-open-settings="privacy">{T.choose}</button>
+    <button type="button" class="btn btn-primary btn-sm consent-accept" data-consent="all">{T.acceptAll}</button>
+    <button type="button" class="btn btn-ghost btn-sm" data-consent="none">{T.rejectAll}</button>
+    <button type="button" class="linkbtn consent-choose" data-open-settings="privacy">{T.choose}</button>
   </div>
 </section>
 
@@ -114,9 +114,9 @@ const toggles = [
       <input type="checkbox" class="switch" role="switch" name="marketing" />
     </label>
     <div class="btnrow prefs-actions">
-      <button type="button" class="btn btn-primary btn-sm" data-consent="save">{T.save}</button>
+      <button type="button" class="btn btn-primary btn-sm" data-consent="all">{T.acceptAll}</button>
+      <button type="button" class="btn btn-ghost btn-sm" data-consent="save">{T.save}</button>
       <button type="button" class="btn btn-ghost btn-sm" data-consent="none">{T.rejectAll}</button>
-      <button type="button" class="btn btn-ghost btn-sm" data-consent="all">{T.acceptAll}</button>
     </div>
   </section>
 

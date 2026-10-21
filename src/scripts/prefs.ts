@@ -50,13 +50,13 @@ const consentMode = (analytics: boolean, marketing: boolean) => {
   return { analytics_storage: state(analytics), ad_storage: state(marketing), ad_user_data: state(marketing), ad_personalization: state(marketing) };
 };
 
-// Analytics (_ga*) and Leadinfo (_li*) cookies, removed when consent is withdrawn.
+// Analytics (_ga*) and HubSpot (__hs*, hubspotutk, messagesUtk) cookies, removed when consent is withdrawn.
 function clearTrackingCookies() {
   const host = location.hostname;
   const domains = ['', host, `.${host}`, `.${host.split('.').slice(-2).join('.')}`];
   for (const part of document.cookie.split(';')) {
     const name = part.split('=')[0].trim();
-    if (!/^(_ga|_gid|_gat|_li)/.test(name)) continue;
+    if (!/^(_ga|_gid|_gat|__hs|hubspotutk|messagesUtk)/.test(name)) continue;
     for (const d of domains) document.cookie = `${name}=; Max-Age=0; path=/${d ? `; domain=${d}` : ''}`;
   }
 }
