@@ -32,9 +32,9 @@ const UI = {
   en: {
     locale: 'en_GB',
     skip: 'Skip to content',
-    homeAria: 'DNA4Digital, back to the helix',
+    homeAria: 'DNA4Digital, home',
     bookCall: 'Book a call',
-    back: 'Back to the helix',
+    back: 'Home',
     pagesNav: 'Pages',
     onThisPage: 'On this page',
     mainNav: 'Main',
@@ -49,9 +49,9 @@ const UI = {
   pl: {
     locale: 'pl_PL',
     skip: 'Przejdź do treści',
-    homeAria: 'DNA4Digital, powrót do helisy',
+    homeAria: 'DNA4Digital, strona główna',
     bookCall: 'Umów rozmowę',
-    back: 'Powrót do helisy',
+    back: 'Strona główna',
     pagesNav: 'Strony',
     onThisPage: 'Na tej stronie',
     mainNav: 'Menu główne',

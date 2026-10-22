@@ -7,16 +7,16 @@ import Panel from '../../components/Panel.astro';
 const cases = [
   {
     figure: '5×',
-    title: 'Migracja starego CRM do jednej instancji HubSpota i pięciokrotny wzrost zaangażowania w lejku',
+    title: 'Jeden HubSpot zamiast starego CRM i luźnych narzędzi: pięć razy większe zaangażowanie w lejku',
     context: 'Jako Senior Technical Business Development Manager w Sensay, firmie AI SaaS.',
-    problem: 'Dane o przychodach były rozproszone między starym CRM a niepołączonymi narzędziami, bez jednego źródła prawdy. Każdy raport dla zarządu wymagał ręcznego uzgadniania liczb.',
+    problem: 'Dane o przychodach były rozproszone między starym CRM a niepołączonymi narzędziami, bez jednego źródła prawdy. Przed każdym raportem dla zarządu ktoś ręcznie uzgadniał liczby.',
     did: 'Przeniosłem stary stos do jednej instancji HubSpota, wzbogaciłem dane kontaktów i firm w Breeze Intelligence oraz zaprojektowałem automatyczne sekwencje w n8n i Zapierze, które utrzymywały dane aktualne bez ręcznego wpisywania. Potem zbudowałem dashboardy w Looker Studio łączące dane z CRM, produktu i strony w jednym widoku.',
     result: 'Zaangażowanie w lejku wzrosło pięciokrotnie.',
     advice: 'Zanim zaczniesz migrację, uzgodnij, co znaczą kluczowe pojęcia (zakwalifikowany, zaangażowany, aktywny), bo inaczej przeniesiesz ten sam bałagan do ładniejszego narzędzia.',
   },
   {
     figure: '30%',
-    title: 'Skrócenie czasu obsługi zgłoszeń o 30% dzięki przebudowie procesu przed automatyzacją',
+    title: 'Czas obsługi zgłoszeń krótszy o 30% po audycie i przebudowie procesu',
     context: 'Jako Client Operations Manager w SpotOn, platformie technologicznej dla restauracji, odpowiedzialny za proces wsparcia i operacji dla bazy klientów.',
     problem: 'Prawidłowa odpowiedź na typowy problem zależała od tego, kto odebrał zgłoszenie, bo wiedza była tylko w głowach ludzi.',
     did: 'Przeprowadziłem audyt całego procesu, przebudowałem SOP-y tak, żeby prawidłowa odpowiedź była spisana i łatwa do znalezienia, i zautomatyzowałem powtarzalne kroki wokół nowego standardu.',
@@ -24,27 +24,27 @@ const cases = [
     advice: 'Najpierw spisz właściwy proces. Gdy go masz, automatyzacja jest najłatwiejszą częścią.',
   },
   {
-    figure: 'Adopcja',
+    figure: 'W użyciu',
     title: 'Warstwa automatyzacji, do której nikogo nie trzeba było namawiać',
     context: 'Również w Sensay, równolegle z migracją CRM: budowa warstwy automatyzacji i raportowania pod procesami sprzedaży i marketingu.',
     problem: 'Narzędzia raportowe już istniały, ale zespół rzadko do nich zaglądał, bo liczby nie zgadzały się z tym, co ludzie widzieli w systemach, których używali na co dzień.',
     did: 'Zbudowałem automatyzacje w n8n i Zapierze w procesach, których zespół już używał, więc nikt nie musiał uczyć się nowego narzędzia, a dashboardy oparłem na danych, którym wszyscy już ufali, łącząc dane z CRM, produktu i strony w jednym widoku Looker Studio.',
     result: 'Zarząd zaczął otwierać dashboardy, bo liczby zgadzały się z tym, co zespół widział w praktyce.',
-    advice: 'Raportuj adopcję razem z wdrożeniem. Dashboard, którego nikt nie otwiera, nie spełnił swojego zadania, bez względu na to, jak sprytna automatyzacja za nim stoi.',
+    advice: 'Razem z wdrożeniem raportuj, kto z narzędzia korzysta. Dashboard, którego nikt nie otwiera, nie spełnił swojego zadania.',
   },
 ];
 ---
 <Site
   title="Realizacje: wyniki z ról, które pełniłem | DNA4Digital"
-  description="Migracja CRM, która zwiększyła zaangażowanie w lejku pięciokrotnie, czas obsługi zgłoszeń krótszy o 30% i dashboardy, które zarząd otwierał. Wyniki z ról w Sensay, SpotOn i Google Customer Solutions."
+  description="Jeden HubSpot zamiast starego CRM, czas obsługi zgłoszeń krótszy o 30% i dashboardy, które zarząd otwierał. Wyniki z Sensay, SpotOn i Google."
 >
   <Panel rung={2} kicker="03 · Realizacje">
     <h1>Wyniki z ról, które pełniłem</h1>
     <p class="lead">Te wyniki osiągnąłem jako pracownik, w rolach podanych przy każdym przykładzie. Nie są to projekty doradcze DNA4Digital.</p>
     <div class="stats">
-      <div><b>#1</b><span>zespół przychodowy w EMEA, Google CS</span></div>
-      <div><b>5&times;</b><span>zaangażowanie w lejku, Sensay</span></div>
-      <div><b>30%</b><span>krótszy czas obsługi zgłoszeń, SpotOn</span></div>
+      <div><b>#1</b><span>w EMEA pod względem przychodów, mój zespół w Google CS</span></div>
+      <div><b>5&times;</b><span>wyższe zaangażowanie w lejku po migracji CRM w Sensay</span></div>
+      <div><b>30%</b><span>krótszy czas obsługi zgłoszeń po przebudowie procesu w SpotOn</span></div>
     </div>
 
     {cases.map(c => (
