@@ -9,11 +9,11 @@ const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 
 ---
 <Site
   title="Blog: notes on GTM, process and AI | DNA4Digital"
-  description="Short, practical notes on go-to-market, process and AI, drawn from projects I've worked on."
+  description="Short notes on sorting out sales and putting AI to work, with examples from projects I've worked on."
 >
   <Panel rung={3} kicker="04 · Blog">
     <h1>Notes from the field</h1>
-    <p class="lead">Short, practical notes on go-to-market, process and AI, drawn from projects I've worked on.</p>
+    <p class="lead">I write short notes here on sorting out sales and putting AI to work, with examples from projects I've worked on.</p>
     {posts.length > 0 ? (
       posts.map(p => (
         <a class="post" href={`/blog/${p.id}/`}>

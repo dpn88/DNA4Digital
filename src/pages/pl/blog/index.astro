@@ -10,11 +10,11 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
 ---
 <Site
   title="Blog: notatki o GTM, procesach i AI | DNA4Digital"
-  description="Krótkie, praktyczne notatki o go-to-market, procesach i AI, oparte na projektach, przy których pracowałem."
+  description="Krótko o tym, jak porządkować sprzedaż i wdrażać AI, na przykładach z projektów, przy których pracowałem."
 >
   <Panel rung={3} kicker="04 · Blog">
     <h1>Notatki z praktyki</h1>
-    <p class="lead">Krótkie, praktyczne notatki o go-to-market, procesach i AI, oparte na projektach, przy których pracowałem.</p>
+    <p class="lead">Piszę tu krótko o tym, jak porządkować sprzedaż i wdrażać AI, na przykładach z projektów, przy których pracowałem.</p>
     {posts.length > 0 ? (
       posts.map(p => (
         <a class="post" href={`${ROUTES.blog.pl}${p.id}/`}>

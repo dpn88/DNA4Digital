@@ -6,16 +6,16 @@ import Panel from '../components/Panel.astro';
 const cases = [
   {
     figure: '5×',
-    title: 'Migrated a legacy CRM into one HubSpot instance, and grew funnel engagement fivefold',
+    title: 'One HubSpot in place of a legacy CRM and loose tools: five times the funnel engagement',
     context: 'As Senior Technical Business Development Manager at Sensay, an AI SaaS company.',
-    problem: 'Revenue data was split between a legacy CRM and disconnected tools, with no single source of truth. Every report to leadership meant reconciling numbers by hand.',
+    problem: 'Revenue data was split between a legacy CRM and disconnected tools, with no single source of truth. Before every report to leadership, someone reconciled the numbers by hand.',
     did: 'Migrated the legacy stack into a single HubSpot instance, enriched contact and account data with Breeze Intelligence, and engineered automated sequences in n8n and Zapier to keep the data current without manual entry. Then built Looker Studio dashboards merging CRM, product and website analytics into one view.',
     result: 'Funnel engagement increased fivefold.',
     advice: "Agree what your key terms mean (qualified, engaged, active) before you migrate, or you'll carry the same mess into a nicer-looking tool.",
   },
   {
     figure: '30%',
-    title: 'Cut ticket handling time by 30% by rebuilding the workflow before automating it',
+    title: 'Ticket handling time down 30% after I audited and rebuilt the workflow',
     context: 'As Client Operations Manager at SpotOn, a restaurant-tech platform, owning the support and operations workflow for the client base.',
     problem: "The right answer to a common issue depended on who picked up the ticket, because the knowledge lived in people's heads and nowhere else.",
     did: 'Audited the existing workflow end to end, rebuilt the SOPs so the correct answer was written down and easy to find, and automated the repetitive parts of the workflow around that new standard.',
@@ -23,27 +23,27 @@ const cases = [
     advice: 'Write down the correct process first. Once you have it, the automation is the easy part.',
   },
   {
-    figure: 'Adoption',
+    figure: 'In use',
     title: 'Built the automation layer nobody had to be told to use',
     context: 'Also at Sensay, alongside the CRM migration, building the automation and reporting layer underneath the sales and marketing workflow.',
     problem: "Reporting tools already existed, but the team rarely opened them, because the numbers didn't match what people saw in the systems they used every day.",
     did: 'Built the n8n and Zapier automations into the workflows the team already used, so nobody had to learn a new tool, and built the dashboards on the data everyone already trusted, merging CRM, product and website analytics into one Looker Studio view.',
     result: 'Leadership started opening the dashboards, because the numbers matched what the team saw on the ground.',
-    advice: 'Report adoption alongside delivery. A dashboard nobody opens has failed, however clever the automation behind it.',
+    advice: 'Alongside the rollout, report who uses the tool. A dashboard nobody opens has failed.',
   },
 ];
 ---
 <Site
   title="Selected work: results from roles I've held | DNA4Digital"
-  description="A CRM migration that grew funnel engagement fivefold, a 30% cut in ticket handling time, and dashboards leadership opened. Results from roles at Sensay, SpotOn and Google Customer Solutions."
+  description="One HubSpot in place of a legacy CRM, ticket handling time down 30%, and dashboards leadership opened. Results from Sensay, SpotOn and Google."
 >
   <Panel rung={2} kicker="03 · Selected work">
     <h1>Results from roles I've held</h1>
     <p class="lead">I achieved these results as an employee, in the roles named on each case. They are not DNA4Digital consulting engagements.</p>
     <div class="stats">
-      <div><b>#1</b><span>revenue team in EMEA, Google CS</span></div>
-      <div><b>5&times;</b><span>funnel engagement, Sensay</span></div>
-      <div><b>30%</b><span>less ticket handling time, SpotOn</span></div>
+      <div><b>#1</b><span>for revenue in EMEA, my team at Google CS</span></div>
+      <div><b>5&times;</b><span>higher funnel engagement after the CRM migration at Sensay</span></div>
+      <div><b>30%</b><span>less ticket handling time after the process rebuild at SpotOn</span></div>
     </div>
 
     {cases.map(c => (
