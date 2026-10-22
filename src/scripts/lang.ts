@@ -1,5 +1,5 @@
-// Remembers a language picked with the EN/PL switch, so the Polish-browser redirect in Site.astro
-// never overrides an explicit choice. Stored only in this browser; nothing is sent anywhere.
+// Remembers a language picked with the EN/PL switch. The redirect in Site.astro then follows that choice
+// instead of the browser language. Stored only in this browser; nothing is sent anywhere.
 export const LANG_CHOICE_KEY = 'dna4d-lang';
 
 document.addEventListener('click', e => {

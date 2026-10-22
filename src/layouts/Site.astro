@@ -35,20 +35,23 @@ const alternates = LANGS.map(l => ({ lang: l, href: new URL(alternatePath(path, 
     {noindex && <meta name="robots" content="noindex" />}
     {lang === 'en' && !noindex && (
       <script is:inline>
-        // Browsers that prefer Polish over English go to the Polish page, unless the visitor has already
-        // picked a language with the EN/PL switch (remembered by src/scripts/lang.ts). Runs before paint.
+        // Send the visitor to the Polish page when they picked PL with the EN/PL switch (remembered by
+        // src/scripts/lang.ts), or, if they never picked, when their browser prefers Polish over English.
+        // A picked EN always stays. Runs before paint.
         (function () {
-          try { if (localStorage.getItem('dna4d-lang')) return; } catch (e) { return; }
+          var choice;
+          try { choice = localStorage.getItem('dna4d-lang'); } catch (e) { return; }
+          if (choice === 'en') return;
+          var polish = choice === 'pl';
           var prefs = navigator.languages || [navigator.language || ''];
-          for (var i = 0; i < prefs.length; i++) {
+          for (var i = 0; !polish && i < prefs.length; i++) {
             var tag = String(prefs[i]).toLowerCase().split('-')[0];
             if (tag === 'en') return;
-            if (tag === 'pl') {
-              var alt = document.querySelector('link[rel="alternate"][hreflang="pl"]');
-              if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
-              return;
-            }
+            if (tag === 'pl') polish = true;
           }
+          if (!polish) return;
+          var alt = document.querySelector('link[rel="alternate"][hreflang="pl"]');
+          if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
         })();
       </script>
     )}
