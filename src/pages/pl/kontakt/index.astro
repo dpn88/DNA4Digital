@@ -14,6 +14,7 @@ import { ROUTES } from '../../../i18n';
     <div class="btnrow"><a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Wybierz termin w kalendarzu</a></div>
 
     <h2>Albo wyślij wiadomość</h2>
+    <noscript><p class="form-status err">Formularz działa tylko z włączonym JavaScriptem, bo to on chroni go przed spamem. Napisz do mnie bezpośrednio na <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p></noscript>
     <form class="form" method="post" action="/api/contact" data-contact>
       <div class="row">
         <label>Imię i nazwisko<input name="name" autocomplete="name" required maxlength="120" /></label>
@@ -45,7 +46,7 @@ import { ROUTES } from '../../../i18n';
       <input type="hidden" name="started" value="" />
       <input type="hidden" name="score" value="" />
       <input type="hidden" name="lang" value="pl" />
-      <div class="btnrow"><button class="btn btn-primary" type="submit">Wyślij wiadomość</button></div>
+      <div class="btnrow"><button class="btn btn-primary" type="submit">Wyślij wiadomość</button><div data-turnstile></div></div>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>
 

@@ -1,5 +1,6 @@
 // Handles POST /api/contact and emails the enquiry to CONTACT_TO. Everything else is static assets.
 // Works for plain HTML form posts (redirects back to the site) and for fetch() calls (JSON).
+import { TURNSTILE_SITE_KEY } from '../src/data/turnstile';
 
 const TOPICS: Record<string, string> = {
   call: 'A free 30-min call',
@@ -14,6 +15,8 @@ const EMAIL_RE = /^[^\s@<>"]+@[^\s@<>"]+\.[^\s@<>"]{2,}$/;
 const MIN_FILL_MS = 3000;
 
 type Fields = Record<'name' | 'email' | 'company' | 'topic' | 'message' | 'score' | 'lang', string>;
+// TURNSTILE_SECRET is a Worker secret rather than a var in wrangler.jsonc, and it isn't set everywhere (local runs, Previews).
+type ContactEnv = Env & { TURNSTILE_SECRET?: string };
 
 // Must match ROUTES.contact and ROUTES.thanks in src/i18n/index.ts.
 const PAGES = {
@@ -29,14 +32,14 @@ export default {
   },
 } satisfies ExportedHandler<Env>;
 
-async function handleContact(request: Request, env: Env): Promise<Response> {
+async function handleContact(request: Request, env: ContactEnv): Promise<Response> {
   if (request.method !== 'POST') return new Response('Method not allowed', { status: 405, headers: { Allow: 'POST' } });
 
   const wantsJson = (request.headers.get('Accept') ?? '').includes('application/json');
   // Plain form posts come from the contact page, so the referring page tells us which language to send them back to.
   const lang: 'en' | 'pl' = new URL(request.headers.get('Referer') ?? request.url).pathname.startsWith('/pl/') ? 'pl' : 'en';
   const pages = PAGES[lang];
-  const reply = (status: 'sent' | 'invalid' | 'error' | 'busy', httpStatus: number) =>
+  const reply = (status: 'sent' | 'invalid' | 'unverified' | 'error' | 'busy', httpStatus: number) =>
     wantsJson
       ? Response.json({ ok: status === 'sent', status }, { status: httpStatus })
       : Response.redirect(new URL(status === 'sent' ? pages.thanks : `${pages.contact}?error=${status}`, request.url).toString(), 303);
@@ -56,7 +59,10 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
 
   // Bots fill the hidden field or submit faster than a person can type. Pretend it worked.
   const startedAt = Number(form.get('started') ?? 0);
-  if (String(form.get('website') ?? '') !== '' || (startedAt > 0 && Date.now() - startedAt < MIN_FILL_MS)) return reply('sent', 200);
+  if (String(form.get('website') ?? '') !== '' || Date.now() - startedAt < MIN_FILL_MS) return reply('sent', 200);
+  // The page's script fills in `started`. Without it the post didn't come from the page in a browser (most spam bots),
+  // or the visitor has JavaScript off, and the contact page asks them to email instead.
+  if (!(startedAt > 0)) return reply('unverified', 400);
 
   const get = (key: string, max: number) => String(form.get(key) ?? '').trim().slice(0, max);
   const f: Fields = {
@@ -70,6 +76,8 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
   };
   const consent = form.get('consent') === 'yes';
   if (!f.name || !EMAIL_RE.test(f.email) || f.message.length < 10 || !consent) return reply('invalid', 400);
+  // Checked after the fields because each Turnstile token can be verified only once.
+  if (!(await passesTurnstile(form, ip, env))) return reply('unverified', 400);
   const topic = TOPICS[f.topic] ?? TOPICS.other;
 
   try {
@@ -86,6 +94,25 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
     return reply('error', 502);
   }
   return reply('sent', 200);
+}
+
+// Cloudflare Turnstile. Enforced only once the site key is in the repo and TURNSTILE_SECRET is set on the Worker.
+async function passesTurnstile(form: FormData, ip: string, env: ContactEnv): Promise<boolean> {
+  if (!TURNSTILE_SITE_KEY || !env.TURNSTILE_SECRET) return true;
+  const token = String(form.get('cf-turnstile-response') ?? '');
+  if (!token) return false;
+  const body = new URLSearchParams({ secret: env.TURNSTILE_SECRET, response: token });
+  if (ip !== 'unknown') body.set('remoteip', ip);
+  try {
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', { method: 'POST', body, signal: AbortSignal.timeout(5000) });
+    const result = await res.json<{ success: boolean; 'error-codes'?: string[] }>();
+    if (!result.success) console.warn('contact: turnstile rejected', result['error-codes']);
+    return result.success;
+  } catch (err) {
+    // If Cloudflare can't answer in time, let the message through rather than lose a real enquiry.
+    console.error('contact: turnstile check failed', err);
+    return true;
+  }
 }
 
 function rows(f: Fields, topic: string): [string, string][] {
