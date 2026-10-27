@@ -13,6 +13,7 @@ import { CONTACT_EMAIL, BOOKING_URL } from '../../data/site';
     <div class="btnrow"><a class="btn btn-primary" href={BOOKING_URL} target="_blank" rel="noopener">Book a time in my calendar</a></div>
 
     <h2>Or send a message</h2>
+    <noscript><p class="form-status err">This form only works with JavaScript turned on, because that's how it keeps spam out. Please email me at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> instead.</p></noscript>
 
     <form class="form" method="post" action="/api/contact" data-contact>
       <div class="row">
@@ -45,7 +46,7 @@ import { CONTACT_EMAIL, BOOKING_URL } from '../../data/site';
       <input type="hidden" name="started" value="" />
       <input type="hidden" name="score" value="" />
       <input type="hidden" name="lang" value="en" />
-      <div class="btnrow"><button class="btn btn-primary" type="submit">Send message</button></div>
+      <div class="btnrow"><button class="btn btn-primary" type="submit">Send message</button><div data-turnstile></div></div>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>
 

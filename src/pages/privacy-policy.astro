@@ -15,7 +15,7 @@ import Panel from '../components/Panel.astro';
     <p><strong>AI readiness test.</strong> The test runs entirely in your browser and doesn't store or send your answers. I only see your score if you choose to send it through the contact form.</p>
     <p><strong>Analytics, only with your consent.</strong> If you allow analytics, Google Analytics records which pages you visit, how you got here, roughly where you are (country and city), and the type of device and browser you use. I use this to see which pages are useful. It does not tell me who you are. The legal basis is your consent (Article 6(1)(a)).</p>
     <p><strong>Visit history and enquiries, only with your consent.</strong> If you allow marketing, HubSpot records the pages you visit. If you then contact me, those visits are linked to your enquiry in my CRM so I can reply with the right context, and HubSpot may also record the details you enter in the contact form. The legal basis is your consent (Article 6(1)(a)).</p>
-    <p><strong>Technical data.</strong> Like any website, the servers that deliver this site process your IP address and basic request details (browser type, time, page requested) to deliver pages, protect the site from abuse and limit form spam. The legal basis is my legitimate interest in running a secure website (Article 6(1)(f)). I don't use this data to profile you.</p>
+    <p><strong>Technical data.</strong> Like any website, the servers that deliver this site process your IP address and basic request details (browser type, time, page requested) to deliver pages, protect the site from abuse and limit form spam. On the contact page, the form's spam check (Cloudflare Turnstile) also looks at technical signals from your browser to tell people from bots. The legal basis is my legitimate interest in running a secure website (Article 6(1)(f)). I don't use this data to profile you.</p>
 
     <h2>Cookies and browser storage</h2>
     <p><strong>Always on, stored only in your browser:</strong> your language choice, your cookie choice and your accessibility settings. They are kept in local storage, are never sent to me and are needed for the site to work the way you asked.</p>
@@ -25,11 +25,11 @@ import Panel from '../components/Panel.astro';
       <li><strong>HubSpot</strong> (marketing): cookies <code>__hstc</code>, <code>hubspotutk</code>, <code>__hssc</code> and <code>__hssrc</code>, which recognise returning visits and last up to six months.</li>
     </ul>
     <p>Until you choose, everything except the always-on items is switched off and Google Tag Manager, which loads these tools, is not loaded at all. You can change or withdraw your consent at any time with <button type="button" class="linkbtn" data-open-settings="privacy">Cookie &amp; accessibility settings</button>, also linked at the bottom of every page. Withdrawing removes these cookies from your browser.</p>
-    <p>Fonts and scripts for the site itself are served from this domain, not from third-party CDNs.</p>
+    <p>Fonts and scripts for the site itself are served from this domain, not from third-party CDNs. The one exception is the spam check on the contact page, which loads from Cloudflare.</p>
 
     <h2>Who processes the data for me</h2>
     <ul class="ticks">
-      <li><strong>Cloudflare, Inc.</strong> hosts the site and delivers contact form messages by email.</li>
+      <li><strong>Cloudflare, Inc.</strong> hosts the site, delivers contact form messages by email and runs the form's spam check.</li>
       <li><strong>Google</strong> (Google Workspace) hosts my mailbox, where your messages arrive.</li>
       <li><strong>Google Ireland Limited</strong> provides Google Analytics and Google Tag Manager, only if you consent.</li>
       <li><strong>HubSpot Ireland Limited</strong> and <strong>HubSpot, Inc.</strong> provide my CRM and visit tracking, only if you consent. HubSpot data is hosted in the EU.</li>

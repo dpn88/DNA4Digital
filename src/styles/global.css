@@ -160,6 +160,8 @@ img { max-width: 100%; height: auto; }
 .form .check { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; line-height: 1.45; }
 .form .check input { width: 18px; height: 18px; margin-top: 1px; accent-color: var(--teal); flex: none; }
 .form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+/* The Turnstile box sits beside the send button and stays empty unless Cloudflare wants a click. */
+.form .btnrow { align-items: center; }
 .form-status { min-height: 1.5em; font-size: 14px; margin: 4px 0 0; }
 .form-status.ok { color: var(--teal); }
 .form-status.err { color: #ff9a9a; }

@@ -2,6 +2,7 @@
 // Both bind on every astro:page-load because pages are swapped in without a full reload, and both follow <html lang>.
 import { navigate } from 'astro:transitions/client';
 import { CONTACT_EMAIL } from '../data/site';
+import { TURNSTILE_SITE_KEY } from '../data/turnstile';
 import { ROUTES, type Lang } from '../i18n';
 
 const pageLang = (): Lang => (document.documentElement.lang === 'pl' ? 'pl' : 'en');
@@ -12,6 +13,7 @@ const FORM_TEXT = {
     scorePrefill: (s: string) => `I took the AI readiness test and scored ${s}/100. `,
     errors: {
       invalid: 'Please fill in your name, a valid email and a short message, and tick the privacy consent.',
+      unverified: `The spam check didn't pass. Please refresh the page and try again, or email ${CONTACT_EMAIL}.`,
       busy: 'Too many messages in a short time. Please wait a minute and try again.',
       error: `The message didn't go through. Please email ${CONTACT_EMAIL} instead.`,
     } as Record<string, string>,
@@ -21,6 +23,7 @@ const FORM_TEXT = {
     scorePrefill: (s: string) => `Mój wynik w teście gotowości AI: ${s}/100. `,
     errors: {
       invalid: 'Podaj imię, poprawny adres e-mail i krótką wiadomość oraz zaznacz zgodę na przetwarzanie danych.',
+      unverified: `Weryfikacja antyspamowa się nie powiodła. Odśwież stronę i spróbuj ponownie albo napisz na ${CONTACT_EMAIL}.`,
       busy: 'Za dużo wiadomości w krótkim czasie. Odczekaj minutę i spróbuj ponownie.',
       error: `Wiadomość nie dotarła. Napisz bezpośrednio na ${CONTACT_EMAIL}.`,
     } as Record<string, string>,
@@ -50,6 +53,8 @@ function initContact() {
   const error = params.get('error');
   if (error) showStatus(text.errors[error] ?? text.errors.error, true);
   field<HTMLInputElement>('started')!.value = String(Date.now());
+  const box = form.querySelector<HTMLElement>('[data-turnstile]');
+  const spamCheck = box && TURNSTILE_SITE_KEY ? mountTurnstile(box, lang) : null;
 
   function showStatus(message: string, isError: boolean) {
     status.textContent = message;
@@ -61,6 +66,7 @@ function initContact() {
     if (!form.reportValidity()) return;
     button.disabled = true;
     showStatus(text.sending, false);
+    await spamCheck?.ready();
     try {
       const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
       const data = (await res.json().catch(() => ({}))) as { ok?: boolean; status?: string };
@@ -72,8 +78,82 @@ function initContact() {
     } catch {
       showStatus(text.errors.error, true);
     }
+    // The Worker may have used up the token, so fetch a fresh one for the next try.
+    spamCheck?.reset();
     button.disabled = false;
   });
+}
+
+// ---------- Cloudflare Turnstile ----------
+// The spam check stays invisible unless Cloudflare wants a click. Its token rides along in the form's
+// cf-turnstile-response field. Rendered explicitly because pages are swapped in without a reload.
+type Turnstile = {
+  render(el: HTMLElement, options: Record<string, unknown>): string;
+  reset(id: string): void;
+  remove(id: string): void;
+};
+declare global {
+  interface Window { turnstile?: Turnstile }
+}
+
+let turnstileApi: Promise<Turnstile> | undefined;
+function loadTurnstile(): Promise<Turnstile> {
+  turnstileApi ??= new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    script.onload = () => (window.turnstile ? resolve(window.turnstile) : reject());
+    script.onerror = () => {
+      turnstileApi = undefined;
+      script.remove();
+      reject();
+    };
+    document.head.append(script);
+  });
+  return turnstileApi;
+}
+
+function mountTurnstile(box: HTMLElement, lang: Lang) {
+  // Cloudflare's test key always passes, and works on localhost, where the real key isn't allowed.
+  const sitekey = ['localhost', '127.0.0.1'].includes(location.hostname) ? '1x00000000000000000000BB' : TURNSTILE_SITE_KEY;
+  let api: Turnstile | undefined;
+  let id: string | undefined;
+  let state: 'waiting' | 'ready' | 'failed' = 'waiting';
+  let wake: (() => void) | undefined;
+  const settle = (next: 'ready' | 'failed') => {
+    state = next;
+    wake?.();
+  };
+
+  loadTurnstile().then(ts => {
+    if (!box.isConnected) return;
+    api = ts;
+    id = ts.render(box, {
+      sitekey,
+      action: 'contact',
+      language: lang,
+      appearance: 'interaction-only',
+      callback: () => settle('ready'),
+      'expired-callback': () => (state = 'waiting'),
+      'error-callback': () => settle('failed'),
+    });
+  }, () => settle('failed'));
+  document.addEventListener('astro:before-swap', () => id && api?.remove(id), { once: true });
+
+  return {
+    // Waits until there's a token, the check has failed or 10 seconds have passed. The Worker decides what to do either way.
+    ready: () =>
+      state === 'waiting'
+        ? new Promise<void>(resolve => {
+            wake = resolve;
+            setTimeout(resolve, 10_000);
+          })
+        : Promise.resolve(),
+    reset: () => {
+      if (!api || !id) return;
+      state = 'waiting';
+      api.reset(id);
+    },
+  };
 }
 
 // ---------- AI readiness test ----------
