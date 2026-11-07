@@ -98,6 +98,19 @@ function start() {
   const DIAG = R - CHIP_H, CHIP_TOP = CHIP_Y + CHIP_H, CHIP_BOT = CHIP_Y - CHIP_H, D0 = CHIP_TOP + DIAG;
   // How far from the axis the board's strands run at height y (above the chip).
   const boardX = (y: number) => (y >= D0 ? R : Math.max(CHIP_H, CHIP_H + (y - CHIP_TOP)));
+  // SPIKE: true wraps the board round the helix's cylinder and spins it with the helix; false keeps it flat and still.
+  // Wrapped, a board x of -R and +R land where the two strands are at the bottom of the zone, so the strands meet
+  // their board paths exactly and the zone only has to stop the twist.
+  const BOARD_SPINS = true;
+  const WRAP0 = angAt(T_END) + Math.PI / 2;
+  type V3 = [number, number, number];
+  // Below the chip the tube flares out, so the traces spread like the fan on the card.
+  const boardR = (y: number) => (BOARD_SPINS ? R * (1 + .45 * smooth(CHIP_BOT, -5, y)) : R);
+  const wrap = (x: number, y: number): V3 => {
+    if (!BOARD_SPINS) return [x, y, 0];
+    const a = WRAP0 + x * (Math.PI / 2) / R, r = boardR(y);
+    return [r * Math.cos(a), y, r * Math.sin(a)];
+  };
 
   // Particle shapes drawn by the fragment shader.
   const ROUND = 0, SQUARE = 1, RING = 2;
@@ -108,7 +121,6 @@ function start() {
   const pale = new THREE.Color(0xc6eef6);
   const cBA = cA.clone().lerp(pale, .4), cBB = cB.clone().lerp(pale, .4), cTrace = cA.clone().lerp(cB, .5).lerp(pale, .4);
   const cFaint = cTrace.clone().multiplyScalar(.6);
-  type V3 = [number, number, number];
   function add(h: V3, b: V3, mix: number, size: number, bright: number, rung: number, col: THREE.Color, shape = ROUND, flow = -1) {
     P.push(h[0], h[1], h[2]); BOARD.push(b[0], b[1], b[2]); MIX.push(mix);
     SIZE.push(size); BRIGHT.push(bright); PHASE.push(Math.random()); RUNG.push(rung); SHAPE.push(shape); FLOW.push(flow);
@@ -117,7 +129,7 @@ function start() {
   }
   // A particle that only lives on the board.
   const addB = (x: number, y: number, size: number, bright: number, rung: number, col: THREE.Color, shape = ROUND, flow = -1) =>
-    add([x, y, 0], [x, y, 0], 1, size, bright, rung, col, shape, flow);
+    { const b = wrap(x, y); add(b, b, 1, size, bright, rung, col, shape, flow); };
   const lerpC = (a: THREE.Color, b: THREE.Color, t: number) => a.clone().lerp(b, t);
 
   // Strands: a dense core plus a fuzzy outer layer. In the zone each particle also gets its board spot, the fuzz
@@ -129,7 +141,7 @@ function start() {
       if (Math.random() < w * .75) continue;
       const fuzzy = Math.random() < 0.3, s = fuzzy ? 0.17 : 0.065;
       const size = 0.5 + Math.random() * (fuzzy ? 0.7 : 1.1), bright = fuzzy ? 0.35 + Math.random() * 0.35 : 0.55 + Math.random() * 0.45;
-      add([x + gauss() * s, y + gauss() * s * 0.6, z + gauss() * s], [side * boardX(y) + gauss() * .008, y, 0], w,
+      add([x + gauss() * s, y + gauss() * s * 0.6, z + gauss() * s], wrap(side * boardX(y) + gauss() * .008, y), w,
         size + (.5 - size) * w, bright + (.4 - bright) * w, -1, lerpC(col, bcol, w), ROUND, L / 2 - y);
     }
   }
@@ -143,7 +155,7 @@ function start() {
     for (let k = 1; k < RUNG_DOTS; k++) {
       const f = k / RUNG_DOTS, x = -bx + 2 * bx * f;
       const gap = ((x + 5) % .17) / .17 > .62 ? 1 : 0;
-      add([a[0] + (b[0] - a[0]) * f + gauss() * .012, a[1] + gauss() * .012, a[2] + (b[2] - a[2]) * f + gauss() * .012], [x, y, 0], w,
+      add([a[0] + (b[0] - a[0]) * f + gauss() * .012, a[1] + gauss() * .012, a[2] + (b[2] - a[2]) * f + gauss() * .012], wrap(x, y), w,
         0.55 + Math.random() * 0.4 - .1 * w, (0.75 + Math.random() * 0.25) * (1 - w * gap) * (1 - .35 * w), j, cRung);
     }
   }
@@ -212,7 +224,7 @@ function start() {
   // spinning strand (at the same height) and settles onto the path, showing up only as the strand slows down.
   function strandPath(pts: Pt[], off: number, hcol: THREE.Color, col: THREE.Color, flow0: number, every = .27) {
     let flow = flow0, nextPad = every * .5;
-    const at = (x: number, y: number) => ({ h: strandPoint((L / 2 - y) / L, off) as V3, b: [x, y, 0] as V3, w: morphAt(y) });
+    const at = (x: number, y: number) => ({ h: strandPoint((L / 2 - y) / L, off) as V3, b: wrap(x, y), w: morphAt(y) });
     for (let i = 0; i < pts.length - 1; i++) {
       const [x0, y0] = pts[i], [x1, y1] = pts[i + 1];
       const d = Math.hypot(x1 - x0, y1 - y0), n = Math.max(1, Math.round(d / STEP));
@@ -314,7 +326,7 @@ function start() {
 
   const uniforms = {
     uTime: { value: 0 }, uPR: { value: PR }, uScale: { value: 110 }, uR: { value: R },
-    uHL: { value: -1 }, uHLY: { value: 999 }, uPulse: { value: 1 }, uSpin: { value: 0 },
+    uHL: { value: -1 }, uHLY: { value: 999 }, uPulse: { value: 1 }, uSpin: { value: 0 }, uBoardSpin: { value: BOARD_SPINS ? 1 : 0 },
   };
   const mat = new THREE.ShaderMaterial({
     uniforms,
@@ -322,18 +334,19 @@ function start() {
     vertexShader: `
       attribute float aSize; attribute float aBright; attribute float aPhase; attribute float aRung; attribute vec3 aColor;
       attribute vec3 aBoard; attribute float aMix; attribute float aShape; attribute float aFlow;
-      uniform float uTime, uPR, uScale, uR, uHL, uHLY, uPulse, uSpin;
+      uniform float uTime, uPR, uScale, uR, uHL, uHLY, uPulse, uSpin, uBoardSpin;
       varying float vAlpha; varying float vWhite; varying vec3 vColor; varying float vShape;
+      vec3 spin(vec3 v){ float c = cos(uSpin), s = sin(uSpin); return vec3(c * v.x + s * v.z, v.y, -s * v.x + c * v.z); }
       void main(){
-        // The spin happens here rather than on the object, so each particle can blend to its still board spot.
-        float c = cos(uSpin), s = sin(uSpin);
-        vec3 h = vec3(c * position.x + s * position.z, position.y, -s * position.x + c * position.z);
+        // The spin happens here rather than on the object, so each particle can blend to its board spot, which
+        // either spins too (wrapped board) or stays still (flat board).
+        vec3 h = spin(position);
         float wob = 1.0 - aMix;
         h.x += sin(uTime * .9 + aPhase * 6.283) * .012 * wob;
         h.z += cos(uTime * .7 + aPhase * 6.283) * .012 * wob;
-        vec3 p = mix(h, aBoard, aMix);
+        vec3 p = mix(h, uBoardSpin > .5 ? spin(aBoard) : aBoard, aMix);
         vec4 world = modelMatrix * vec4(p, 1.0);
-        float front = mix((clamp(world.z / uR, -1.0, 1.0) + 1.0) * .5, .85, aMix);
+        float front = mix((clamp(world.z / uR, -1.0, 1.0) + 1.0) * .5, .85, aMix * (1.0 - uBoardSpin));
         float tw = mix(.78 + .22 * sin(uTime * 1.6 + aPhase * 40.0), .96, aMix * .8);
         float hl = 0.0;
         if (uHL >= 0.0){
@@ -342,7 +355,9 @@ function start() {
         }
         float pulse = 0.0;
         if (aFlow >= 0.0) { float f = fract(aFlow / 2.6 - uTime * .2); f = min(f, 1.0 - f); pulse = exp(-f * f / .0005) * uPulse * mix(.5, 1.0, aMix); }
-        vAlpha = aBright * tw * mix(.2, 1.0, front) * (1.0 + hl * 1.6) * (1.0 + pulse * 2.5);
+        // A wrapped board always has half its circuit turned away, so it gets a little more light and a softer back.
+        float wrapped = aMix * uBoardSpin;
+        vAlpha = aBright * tw * mix(mix(.2, .32, wrapped), 1.0, front) * (1.0 + .45 * wrapped) * (1.0 + hl * 1.6) * (1.0 + pulse * 2.5);
         vWhite = max(hl, pulse * .7);
         vColor = aColor;
         vShape = aShape;
@@ -793,8 +808,9 @@ function start() {
     LABELED.forEach((j, i) => {
       const c = rungWorld[j];
       // On the circuit board the label's line starts at the rung's pin and is drawn as a trace ending in a ring.
-      const onBoard = rungY[j] < Z_BOT;
-      const startPt = onBoard ? toScreen(pinWorld[j].x, pinWorld[j].y, pinWorld[j].z) : toScreen(c.x + (R + .35) / Math.cos(TILT_Z), c.y, c.z);
+      // A spinning board's pins move, so its labels keep the helix's fixed starting point.
+      const onBoard = rungY[j] < Z_BOT, pinned = onBoard && !BOARD_SPINS;
+      const startPt = pinned ? toScreen(pinWorld[j].x, pinWorld[j].y, pinWorld[j].z) : toScreen(c.x + (Math.max(R, boardR(rungY[j])) + .35) / Math.cos(TILT_Z), c.y, c.z);
       const lx = startPt.x + (lay.phone ? 16 : 30);
       const on = i === hover;
       if (fade > 0) {
