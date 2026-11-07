@@ -76,7 +76,7 @@ const UI = {
       minRead: 'min czytania',
       allPosts: 'Wszystkie wpisy',
       bookCall: 'Umów bezpłatną rozmowę (30 min)',
-      ctaHeading: 'Sprawdź, na jakim etapie jest twoja firma',
+      ctaHeading: 'Sprawdź, na jakim etapie jest Twoja firma',
       ctaBody: 'Test gotowości AI to osiem pytań i dwie minuty. Na koniec dostajesz wynik i cztery kroki na start.',
       ctaButton: 'Zrób test gotowości AI',
     },

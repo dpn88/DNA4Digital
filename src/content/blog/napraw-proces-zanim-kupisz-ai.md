@@ -35,7 +35,7 @@ Ostrzejszą wersję tego argumentu Michael Hammer przedstawił w 1990 roku w *Ha
 
 ## Automatyzacja kopiuje to, co zastanie
 
-Narzędzie AI uczy się na pracy, którą twój zespół już wykonuje. Jeśli trzy osoby odpowiadają na to samo pytanie klienta na trzy różne sposoby, narzędzie nauczy się każdej wersji, łącznie z błędnymi. Jeśli ten sam klient figuruje w dwóch systemach zapisany na dwa różne sposoby, model przeczyta oba rekordy i dostaniesz dwie odpowiedzi szybciej niż wcześniej.
+Narzędzie AI uczy się na pracy, którą Twój zespół już wykonuje. Jeśli trzy osoby odpowiadają na to samo pytanie klienta na trzy różne sposoby, narzędzie nauczy się każdej wersji, łącznie z błędnymi. Jeśli ten sam klient figuruje w dwóch systemach zapisany na dwa różne sposoby, model przeczyta oba rekordy i dostaniesz dwie odpowiedzi szybciej niż wcześniej.
 
 Podobnie jest z czasem. W większości procesów obsługowych sama praca zajmuje niewielką część całkowitego czasu, a resztę stanowi czekanie w kolejkach i na akceptacje. Jeśli przyspieszysz krok, który trwa dziesięć minut, zgłoszenie czekające dwa dni w kolejce nadal będzie czekać dwa dni.
 
@@ -57,7 +57,7 @@ Asystent AI wytrenowany na starych zgłoszeniach nauczyłby się każdej wersji 
 
 Zadaję je przy każdym kroku, który klient chce zautomatyzować. Odpowiedzi zajmują jedno popołudnie i pokazują, czy dany krok jest gotowy.
 
-1. **Czy dwie osoby opiszą ten krok tak samo?** Poproś dwie osoby, które go wykonują, żeby osobno pokazały ci, jak to robią. Jeśli opisy się różnią, masz dwa procesy, a automatyzacja wybierze jeden z nich, nie informując o tym nikogo.
+1. **Czy dwie osoby opiszą ten krok tak samo?** Poproś dwie osoby, które go wykonują, żeby osobno pokazały Ci, jak to robią. Jeśli opisy się różnią, masz dwa procesy, a automatyzacja wybierze jeden z nich, nie informując o tym nikogo.
 2. **Kto jest jego właścicielem?** Wskaż osobę, która może zmienić ten krok i odpowiada za jego wynik. Zgłoszenia najczęściej czekają tam, gdzie właściciela brak.
 3. **Dokąd trafiają wyjątki?** Policz, jak często standardowa ścieżka zawodzi, i prześledź jeden wyjątek do samego końca. Niespisane reguły obsługi wyjątków to pierwsza rzecz, w której narzędzia AI się mylą.
 4. **Czy dane są czyste tam, gdzie powstają?** Sprawdź dane w momencie, w którym ktoś je wpisuje, zanim trafią do raportu. Duplikaty i pola tekstowe wypełniane dowolnie płyną dalej i się mnożą.
