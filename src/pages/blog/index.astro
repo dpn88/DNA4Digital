@@ -2,10 +2,10 @@
 import { getCollection } from 'astro:content';
 import Site from '../../layouts/Site.astro';
 import Panel from '../../components/Panel.astro';
+import PostCard from '../../components/PostCard.astro';
 import { LINKEDIN_URL } from '../../data/site';
 
-const posts = (await getCollection('blog', p => !p.data.draft && p.data.lang === 'en')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const posts = (await getCollection('blog', p => !p.data.draft && p.data.lang === 'en')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 <Site
   title="Blog: notes on GTM, process and AI | DNA4Digital"
@@ -15,13 +15,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 
     <h1>Notes from the field</h1>
     <p class="lead">I write short notes here on sorting out sales and putting AI to work, with examples from projects I've worked on.</p>
     {posts.length > 0 ? (
-      posts.map(p => (
-        <a class="post" href={`/blog/${p.id}/`}>
-          <span class="date">{fmt(p.data.date)}</span>
-          <strong>{p.data.title}</strong>
-          <span class="excerpt">{p.data.description}</span>
-        </a>
-      ))
+      posts.map(post => <PostCard post={post} />)
     ) : (
       <p>I'm writing the first posts now. Until they're up, <a href={LINKEDIN_URL} rel="noopener">follow DNA4Digital on LinkedIn</a> or <a href="/contact/">send me the question</a> you'd like me to answer first.</p>
     )}

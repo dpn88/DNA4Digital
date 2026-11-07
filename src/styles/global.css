@@ -132,7 +132,8 @@ img { max-width: 100%; height: auto; }
 .case dt { font: 500 11.5px var(--mono); color: var(--teal); text-transform: uppercase; letter-spacing: .08em; margin-top: 12px; }
 .case dd { margin: 3px 0 0; color: #c3d0dc; }
 
-.post { display: block; padding: 16px 0; border-top: 1px solid var(--line); color: inherit; text-decoration: none; }
+.post { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 20px; align-items: center; padding: 18px 0; border-top: 1px solid var(--line); color: inherit; text-decoration: none; }
+.post img { display: block; width: 100%; border-radius: 10px; border: 1px solid var(--line); }
 .post .date { font: 500 11.5px var(--mono); color: var(--muted); }
 .post strong { display: block; font-size: 17px; margin: 3px 0 4px; }
 .post span.excerpt { font-size: 14px; color: var(--muted); }
@@ -141,6 +142,22 @@ img { max-width: 100%; height: auto; }
 .prose h2 { font-size: 22px; }
 .prose h3 { margin-top: 22px; }
 .prose img { border-radius: 14px; margin: 8px 0 16px; }
+.prose .post-hero { display: block; width: 100%; margin: 0 0 22px; border-radius: 12px; border: 1px solid var(--line); }
+.panel .post-meta { font: 500 12px var(--mono); color: var(--muted); margin: 0 0 26px; }
+.prose ol { padding-left: 26px; margin: 12px 0 18px; }
+.prose ol li { margin-bottom: 8px; padding-left: 4px; }
+.prose ol li::marker { color: var(--teal); font-weight: 600; }
+.prose figure { margin: 28px 0; }
+.prose figure img { display: block; width: 100%; height: auto; margin: 0; border-radius: 12px; border: 1px solid var(--line); }
+.prose figcaption { margin-top: 10px; font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+.post-sources { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; }
+.post-sources h3 { margin: 0 0 8px; font-size: 14px; }
+.post-sources ul { margin: 0; padding-left: 18px; }
+.post-sources li { margin-bottom: 4px; color: var(--muted); }
+.post-cta { margin-top: 32px; padding: 20px 22px; border: 1px solid rgba(45, 212, 191, .3); border-radius: 14px; background: rgba(45, 212, 191, .05); }
+.panel .post-cta h3 { font: 600 19px/1.25 var(--display); margin: 0 0 6px; }
+.post-cta p { margin-bottom: 14px; }
+.post-cta .btn { display: inline-block; }
 
 .disclosure { font-size: 13.5px; color: var(--muted); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-top: 18px; }
 .panel-foot { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
@@ -251,7 +268,7 @@ html.js:not(.no-gl) .panel [id] { scroll-margin-top: 110px; }
   html.js:not(.no-gl) .panel h1 { font-size: clamp(34px, 3.1vw, 48px); max-width: 24ch; }
   html.js:not(.no-gl) .panel h2 { font-size: 26px; margin-top: 48px; }
   /* Paragraphs keep a comfortable line length; cards, stats and the timeline use the full width. */
-  html.js:not(.no-gl) .panel :is(p, .ticks, .callout) { max-width: 62ch; }
+  html.js:not(.no-gl) .panel :is(p, .ticks, .callout, .prose ol, .prose figcaption, .post-sources ul) { max-width: 62ch; }
   html.js:not(.no-gl) .panel :is(.form, .quiz) { max-width: 720px; }
   html.js:not(.no-gl) .photo { width: 190px; }
 }
@@ -297,7 +314,8 @@ html.js:not(.no-gl) .panel { container-type: inline-size; }
   .panel { padding: 20px 20px 26px; border-radius: 24px; }
   .panel h1 { font-size: 27px; }
   .panel h2 { font-size: 20px; }
-  .pcards, .pcards.three, .form .row { grid-template-columns: 1fr; }
+  .pcards, .pcards.three, .form .row, .post { grid-template-columns: 1fr; }
+  .post { gap: 12px; }
   .photo { width: 110px; }
   html:not(.js) .home, html.no-gl .home { padding: 24px 20px 40px; }
   html:not(.js) .panel, html.no-gl .panel { margin: 10px 10px 40px; }
@@ -370,7 +388,7 @@ html.a11y-contrast { --muted: #d0dbe5; }
 html.a11y-contrast .panel, html.a11y-contrast.js:not(.no-gl) .panel { background: #05080d; border-color: rgba(255, 255, 255, .55); }
 html.a11y-contrast.js:not(.no-gl) .panel::before { display: none; }
 html.a11y-contrast .panel :is(p, li, dd), html.a11y-contrast .panel .lead { color: #f4f8fb; }
-html.a11y-contrast :is(.pcard, .steps li, .disclosure) { background: #0d141e; border-color: rgba(255, 255, 255, .35); }
+html.a11y-contrast :is(.pcard, .steps li, .disclosure, .post-cta) { background: #0d141e; border-color: rgba(255, 255, 255, .35); }
 html.a11y-contrast .hero { background: rgba(5, 8, 13, .9); padding: 24px 26px; border-radius: 18px; }
 html.a11y-contrast .hero .intro { color: #e6eef5; }
 html.a11y-contrast .rung-link { text-shadow: 0 0 4px #000, 0 0 10px #000; }
