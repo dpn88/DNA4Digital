@@ -13,14 +13,20 @@ interface Props {
   description: string;
   ogType?: 'website' | 'article';
   noindex?: boolean;
+  /** Share card overrides, for pages with their own headline and 1200 x 630 image. */
+  ogTitle?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  /** This page's path in the other language, for pages ROUTES doesn't pair (blog posts). */
+  alternate?: string;
 }
-const { title, description, ogType = 'website', noindex = false } = Astro.props;
+const { title, description, ogType = 'website', noindex = false, ogTitle = title, ogImage: ogImagePath = '/og.png', ogImageAlt, alternate } = Astro.props;
 const path = Astro.url.pathname;
 const lang = langFromPath(path);
 const t = ui(lang);
 const canonical = new URL(path, Astro.site);
-const ogImage = new URL('/og.png', Astro.site);
-const alternates = LANGS.map(l => ({ lang: l, href: new URL(alternatePath(path, l), Astro.site) }));
+const ogImage = new URL(ogImagePath, Astro.site);
+const alternates = LANGS.map(l => ({ lang: l, href: new URL(l !== lang && alternate ? alternate : alternatePath(path, l), Astro.site) }));
 ---
 <!doctype html>
 <html lang={lang} transition:animate="none">
@@ -92,11 +98,15 @@ const alternates = LANGS.map(l => ({ lang: l, href: new URL(alternatePath(path, 
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="DNA4Digital" />
     <meta property="og:locale" content={t.locale} />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImage} />
     <meta name="theme-color" content="#05080d" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

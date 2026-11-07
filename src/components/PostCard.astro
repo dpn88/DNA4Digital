@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { ROUTES, formatDate, ui } from '../i18n';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+const { post } = Astro.props;
+const { title, excerpt, lang, pubDate, readingTime, heroImage, heroAlt } = post.data;
+---
+<a class="post" href={`${ROUTES.blog[lang]}${post.id}/`}>
+  <img src={heroImage} alt={heroAlt} width="2400" height="1350" loading="lazy" decoding="async" />
+  <span>
+    <span class="date">{formatDate(pubDate, lang)} · {readingTime} {ui(lang).post.minRead}</span>
+    <strong>{title}</strong>
+    <span class="excerpt">{excerpt}</span>
+  </span>
+</a>

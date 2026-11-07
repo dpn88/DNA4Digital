@@ -2,11 +2,11 @@
 import { getCollection } from 'astro:content';
 import Site from '../../../layouts/Site.astro';
 import Panel from '../../../components/Panel.astro';
+import PostCard from '../../../components/PostCard.astro';
 import { LINKEDIN_URL } from '../../../data/site';
 import { ROUTES } from '../../../i18n';
 
-const posts = (await getCollection('blog', p => !p.data.draft && p.data.lang === 'pl')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 'long', year: 'numeric' });
+const posts = (await getCollection('blog', p => !p.data.draft && p.data.lang === 'pl')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 <Site
   title="Blog: notatki o GTM, procesach i AI | DNA4Digital"
@@ -16,13 +16,7 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
     <h1>Notatki z praktyki</h1>
     <p class="lead">Piszę tu krótko o tym, jak porządkować sprzedaż i wdrażać AI, na przykładach z projektów, przy których pracowałem.</p>
     {posts.length > 0 ? (
-      posts.map(p => (
-        <a class="post" href={`${ROUTES.blog.pl}${p.id}/`}>
-          <span class="date">{fmt(p.data.date)}</span>
-          <strong>{p.data.title}</strong>
-          <span class="excerpt">{p.data.description}</span>
-        </a>
-      ))
+      posts.map(post => <PostCard post={post} />)
     ) : (
       <p>Piszę właśnie pierwsze wpisy. Do tego czasu <a href={LINKEDIN_URL} rel="noopener">obserwuj DNA4Digital na LinkedInie</a> albo <a href={ROUTES.contact.pl}>wyślij mi pytanie</a>, na które mam odpowiedzieć najpierw.</p>
     )}
