@@ -1,6 +1,6 @@
 # dna4digital.com
 
-Daniel Nowak's site: AI, GTM and process consulting. The landing page is a particle DNA helix with the menu on its rungs. Clicking a menu item zooms the camera onto that rung and opens the page beside it.
+Daniel Nowak's site: AI, GTM and process consulting. The landing page is a particle DNA helix with the menu on its rungs. Below the middle it turns into a spinning circuit board, like the business card. Clicking a menu item zooms the camera onto that rung and opens the page beside it.
 
 - **Astro** builds the pages to static HTML in `dist/`. Every page has its own URL and reads fine without JavaScript or WebGL.
 - **three.js** draws the helix (`src/scripts/helix.ts`). It persists across page changes through Astro's `ClientRouter`.
@@ -27,7 +27,7 @@ Under `npm run preview` the contact form doesn't send real email. Wrangler print
 | Language pairs, menu labels, footer and other shared UI text | `src/i18n/index.ts` (`ROUTES` drives the EN/PL switch and hreflang tags) |
 | Menu items and which rung each page zooms to | `src/data/site.ts` |
 | Styles | `src/styles/global.css` |
-| Helix, background network, camera and page transitions | `src/scripts/helix.ts` |
+| Helix and its circuit board, background network, camera and page transitions | `src/scripts/helix.ts` |
 | Contact form and AI readiness test behaviour | `src/scripts/forms.ts` |
 | Blog posts | `src/content/blog/*.md` (copy `_example-post.md` to start one) |
 | Old-URL redirects, security headers | `public/_redirects`, `public/_headers` |
