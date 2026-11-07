@@ -2,11 +2,13 @@
 import { BOOKING_URL } from '../data/site';
 import Site from '../layouts/Site.astro';
 const year = new Date().getFullYear();
+const MOTTO = 'For only the human touch gives technology its true sense';
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Daniel Nowak',
   jobTitle: 'AI, GTM and process consultant',
+  slogan: MOTTO,
   url: 'https://dna4digital.com/',
   worksFor: { '@type': 'Organization', name: 'DNA4Digital', url: 'https://dna4digital.com/' },
   knowsAbout: ['Go-to-market', 'Revenue operations', 'Process improvement', 'Lean Six Sigma', 'AI implementation'],
@@ -21,8 +23,9 @@ const jsonLd = {
     <section class="hero">
       <p class="eyebrow">GTM and AI consulting</p>
       <h1>First I fix the process. <span class="grad">Then I bring in&nbsp;AI.</span></h1>
+      <p class="motto">{MOTTO}.</p>
       <p class="intro">
-        <span class="long">I'm Daniel Nowak. I spent thirteen years in hotels and restaurants in Poland and Ireland, then at TTEC I led the Google Customer Solutions team that finished first in EMEA for revenue. Now I look for the places in your company where leads get stuck on their way to an invoice. I fix the process first, and only automate what pays back.</span>
+        <span class="long">I'm Daniel Nowak. I spent thirteen years in hospitality, then led the Google Customer Solutions team at TTEC. Now I look for the places in your company where leads get stuck on their way to an invoice. I clear those hold-ups and automate only what pays back.</span>
         <span class="short">I'm Daniel Nowak. I clear the hold-ups between lead and invoice, then automate what pays back.</span>
       </p>
       <div class="ctas">

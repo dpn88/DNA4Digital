@@ -3,11 +3,13 @@ import { BOOKING_URL } from '../../data/site';
 import { ROUTES } from '../../i18n';
 import Site from '../../layouts/Site.astro';
 const year = new Date().getFullYear();
+const MOTTO = 'Bo tylko człowiek nadaje technologii prawdziwy sens';
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Daniel Nowak',
   jobTitle: 'Doradca ds. AI, GTM i procesów',
+  slogan: MOTTO,
   url: 'https://dna4digital.com/pl/',
   worksFor: { '@type': 'Organization', name: 'DNA4Digital', url: 'https://dna4digital.com/' },
   knowsAbout: ['Go-to-market', 'Revenue operations', 'Optymalizacja procesów', 'Lean Six Sigma', 'Wdrożenia AI'],
@@ -21,9 +23,10 @@ const jsonLd = {
   <main class="home" id="main" data-view="home" data-rung="-1">
     <section class="hero">
       <p class="eyebrow">Doradztwo GTM i AI</p>
-      <h1>Najpierw porządkuję proces. <span class="grad">Potem wdrażam&nbsp;AI.</span></h1>
+      <h1>Porządkuję proces. <span class="grad">Potem wdrażam&nbsp;AI.</span></h1>
+      <p class="motto">{MOTTO}.</p>
       <p class="intro">
-        <span class="long">Jestem Daniel Nowak. Trzynaście lat spędziłem w hotelarstwie i gastronomii w Polsce i Irlandii, potem w TTEC kierowałem zespołem Google Customer Solutions, który był pierwszy w EMEA pod względem przychodów. Dziś szukam w Twojej firmie miejsc, w których leady utykają w drodze do faktury. Najpierw poprawiam proces, a automatyzuję dopiero to, co się opłaca.</span>
+        <span class="long">Jestem Daniel Nowak. Trzynaście lat pracowałem w hotelarstwie, potem kierowałem zespołem Google Customer Solutions w TTEC. Dziś szukam w Twojej firmie miejsc, w których leady utykają w drodze do faktury. Usuwam te przestoje i automatyzuję tylko to, co się opłaca.</span>
         <span class="short">Jestem Daniel Nowak. Usuwam przestoje na drodze od leada do faktury, a potem automatyzuję to, co się opłaca.</span>
       </p>
       <div class="ctas">
