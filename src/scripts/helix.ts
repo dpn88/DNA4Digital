@@ -97,8 +97,8 @@ function start() {
   // The board is laid out unrolled: u runs round the tube (arc length at radius R, wrapping at CIRC) and y runs down
   // it. u = 0 is where strand A is at the bottom of the zone; strand B is half way round.
   const CIRC = 2 * Math.PI * R, HALF = CIRC / 2, PHI0 = angAt(T_END);
-  // Below the chips the tube flares out, so the traces spread like the fan on the card.
-  const boardR = (y: number) => R * (1 + .38 * smooth(-2.4, -5, y));
+  // Below the chips the tube narrows, so the traces draw together towards the bottom.
+  const boardR = (y: number) => R * (1 - .45 * smooth(-2.4, -5, y));
   type V3 = [number, number, number];
   const wrap = (u: number, y: number): V3 => { const a = PHI0 + u / R, r = boardR(y); return [r * Math.cos(a), y, r * Math.sin(a)]; };
   // Inside the zone a strand's board path simply follows the helix (strand A; B is HALF further round).
@@ -125,6 +125,16 @@ function start() {
   // A particle that only lives on the board.
   const addB = (u: number, y: number, size: number, bright: number, rung: number, col: THREE.Color, shape = ROUND, flow = -1) =>
     { const b = wrap(u, y); add(b, b, 1, size, bright, rung, col, shape, flow); };
+  // Circuit traces are drawn as soft lines (see lineMat), one piece per short straight chord of the tube, instead of
+  // rows of overlapping dots: about a sixth as many things to draw, and they stay solid when the camera zooms in.
+  const LA: number[] = [], LB: number[] = [], LW: number[] = [], LBR: number[] = [], LR: number[] = [], LC: number[] = [], LFA: number[] = [], LFB: number[] = [];
+  // At this gain a line glows like the row of dots it replaced (worked out from the dots' size, spacing and falloff,
+  // then checked against screenshots of the dotted version).
+  const LINE_GAIN = .86;
+  function line(u0: number, y0: number, u1: number, y1: number, bright: number, rung: number, col: THREE.Color, flowA = -1, flowB = -1) {
+    LA.push(...wrap(u0, y0)); LB.push(...wrap(u1, y1)); LW.push(.48); LBR.push(bright * LINE_GAIN); LR.push(rung);
+    LC.push(col.r, col.g, col.b); LFA.push(flowA); LFB.push(flowB);
+  }
 
   // Strands: a dense core plus a fuzzy outer layer. In the zone each particle also gets its board spot, the fuzz
   // goes, and the strand thins out to the density of a trace.
@@ -154,7 +164,8 @@ function start() {
     }
     const fade = Math.pow(w, 1.5);
     if (fade < .03) continue;
-    for (let u = u0 + HALF; u < u0 + CIRC; u += .02) if (!dashGap(u)) addB(u, y, .5, .5 * fade, j, cRung);
+    const first = Math.ceil((u0 + HALF) / .17) * .17;
+    for (let u = first; u < u0 + CIRC - .02; u += .17) line(u, y, Math.min(u + .105, u0 + CIRC), y, .5 * fade, j, cRung);
   }
 
   // Loose halo particles drifting around the strands, thinning out through the zone.
@@ -198,25 +209,31 @@ function start() {
   function trace(pts: Pt[], flow0 = -1, o: { bright?: number; rung?: number; col?: THREE.Color; block?: boolean } = {}) {
     let flow = flow0;
     for (let i = 0; i < pts.length - 1; i++) {
-      const [u0, y0] = pts[i], [u1, y1] = pts[i + 1];
-      const d = Math.hypot(u1 - u0, y1 - y0), n = Math.max(1, Math.round(d / STEP));
-      for (let k = i === 0 ? 0 : 1; k <= n; k++) {
-        const f = k / n, u = u0 + (u1 - u0) * f, y = y0 + (y1 - y0) * f, fade = fadeIn(y);
+      const [u0, y0] = pts[i], [u1, y1] = pts[i + 1], d = Math.hypot(u1 - u0, y1 - y0);
+      // Chords short enough that the tube's curve and taper never show.
+      const n = Math.max(1, Math.ceil(Math.max(Math.abs(u1 - u0) / .1, Math.abs(y1 - y0) / .3)));
+      for (let k = 0; k < n; k++) {
+        const fa = k / n, fb = (k + 1) / n, ya = y0 + (y1 - y0) * fa, yb = y0 + (y1 - y0) * fb, fade = fadeIn((ya + yb) / 2);
         if (fade <= .01) continue;
-        const col = o.col ?? colAt(u);
-        addB(u, y, .42 + rnd() * .12, (o.bright ?? .32) * DIM * fade, o.rung ?? -1, col, ROUND, flow0 >= 0 ? flow + d * f : -1);
-        if (Math.random() < .3 * DIM * (1 - smooth(Z_BOT, -3.2, y))) addB(u + gauss() * .05, y + gauss() * .05, .4 + Math.random() * .5, .2 * fade, -1, col);
+        const ua = u0 + (u1 - u0) * fa, ub = u0 + (u1 - u0) * fb;
+        line(ua, ya, ub, yb, (o.bright ?? .32) * fade, o.rung ?? -1, o.col ?? colAt((ua + ub) / 2),
+          flow0 >= 0 ? flow + d * fa : -1, flow0 >= 0 ? flow + d * fb : -1);
+      }
+      for (let s = 0; s < d; s += .02) {
+        const u = u0 + (u1 - u0) * s / d, y = y0 + (y1 - y0) * s / d;
+        if (Math.random() < .3 * (1 - smooth(Z_BOT, -3.2, y))) addB(u + gauss() * .05, y + gauss() * .05, .4 + Math.random() * .5, .2 * fadeIn(y), -1, o.col ?? colAt(u));
       }
       flow += d;
     }
     if (o.block !== false) claimPath(pts);
     return flow;
   }
+  // Pads and terminals shrink a little where the tube narrows, so they don't crowd together at the bottom.
   const pad = (u: number, y: number, size = 1.5, flow = -1, rung = -1, col?: THREE.Color) => {
-    addB(u, y, size, .72 * fadeIn(y), rung, lerpC(col ?? colAt(u), pale, .5), SQUARE, flow); claim(u, y);
+    addB(u, y, size * (.5 + .5 * boardR(y) / R), .72 * fadeIn(y), rung, lerpC(col ?? colAt(u), pale, .5), SQUARE, flow); claim(u, y);
   };
   const ring = (u: number, y: number, size = 2.4, flow = -1, col?: THREE.Color) => {
-    addB(u, y, size, .7, -1, lerpC(col ?? colAt(u), pale, .5), RING, flow); claim(u, y, 2);
+    addB(u, y, size * (.5 + .5 * boardR(y) / R), .7, -1, lerpC(col ?? colAt(u), pale, .5), RING, flow); claim(u, y, 2);
   };
   function padsAlong(pts: Pt[], flow0: number, every: number, col?: THREE.Color, size = 1.4) {
     let carry = every * .5, flow = flow0;
@@ -378,7 +395,7 @@ function start() {
 
   const uniforms = {
     uTime: { value: 0 }, uPR: { value: PR }, uScale: { value: 110 }, uR: { value: R },
-    uHL: { value: -1 }, uHLY: { value: 999 }, uPulse: { value: 1 }, uSpin: { value: 0 },
+    uHL: { value: -1 }, uHLY: { value: 999 }, uPulse: { value: 1 }, uSpin: { value: 0 }, uRes: { value: new THREE.Vector2(1, 1) },
   };
   const mat = new THREE.ShaderMaterial({
     uniforms,
@@ -449,6 +466,63 @@ function start() {
   const helix = new THREE.Points(geo, mat);
   helix.frustumCulled = false;
   tilt.add(helix);
+
+  // The circuit's lines: one camera-facing strip per chord, as wide as a dot of the same size would be at that depth,
+  // with the dots' soft falloff across it. Spin, depth shading, hover glow and pulses match the particles.
+  const lineGeo = new THREE.InstancedBufferGeometry();
+  lineGeo.setAttribute('corner', new THREE.Float32BufferAttribute([0, -1, 1, -1, 0, 1, 1, 1], 2));
+  lineGeo.setIndex([0, 1, 2, 2, 1, 3]);
+  for (const [name, arr, n] of [['aA', LA, 3], ['aB', LB, 3], ['aWidth', LW, 1], ['aBright', LBR, 1], ['aRung', LR, 1], ['aColor', LC, 3], ['aFlowA', LFA, 1], ['aFlowB', LFB, 1]] as const) {
+    lineGeo.setAttribute(name, new THREE.InstancedBufferAttribute(new Float32Array(arr), n));
+  }
+  lineGeo.instanceCount = LW.length;
+  const lineMat = new THREE.ShaderMaterial({
+    uniforms,
+    transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
+    vertexShader: `
+      attribute vec2 corner; attribute vec3 aA; attribute vec3 aB; attribute float aWidth; attribute float aBright;
+      attribute float aRung; attribute vec3 aColor; attribute float aFlowA; attribute float aFlowB;
+      uniform float uPR, uScale, uR, uHL, uHLY, uSpin; uniform vec2 uRes;
+      varying float vAlpha; varying float vX; varying vec3 vColor; varying float vFlow; varying float vHL;
+      vec3 spin(vec3 v){ float c = cos(uSpin), s = sin(uSpin); return vec3(c * v.x + s * v.z, v.y, -s * v.x + c * v.z); }
+      void main(){
+        vec4 wa = modelMatrix * vec4(spin(aA), 1.0), wb = modelMatrix * vec4(spin(aB), 1.0);
+        vec4 ma = viewMatrix * wa, mb = viewMatrix * wb;
+        vec4 ca = projectionMatrix * ma, cb = projectionMatrix * mb;
+        vec2 dir = (cb.xy / cb.w - ca.xy / ca.w) * uRes;
+        float len = length(dir);
+        dir = len > 1e-5 ? dir / len : vec2(1.0, 0.0);
+        float t = corner.x;
+        vec4 w = mix(wa, wb, t), m = mix(ma, mb, t), c = mix(ca, cb, t);
+        float front = (clamp(w.z / uR, -1.0, 1.0) + 1.0) * .5, f = mix(.75, 1.15, front);
+        float hl = 0.0;
+        if (uHL >= 0.0){
+          if (aRung >= 0.0) hl = abs(aRung - uHL) < .5 ? 1.0 : 0.0;
+          else { float dy = (mix(aA.y, aB.y, t) - uHLY) / .35; hl = exp(-dy * dy) * .7; }
+        }
+        float px = aWidth * uPR * uScale * f * (1.0 + hl * .25) / -m.z;
+        c.xy += vec2(-dir.y, dir.x) * corner.y * px / uRes * c.w;
+        gl_Position = c;
+        // Same light as a board particle: a softer back, a little extra glow, and wider (closer) means brighter.
+        vAlpha = aBright * .92 * mix(.32, 1.0, front) * 1.45 * f * (1.0 + hl * 1.6);
+        vX = corner.y; vColor = aColor; vHL = hl;
+        vFlow = aFlowA >= 0.0 ? mix(aFlowA, aFlowB, t) : -1.0;
+      }`,
+    fragmentShader: `
+      uniform float uTime, uPulse;
+      varying float vAlpha; varying float vX; varying vec3 vColor; varying float vFlow; varying float vHL;
+      void main(){
+        float d = abs(vX) * .5;
+        float soft = smoothstep(.5, 0.0, d), core = smoothstep(.22, 0.0, d);
+        float pulse = 0.0;
+        if (vFlow >= 0.0) { float fl = fract(vFlow / 2.6 - uTime * .2); fl = min(fl, 1.0 - fl); pulse = exp(-fl * fl / .0005) * uPulse; }
+        vec3 col = mix(vColor, vec3(1.0), core * .5 + max(vHL, pulse * .7) * .6);
+        gl_FragColor = vec4(col, (soft * .55 + core * .45) * vAlpha * (1.0 + pulse * 2.5));
+      }`,
+  });
+  const lines = new THREE.Mesh(lineGeo, lineMat);
+  lines.frustumCulled = false;
+  tilt.add(lines);
   tilt.updateMatrixWorld(true);
   const rungWorld = rungY.map(y => tilt.localToWorld(new THREE.Vector3(0, y, 0)));
   const AXIS = new THREE.Vector3(0, 1, 0).applyQuaternion(tilt.quaternion);
@@ -751,6 +825,7 @@ function start() {
     W = stage.clientWidth; H = stage.clientHeight;
     renderer.setSize(W, H, false);
     composer.setSize(W, H);
+    renderer.getDrawingBufferSize(uniforms.uRes.value);
     camera.aspect = W / H;
     camera.updateProjectionMatrix();
     // Keep particles the same size relative to the helix on any screen height.
