@@ -86,31 +86,22 @@ function start() {
   const strandPoint = (t: number, off: number) => { const a = angAt(t) + off; return [R * Math.cos(a), yAt(t), R * Math.sin(a)]; };
   const rungY = Array.from({ length: BP }, (_, j) => yAt((j + .5) / BP));
 
-  // SPIKE: below "Selected work" the helix settles into a flat circuit board. Every particle has two positions: its
-  // place on the spinning helix and its place on the still board. Through the morph zone (Z_TOP down to Z_BOT) the
-  // shader blends from one to the other, so the strands stay joined while their spin dies away. It blends positions,
-  // not spin angles, so the zone never winds up however long the helix turns.
+  // SPIKE: below "Selected work" the helix turns into a circuit printed all the way round its own cylinder, which
+  // spins with it. Every particle has a place on the helix and a place on the board; through the morph zone (Z_TOP
+  // down to Z_BOT) the shader blends from one to the other, so the strands stay joined while the fuzz clears and the
+  // circuit forms.
   const Z_TOP = .3, Z_BOT = -1.35, T_END = (L / 2 - Z_BOT) / L;
   const morphAt = (y: number) => smooth(Z_TOP, Z_BOT, y);
 
-  // Board layout. The strands drop straight from the zone, then run diagonally into a chip where they cross.
-  const CHIP_Y = -1.85, CHIP_H = .34, FAN_Y = -3.25, PIN_X = R + .35;
-  const DIAG = R - CHIP_H, CHIP_TOP = CHIP_Y + CHIP_H, CHIP_BOT = CHIP_Y - CHIP_H, D0 = CHIP_TOP + DIAG;
-  // How far from the axis the board's strands run at height y (above the chip).
-  const boardX = (y: number) => (y >= D0 ? R : Math.max(CHIP_H, CHIP_H + (y - CHIP_TOP)));
-  // SPIKE: true wraps the board round the helix's cylinder and spins it with the helix; false keeps it flat and still.
-  // Wrapped, a board x of -R and +R land where the two strands are at the bottom of the zone, so the strands meet
-  // their board paths exactly and the zone only has to stop the twist.
-  const BOARD_SPINS = true;
-  const WRAP0 = angAt(T_END) + Math.PI / 2;
+  // The board is laid out unrolled: u runs round the tube (arc length at radius R, wrapping at CIRC) and y runs down
+  // it. u = 0 is where strand A is at the bottom of the zone; strand B is half way round.
+  const CIRC = 2 * Math.PI * R, HALF = CIRC / 2, PHI0 = angAt(T_END);
+  // Below the chips the tube flares out, so the traces spread like the fan on the card.
+  const boardR = (y: number) => R * (1 + .38 * smooth(-2.4, -5, y));
   type V3 = [number, number, number];
-  // Below the chip the tube flares out, so the traces spread like the fan on the card.
-  const boardR = (y: number) => (BOARD_SPINS ? R * (1 + .45 * smooth(CHIP_BOT, -5, y)) : R);
-  const wrap = (x: number, y: number): V3 => {
-    if (!BOARD_SPINS) return [x, y, 0];
-    const a = WRAP0 + x * (Math.PI / 2) / R, r = boardR(y);
-    return [r * Math.cos(a), y, r * Math.sin(a)];
-  };
+  const wrap = (u: number, y: number): V3 => { const a = PHI0 + u / R, r = boardR(y); return [r * Math.cos(a), y, r * Math.sin(a)]; };
+  // Inside the zone a strand's board path simply follows the helix (strand A; B is HALF further round).
+  const helixU = (y: number) => (Z_BOT - y) * TURNS * Math.PI * 2 / L * R;
 
   // Particle shapes drawn by the fragment shader.
   const ROUND = 0, SQUARE = 1, RING = 2;
@@ -121,6 +112,9 @@ function start() {
   const pale = new THREE.Color(0xc6eef6);
   const cBA = cA.clone().lerp(pale, .4), cBB = cB.clone().lerp(pale, .4), cTrace = cA.clone().lerp(cB, .5).lerp(pale, .4);
   const cFaint = cTrace.clone().multiplyScalar(.6);
+  const lerpC = (a: THREE.Color, b: THREE.Color, t: number) => a.clone().lerp(b, t);
+  // Round the tube the colour drifts between the two strands' hues.
+  const colAt = (u: number) => lerpC(cBA, cBB, .5 + .5 * Math.cos(u / R));
   function add(h: V3, b: V3, mix: number, size: number, bright: number, rung: number, col: THREE.Color, shape = ROUND, flow = -1) {
     P.push(h[0], h[1], h[2]); BOARD.push(b[0], b[1], b[2]); MIX.push(mix);
     SIZE.push(size); BRIGHT.push(bright); PHASE.push(Math.random()); RUNG.push(rung); SHAPE.push(shape); FLOW.push(flow);
@@ -128,36 +122,38 @@ function start() {
     COL.push(col.r * j, col.g * j, col.b * j);
   }
   // A particle that only lives on the board.
-  const addB = (x: number, y: number, size: number, bright: number, rung: number, col: THREE.Color, shape = ROUND, flow = -1) =>
-    { const b = wrap(x, y); add(b, b, 1, size, bright, rung, col, shape, flow); };
-  const lerpC = (a: THREE.Color, b: THREE.Color, t: number) => a.clone().lerp(b, t);
+  const addB = (u: number, y: number, size: number, bright: number, rung: number, col: THREE.Color, shape = ROUND, flow = -1) =>
+    { const b = wrap(u, y); add(b, b, 1, size, bright, rung, col, shape, flow); };
 
   // Strands: a dense core plus a fuzzy outer layer. In the zone each particle also gets its board spot, the fuzz
   // goes, and the strand thins out to the density of a trace.
-  for (const [off, col, side, bcol] of [[0, cA, -1, cBA], [GROOVE, cB, 1, cBB]] as const) {
+  for (const [off, col, uOff, bcol] of [[0, cA, 0, cBA], [GROOVE, cB, HALF, cBB]] as const) {
     const n = Math.round((LITE ? 1700 : 2800) * T_END);
     for (let i = 0; i < n; i++) {
       const t = Math.random() * T_END, [x, y, z] = strandPoint(t, off), w = morphAt(y);
       if (Math.random() < w * .75) continue;
       const fuzzy = Math.random() < 0.3, s = fuzzy ? 0.17 : 0.065;
       const size = 0.5 + Math.random() * (fuzzy ? 0.7 : 1.1), bright = fuzzy ? 0.35 + Math.random() * 0.35 : 0.55 + Math.random() * 0.45;
-      add([x + gauss() * s, y + gauss() * s * 0.6, z + gauss() * s], wrap(side * boardX(y) + gauss() * .008, y), w,
+      add([x + gauss() * s, y + gauss() * s * 0.6, z + gauss() * s], wrap(helixU(y) + uOff + gauss() * .008, y), w,
         size + (.5 - size) * w, bright + (.4 - bright) * w, -1, lerpC(col, bcol, w), ROUND, L / 2 - y);
     }
   }
 
-  // Rungs: thin dotted lines between the strands. Through the zone they flatten into the board's dashed bus lines.
+  // Rungs: thin dotted lines between the strands. Through the zone each one opens out into a dashed half ring round
+  // the tube, and the other half of the ring fades in, so the rungs end up as full rings.
   const RUNG_DOTS = LITE ? 32 : 46;
   const lastRung = rungY.findIndex(y => y < Z_BOT) - 1;
+  const dashGap = (u: number) => ((((u % .17) + .17) % .17) / .17 > .62 ? 1 : 0);
   for (let j = 0; j <= lastRung; j++) {
-    const t = (j + .5) / BP, a = strandPoint(t, 0), b = strandPoint(t, GROOVE), y = rungY[j], w = morphAt(y);
-    const bx = boardX(y) - .07;
+    const t = (j + .5) / BP, a = strandPoint(t, 0), b = strandPoint(t, GROOVE), y = rungY[j], w = morphAt(y), u0 = helixU(y);
     for (let k = 1; k < RUNG_DOTS; k++) {
-      const f = k / RUNG_DOTS, x = -bx + 2 * bx * f;
-      const gap = ((x + 5) % .17) / .17 > .62 ? 1 : 0;
-      add([a[0] + (b[0] - a[0]) * f + gauss() * .012, a[1] + gauss() * .012, a[2] + (b[2] - a[2]) * f + gauss() * .012], wrap(x, y), w,
-        0.55 + Math.random() * 0.4 - .1 * w, (0.75 + Math.random() * 0.25) * (1 - w * gap) * (1 - .35 * w), j, cRung);
+      const f = k / RUNG_DOTS, u = u0 + HALF * f;
+      add([a[0] + (b[0] - a[0]) * f + gauss() * .012, a[1] + gauss() * .012, a[2] + (b[2] - a[2]) * f + gauss() * .012], wrap(u, y), w,
+        0.55 + Math.random() * 0.4 - .1 * w, (0.75 + Math.random() * 0.25) * (1 - w * dashGap(u)) * (1 - .35 * w), j, cRung);
     }
+    const fade = Math.pow(w, 1.5);
+    if (fade < .03) continue;
+    for (let u = u0 + HALF; u < u0 + CIRC; u += .02) if (!dashGap(u)) addB(u, y, .5, .5 * fade, j, cRung);
   }
 
   // Loose halo particles drifting around the strands, thinning out through the zone.
@@ -168,149 +164,204 @@ function start() {
   }
 
   // ---------- Circuit board (SPIKE) ----------
-  // Traces are rows of fine dots; pads, chips and terminals use the square and ring shapes. Board parts fade in
-  // through the zone, and the upper board keeps a little loose dust so the helix's texture dies away gradually.
-  // aFlow is the distance down from the top of the helix, which carries the signal pulses all the way down.
+  // Traces are rows of fine dots; pads, chips and terminals use the square and ring shapes. The upper board keeps a
+  // little loose dust, so the helix's texture dies away gradually. aFlow is the distance down from the top of the
+  // helix, which carries the signal pulses all the way down.
   let seed = 11;
   const rnd = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
-  type Pt = [number, number];
+  type Pt = [number, number]; // [u, y]
   const STEP = LITE ? .02 : .012, DIM = STEP / .02;
   const fadeIn = (y: number) => Math.pow(morphAt(y), 1.5);
-  function trace(pts: Pt[], flow0 = -1, o: { bright?: number; rung?: number; col?: THREE.Color } = {}) {
-    let flow = flow0;
-    const col = o.col ?? cTrace;
+
+  // A coarse occupancy grid over the unrolled board, so generated traces and parts don't run into each other.
+  const CELL = .06, GW = Math.ceil(CIRC / CELL), GH = Math.ceil(6.5 / CELL);
+  const occ = new Uint8Array(GW * GH);
+  const cellOf = (u: number, y: number) => {
+    const i = ((Math.floor(u / CELL) % GW) + GW) % GW, j = Math.floor((1 - y) / CELL);
+    return j >= 0 && j < GH ? j * GW + i : -1;
+  };
+  const isFree = (u: number, y: number) => { const c = cellOf(u, y); return c >= 0 && !occ[c]; };
+  const claim = (u: number, y: number, pad = 1) => {
+    for (let di = -pad; di <= pad; di++) for (let dj = -pad; dj <= pad; dj++) { const c = cellOf(u + di * CELL, y + dj * CELL); if (c >= 0) occ[c] = 1; }
+  };
+  const walk = (pts: Pt[], fn: (u: number, y: number) => boolean | void) => {
     for (let i = 0; i < pts.length - 1; i++) {
-      const [x0, y0] = pts[i], [x1, y1] = pts[i + 1];
-      const d = Math.hypot(x1 - x0, y1 - y0), n = Math.max(1, Math.round(d / STEP));
+      const [u0, y0] = pts[i], [u1, y1] = pts[i + 1], n = Math.max(1, Math.ceil(Math.hypot(u1 - u0, y1 - y0) / (CELL * .5)));
+      for (let k = 0; k <= n; k++) if (fn(u0 + (u1 - u0) * k / n, y0 + (y1 - y0) * k / n) === false) return false;
+    }
+    return true;
+  };
+  const pathFree = (pts: Pt[]) => walk(pts, (u, y) => isFree(u, y));
+  const claimPath = (pts: Pt[]) => { walk(pts, (u, y) => { claim(u, y); }); };
+
+  function trace(pts: Pt[], flow0 = -1, o: { bright?: number; rung?: number; col?: THREE.Color; block?: boolean } = {}) {
+    let flow = flow0;
+    for (let i = 0; i < pts.length - 1; i++) {
+      const [u0, y0] = pts[i], [u1, y1] = pts[i + 1];
+      const d = Math.hypot(u1 - u0, y1 - y0), n = Math.max(1, Math.round(d / STEP));
       for (let k = i === 0 ? 0 : 1; k <= n; k++) {
-        const f = k / n, x = x0 + (x1 - x0) * f, y = y0 + (y1 - y0) * f, fade = fadeIn(y);
+        const f = k / n, u = u0 + (u1 - u0) * f, y = y0 + (y1 - y0) * f, fade = fadeIn(y);
         if (fade <= .01) continue;
-        addB(x, y, .42 + rnd() * .12, (o.bright ?? .36) * DIM * fade, o.rung ?? -1, col, ROUND, flow0 >= 0 ? flow + d * f : -1);
-        if (Math.random() < .3 * DIM * (1 - smooth(Z_BOT, -3.2, y))) addB(x + gauss() * .05, y + gauss() * .05, .4 + Math.random() * .5, .22 * fade, -1, col);
+        const col = o.col ?? colAt(u);
+        addB(u, y, .42 + rnd() * .12, (o.bright ?? .32) * DIM * fade, o.rung ?? -1, col, ROUND, flow0 >= 0 ? flow + d * f : -1);
+        if (Math.random() < .3 * DIM * (1 - smooth(Z_BOT, -3.2, y))) addB(u + gauss() * .05, y + gauss() * .05, .4 + Math.random() * .5, .2 * fade, -1, col);
       }
       flow += d;
     }
+    if (o.block !== false) claimPath(pts);
     return flow;
   }
-  const pad = (x: number, y: number, size = 1.7, flow = -1, rung = -1, col = cTrace) => addB(x, y, size, .72 * fadeIn(y), rung, lerpC(col, pale, .5), SQUARE, flow);
-  const ring = (x: number, y: number, size = 2.6, flow = -1, col = cTrace) => addB(x, y, size, .7, -1, lerpC(col, pale, .5), RING, flow);
-  // Pads spaced along a path, like the squares on the card's strands.
-  function padsAlong(pts: Pt[], flow0: number, every: number, col: THREE.Color, size = 1.4) {
+  const pad = (u: number, y: number, size = 1.5, flow = -1, rung = -1, col?: THREE.Color) => {
+    addB(u, y, size, .72 * fadeIn(y), rung, lerpC(col ?? colAt(u), pale, .5), SQUARE, flow); claim(u, y);
+  };
+  const ring = (u: number, y: number, size = 2.4, flow = -1, col?: THREE.Color) => {
+    addB(u, y, size, .7, -1, lerpC(col ?? colAt(u), pale, .5), RING, flow); claim(u, y, 2);
+  };
+  function padsAlong(pts: Pt[], flow0: number, every: number, col?: THREE.Color, size = 1.4) {
     let carry = every * .5, flow = flow0;
     for (let i = 0; i < pts.length - 1; i++) {
-      const [x0, y0] = pts[i], [x1, y1] = pts[i + 1], d = Math.hypot(x1 - x0, y1 - y0);
+      const [u0, y0] = pts[i], [u1, y1] = pts[i + 1], d = Math.hypot(u1 - u0, y1 - y0);
       let s = carry;
-      for (; s < d; s += every) pad(x0 + (x1 - x0) * s / d, y0 + (y1 - y0) * s / d, size, flow + s, -1, col);
+      for (; s < d; s += every) pad(u0 + (u1 - u0) * s / d, y0 + (y1 - y0) * s / d, size, flow + s, -1, col);
       carry = s - d;
       flow += d;
     }
   }
-  // A bus line: dashes with small square pads, like the card's rungs below the crossing.
-  function dashed(x0: number, x1: number, y: number) {
-    let x = x0;
-    while (x < x1 - .02) {
-      if (rnd() < .3) { pad(x + .025, y, .85); x += .09; continue; }
-      const len = .05 + rnd() * .11;
-      trace([[x, y], [Math.min(x + len, x1), y]], -1, { bright: .4 });
-      x += len + .045;
+  // A ring of dashes with small square pads round the whole tube. Traces may cross it, as on the card.
+  function dashedRing(y: number, rung = -1) {
+    let u = rnd() * .2;
+    while (u < CIRC) {
+      if (rnd() < .22) { addB(u + .025, y, .85, .72 * fadeIn(y), rung, lerpC(colAt(u), pale, .5), SQUARE); u += .09; continue; }
+      const len = .06 + rnd() * .16;
+      trace([[u, y], [Math.min(u + len, CIRC), y]], -1, { bright: .36, rung, block: false });
+      u += len + .05;
     }
   }
-  const footprint = (cx: number, cy: number, cols: number, rows: number) => {
-    for (let i = 0; i < cols; i++) for (let j = 0; j < rows; j++) addB(cx + (i - (cols - 1) / 2) * .055, cy + (j - (rows - 1) / 2) * .055, .7, .45, -1, cFaint, SQUARE);
+  // A chip: outline, pins on every side, and the strands' X picked out in small squares inside.
+  function chip(uc: number, yc: number, h: number, col: THREE.Color, skipY: number[] = []) {
+    trace([[uc - h, yc + h], [uc + h, yc + h], [uc + h, yc - h], [uc - h, yc - h], [uc - h, yc + h]], -1, { bright: .5, col: lerpC(col, pale, .4) });
+    const n = h > .25 ? 4 : 3;
+    for (let i = 0; i < n; i++) {
+      const o = -h + (i + .5) * 2 * h / n;
+      for (const s of [-1, 1]) {
+        trace([[uc + o, yc + s * h], [uc + o, yc + s * (h + .06)]], -1, { bright: .3, col });
+        addB(uc + o, yc + s * (h + .08), .7, .6, -1, lerpC(col, pale, .5), SQUARE);
+        if (skipY.some(y => Math.abs(yc + o - y) < .07)) continue;
+        trace([[uc + s * h, yc + o], [uc + s * (h + .06), yc + o]], -1, { bright: .3, col });
+        addB(uc + s * (h + .08), yc + o, .7, .6, -1, lerpC(col, pale, .5), SQUARE);
+      }
+    }
+    for (let i = -3; i <= 3; i++) {
+      const o = i * h * .24;
+      addB(uc + o, yc + o, .65, .6, -1, lerpC(cBA, pale, .3), SQUARE);
+      if (i) addB(uc + o, yc - o, .65, .6, -1, lerpC(cBB, pale, .3), SQUARE);
+    }
+    for (let u = uc - h - .1; u <= uc + h + .1; u += CELL) for (let y = yc - h - .1; y <= yc + h + .1; y += CELL) claim(u, y, 0);
+  }
+  const footprint = (uc: number, yc: number, cols: number, rows: number) => {
+    for (let i = 0; i < cols; i++) for (let j = 0; j < rows; j++) addB(uc + (i - (cols - 1) / 2) * .055, yc + (j - (rows - 1) / 2) * .055, .7, .45, -1, cFaint, SQUARE);
   };
-  const bars = (cx: number, cy: number) => { for (let i = 0; i < 3; i++) trace([[cx - .07 + i * .02, cy + i * .045], [cx + .07, cy + i * .045]], -1, { bright: .26, col: cFaint }); };
+  const bars = (uc: number, yc: number) => { for (let i = 0; i < 3; i++) trace([[uc - .07 + i * .02, yc + i * .045], [uc + .07, yc + i * .045]], -1, { bright: .24, col: cFaint }); };
 
-  // The upper part of a strand's board path grows out of the strand itself: each dot and pad starts on the
-  // spinning strand (at the same height) and settles onto the path, showing up only as the strand slows down.
-  function strandPath(pts: Pt[], off: number, hcol: THREE.Color, col: THREE.Color, flow0: number, every = .27) {
-    let flow = flow0, nextPad = every * .5;
-    const at = (x: number, y: number) => ({ h: strandPoint((L / 2 - y) / L, off) as V3, b: wrap(x, y), w: morphAt(y) });
-    for (let i = 0; i < pts.length - 1; i++) {
-      const [x0, y0] = pts[i], [x1, y1] = pts[i + 1];
-      const d = Math.hypot(x1 - x0, y1 - y0), n = Math.max(1, Math.round(d / STEP));
-      for (let k = i === 0 ? 0 : 1; k <= n; k++) {
-        const f = k / n, { h, b, w } = at(x0 + (x1 - x0) * f, y0 + (y1 - y0) * f);
-        if (w < .02) continue;
-        add(h, b, w, .42 + rnd() * .12, .42 * DIM * Math.pow(w, 1.3), -1, lerpC(hcol, col, w), ROUND, flow + d * f);
-      }
-      for (; nextPad < d; nextPad += every) {
-        const f = nextPad / d, { h, b, w } = at(x0 + (x1 - x0) * f, y0 + (y1 - y0) * f);
-        if (w < .05) continue;
-        add(h, b, w, 1.4, .72 * w * w, -1, lerpC(col, pale, .5), SQUARE, flow + nextPad);
-      }
-      nextPad -= d;
-      flow += d;
-    }
-    return flow;
-  }
-
-  // The strands' board paths. Each strand crosses inside the chip, so the one entering top left leaves bottom right.
-  const flowTop = L / 2 - Z_TOP;
-  let fanFlow = 0;
-  for (const [s, off, hcol, col] of [[-1, 0, cA, cBA], [1, GROOVE, cB, cBB]] as const) {
-    const top: Pt[] = [[s * R, Z_TOP], [s * R, D0], [s * CHIP_H, CHIP_TOP]];
-    const low: Pt[] = [[-s * CHIP_H, CHIP_BOT], [-s * R, CHIP_BOT - DIAG], [-s * R, FAN_Y]];
-    const e1 = strandPath(top, off, hcol, col, flowTop);
-    const f2 = e1 + CHIP_H * 2 * Math.SQRT2;
-    fanFlow = trace(low, f2, { bright: .42, col });
-    padsAlong(low.slice(0, 2), f2, .27, col);
-  }
-
-  // The chip: outline, pins, and the strands' X picked out in small squares inside.
-  trace([[-CHIP_H, CHIP_TOP], [CHIP_H, CHIP_TOP], [CHIP_H, CHIP_BOT], [-CHIP_H, CHIP_BOT], [-CHIP_H, CHIP_TOP]], -1, { bright: .5, col: lerpC(cTrace, pale, .4) });
-  for (const o of [-.17, 0, .17]) {
-    for (const s of [-1, 1]) {
-      trace([[o, CHIP_Y + s * CHIP_H], [o, CHIP_Y + s * (CHIP_H + .08)]], -1, { bright: .34 });
-      pad(o, CHIP_Y + s * (CHIP_H + .1), .75);
+  // The upper part of a strand's board path grows out of the strand itself: each dot and pad starts on the strand
+  // (at the same height) and settles onto the path, showing up only as the strand clears.
+  function strandPath(off: number, uOff: number, hcol: THREE.Color, col: THREE.Color, flow0: number, every = .27) {
+    let nextPad = every * .5;
+    const n = Math.round((Z_TOP - Z_BOT) / STEP);
+    for (let k = 0; k <= n; k++) {
+      const y = Z_TOP - (Z_TOP - Z_BOT) * k / n, w = morphAt(y);
+      if (w < .02) continue;
+      const h = strandPoint((L / 2 - y) / L, off) as V3, b = wrap(helixU(y) + uOff, y);
+      add(h, b, w, .42 + rnd() * .12, .42 * DIM * Math.pow(w, 1.3), -1, lerpC(hcol, col, w), ROUND, flow0 + (Z_TOP - y));
+      const s = (Z_TOP - y) * 1.6; // rough path length so far
+      if (s >= nextPad) { nextPad += every; if (w > .05) add(h, b, w, 1.4, .72 * w * w, -1, lerpC(col, pale, .5), SQUARE, flow0 + (Z_TOP - y)); }
     }
   }
-  for (const y of [CHIP_Y + .22, CHIP_Y + .08]) {
-    for (const s of [-1, 1]) { trace([[s * CHIP_H, y], [s * (CHIP_H + .08), y]], -1, { bright: .34 }); pad(s * (CHIP_H + .1), y, .75); }
-  }
-  for (let i = -3; i <= 3; i++) {
-    const o = i * CHIP_H * .24;
-    pad(o, CHIP_Y + o, .7, -1, -1, cBA);
-    if (i) pad(o, CHIP_Y - o, .7, -1, -1, cBB);
+
+  // The two strands. Each keeps winding round the tube as a stepped trace into its own chip (A and B sit on opposite
+  // sides), carries on out of the chip's far corner and splits into a fan of traces ending in terminals.
+  const CHIP_Y = -2.05, CHIP_H = .3, CHIP_U = .62, BLOG_RUNG = 17, CONTACT_RUNG = 22;
+  const BLOG_Y = rungY[BLOG_RUNG], CONTACT_Y = rungY[CONTACT_RUNG];
+  for (const [off, uOff, hcol, col] of [[0, 0, cA, cBA], [GROOVE, HALF, cB, cBB]] as const) {
+    strandPath(off, uOff, hcol, col, L / 2 - Z_TOP);
+    const f0 = L / 2 - Z_BOT;
+    const into: Pt[] = [[uOff, Z_BOT], [uOff + CHIP_U - CHIP_H, CHIP_Y + CHIP_H]];
+    const e1 = trace(into, f0, { bright: .44, col });
+    padsAlong(into, f0, .27, col);
+    chip(uOff + CHIP_U, CHIP_Y, CHIP_H, col, [BLOG_Y]);
+    const ux = uOff + CHIP_U + CHIP_H, out: Pt[] = [[ux, CHIP_Y - CHIP_H], [ux + .4, CHIP_Y - CHIP_H - .4], [ux + .4, -3.0]];
+    const e2 = trace(out, e1 + .85, { bright: .44, col });
+    padsAlong(out.slice(0, 2), e1 + .85, .27, col);
+    const uf = ux + .4;
+    pad(uf, -3.0, 1.8, e2, -1, col);
+    let e = trace([[uf, -3.0], [uf, -4.45]], e2, { col }); ring(uf, -4.45 - .09, 3.6, e, col);
+    e = trace([[uf, -3.0], [uf - .2, -3.2], [uf - .2, -4.3]], e2, { col }); ring(uf - .2, -4.3 - .07, 2.6, e, col);
+    e = trace([[uf, -3.0], [uf + .2, -3.2], [uf + .2, -3.75], [uf + .32, -3.87], [uf + .32, -4.6]], e2, { col }); ring(uf + .32, -4.6 - .07, 2.6, e, col);
   }
 
-  // A bus line below the chip, between the strands.
-  { const y = rungY[19], x = Math.min(R, CHIP_H + (CHIP_BOT - y)) - .07; dashed(-x, x, y); }
-
-  // The menu rungs on the board end in a pin on the right, where the label's trace starts.
-  const BLOG_RUNG = 17, CONTACT_RUNG = 22;
-  {
-    const y = rungY[BLOG_RUNG], f0 = L / 2 - CHIP_Y;
-    const e = trace([[CHIP_H, y], [PIN_X, y]], f0, { rung: BLOG_RUNG, bright: .44 });
-    pad(PIN_X, y, 1.8, e, BLOG_RUNG);
-    const e2 = trace([[-CHIP_H, y], [-(R + .25), y]], f0, { rung: BLOG_RUNG, bright: .44 });
-    ring(-(R + .25) - .07, y, 2.6, e2);
-  }
-  {
-    const y = rungY[CONTACT_RUNG];
-    dashed(-.95, .9, y);
-    const e = trace([[.9, y], [PIN_X, y]], fanFlow + .6, { rung: CONTACT_RUNG, bright: .44 });
-    pad(PIN_X, y, 1.8, e, CONTACT_RUNG);
-  }
-
-  // Below the second crossing the strands fan out into traces that end in round terminals.
-  for (const [s, col] of [[-1, cBB], [1, cBA]] as const) {
-    const X = (x: number) => s * x, f0 = fanFlow;
-    pad(X(R), FAN_Y, 1.9, f0, -1, col);
-    let e = trace([[X(R), FAN_Y], [X(R + .28), FAN_Y], [X(R + .45), FAN_Y - .17], [X(R + .45), -3.78]], f0, { col });
-    ring(X(R + .45), -3.78 - .07, 2.6, e, col);
-    e = trace([[X(R), FAN_Y], [X(R), -3.52], [X(R + .15), -3.67], [X(R + .15), -4.4]], f0, { col });
-    ring(X(R + .15), -4.4 - .11, 4.2, e, col);
-    trace([[X(R), FAN_Y], [X(.3), FAN_Y]], f0, { col });
-    for (const [x, jogY, jog, endY] of [[.84, -3.9, .1, -4.72], [.62, -4.3, 0, -4.88], [.4, -3.62, .1, -4.5]]) {
-      e = trace([[X(x), FAN_Y], [X(x), jogY], [X(x - jog), jogY - jog], [X(x - jog), endY]], f0 + R - x, { col });
-      ring(X(x - jog), endY - .07, jog ? 2.4 : 3.4, e, col);
+  // The Blog rung becomes a bus round the tube joining the two chips; the Contact rung and a few others become
+  // dashed rings.
+  for (const [from, to] of [[CHIP_U + CHIP_H, HALF + CHIP_U - CHIP_H], [HALF + CHIP_U + CHIP_H, CIRC + CHIP_U - CHIP_H]]) {
+    const mid = (from + to) / 2, f0 = L / 2 - BLOG_Y;
+    for (const [a, b] of [[from, mid], [to, mid]]) {
+      trace([[a, BLOG_Y], [b, BLOG_Y]], f0, { rung: BLOG_RUNG, bright: .44, block: false });
+      for (let u = Math.min(a, b) + .3; u < Math.max(a, b) - .1; u += .45) pad(u, BLOG_Y, 1.1, -1, BLOG_RUNG);
     }
   }
-  footprint(0, -3.72, 3, 4);
+  dashedRing(rungY[20]); dashedRing(CONTACT_Y, CONTACT_RUNG); dashedRing(rungY[16]);
 
-  // Small parts scattered beside the traces, kept clear of the menu labels on the right.
-  footprint(-1.78, -1.05, 2, 3); footprint(-1.95, -2.55, 3, 2); bars(-1.95, -3.25); footprint(-1.9, -4.45, 2, 3);
-  footprint(1.72, -1.15, 2, 2); footprint(1.78, -2.95, 3, 2); bars(1.75, -4.6);
+  // Two smaller chips a quarter turn round, hanging off the Blog bus, with their own terminals below.
+  for (const uc of [CHIP_U + CIRC / 4, CHIP_U + CIRC / 4 + HALF]) {
+    const yc = rungY[20], h = .22, col = colAt(uc);
+    chip(uc, yc, h, col, [yc]);
+    for (const du of [-.1, .1]) trace([[uc + du, BLOG_Y], [uc + du, yc + h + .1]], L / 2 - BLOG_Y, { col });
+    for (const [du, jog, end] of [[-.12, -.18, -4.25], [0, 0, -4.6], [.12, .18, -4.4]]) {
+      const pts: Pt[] = [[uc + du, yc - h - .1], [uc + du, yc - h - .25], [uc + du + jog, yc - h - .25 - Math.abs(jog)], [uc + du + jog, end]];
+      const e = trace(pts, L / 2 - yc, { col });
+      ring(uc + du + jog, end - .07, jog ? 2.4 : 3.2, e, col);
+    }
+  }
+
+  // Fill the rest of the tube with generated traces in lanes all the way round: drops from the Blog bus or from vias
+  // down to terminals near the bottom, short links above the bus, each with an occasional 45 degree jog.
+  const LANES = LITE ? 30 : 44;
+  for (let k = 0; k < LANES; k++) {
+    const u = k * CIRC / LANES + .03 + rnd() * .04, col = colAt(u);
+    // A short link above the bus.
+    if (rnd() < .55) {
+      const ys = -1.45 - rnd() * .2, pts: Pt[] = [[u, ys], [u, BLOG_Y + .04]];
+      if (pathFree(pts)) { trace(pts, L / 2 - ys, { col, bright: .28 }); ring(u, ys + .06, 1.8, -1, col); }
+    }
+    // A long drop to a terminal.
+    const fromBus = rnd() < .45, ys = fromBus ? BLOG_Y - .03 : -2.3 - rnd() * 1.2;
+    let ye = -4.0 - rnd() * .65;
+    const jogAt = ys - .25 - rnd() * Math.max(.1, ys - ye - .8), du = rnd() < .5 ? 0 : (rnd() < .5 ? -1 : 1) * CIRC / LANES;
+    let pts: Pt[] = du ? [[u, ys], [u, jogAt], [u + du, jogAt - Math.abs(du)], [u + du, ye]] : [[u, ys], [u, ye]];
+    if (!pathFree(pts.map(([a, b], i) => (i === 0 ? [a, b - .08] : [a, b]) as Pt))) {
+      // Shorten it to end before whatever is in the way.
+      let stop = ys;
+      walk(pts, (a, b) => { if (b < ys - .08 && !isFree(a, b)) return false; stop = b; });
+      ye = stop + .14;
+      if (ys - ye < .45) continue;
+      pts = du && ye < jogAt - Math.abs(du) ? [[u, ys], [u, jogAt], [u + du, jogAt - Math.abs(du)], [u + du, ye]] : [[u, ys], [u, Math.max(ye, jogAt)]];
+      ye = pts[pts.length - 1][1];
+    }
+    const e = trace(pts, L / 2 - ys, { col, bright: .3 });
+    const ue = pts[pts.length - 1][0];
+    if (!fromBus) pad(u, ys, 1.1, -1, -1, col);
+    ring(ue, ye - .06, ye < -4.3 && rnd() < .3 ? 3.2 : 2.2, e, col);
+  }
+
+  // Small parts scattered in the gaps.
+  for (let i = 0, placed = 0; i < 200 && placed < (LITE ? 14 : 24); i++) {
+    const u = rnd() * CIRC, y = -1.5 - rnd() * 3.3, kind = rnd();
+    const cols = kind < .5 ? 2 : 3, rows = kind < .5 ? 3 : 2;
+    const box: Pt[] = [[u - .1, y + .1], [u + .1, y + .1], [u + .1, y - .1], [u - .1, y - .1]];
+    if (!box.every(([a, b]) => isFree(a, b)) || !isFree(u, y)) continue;
+    if (kind < .8) footprint(u, y, cols, rows); else bars(u, y);
+    claim(u, y, 2);
+    placed++;
+  }
 
   const geo = new THREE.BufferGeometry();
   geo.setAttribute('position', new THREE.Float32BufferAttribute(P, 3));
@@ -326,7 +377,7 @@ function start() {
 
   const uniforms = {
     uTime: { value: 0 }, uPR: { value: PR }, uScale: { value: 110 }, uR: { value: R },
-    uHL: { value: -1 }, uHLY: { value: 999 }, uPulse: { value: 1 }, uSpin: { value: 0 }, uBoardSpin: { value: BOARD_SPINS ? 1 : 0 },
+    uHL: { value: -1 }, uHLY: { value: 999 }, uPulse: { value: 1 }, uSpin: { value: 0 },
   };
   const mat = new THREE.ShaderMaterial({
     uniforms,
@@ -334,19 +385,18 @@ function start() {
     vertexShader: `
       attribute float aSize; attribute float aBright; attribute float aPhase; attribute float aRung; attribute vec3 aColor;
       attribute vec3 aBoard; attribute float aMix; attribute float aShape; attribute float aFlow;
-      uniform float uTime, uPR, uScale, uR, uHL, uHLY, uPulse, uSpin, uBoardSpin;
+      uniform float uTime, uPR, uScale, uR, uHL, uHLY, uPulse, uSpin;
       varying float vAlpha; varying float vWhite; varying vec3 vColor; varying float vShape;
       vec3 spin(vec3 v){ float c = cos(uSpin), s = sin(uSpin); return vec3(c * v.x + s * v.z, v.y, -s * v.x + c * v.z); }
       void main(){
-        // The spin happens here rather than on the object, so each particle can blend to its board spot, which
-        // either spins too (wrapped board) or stays still (flat board).
-        vec3 h = spin(position);
+        // Blend from the helix spot to the board spot, then spin the result: helix and board turn as one.
+        vec3 q = mix(position, aBoard, aMix);
         float wob = 1.0 - aMix;
-        h.x += sin(uTime * .9 + aPhase * 6.283) * .012 * wob;
-        h.z += cos(uTime * .7 + aPhase * 6.283) * .012 * wob;
-        vec3 p = mix(h, uBoardSpin > .5 ? spin(aBoard) : aBoard, aMix);
+        q.x += sin(uTime * .9 + aPhase * 6.283) * .012 * wob;
+        q.z += cos(uTime * .7 + aPhase * 6.283) * .012 * wob;
+        vec3 p = spin(q);
         vec4 world = modelMatrix * vec4(p, 1.0);
-        float front = mix((clamp(world.z / uR, -1.0, 1.0) + 1.0) * .5, .85, aMix * (1.0 - uBoardSpin));
+        float front = (clamp(world.z / uR, -1.0, 1.0) + 1.0) * .5;
         float tw = mix(.78 + .22 * sin(uTime * 1.6 + aPhase * 40.0), .96, aMix * .8);
         float hl = 0.0;
         if (uHL >= 0.0){
@@ -355,8 +405,8 @@ function start() {
         }
         float pulse = 0.0;
         if (aFlow >= 0.0) { float f = fract(aFlow / 2.6 - uTime * .2); f = min(f, 1.0 - f); pulse = exp(-f * f / .0005) * uPulse * mix(.5, 1.0, aMix); }
-        // A wrapped board always has half its circuit turned away, so it gets a little more light and a softer back.
-        float wrapped = aMix * uBoardSpin;
+        // The board always has half its circuit turned away, so it gets a little more light and a softer back.
+        float wrapped = aMix;
         vAlpha = aBright * tw * mix(mix(.2, .32, wrapped), 1.0, front) * (1.0 + .45 * wrapped) * (1.0 + hl * 1.6) * (1.0 + pulse * 2.5);
         vWhite = max(hl, pulse * .7);
         vColor = aColor;
@@ -400,7 +450,6 @@ function start() {
   tilt.add(helix);
   tilt.updateMatrixWorld(true);
   const rungWorld = rungY.map(y => tilt.localToWorld(new THREE.Vector3(0, y, 0)));
-  const pinWorld = rungY.map(y => tilt.localToWorld(new THREE.Vector3(PIN_X, y, 0)));
   const AXIS = new THREE.Vector3(0, 1, 0).applyQuaternion(tilt.quaternion);
   // The rung each menu item sits on, spread evenly down the helix.
   const MENU_ITEMS = 5;
@@ -808,9 +857,8 @@ function start() {
     LABELED.forEach((j, i) => {
       const c = rungWorld[j];
       // On the circuit board the label's line starts at the rung's pin and is drawn as a trace ending in a ring.
-      // A spinning board's pins move, so its labels keep the helix's fixed starting point.
-      const onBoard = rungY[j] < Z_BOT, pinned = onBoard && !BOARD_SPINS;
-      const startPt = pinned ? toScreen(pinWorld[j].x, pinWorld[j].y, pinWorld[j].z) : toScreen(c.x + (Math.max(R, boardR(rungY[j])) + .35) / Math.cos(TILT_Z), c.y, c.z);
+      const onBoard = rungY[j] < Z_BOT;
+      const startPt = toScreen(c.x + (Math.max(R, boardR(rungY[j])) + .35) / Math.cos(TILT_Z), c.y, c.z);
       const lx = startPt.x + (lay.phone ? 16 : 30);
       const on = i === hover;
       if (fade > 0) {
