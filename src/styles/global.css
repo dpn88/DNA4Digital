@@ -62,12 +62,14 @@ img { max-width: 100%; height: auto; }
 .hero h1 .grad { display: block; width: fit-content; }
 /* The motto answers the headline ("Then I bring in AI. For only..."), so it sits right under it. */
 .hero .motto { font: 500 clamp(17px, 1.5vw, 22px)/1.3 var(--display); letter-spacing: -.01em; text-wrap: balance; margin: 0 0 18px; }
-.hero .intro { color: var(--muted); font-size: 18px; line-height: 1.6; text-wrap: pretty; margin: 0 0 32px; max-width: 540px; }
+.hero .intro { color: var(--muted); font-size: 17px; line-height: 1.55; text-wrap: pretty; margin: 0 0 28px; max-width: 620px; }
+.hero .intro .long { display: block; }
+.hero .intro .long + .long { margin-top: 10px; }
 .hero .intro .short { display: none; }
 .ctas, .btnrow { display: flex; gap: 12px; flex-wrap: wrap; }
 /* Each caption names where the result came from, so it wraps onto two lines. */
 .proof { display: flex; flex-wrap: wrap; gap: 16px 32px; }
-.proof > div { max-width: 230px; }
+.proof > div { max-width: 236px; }
 .proof b { display: block; font: 600 26px var(--display); color: var(--teal); }
 .proof span { display: block; margin-top: 2px; font-size: 13px; line-height: 1.4; color: var(--muted); }
 .homefoot { font-size: 12.5px; color: var(--muted); }
@@ -241,7 +243,7 @@ html.js:not(.no-gl) .homefoot { position: fixed; right: 44px; bottom: 30px; z-in
 html.js.zoomed .hero { opacity: 0; transform: translate(-40px, -50%); pointer-events: none; }
 html.js.zoomed .proof, html.js.zoomed .homefoot { opacity: 0; pointer-events: none; }
 /* Below 1440px the stats row reaches under the footer links, so the footer moves beneath it, as on phones. */
-@media (1080px < width < 1440px) {
+@media (1279px < width < 1440px) {
   html.js:not(.no-gl) .proof { bottom: 46px; }
   html.js:not(.no-gl) .homefoot { right: auto; left: 6%; bottom: 14px; }
 }
@@ -291,7 +293,7 @@ html.js:not(.no-gl) .panel { container-type: inline-size; }
 @keyframes hero-in { from { opacity: 0; transform: translate(-24px, -50%); } }
 @keyframes fade-in { from { opacity: 0; } }
 
-@media (max-width: 1080px), (max-height: 760px) {
+@media (max-width: 1279px), (max-height: 760px) {
   html.js:not(.no-gl) .proof { display: none; }
 }
 
