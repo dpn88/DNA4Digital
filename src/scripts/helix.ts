@@ -1,4 +1,5 @@
-// The particle helix behind every page. It survives page navigations (the #stage element is persisted by
+// The particle helix behind every page, turning into a circuit board in its lower part (an echo of the business
+// card). It survives page navigations (the #stage element is persisted by
 // Astro's ClientRouter) and moves the camera to the rung that belongs to the page being shown:
 // home = the whole helix with the menu beside it; any other page = zoomed onto its rung, content panel open.
 import * as THREE from 'three';
@@ -86,7 +87,7 @@ function start() {
   const strandPoint = (t: number, off: number) => { const a = angAt(t) + off; return [R * Math.cos(a), yAt(t), R * Math.sin(a)]; };
   const rungY = Array.from({ length: BP }, (_, j) => yAt((j + .5) / BP));
 
-  // SPIKE: below "Selected work" the helix turns into a circuit printed all the way round its own cylinder, which
+  // Below "Selected work" the helix turns into a circuit printed all the way round its own cylinder, which
   // spins with it. Every particle has a place on the helix and a place on the board; through the morph zone (Z_TOP
   // down to Z_BOT) the shader blends from one to the other, so the strands stay joined while the fuzz clears and the
   // circuit forms.
@@ -163,7 +164,7 @@ function start() {
     add(h, h, 0, 0.4 + Math.random() * 0.6, (0.18 + Math.random() * 0.22) * (1 - w), -1, cHalo);
   }
 
-  // ---------- Circuit board (SPIKE) ----------
+  // ---------- Circuit board ----------
   // Traces are rows of fine dots; pads, chips and terminals use the square and ring shapes. The upper board keeps a
   // little loose dust, so the helix's texture dies away gradually. aFlow is the distance down from the top of the
   // helix, which carries the signal pulses all the way down.
