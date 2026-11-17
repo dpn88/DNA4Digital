@@ -10,3 +10,11 @@
 /oferta/ /pl/uslugi/ 301
 /o-nas/ /pl/o-mnie/ 301
 /kontakt/ /pl/kontakt/ 301
+
+# Old sitemap URLs. The WordPress site served Yoast sitemaps, which Search Console and Googlebot still request.
+# Astro writes /sitemap-index.xml (an index) and /sitemap-0.xml (the URL list); robots.txt points to the index.
+/sitemap.xml /sitemap-index.xml 301
+/sitemap_index.xml /sitemap-index.xml 301
+/post-sitemap.xml /sitemap-0.xml 301
+/page-sitemap.xml /sitemap-0.xml 301
+/category-sitemap.xml /sitemap-0.xml 301
